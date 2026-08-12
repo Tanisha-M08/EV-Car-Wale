@@ -354,6 +354,8 @@ function createApp(options = {}) {
     next();
   });
 
+  app.get('/insights/our-blogs', injectMapsKeyIntoHtml);
+
   app.use(express.static(path.join(frontendRoot, 'public')));
   app.use(express.static(frontendRoot));
 

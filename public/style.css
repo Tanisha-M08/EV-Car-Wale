@@ -88,6 +88,27 @@ table {
   background: #555555;
 }
 
+/* Station results vertical scrollable panel */
+.station-scroll-container {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d4d4d4 transparent;
+  max-height: 620px;
+}
+.station-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+.station-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.station-scroll-container::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 3px;
+}
+.station-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
 /* Selection Override */
 ::selection {
   background-color: var(--color-white);
@@ -2829,6 +2850,23 @@ button:active, .btn:active, [role="button"]:active {
   box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.04) !important;
 }
 
+/* EV Brand Dictionary — scroll reveal + subtle parallax */
+.brand-scroll-card {
+  opacity: 0;
+  translate: 0 var(--scroll-y, 0px);
+  transition: opacity 0.6s ease;
+  will-change: opacity;
+}
+.brand-scroll-card.brand-card-in-view {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-scroll-card {
+    opacity: 1;
+    transition: none;
+  }
+}
+
 /* Smooth Image Zoom on Card Hover */
 .car-card img, .insight-card img, .card-image-container img {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -2917,4 +2955,365 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="email"]:focus,
   aspect-ratio: 16 / 10;
   background-color: #f3f4f6;
   overflow: hidden;
+}
+
+/* ==========================================================================
+   REUSABLE VEHICLE CARD (vc-card) — Premium Automotive Marketplace Design
+   Single card component used across carousels, view-all, search, brand pages,
+   related cars, profile and all-cars. Higher specificity overrides legacy
+   global .car-card rules below so every vehicle card shares this one design.
+   ========================================================================== */
+
+body .car-card.vc-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 12px 28px rgba(0, 0, 0, 0.05) !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+  position: relative !important;
+  min-height: 380px !important;
+  max-width: 100% !important;
+  will-change: transform, box-shadow;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+body .car-card.vc-card:hover {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.16) !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), 0 22px 42px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Neutralize legacy card child margins */
+body .car-card.vc-card > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ---- Image ---- */
+body .car-card.vc-card .vc-image {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 10;
+  background: transparent !important;
+  overflow: hidden !important;
+  border: none !important;
+  border-radius: 20px 20px 0 0 !important;
+  flex-shrink: 0;
+}
+
+body .car-card.vc-card .vc-image .vc-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  position: relative;
+  z-index: 1;
+}
+
+body .car-card.vc-card:hover .vc-img {
+  transform: scale(1.05) !important;
+}
+
+body .car-card.vc-card .skeleton-shimmer {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0;
+}
+
+/* ---- Badges & wishlist overlay ---- */
+body .car-card.vc-card .vc-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  pointer-events: none !important;
+  padding: 12px !important;
+  z-index: 3;
+}
+
+body .car-card.vc-card .vc-overlay-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  pointer-events: auto !important;
+}
+
+body .car-card.vc-card .vc-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  border-radius: 9999px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  padding: 6px 12px !important;
+  line-height: 1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+  border: none !important;
+  background: #22C55E !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+}
+
+body .car-card.vc-card:hover .vc-badge {
+  background: #22C55E !important;
+  color: #ffffff !important;
+}
+
+body .car-card.vc-card .vc-badge-range,
+body .car-card.vc-card:hover .vc-badge-range {
+  background: rgba(17, 17, 17, 0.88) !important;
+  color: #ffffff !important;
+}
+
+body .car-card.vc-card .vc-lightning {
+  width: 12px !important;
+  height: 12px !important;
+  color: #22C55E !important;
+  display: block !important;
+}
+
+/* ---- Body ---- */
+body .car-card.vc-card .vc-body {
+  padding: 12px 14px 6px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+body .car-card.vc-card .vc-brand,
+body .car-card.vc-card:hover .vc-brand {
+  color: #16a34a !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+body .car-card.vc-card .vc-name,
+body .car-card.vc-card:hover .vc-name {
+  color: #0a0a0a !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  margin: 2px 0 4px !important;
+}
+
+body .car-card.vc-card .vc-price,
+body .car-card.vc-card:hover .vc-price {
+  color: #0a0a0a !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+body .car-card.vc-card .vc-price-onwards,
+body .car-card.vc-card:hover .vc-price-onwards {
+  color: #9ca3af !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  margin-left: 4px !important;
+}
+
+/* ---- Spec grid ---- */
+body .car-card.vc-card .vc-specs {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 6px !important;
+  margin-top: 10px !important;
+}
+
+body .car-card.vc-card .vc-spec {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #f6f6f7 !important;
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
+  border-radius: 10px !important;
+  padding: 7px 8px !important;
+  overflow: hidden !important;
+}
+
+body .car-card.vc-card .vc-spec-icon {
+  flex: 0 0 auto !important;
+  color: #22C55E !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+body .car-card.vc-card .vc-ico {
+  width: 14px !important;
+  height: 14px !important;
+  display: block !important;
+}
+
+body .car-card.vc-card .vc-spec-text {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  line-height: 1.15 !important;
+}
+
+body .car-card.vc-card .vc-spec-label,
+body .car-card.vc-card:hover .vc-spec-label {
+  color: #9ca3af !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+body .car-card.vc-card .vc-spec-value,
+body .car-card.vc-card:hover .vc-spec-value {
+  color: #111111 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* ---- CTA button ---- */
+body .car-card.vc-card .vc-btn,
+body .car-card.vc-card:hover .vc-btn {
+  margin: 4px 14px 14px !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  padding: 10px 16px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+body .car-card.vc-card .vc-btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22) !important;
+  color: #ffffff !important;
+}
+
+body .car-card.vc-card .vc-arrow {
+  font-size: 16px !important;
+  line-height: 1 !important;
+  transition: transform 0.3s ease !important;
+}
+
+body .car-card.vc-card .vc-btn:hover .vc-arrow {
+  transform: translateX(3px) !important;
+}
+
+/* ---- Wishlist heart ---- */
+body .car-card.vc-card .wishlist-btn,
+body .car-card.vc-card:hover .wishlist-btn {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #71717a !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+}
+
+body .car-card.vc-card .wishlist-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+body .car-card.vc-card .wishlist-btn:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #ef4444 !important;
+  transform: scale(1.08) !important;
+  box-shadow: none !important;
+}
+
+body .car-card.vc-card .wishlist-btn:hover svg {
+  fill: #ef4444 !important;
+  stroke: #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+body .car-card.vc-card .wishlist-btn svg.fill-current {
+  fill: #ef4444 !important;
+  stroke: #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+/* ---- Mobile: allow natural height, keep image crop & readability ---- */
+@media (max-width: 640px) {
+  body .car-card.vc-card {
+    min-height: 0 !important;
+  }
+}
+
+/* Put favourite heart beside the car name */
+body .car-card.vc-card .vc-name-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+body .car-card.vc-card .vc-name-row .wishlist-btn {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+/* Browse by Brand (homepage) — hover keeps black border + soft green shadow behind card */
+.brand-chip:hover {
+  border-color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.20) !important;
+}
+
+/* EV News cards — Read More button stays clearly visible on card hover */
+.news-card:hover button.btn-read-news-more,
+.news-card:hover button.btn-news-page-open,
+.news-card:hover a.btn-read-news-more,
+.news-card:hover a.btn-news-page-open {
+  color: #000000 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+.news-card:hover button.btn-read-news-more .arrow,
+.news-card:hover button.btn-news-page-open .arrow,
+.news-card:hover a.btn-read-news-more .arrow,
+.news-card:hover a.btn-news-page-open .arrow {
+  color: #22C55E !important;
 }

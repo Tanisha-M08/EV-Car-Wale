@@ -8374,27 +8374,27 @@ const BLOG_DATABASE = [
 const BRAND_LOGO_MAP = {
   'audi': 'AUDI_LOGO.JPG',
   'bmw': 'BMW_LOGO.jpeg',
-  'byd': 'BYD_LOGO.jpeg',
-  'citroen': 'CITROEN_logo.jpg',
+  'byd': 'BYD_LOGO.png',
+  'citroen': 'CITROEN_logo.jpeg',
   'honda': 'HONDA_LOGO.JPEG',
   'hyundai': 'HYUNDAI_LOGO.jpeg',
-  'isuzu': 'isuzu_logo.jpeg',
+  'isuzu': 'isuzu_logo.png',
   'jeep': 'jeep_logo.jpeg',
   'kia': 'KIA_LOGO.jpeg',
   'mahindra': 'MAHINDRA_LOGO.jpeg',
   'maruti-suzuki': 'maruti_suzuki_logo.jpeg',
-  'mercedes-benz': 'MERCEDES_LOGO.jpeg',
+  'mercedes-benz': 'MERCEDES_LOGO.png',
   'mg': 'MG_LOGO.jpeg',
   'nissan': 'nissan_logo.jpeg',
   'porsche': 'PORSCHE_LOGO.jpeg',
-  'renault': 'RENAULT_LOGO.jpeg',
+  'renault': 'RENAULT_LOGO.png',
   'skoda': 'SKODA_LOGO.jpeg',
-  'tata': 'TATA_LOGO.jpeg',
+  'tata': 'TATA_LOGO.png',
   'toyota': 'TOYOTA_LOGO.jpeg',
   'vinfast': 'VINFAST_LOGO.jpeg',
   'volkswagen': 'VOLKSWAGEN_LOGO.jpeg',
   'volvo': 'volvo_logo.jpeg',
-  'tesla': 'TESLA_LOGO.PNG',
+  'tesla': 'TESLA_LOGO.jpeg',
   'ferrari': 'ferrari_logo.jpeg',
   'genesis': 'GENESIS_LOGO.jpeg',
   'lotus': 'LOTUS_LOGO.png',
@@ -8403,13 +8403,12 @@ const BRAND_LOGO_MAP = {
   'pmv': 'PMV_LOGO.png',
   'pravaig': 'PRAVAIG_LOGO.png',
   'rolls-royce': 'ROLLS_ROYCLE.JPG',
-  'vayve': 'VAYVE_LOGO.jpeg',
-  'blinq': 'BLINQ_LOGO.jpeg',
-  'blink': 'BLINQ_LOGO.jpeg',
+  'vayve': 'VAYVE_LOGO.png',
+  'blinq': 'BLINQ_LOGO.png',
   'strom': 'STROM_LOGO.jpeg',
 };
 function getBrandLogoUrl(brandId) {
-  return getS3ImageUrl('LOGOS/' + (BRAND_LOGO_MAP[brandId] || brandId.toUpperCase() + '_LOGO.jpeg'));
+  return getS3ImageUrl('LOGOS/' + (BRAND_LOGO_MAP[brandId] || brandId.toUpperCase() + '_LOGO.jpeg')) + '?v=2026';
 }
 function getBrandInitials(name) {
   return name.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
@@ -9104,66 +9103,18 @@ const budgetChips = document.querySelectorAll('.budget-chip');
 const filterResetContainer = document.getElementById('filter-reset-container');
 const wishlistBadge = document.getElementById('wishlist-badge') || { textContent: 0, classList: { remove() {}, add() {} } };
 
-function getSpecGridHtml(car) {
-  if (car.sections.includes('upcoming')) {
-    return `
-      <div><span class="notranslate-label">EXPECTED</span><span class="notranslate">: ${car.launchDate || 'Soon'}</span></div>
-      <div><span class="notranslate-label">RANGE</span><span class="notranslate">: ${car.range}</span></div>
-      <div><span class="notranslate-label">BATTERY</span><span class="notranslate">: ${car.battery}</span></div>
-      <div><span class="notranslate-label">DC CHARGE</span><span class="notranslate">: ${car.charging}</span></div>
-      <div class="col-span-2 truncate text-zinc-500 notranslate" title="${car.features}">${car.features}</div>
-    `;
-  } else if (car.sections.includes('launches')) {
-    return `
-      <div><span class="notranslate-label">LAUNCHED</span><span class="notranslate">: ${car.launchDate || 'Recently'}</span></div>
-      <div><span class="notranslate-label">RANGE</span><span class="notranslate">: ${car.range}</span></div>
-      <div><span class="notranslate-label">BATTERY</span><span class="notranslate">: ${car.battery}</span></div>
-      <div><span class="notranslate-label">DC CHARGE</span><span class="notranslate">: ${car.charging}</span></div>
-      <div class="col-span-2 truncate text-zinc-500 notranslate" title="${car.features}">${car.features}</div>
-    `;
-  } else {
-    return `
-      <div><span class="notranslate-label">RANGE</span><span class="notranslate">: ${car.range}</span></div>
-      <div><span class="notranslate-label">BATTERY</span><span class="notranslate">: ${car.battery}</span></div>
-      <div><span class="notranslate-label">DC CHARGE</span><span class="notranslate">: ${car.charging}</span></div>
-      <div><span class="notranslate-label">TOP SPEED</span><span class="notranslate">: ${car.speed}</span></div>
-      <div class="col-span-2 truncate text-zinc-500 notranslate" title="${car.features}">${car.features}</div>
-    `;
-  }
-}
-
-function createCarCardHtml(car, extraClasses = '') {
+// One reusable vehicle-card component: vehicle-card.js (window.VehicleCard).
+// This thin wrapper keeps all existing call sites working while every card
+// shares the exact same markup/design across carousels, view-all, search,
+// brand pages and related cars.
+function createCarCardHtml(car, extraClasses = '', category = '') {
   const isWishlisted = wishlistIds.includes(car.id);
-  return `
-    <div class="car-card ${extraClasses} border border-zinc-200 bg-white p-5 flex flex-col justify-between min-h-[480px] rounded-2xl relative group hover:border-black transition-all shadow-[0_4px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] stagger-card cursor-pointer">
-      <button class="wishlist-btn absolute top-4 right-4 z-20" data-id="${car.id}" aria-label="Toggle Wishlist">
-        <svg viewBox="0 0 24 24" class="w-4 h-4 ${isWishlisted ? 'fill-current' : ''}">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-      </button>
-
-        ${renderCarImage(getS3ImageUrl(car.image), car.name)}
-
-      <div>
-        <div class="flex justify-between items-start text-black">
-          <div>
-            <span class="font-mono text-[9px] text-zinc-500 uppercase notranslate">${getBrandDisplay(car.brand)}</span>
-            <h3 class="text-lg font-bold mt-0.5 text-black notranslate">${car.name}</h3>
-          </div>
-          <span class="font-mono text-sm font-bold text-black notranslate">${car.price}</span>
-        </div>
-        
-        <!-- Spec Grid -->
-        <div class="grid grid-cols-2 gap-y-1.5 gap-x-4 my-3 text-[10px] text-zinc-500 border-t border-zinc-100 pt-3 font-mono">
-          ${getSpecGridHtml(car)}
-        </div>
-      </div>
-
-      <button class="w-full py-2.5 border border-zinc-200 hover:border-black text-zinc-500 hover:text-white hover:bg-black font-mono text-[9px] uppercase tracking-widest transition-all btn-view-details notranslate" data-id="${car.id}">
-        VIEW DETAILS
-      </button>
-    </div>
-  `;
+  return window.VehicleCard.build(car, {
+    imageUrl: getS3ImageUrl(car),
+    category: category || '',
+    isWishlisted: isWishlisted,
+    extraClasses: extraClasses
+  });
 }
 
 function renderAllCarousels() {
@@ -9225,7 +9176,7 @@ function renderAllCarousels() {
       `;
     } else {
       filteredPopular.slice(0, 10).forEach(car => {
-        carCarouselViewport.innerHTML += createCarCardHtml(car, 'flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start');
+        carCarouselViewport.innerHTML += createCarCardHtml(car, 'flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start', 'Popular');
       });
     }
   }
@@ -9236,7 +9187,7 @@ function renderAllCarousels() {
     launchesViewport.innerHTML = '';
     const launchesCars = EV_DATABASE.filter(car => car.sections && car.sections.includes('launches'));
     launchesCars.slice(0, 10).forEach(car => {
-      launchesViewport.innerHTML += createCarCardHtml(car, 'flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start');
+      launchesViewport.innerHTML += createCarCardHtml(car, 'flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start', 'Latest');
     });
   }
   
@@ -9246,7 +9197,7 @@ function renderAllCarousels() {
     upcomingViewport.innerHTML = '';
     const upcomingCars = EV_DATABASE.filter(car => car.sections && car.sections.includes('upcoming'));
     upcomingCars.slice(0, 10).forEach(car => {
-      upcomingViewport.innerHTML += createCarCardHtml(car, 'flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start');
+      upcomingViewport.innerHTML += createCarCardHtml(car, 'flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start', 'Upcoming');
     });
   }
   
@@ -12015,7 +11966,7 @@ function openCarDetails(carId) {
     },
 
     getNativeLabel(lang) {
-      const labels = { en:'English', hi:'हिन्दी', kn:'ಕನ್ನಡ', ml:'മലയാളം', te:'తెలుగు', ta:'தமிழ்' };
+      const labels = { en:'English', hi:'हिन्दी'-'HI', kn:'ಕನ್ನಡ'-'KA', ml:'മലയാളം'-'ML', te:'తెలుగు'-'TE', ta:'தமிழ்'-'TA' };
       return labels[lang] || lang.toUpperCase();
     },
     getLangName(lang) {
@@ -12772,6 +12723,8 @@ async function handleRouting() {
     route = hash.substring(1);
   } else if (path === '/videos' || hash === '#/videos') {
     route = '/videos';
+  } else if (hash === '#featured-videos' || hash === '#/featured-videos' || path === '/featured-videos') {
+    route = '/featured-videos';
   } else if (path === '/compare' || hash === '#/compare') {
     route = '/compare';
   }
@@ -12791,7 +12744,7 @@ async function handleRouting() {
 
   const clientMeta = getClientMetadataForRoute(route);
   if (clientMeta) {
-    updateClientMetaTags(clientMeta.title, clientMeta.description, null);
+    updateClientMetaTags(clientMeta.title, clientMeta.description, clientMeta.image || null);
   }
 
   // Parse route parameters
@@ -12908,6 +12861,10 @@ async function handleRouting() {
       renderAllBlogsPage();
       return;
     }
+    if (categoryKey === 'our-blogs') {
+      renderOurBlogsPage();
+      return;
+    }
     if (categoryKey === 'categories') {
       renderAllInsightsPage();
       return;
@@ -12998,6 +12955,13 @@ async function handleRouting() {
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }, 50);
     return;
+  } else if (route === '/featured-videos') {
+    restoreHomepage(true, true);
+    setTimeout(() => {
+      const vEl = document.getElementById('featured-videos');
+      if (vEl) vEl.scrollIntoView({ behavior: 'smooth' });
+    }, 150);
+    return;
   } else if (route === '/videos') {
     restoreHomepage();
     setTimeout(() => {
@@ -13083,20 +13047,50 @@ function updateClientMetaTags(title, description, image) {
 }
 
 function getClientMetadataForRoute(route) {
+  const DEFAULT_OG_IMAGE = 'https://www.evcarwale.com/tab_logo.png';
+  const siteOrigin = window.location.origin || 'https://www.evcarwale.com';
+
   if (route.startsWith('/cars/')) {
     const carId = route.split('/')[2];
-    const car = EV_DATABASE.find(c => c.id === carId);
-    if (car) {
+    if (S3_IMAGE_MAPPING[carId]) {
+      const imgPath = S3_IMAGE_MAPPING[carId];
+      const url = imgPath.startsWith('http') ? imgPath : siteOrigin + (imgPath.startsWith('/') ? '' : '/') + imgPath;
+      const car = EV_DATABASE.find(c => c.id === carId) || {};
       const brand = car.brand || car.Brand || '';
-      const model = car.name || car.Name || '';
+      const model = car.name || car.Name || (carId || '').replace(/-/g, ' ');
       return {
         title: `${brand} ${model} — Price, Range, Battery & Charging | EV Car Wale`,
-        description: `Explore the ${brand} ${model} with price, real-world range, battery capacity, charging time, variants and specifications in India.`
+        description: `Explore the ${brand} ${model} with price, real-world range, battery capacity, charging time, variants and specifications in India.`,
+        image: url
       };
+    }
+    if (EV_DATABASE && EV_DATABASE.length) {
+      const car = EV_DATABASE.find(c => c.id === carId);
+      if (car) {
+        const brand = car.brand || car.Brand || '';
+        const model = car.name || car.Name || '';
+        const imgPath = typeof car.image === 'string' ? car.image : '';
+        const url = imgPath ? (imgPath.startsWith('http') ? imgPath : siteOrigin + (imgPath.startsWith('/') ? '' : '/') + imgPath) : DEFAULT_OG_IMAGE;
+        return {
+          title: `${brand} ${model} — Price, Range, Battery & Charging | EV Car Wale`,
+          description: `Explore the ${brand} ${model} with price, real-world range, battery capacity, charging time, variants and specifications in India.`,
+          image: url
+        };
+      }
     }
   }
   if (route.startsWith('/insights/')) {
     const key = route.split('/')[2];
+    const imageMap = {
+      'ev-cost-savings': siteOrigin + '/insights_images/ev_cost%26savings.jpg',
+      'ev-charging-explained': siteOrigin + '/insights_images/ev-charging-explained.JPG',
+      'ev-infrastructure-india': siteOrigin + '/insights_images/ev-infrastructure-india.webp',
+      'government-policies': siteOrigin + '/insights_images/government-policies.JPG',
+      'where-electricity-comes-from': siteOrigin + '/insights_images/where-does-electricity-come-from.JPG',
+      'renewable-energy': siteOrigin + '/insights_images/renewable-energy-and-evs.jpg',
+      'ev-guides': siteOrigin + '/insights_images/ev-charging-explained.JPG',
+      'companies-building-indias-network': siteOrigin + '/insights_images/companies-building-indias-network.JPG'
+    };
     const metaMap = {
       'ev-cost-savings': { title: 'EV Cost & Savings — Total Cost of Ownership | EV Car Wale', description: 'Calculate EV running costs, charging expenses, maintenance savings and total cost of ownership compared with petrol cars.' },
       'ev-charging-explained': { title: 'EV Charging Explained — Types, Speed & Costs | EV Car Wale', description: 'Understand AC and DC charging, charging speeds, connectors, charging time and EV charging costs in India.' },
@@ -13108,7 +13102,12 @@ function getClientMetadataForRoute(route) {
       'companies-building-indias-network': { title: "Companies Building India's EV Network | EV Car Wale", description: 'Major EV charging companies in India including Tata Power, ChargeZone, Statiq, Jio-bp Pulse and more.' },
       'latest-news': { title: 'Latest EV News & Updates | EV Car Wale', description: 'Stay updated with the latest electric vehicle news, launches, policy changes and industry developments in India.' }
     };
-    if (metaMap[key]) return metaMap[key];
+    if (metaMap[key]) {
+      return {
+        ...metaMap[key],
+        image: imageMap[key] || DEFAULT_OG_IMAGE
+      };
+    }
   }
   if (route.startsWith('/hub/') || route.startsWith('/tools/')) {
     const key = route.split('/')[2];
@@ -13118,7 +13117,12 @@ function getClientMetadataForRoute(route) {
       'petrol-savings': { title: 'EV vs Petrol Savings Calculator | EV Car Wale', description: 'Compare fuel costs between electric and petrol vehicles. Calculate how much you can save by switching to EV.' },
       'charging-stations': { title: 'Find EV Charging Stations Near You | EV Car Wale', description: 'Locate DC fast charging stations, AC chargers and EV charging points near you in India.' }
     };
-    if (metaMap[key]) return metaMap[key];
+    if (metaMap[key]) {
+      return {
+        ...metaMap[key],
+        image: DEFAULT_OG_IMAGE
+      };
+    }
   }
   if (route.startsWith('/view-all/')) {
     const sectionLabels = { popular: 'Popular', launches: 'Launches', upcoming: 'Upcoming', all: 'All' };
@@ -13126,7 +13130,8 @@ function getClientMetadataForRoute(route) {
     const label = sectionLabels[section] || section;
     return {
       title: `${label} Electric Vehicles in India | EV Car Wale`,
-      description: `Browse ${label.toLowerCase()} electric vehicles in India with prices, range and specifications.`
+      description: `Browse ${label.toLowerCase()} electric vehicles in India with prices, range and specifications.`,
+      image: DEFAULT_OG_IMAGE
     };
   }
   return null;
@@ -13173,6 +13178,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnViewAllBrands) {
     btnViewAllBrands.addEventListener('click', () => navigateTo('/view-all/brands'));
   }
+
+  initCardScrollAnimation('home-brands-grid', '.brand-chip');
 
   document.querySelectorAll('a[href="all-cars.html"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
@@ -13338,7 +13345,7 @@ function renderViewAllPage(section) {
   }
   let cardsHtml = '';
   sectionCars.forEach(car => {
-    cardsHtml += createCarCardHtml(car, 'w-full');
+    cardsHtml += createCarCardHtml(car, 'w-full', section === 'all' ? '' : section);
   });
   
   const allBodyTypes = ['All','SUV','Sedan','Hatchback','Luxury'];
@@ -13357,7 +13364,7 @@ function renderViewAllPage(section) {
           </select>
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4" id="viewall-cars-grid">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4" id="viewall-cars-grid">
         ${cardsHtml}
       </div>
     </div>
@@ -13375,7 +13382,7 @@ function renderViewAllPage(section) {
         var filtered = val === 'All' ? sectionCars : sectionCars.filter(function(c) { return BODY_TYPE_MAP[c.id] === val; });
         grid.innerHTML = '';
         filtered.forEach(function(car) {
-          grid.innerHTML += createCarCardHtml(car, 'w-full');
+          grid.innerHTML += createCarCardHtml(car, 'w-full', section === 'all' ? '' : section);
         });
         attachCardEvents();
       });
@@ -13579,7 +13586,7 @@ const count = brandCounts[brandId] ?? 0;
     console.log(brandId, logoUrl);
     const initials = getBrandInitials(brandName);
     brandsHtml += `
-      <a href="/brand/${brandId}" class="border border-zinc-200 bg-zinc-50 hover:border-black hover:bg-white hover:shadow-[0_8px_30px_rgba(34,197,94,0.12)] hover:-translate-y-1 transition-all p-3 flex flex-col items-center gap-2 group rounded-xl text-center" style="border-radius:18px">
+      <a href="/brand/${brandId}" class="border border-zinc-200 bg-white hover:border-black hover:bg-white hover:shadow-[0_8px_30px_rgba(34,197,94,0.12)] hover:-translate-y-1 transition-all p-3 flex flex-col items-center gap-2 group rounded-xl text-center" style="border-radius:18px">
 <img
     src="${logoUrl}"
     alt="${brandName}"
@@ -13601,13 +13608,60 @@ const count = brandCounts[brandId] ?? 0;
         <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-black mt-1">EV Brand Dictionary</h2>
         <p class="text-xs text-zinc-500 font-mono mt-1">Browse all electric vehicle manufacturers and explore their lineups.</p>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-2">
+      <div id="view-all-brands-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-2">
         ${brandsHtml}
       </div>
     </div>
   `;
   
   renderSubpage(title, breadcrumbs, contentHtml, '/');
+  initCardScrollAnimation('view-all-brands-grid');
+}
+
+function initCardScrollAnimation(gridId, cardSelector) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  const cards = Array.from(grid.querySelectorAll(cardSelector || 'a[href^="/brand/"]'));
+  if (!cards.length) return;
+
+  cards.forEach((c, i) => {
+    c.classList.add('brand-scroll-card');
+    c.style.transitionDelay = (i % 10) * 35 + 'ms';
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('brand-card-in-view');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+  cards.forEach(c => io.observe(c));
+
+  let ticking = false;
+  const update = () => {
+    if (!grid.isConnected) {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      return;
+    }
+    const vh = window.innerHeight;
+    cards.forEach((c, i) => {
+      const r = c.getBoundingClientRect();
+      const center = r.top + r.height / 2 - vh / 2;
+      const col = i % 5;
+      const drift = (col - 2) * 1.5 + (center * -0.03);
+      c.style.setProperty('--scroll-y', drift.toFixed(1) + 'px');
+    });
+    ticking = false;
+  };
+  function onScroll() {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
 }
 
 function renderAllNewsPage() {
@@ -13651,6 +13705,13 @@ function renderAllNewsPage() {
     '</div>';
   
   renderSubpage(title, breadcrumbs, contentHtml, '/');
+  
+  // Latest EV News: Back button must go straight to the homepage (no history.back)
+  const newsBackBtn = document.getElementById('btn-subpage-back');
+  if (newsBackBtn) {
+    newsBackBtn.replaceWith(newsBackBtn.cloneNode(true));
+    document.getElementById('btn-subpage-back').addEventListener('click', () => navigateTo('/'));
+  }
   
   document.querySelectorAll('.btn-read-news-more').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -13841,6 +13902,15 @@ function renderNewsPage() {
       '</div>';
 
     renderSubpage('Latest EV News', ['RESOURCES', 'LATEST NEWS'], contentHtml, '/');
+
+    // Latest EV News: Back button must go straight to the homepage (no history.back)
+    const newsBackBtn = document.getElementById('btn-subpage-back');
+    if (newsBackBtn) {
+      newsBackBtn.replaceWith(newsBackBtn.cloneNode(true));
+      document.getElementById('btn-subpage-back').addEventListener('click', function() {
+        navigateTo('/');
+      });
+    }
 
     document.querySelectorAll('.btn-news-filter').forEach(function(btn) {
       btn.addEventListener('click', function() {
@@ -14973,6 +15043,21 @@ function renderAllBlogsPage() {
   loadBlogsData();
 }
 
+function renderOurBlogsPage() {
+  const title = 'Our Blogs';
+  const breadcrumbs = ['OUR BLOGS'];
+  const contentHtml = `
+    <div class="flex flex-col gap-6 pt-6">
+      <div>
+        <span class="font-mono text-[9px] text-zinc-500 uppercase tracking-widest">INSIGHTS</span>
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-black mt-1">Our Blogs</h2>
+        <p class="text-xs text-zinc-500 font-mono mt-2">Our own EV blog content will be available here soon.</p>
+      </div>
+    </div>
+  `;
+  renderSubpage(title, breadcrumbs, contentHtml, '/');
+}
+
 async function loadBlogsData() {
   const grid = document.getElementById('blogs-grid');
   const countLabel = document.getElementById('blogs-count-label');
@@ -15764,6 +15849,29 @@ function setupLoginForm() {
   }
 }
 
+function getInitials(name) {
+  if (!name) return 'U';
+  return name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+}
+
+function getDesktopAvatarHtml(user) {
+  const initials = getInitials(user.name);
+  const picture = user.picture || '';
+  if (picture) {
+    return `<img src="${picture}" alt="${user.name || 'User'}" class="w-8 h-8 rounded-full object-cover border border-zinc-200" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-xs hidden">${getInitials(user.name)}</span>`;
+  }
+  return `<span class="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-xs">${getInitials(user.name)}</span>`;
+}
+
+function getMobileAvatarHtml(user) {
+  const initials = getInitials(user.name);
+  const picture = user.picture || '';
+  if (picture) {
+    return `<img src="${picture}" alt="${user.name}" class="w-10 h-10 rounded-full object-cover border border-zinc-200" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="w-10 h-10 rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-sm hidden">${getInitials(user.name)}</span>`;
+  }
+  return `<span class="w-10 h-10 rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-sm">${initials}</span>`;
+}
+
 function updateAuthUI(user) {
   window.updateAuthUI = updateAuthUI;
   const loginBtn = document.getElementById('login-nav-btn');
@@ -15782,7 +15890,7 @@ function updateAuthUI(user) {
       profileContainer.href = "javascript:void(0)";
       profileContainer.innerHTML = `
         <div class="relative group flex items-center gap-2 cursor-pointer animate-fade-in">
-          <img src="${user.picture || '/car_outline.jpg'}" alt="${user.name || 'User'}" class="w-8 h-8 rounded-full object-cover border border-zinc-200" onerror="this.src='/car_outline.jpg';">
+          ${getDesktopAvatarHtml(user)}
           <span class="font-mono text-[9px] text-zinc-700 font-semibold uppercase tracking-wider hidden lg:inline">${user.name || 'Account'}</span>
           <!-- Dropdown Menu -->
           <div class="absolute right-0 top-full mt-2 w-44 bg-white border border-zinc-200 shadow-lg py-1.5 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 rounded-xl">
@@ -15803,7 +15911,7 @@ function updateAuthUI(user) {
       profileContainerMobile.innerHTML = `
         <div class="flex flex-col gap-2 pt-4 border-t border-zinc-200 mt-2">
           <div class="flex items-center gap-3">
-            <img src="${user.picture || '/car_outline.jpg'}" alt="${user.name}" class="w-10 h-10 rounded-full object-cover border border-zinc-200" onerror="this.src='/car_outline.jpg';">
+            ${getMobileAvatarHtml(user)}
             <div>
               <p class="font-mono text-[11px] text-zinc-900 font-bold uppercase">${user.name}</p>
               <p class="font-mono text-[8px] text-zinc-400 uppercase">${user.email}</p>
@@ -15909,7 +16017,7 @@ function buildPremiumAboutHtml(pageKey, page) {
       <div class="relative overflow-hidden bg-zinc-900 text-white p-8 md:p-12 rounded-xl">
         <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-green-500/10 to-transparent rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div class="relative z-10">
-          <a href="/" class="inline-flex items-center gap-1.5 text-[10px] font-mono text-zinc-400 hover:text-white uppercase tracking-wider transition-colors mb-6">← Back to Home</a>
+          <a href="/" class="inline-flex items-center gap-1.5 text-[10px] font-mono text-zinc-400 hover:text-white uppercase tracking-wider transition-colors mb-6">← Back </a>
           <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white">${page.title}</h1>
           <div class="w-12 h-1 bg-green-500 mt-4"></div>
         </div>
@@ -15918,7 +16026,7 @@ function buildPremiumAboutHtml(pageKey, page) {
         ${sections}
       </div>
       <div class="border-t border-zinc-200 pt-8 mt-4 max-w-4xl mx-auto w-full">
-        <a href="/" class="inline-flex items-center gap-2 border border-zinc-200 bg-zinc-50 hover:border-black hover:bg-white transition-all px-6 py-3 font-mono text-[9px] uppercase tracking-wider rounded-lg">← Back to Home</a>
+        <a href="/" class="inline-flex items-center gap-2 border border-zinc-200 bg-zinc-50 hover:border-black hover:bg-white transition-all px-6 py-3 font-mono text-[9px] uppercase tracking-wider rounded-lg">← Back </a>
       </div>
     </div>`;
 }
@@ -15929,7 +16037,7 @@ function buildFeedbackFormHtml() {
       <div class="relative overflow-hidden bg-zinc-900 text-white p-8 md:p-12 rounded-xl">
         <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-green-500/10 to-transparent rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div class="relative z-10">
-          <a href="/" class="inline-flex items-center gap-1.5 text-[10px] font-mono text-zinc-400 hover:text-white uppercase tracking-wider transition-colors mb-6">← Back to Home</a>
+          <a href="/" class="inline-flex items-center gap-1.5 text-[10px] font-mono text-zinc-400 hover:text-white uppercase tracking-wider transition-colors mb-6">← Back </a>
           <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white">Feedback</h1>
           <p class="text-sm text-zinc-400 mt-3 max-w-xl">We value your feedback. Help us improve EV Car Wale.</p>
           <div class="w-12 h-1 bg-green-500 mt-4"></div>
@@ -16068,7 +16176,7 @@ function renderResourcePage(slug, article) {
   const breadcrumbs = ['RESOURCES', article.title];
   const contentHtml = `
     <div class="flex flex-col gap-6 pt-6 max-w-3xl mx-auto">
-      <a href="/" class="font-mono text-[9px] text-zinc-500 hover:text-black uppercase tracking-wider flex items-center gap-1 transition-colors">← Back to Home</a>
+      <a href="/" class="font-mono text-[9px] text-zinc-500 hover:text-black uppercase tracking-wider flex items-center gap-1 transition-colors">← Back </a>
       <div>
         <h1 class="text-2xl md:text-4xl font-black tracking-tight text-black leading-tight">${article.title}</h1>
       </div>
@@ -16085,7 +16193,7 @@ function renderBlogArticlePage(article) {
   const breadcrumbs = ['BLOG', article.title];
   const contentHtml = `
     <div class="flex flex-col gap-6 pt-6 max-w-3xl mx-auto">
-      <a href="/#home" class="font-mono text-[9px] text-zinc-500 hover:text-black uppercase tracking-wider flex items-center gap-1 transition-colors">← Back to Home</a>
+      <a href="/#home" class="font-mono text-[9px] text-zinc-500 hover:text-black uppercase tracking-wider flex items-center gap-1 transition-colors">← Back </a>
       <div>
         <div class="flex items-center gap-2 text-[8px] font-mono text-zinc-400 uppercase tracking-wider mb-3">
           <span>${article.date}</span>
@@ -16183,32 +16291,11 @@ async function renderCarDetailsPage(car) {
       </option>
     `).join('');
     relatedCars.forEach(c => {
-      const imgUrl = getS3ImageUrl(c.image);
-      relatedHtml += `
-        <div class="border border-zinc-200 bg-white rounded-xl overflow-hidden flex flex-col">
-          <div class="h-40 bg-white flex items-center justify-center p-4 border-b border-zinc-100">
-            <img src="${imgUrl}" alt="${c.name}" class="w-full h-full object-contain" onerror="handleImageError(this)">
-          </div>
-          <div class="flex flex-col flex-1 p-4">
-            <span class="font-mono text-[9px] text-zinc-500 uppercase tracking-wider">${getBrandDisplay(c.brand)}</span>
-            <div class="flex items-center justify-between mt-1">
-              <h4 class="font-bold text-sm text-black">${c.name}</h4>
-              <span class="font-mono text-[11px] text-zinc-700 font-semibold">${c.price}</span>
-            </div>
-            <div class="flex items-center gap-2 mt-2 text-[9px] font-mono text-zinc-500">
-              <span>${c.range || ''}</span>
-              <span class="text-zinc-300">|</span>
-              <span>${c.battery || ''}</span>
-              <span class="text-zinc-300">|</span>
-              <span>${c.charging || ''}</span>
-            </div>
-            <p class="text-[10px] text-zinc-500 mt-2 leading-relaxed flex-1">${c.features ? c.features.split(',').slice(0,2).join(', ') : ''}</p>
-            <button class="w-full mt-3 py-2.5 border border-zinc-200 hover:bg-black hover:text-white hover:border-black text-[9px] font-mono tracking-widest uppercase transition-colors rounded-lg" data-id="${c.id}" data-related-view>
-              VIEW DETAILS
-            </button>
-          </div>
-        </div>
-      `;
+      relatedHtml += window.VehicleCard.build(c, {
+        imageUrl: getS3ImageUrl(c),
+        showWishlist: false,
+        extraClasses: ''
+      });
     });
 
 
@@ -18985,7 +19072,7 @@ function renderChargingStationsPage() {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start min-h-[500px]">
         
         <!-- Left Side (Initial Placeholder or Searched Station Cards) -->
-        <div class="lg:col-span-5 flex flex-col gap-4 min-h-[480px]" id="station-results-container">
+         <div class="lg:col-span-5 flex flex-col gap-4 h-[680px]" id="station-results-container">
           <div class="border border-zinc-200 bg-zinc-50 rounded-3xl p-12 flex flex-col items-center justify-center text-center h-full min-h-[480px]">
             <div class="w-12 h-12 rounded-full bg-zinc-200 flex items-center justify-center text-xl text-zinc-500 mb-3">🔌</div>
             <p class="text-xs text-zinc-500 font-mono">Enter a city, state, or locality above or use your location to find charging stations.</p>
@@ -19315,9 +19402,11 @@ function bindChargingStationsLogic() {
       `;
     } else {
       resultsContainer.innerHTML = `
-        <div class="flex flex-col gap-4">
-          <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest font-mono">${titleHeader}</span>
-          ${stationsList.map(s => {
+        <div class="flex flex-col gap-4 h-full">
+          <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest font-mono flex-shrink-0">${titleHeader}</span>
+          <div class="station-scroll-container flex-1 min-h-0">
+            <div class="flex flex-col gap-4 pr-2">
+              ${stationsList.map(s => {
             const sLat = s.lat || s.latitude;
             const sLng = s.lng || s.longitude;
             const mapsUrl = (sLat && sLng)
@@ -19349,8 +19438,9 @@ function bindChargingStationsLogic() {
             </div>
           `;
           }).join('')}
-        </div>
-      `;
+            </div>
+          </div>
+        `;
     }
   }
 
@@ -19921,7 +20011,7 @@ function renderBrandPage(brandId) {
 
   let upcomingGridHtml = '';
   if (upcomingCars.length > 0) {
-    upcomingGridHtml = upcomingCars.map(car => createCarCardHtml(car, 'w-full')).join('');
+    upcomingGridHtml = upcomingCars.map(car => createCarCardHtml(car, 'w-full', 'Upcoming')).join('');
   } else {
     upcomingGridHtml = `
       <div class="col-span-full text-center py-10 bg-zinc-50 rounded-2xl border border-zinc-200">
@@ -19937,7 +20027,7 @@ function renderBrandPage(brandId) {
       <div class="border border-zinc-200 bg-white rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
         <div class="flex items-center gap-6 text-left">
           <div class="w-20 h-20 bg-zinc-50 border border-zinc-200 rounded-2xl flex items-center justify-center p-3 flex-shrink-0">
-            <img src="${logoUrl}" alt="${displayName}" class="w-full h-full object-contain" onerror="this.src='https://ev-car-wale.s3.ap-south-1.amazonaws.com/LOGOS/TATA_LOGO.jpeg'">
+            <img src="${logoUrl}" alt="${displayName}" class="w-full h-full object-contain" onerror="this.src='https://ev-car-wale.s3.ap-south-1.amazonaws.com/LOGOS/TATA_LOGO.png?v=2026'">
           </div>
           <div>
             <span class="font-mono text-[9px] text-zinc-400 uppercase tracking-widest block">ELECTRIC VEHICLE MANUFACTURER</span>

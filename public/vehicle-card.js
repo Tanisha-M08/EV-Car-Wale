@@ -135,7 +135,7 @@
         '<div class="vc-image">' +
           '<div class="skeleton-shimmer"></div>' +
           '<img src="' + imageUrl + '" alt="' + (car.name || 'Vehicle') + '" loading="lazy" class="vc-img" ' +
-            'onload="this.previousElementSibling.style.display=\'none\';if(this.naturalWidth){this.parentElement.style.aspectRatio=this.naturalWidth+\'/\'+this.naturalHeight;}" onerror="handleImageError(this)">' +
+            'onload="this.previousElementSibling.style.display=\'none\'" onerror="handleImageError(this)">' +
           '<div class="vc-overlay">' + badgeHtml + overlayRightHtml + '</div>' +
         '</div>' +
         '<div class="vc-body">' +
@@ -165,14 +165,4 @@
     brandDisplay: brandDisplay,
     cleanedName: cleanedName
   };
-
-  if (typeof document !== 'undefined' && document.addEventListener) {
-    document.addEventListener('load', function (e) {
-      var t = e.target;
-      if (t && t.tagName === 'IMG' && t.classList && t.classList.contains('vc-img') && t.naturalWidth) {
-        var box = t.parentElement;
-        if (box) box.style.aspectRatio = t.naturalWidth + '/' + t.naturalHeight;
-      }
-    }, true);
-  }
 })(typeof window !== 'undefined' ? window : this);

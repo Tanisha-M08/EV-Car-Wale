@@ -1,3 +1,5 @@
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 const env = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   PORT: Number(process.env.PORT || 8081),
@@ -33,7 +35,9 @@ const env = {
   YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY || '',
   CURRENT_NEWS_API_KEY: process.env.CURRENT_NEWS_API_KEY || '',
   SUPABASE_URL: process.env.SUPABASE_URL || '',
-  SUPABASE_PUBLISHABLE_KEY: process.env.SUPABASE_PUBLISHABLE_KEY || ''
+  SUPABASE_PUBLISHABLE_KEY: process.env.SUPABASE_PUBLISHABLE_KEY || '',
+  SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY || '',
+  ADMIN_EMAILS: process.env.ADMIN_EMAILS || ''
 };
 
 module.exports = { env };

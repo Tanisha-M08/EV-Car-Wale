@@ -16938,18 +16938,6 @@ async function renderCarDetailsPage(car) {
             </div>
           </div>
         </div>
-
-        <!-- 6. Related Cars Section -->
-        <div class="border-t border-zinc-150 pt-10 pb-8">
-          <div class="text-left mb-8">
-            <span class="font-mono text-[9px] text-zinc-500 tracking-[0.25em] uppercase block mb-1">CATEGORICAL PAIRINGS</span>
-            <h3 class="text-xl md:text-2xl font-bold tracking-tight">Related Electric Vehicles</h3>
-            <p class="text-xs text-zinc-500 mt-1">Similar EVs by budget pricing indices and body dimensions.</p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            ${relatedHtml}
-          </div>
-        </div>
       </div>
     `;
     

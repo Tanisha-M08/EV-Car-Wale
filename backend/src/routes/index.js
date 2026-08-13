@@ -15,6 +15,7 @@ const videoRoutes = require('./videoRoutes');
 const carImageRoutes = require('./carImageRoutes');
 const translateRoutes = require('./translateRoutes');
 const routeRoutes = require('./routeRoutes');
+const supabaseCarRoutes = require('./supabaseCarRoutes');
 const { createChatController } = require('../controllers/chatController');
 
 function apiRoutes(options = {}) {
@@ -33,6 +34,7 @@ function apiRoutes(options = {}) {
   router.use('/car-images', carImageRoutes);
   router.use('/translate', translateRoutes);
   router.use('/route', routeRoutes);
+  router.use('/cars-admin', supabaseCarRoutes);
   router.use('/', leadRoutes);
   router.use('/chargers', chargerRoutes);
   router.use('/payments', placeholderRoutes('Payments'));

@@ -1,5 +1,6 @@
 const { getFirebaseAdmin } = require('../config/firebaseAdmin');
 const { ApiError } = require('../utils/apiError');
+const { env } = require('../config/env');
 
 async function optionalAuth(req, res, next) {
   const authHeader = req.headers.authorization || '';
@@ -38,4 +39,22 @@ async function requireAuth(req, res, next) {
   });
 }
 
-module.exports = { optionalAuth, requireAuth };
+// Reuses requireAuth, then checks the user's email against the server-side
+// ADMIN_EMAILS allow-list (config in backend/.env). Fails closed: if no
+// admins are configured, every authenticated user is denied (403).
+async function requireAdmin(req, res, next) {
+  await requireAuth(req, res, (error) => {
+    if (error) return next(error);
+    const email = (req.firebaseUser.email || '').trim().toLowerCase();
+    const admins = (env.ADMIN_EMAILS || '')
+      .split(',')
+      .map((entry) => entry.trim().toLowerCase())
+      .filter(Boolean);
+    if (!email || !admins.includes(email)) {
+      return next(new ApiError(403, 'Admin access required.'));
+    }
+    return next();
+  });
+}
+
+module.exports = { optionalAuth, requireAuth, requireAdmin };

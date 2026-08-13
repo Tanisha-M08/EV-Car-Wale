@@ -12556,7 +12556,12 @@ function getDetailsEl() { return document.getElementById('details-page-content')
 
 function navigateTo(url, replace = false) {
   try {
-    if (replace || url === '/' || url === '' || url === '/#') {
+    // Avoid duplicate history entries: if some click handlers already navigated
+    // to this exact URL (e.g. delegated + direct listeners both firing), replace
+    // the current entry instead of pushing a second copy — this keeps the browser
+    // Back button working in one press instead of two or more.
+    var currentUrl = window.location.pathname + window.location.search + window.location.hash;
+    if (replace || url === '/' || url === '' || url === '/#' || url === currentUrl) {
       history.replaceState(null, '', url);
     } else {
       history.pushState(null, '', url);

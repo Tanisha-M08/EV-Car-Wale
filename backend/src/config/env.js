@@ -31,7 +31,9 @@ const env = {
   FIREBASE_PRIVATE_KEY: process.env.FIREBASE_PRIVATE_KEY || '',
   GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY || '',
   YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY || '',
-  CURRENT_NEWS_API_KEY: process.env.CURRENT_NEWS_API_KEY || ''
+  CURRENT_NEWS_API_KEY: process.env.CURRENT_NEWS_API_KEY || '',
+  SUPABASE_URL: process.env.SUPABASE_URL || '',
+  SUPABASE_PUBLISHABLE_KEY: process.env.SUPABASE_PUBLISHABLE_KEY || ''
 };
 
 module.exports = { env };

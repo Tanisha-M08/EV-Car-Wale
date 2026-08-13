@@ -18,7 +18,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "punch-ev",
@@ -39,7 +39,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "harrier-ev",
@@ -61,7 +61,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "curvv-ev",
@@ -82,7 +82,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "tiago-ev",
@@ -103,7 +103,7 @@
     "sections": [
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "avinya-ev",
@@ -125,7 +125,7 @@
       "upcoming"
     ],
     "launchDate": "Expected 2027",
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "xpres-t-ev",
@@ -146,7 +146,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "sierra-ev",
@@ -165,9 +165,9 @@
     "dimensions": "4350 x 1850 x 1700 mm",
     "image": "/car_images/tata/SIERRA.jpeg",
     "sections": [
-      "Launched Recently"
+      " Recently"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "xuv400",
@@ -188,7 +188,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "be6",
@@ -210,7 +210,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "xev-9e",
@@ -231,7 +231,7 @@
     "sections": [
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "thar-e",
@@ -253,7 +253,7 @@
       "upcoming"
     ],
     "launchDate": "Expected 2026",
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "be-07",
@@ -275,7 +275,7 @@
       "upcoming"
     ],
     "launchDate": "Expected 2027",
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "xev-9s",
@@ -297,7 +297,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "xuv-3xo-ev",
@@ -319,7 +319,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "cyberster",
@@ -341,7 +341,7 @@
       "launches",
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "m9-ev",
@@ -362,7 +362,7 @@
     "sections": [
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "zs-ev",
@@ -383,7 +383,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "comet-ev",
@@ -404,7 +404,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "ioniq-5",
@@ -425,7 +425,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "ioniq-6",
@@ -446,7 +446,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "creta-ev",
@@ -468,7 +468,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "byd-seal",
@@ -490,7 +490,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "byd-atto3",
@@ -511,7 +511,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "byd-sealion-6",
@@ -532,7 +532,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "byd-emax-7",
@@ -554,7 +554,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "byd-sealion-7",
@@ -576,7 +576,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "kia-ev6",
@@ -597,7 +597,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "kia-ev9",
@@ -620,7 +620,7 @@
       "explore"
     ],
     "launchDate": "18 Days Ago",
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "syros-ev",
@@ -642,7 +642,7 @@
       "upcoming"
     ],
     "launchDate": "Expected Feb 2027",
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "bmw-i4",
@@ -663,7 +663,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "bmw-i7",
@@ -684,7 +684,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "bmw-ix",
@@ -705,7 +705,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "bmw-ix1",
@@ -727,7 +727,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "bmw-i5",
@@ -749,7 +749,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "audi-q6-e-tron",
@@ -771,7 +771,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "audi-e-tron-gt",
@@ -792,7 +792,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "audi-a6-e-tron",
@@ -813,7 +813,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "ryde",
@@ -835,7 +835,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "gv60",
@@ -856,7 +856,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "ec3",
@@ -877,7 +877,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "luce",
@@ -898,7 +898,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "elevate-ev",
@@ -919,7 +919,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "zero-alpha",
@@ -940,7 +940,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "d-max-ev",
@@ -961,7 +961,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "nissan-ariya",
@@ -982,7 +982,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "nissan-leaf",
@@ -1003,7 +1003,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mini-countryman-electric",
@@ -1025,7 +1025,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "jeep-avengers",
@@ -1046,7 +1046,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "lexus-es",
@@ -1068,7 +1068,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "lotus-eletre",
@@ -1089,7 +1089,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "lotus-emeya",
@@ -1110,7 +1110,7 @@
     "sections": [
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "maruti-e-vitara",
@@ -1132,7 +1132,7 @@
       "launches",
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "fronx-ev",
@@ -1153,7 +1153,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "jimny-ev",
@@ -1174,7 +1174,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mercedes-benz-cla-ev",
@@ -1196,7 +1196,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mercedes-benz-eqs-suv",
@@ -1217,7 +1217,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mercedes-benz-g-class-ev",
@@ -1238,7 +1238,7 @@
     "sections": [
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mercedes-benz-amg-eqs",
@@ -1259,7 +1259,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mercedes-benz-c-class-ev",
@@ -1280,7 +1280,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "mercedes-benz-eqs-maybach",
@@ -1302,7 +1302,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "pmv-eas-e",
@@ -1323,7 +1323,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "renault-kwid-ev",
@@ -1344,7 +1344,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "porsche-macan-ev",
@@ -1366,7 +1366,7 @@
       "launches",
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "porsche-taycan",
@@ -1387,7 +1387,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "porsche-cayenne-ev",
@@ -1408,7 +1408,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "rolls-royce-spectre",
@@ -1429,7 +1429,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "toyota-bz4x",
@@ -1450,7 +1450,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "toyota-Urban-Cruiser-ev",
@@ -1471,7 +1471,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "tesla-model-y",
@@ -1493,7 +1493,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "skoda-elroq",
@@ -1515,7 +1515,7 @@
       "launches",
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "skoda-enyaq",
@@ -1536,7 +1536,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "strom-r3",
@@ -1557,7 +1557,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "pravaig-defy",
@@ -1579,7 +1579,7 @@
       "popular",
       "launches"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "volvo-ec40",
@@ -1600,7 +1600,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "volvo-ex30",
@@ -1621,7 +1621,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "volvo-ex40",
@@ -1642,7 +1642,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "volvo-ex90",
@@ -1663,7 +1663,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "volkswagen-id4",
@@ -1684,7 +1684,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "vayve-mobility-eva",
@@ -1705,7 +1705,7 @@
     "sections": [
       "popular"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "vinfast-vf3",
@@ -1726,7 +1726,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "vinfast-vf6",
@@ -1747,7 +1747,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "vinfast-vf7",
@@ -1768,7 +1768,7 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   },
   {
     "id": "vinfast-vf-mpv7",
@@ -1789,6 +1789,6 @@
     "sections": [
       "upcoming"
     ],
-    "status": "launched"
+    "status": ""
   }
 ]

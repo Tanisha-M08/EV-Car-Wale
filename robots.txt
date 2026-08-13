@@ -1,0 +1,15 @@
+# ===================================
+# EV Car Wale - Robots.txt Rules
+# ===================================
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /profile.html
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /forgot-password.html
+
+# Host & Sitemap location
+Host: https://www.evcarwale.com
+Sitemap: https://www.evcarwale.com/sitemap.xml

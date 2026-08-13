@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX80WKG1WG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VX80WKG1WG');
+</script>
+  <script>window.location.replace('/#/chargers');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charging Stations - EV Car Wale</title>
+  <meta name="description" content="Find EV charging stations near you. AC and DC fast chargers across India.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Leaflet Map CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    window.__gmapReady = false;
+    window.__gmapCallbacks = [];
+    window.__gmapCallback = function() {
+      window.__gmapReady = true;
+      window.__gmapCallbacks.forEach(function(fn) { try { fn(); } catch(e) {} });
+      window.__gmapCallbacks = [];
+    };
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=__GOOGLE_MAPS_API_KEY__&libraries=places&callback=__gmapCallback" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purewhite: '#FFFFFF',
+            black: '#000000',
+            darkgray: '#1E1E1E',
+            medgray: '#555555',
+            lightgray: '#F5F5F5',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            mono: ['Poppins', 'sans-serif'],
+            serif: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/ai-assistant.css">
+  <link rel="icon" type="image/png" href="/tab_logo.png">
+  <link rel="shortcut icon" type="image/png" href="/tab_logo.png">
+  <link rel="canonical" href="https://www.evcarwale.com/charging-stations" />
+  <meta property="og:site_name" content="EV Car Wale" />
+  <meta property="og:title" content="EV Charging Stations Near Me & Route Planner - EV Car Wale" />
+  <meta property="og:description" content="Find fast EV charging stations across India. Locate Tata Power, Bolt.earth, ChargeZone, and Zeon chargers on highway routes." />
+  <meta property="og:url" content="https://www.evcarwale.com/charging-stations" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EV Charging Stations Near Me & Route Planner - EV Car Wale" />
+  <meta name="twitter:description" content="Find fast EV charging stations across India. Locate Tata Power, Bolt.earth, ChargeZone, and Zeon chargers on highway routes." />
+  <meta name="twitter:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "EV Charging Stations Near Me & Route Planner - EV Car Wale",
+  "description": "Find fast EV charging stations across India. Locate Tata Power, Bolt.earth, ChargeZone, and Zeon chargers on highway routes.",
+  "url": "https://www.evcarwale.com/charging-stations"
+}
+  </script>
+</head>
+<body class="bg-white text-black font-sans overflow-x-hidden selection-none">
+  <!-- Navbar -->
+  <nav id="mega-nav" class="sticky top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-zinc-200 px-6 lg:px-12" style="font-family:'Poppins',sans-serif;">
+    <div class="w-full flex items-center justify-between h-16 px-4">
+
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-start">
+        <a href="/" class="logo-link font-bold tracking-widest text-sm flex items-center gap-4[] group text-black flex-shrink-0">
+          <img src="/nav%20bar%20logo.png" alt="Logo" class="h-20 w-auto object-contain flex-shrink-0" style="height: 64px;">
+        </a>
+      </div>
+
+      <!-- Desktop Mega Menu Links (Perfect Center) -->
+      <div id="mega-menu-links" class="hidden xl:flex items-center justify-center h-full">
+
+        <!-- HOME -->
+        <a href="/" class="mega-nav-item nav-link px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group" data-section="home">
+          HOME
+          <span class="mega-active-bar"></span>
+        </a>
+
+        <!-- DISCOVER EVs -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="discover">
+          DISCOVER EVs
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="tools">
+          TOOLS
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+        <!-- LEARN -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="learn">
+          LEARN
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+        <!-- INSIGHTS -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="insights">
+          INSIGHTS
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+      </div><!-- /mega-menu-links -->
+
+      <!-- Right Utility Actions -->
+      <div class="flex-1 flex items-center justify-end gap-4">
+        <!-- Language -->
+        <div id="google_translate_element" class="notranslate" style="display:none"></div>
+        <div class="custom-lang-dropdown notranslate">
+          <button id="custom-lang-btn" class="btn-animate px-3 notranslate">
+            <span id="custom-lang-label" class="notranslate">English</span>
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="custom-lang-menu" class="notranslate">
+            <div class="lang-option notranslate" data-lang="en">English</div>
+            <div class="lang-option notranslate" data-lang="hi">हिन्दी-HI</div>
+            <div class="lang-option notranslate" data-lang="kn">ಕನ್ನಡ</div>
+            <div class="lang-option notranslate" data-lang="ml">മലയാളം-ML</div>
+            <div class="lang-option notranslate" data-lang="te">తెలుగు-TE</div>
+            <div class="lang-option notranslate" data-lang="ta">தமிழ்-TA</div>
+          </div>
+        </div>
+
+        <button id="login-nav-btn" class="hidden md:block px-4 py-2 font-mono text-[10px] tracking-wider border border-zinc-300 hover:border-black text-black hover:bg-black hover:text-white transition-all duration-300 btn-animate">
+          LOGIN
+        </button>
+
+        <!-- Profile Avatar (shown after login) -->
+        <a id="profile-container" class="hidden" href="/profile">
+          <div class="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center hover:bg-zinc-700 transition-colors cursor-pointer" aria-label="Profile">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button id="mega-hamburger" class="xl:hidden flex flex-col gap-[5px] p-2 group" aria-label="Menu" aria-expanded="false">
+          <span class="block w-5 h-[1.5px] bg-black transition-all duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-[6.5px]"></span>
+          <span class="block w-5 h-[1.5px] bg-black transition-all duration-300 group-[.open]:opacity-0"></span>
+          <span class="block w-5 h-[1.5px] bg-black transition-all duration-300 origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-[6.5px]"></span>
+        </button>
+      </div>
+
+    </div><!-- /inner flex -->
+
+    <!-- ============ MEGA PANELS ============ -->
+    <!-- Backdrop overlay -->
+    <div id="mega-backdrop" class="fixed inset-0 top-16 bg-black/10 backdrop-blur-[1px] z-30 hidden opacity-0 transition-opacity duration-200"></div>
+
+    <!-- Discover EVs Panel -->
+    <div class="mega-panel hidden" id="mega-panel-discover">
+      <div class="px-8 py-8 grid grid-cols-2 gap-10">
+        <div>
+          <p class="mega-col-title">Browse</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/popular-evs" class="mega-item">
+              <span class="mega-item-icon">🚗</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Popular Electric Cars</span>
+                <span class="mega-item-desc">Browse India's most popular electric vehicles.</span>
+              </span>
+            </a>
+            <a href="/launches" class="mega-item">
+              <span class="mega-item-icon">⚡</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Latest EV Launches</span>
+                <span class="mega-item-desc">Newest arrivals in the Indian electric car market.</span>
+              </span>
+            </a>
+            <a href="/upcoming" class="mega-item">
+              <span class="mega-item-icon">🔮</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Upcoming Electric Cars</span>
+                <span class="mega-item-desc">Electric models launching in India soon.</span>
+              </span>
+            </a>
+            <a href="/browse" class="mega-item">
+              <span class="mega-item-icon">🏷️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Browse by Brand</span>
+                <span class="mega-item-desc">Filter vehicles by Tata, MG, BYD, Hyundai, and more.</span>
+              </span>
+            </a>
+            
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Quick Actions</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/view-all/all" class="mega-item">
+              <span class="mega-item-icon">📋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">View All Cars</span>
+                <span class="mega-item-desc">Explore the complete EV database for India.</span>
+              </span>
+            </a>
+            <a href="/compare.html" class="mega-item">
+              <span class="mega-item-icon">⚖️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Compare Cars</span>
+                <span class="mega-item-desc">Compare specs, charging, and features side-by-side.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Panel -->
+    <div class="mega-panel hidden" id="mega-panel-tools">
+      <div class="px-8 py-8 grid grid-cols-2 gap-10">
+        <div>
+          <p class="mega-col-title">Calculators</p>
+           <div class="flex flex-col gap-1 mt-3">
+            <a href="/trip-planner" class="mega-item">
+  <span class="mega-item-icon">🗺️</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">EV Trip Planner</span>
+    <span class="mega-item-desc">Plan routes, charging stops, costs.</span>
+  </span>
+  </a>
+ <a href="#/hub/charging-time" class="mega-item">
+  <span class="mega-item-icon">⏱️</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">EV Charging Time Calculator</span>
+    <span class="mega-item-desc">Estimate charging duration for any EV.</span>
+  </span>
+ </a>
+ <a href="#/hub/emi-calculator" class="mega-item">
+  <span class="mega-item-icon">💰</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">EMI Calculator</span>
+    <span class="mega-item-desc">Calculate monthly EV loan installments.</span>
+  </span>
+ </a>
+ <a href="#/hub/petrol-savings" class="mega-item">
+  <span class="mega-item-icon">⛽</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">Petrol Savings Calculator</span>
+    <span class="mega-item-desc">Compare petrol vs EV running costs.</span>
+  </span>
+ </a>
+ <a href="#/hub/charging-stations" class="mega-item">
+  <span class="mega-item-icon">🔌</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">Charging Stations</span>
+    <span class="mega-item-desc">Locate DC fast chargers.</span>
+  </span>
+ </a>
+  
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Utilities</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/hub/apartment-charging" class="mega-item">
+              <span class="mega-item-icon">🏢</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Apartment Charging Guide</span>
+                <span class="mega-item-desc">Get society NOC and home charging setup.</span>
+              </span>
+            </a>
+            <a href="#/hub/battery-health" class="mega-item">
+              <span class="mega-item-icon">🔋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Battery Health Guide</span>
+                <span class="mega-item-desc">Tips and best practices to maximize battery lifespan.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learn Panel -->
+    <div class="mega-panel hidden" id="mega-panel-learn">
+      <div class="px-8 py-8 grid grid-cols-3 gap-8">
+
+        <div>
+          <p class="mega-col-title">Buying Guide</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/guide/everything-about-evs" class="mega-item">
+              <span class="mega-item-icon">📘</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Everything About EVs</span>
+                <span class="mega-item-desc">A complete introduction to electric vehicles.</span>
+              </span>
+            </a>
+            <a href="#/guide/ev-buying-guide" class="mega-item">
+              <span class="mega-item-icon">📋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Buying Guide</span>
+                <span class="mega-item-desc">Step-by-step purchase assistance.</span>
+              </span>
+            </a>
+            <a href="#/guide/home-charging" class="mega-item">
+              <span class="mega-item-icon">🏠</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Charging at Home</span>
+                <span class="mega-item-desc">Set up home charging safely.</span>
+              </span>
+            </a>
+            <a href="#/guide/fast-vs-slow" class="mega-item">
+              <span class="mega-item-icon">⚡</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Fast vs Slow Charging</span>
+                <span class="mega-item-desc">Understand charging speeds.</span>
+              </span>
+            </a>
+            <a href="#/guide/battery-warranty" class="mega-item">
+              <span class="mega-item-icon">🛡️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Battery Warranty</span>
+                <span class="mega-item-desc">Know battery warranty coverage.</span>
+              </span>
+            </a>
+            <a href="#/guide/government-subsidies" class="mega-item">
+              <span class="mega-item-icon">🏛️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Government Subsidies</span>
+                <span class="mega-item-desc">Central and state EV incentives.</span>
+              </span>
+            </a>
+            <a href="#/guide/running-cost" class="mega-item">
+              <span class="mega-item-icon">💰</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Running Cost</span>
+                <span class="mega-item-desc">Compare EV vs petrol costs.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="mega-col-title">Knowledge Centre</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/guide/learn-ev" class="mega-item">
+              <span class="mega-item-icon">🚗</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Learn EV</span>
+                <span class="mega-item-desc">Explore EV technology from basics.</span>
+              </span>
+            </a>
+            <a href="#/guide/ev-terminology" class="mega-item">
+              <span class="mega-item-icon">📖</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Terminology</span>
+                <span class="mega-item-desc">Common EV glossary and definitions.</span>
+              </span>
+            </a>
+            <a href="#/guide/battery-chemistry" class="mega-item">
+              <span class="mega-item-icon">🔋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Battery Chemistry</span>
+                <span class="mega-item-desc">Understand LFP, NMC and battery technology.</span>
+              </span>
+            </a>
+            <a href="#/guide/lfp-vs-nmc" class="mega-item">
+              <span class="mega-item-icon">🧪</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">LFP vs NMC</span>
+                <span class="mega-item-desc">Compare battery types and performance.</span>
+              </span>
+            </a>
+            <a href="#/guide/ac-vs-dc" class="mega-item">
+              <span class="mega-item-icon">🔌</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">AC vs DC Charging</span>
+                <span class="mega-item-desc">Know the difference between charging methods.</span>
+              </span>
+            </a>
+            <a href="#/guide/v2l" class="mega-item">
+              <span class="mega-item-icon">⚙️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Vehicle-to-Load (V2L)</span>
+                <span class="mega-item-desc">Power external devices directly from your EV.</span>
+              </span>
+            </a>
+            <a href="#/guide/regenerative-braking" class="mega-item">
+              <span class="mega-item-icon">♻️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Regenerative Braking</span>
+                <span class="mega-item-desc">Recover energy while slowing down.</span>
+              </span>
+            </a>
+            <a href="#/guide/highway-charging" class="mega-item">
+              <span class="mega-item-icon">🛣️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Highway Charging</span>
+                <span class="mega-item-desc">Plan charging stops for long-distance travel.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="mega-col-title">Resources</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/resources/apartment-noc-letter" class="mega-item">
+              <span class="mega-item-icon">📄</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Apartment NOC Letter Template</span>
+                <span class="mega-item-desc">Download pre-filled request templates for RWAs.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- News Panel -->
+    <div class="mega-panel hidden" id="mega-panel-insights">
+      <div class="px-8 py-8 grid grid-cols-3 gap-6">
+        <div>
+          <p class="mega-col-title">Market & News</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/insights/blogs" class="mega-item">
+              <span class="mega-item-icon">📝</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Blogs</span>
+                <span class="mega-item-desc">In-depth articles and EV stories.</span>
+              </span>
+            </a>
+            <a href="#/insights/ev-infrastructure-india" class="mega-item">
+              <span class="mega-item-icon">🔌</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Infrastructure in India</span>
+                <span class="mega-item-desc">Charging network and infrastructure developments.</span>
+              </span>
+            </a>
+            <a href="#/insights/government-policies" class="mega-item">
+              <span class="mega-item-icon">🏛️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Government Policies</span>
+                <span class="mega-item-desc">Subsidies, policies, regulations.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Guides & Education</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/insights/ev-charging-explained" class="mega-item">
+              <span class="mega-item-icon">⚡</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Charging Explained</span>
+                <span class="mega-item-desc">Everything about EV charging.</span>
+              </span>
+            </a>
+            <a href="#/insights/where-does-electricity-come-from" class="mega-item">
+              <span class="mega-item-icon">🏭</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Where Does Electricity Come From?</span>
+                <span class="mega-item-desc">Understanding the grid and energy sources.</span>
+              </span>
+            </a>
+            <a href="#/insights/renewable-energy-and-evs" class="mega-item">
+              <span class="mega-item-icon">☀️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Renewable Energy and EVs</span>
+                <span class="mega-item-desc">Synergies between solar and electric vehicles.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Companies</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="#/insights/companies-building-indias-network" class="mega-item">
+              <span class="mega-item-icon">🏗️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Companies Building India's Network</span>
+                <span class="mega-item-desc">Key players in India's charging infrastructure.</span>
+              </span>
+            </a>
+            <a href="#/insights/ev-cost-savings" class="mega-item">
+              <span class="mega-item-icon">💰</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Cost & Savings</span>
+                <span class="mega-item-desc">Total cost of ownership and financial analysis.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ===== MOBILE DRAWER ===== -->
+    <div id="mega-mobile-drawer" class="xl:hidden fixed inset-0 top-16 bg-white z-35 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out border-t border-zinc-200" style="z-index:39">
+      <div class="p-6 flex flex-col gap-0">
+
+        <a href="/" class="mobile-nav-link" data-close-drawer>HOME</a>
+
+        <!-- Discover EVs accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">DISCOVER EVs <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <a href="/popular-evs" class="mobile-sub-link" data-close-drawer>🚗 Popular Electric Cars</a>
+            <a href="/launches" class="mobile-sub-link" data-close-drawer>⚡ Latest EV Launches</a>
+            <a href="/upcoming" class="mobile-sub-link" data-close-drawer>🔮 Upcoming Electric Cars</a>
+            <a href="/browse" class="mobile-sub-link" data-close-drawer>🏷️ Browse by Brand</a>
+            
+            <a href="#/view-all/all" class="mobile-sub-link" data-close-drawer>📋 View All Cars</a>
+            <a href="/compare.html" class="mobile-sub-link" data-close-drawer>⚖️ Compare Cars</a>
+            
+            <a href="/popular-evs" class="mobile-sub-link" data-close-drawer>🕒 Recently Viewed</a>
+          </div>
+        </div>
+
+        <!-- Tools accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">TOOLS <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <a href="/trip-planner" class="mobile-sub-link" data-close-drawer>🗺️ EV Trip Planner</a>
+            <a href="#/hub/charging-time" class="mobile-sub-link" data-close-drawer>⏱️ EV Charging Time Calculator</a>
+            <a href="#/hub/emi-calculator" class="mobile-sub-link" data-close-drawer>💰 EMI Calculator</a>
+            <a href="#/hub/petrol-savings" class="mobile-sub-link" data-close-drawer>⛽ Petrol Savings Calculator</a>
+            <a href="/popular-evs" class="mobile-sub-link" data-close-drawer>💸 On-Road Price Calculator</a>
+            <a href="#/hub/charging-stations" class="mobile-sub-link" data-close-drawer>🔌 Charging Stations</a>
+            <a href="#/hub/apartment-charging" class="mobile-sub-link" data-close-drawer>🏢 Apartment Charging Guide</a>
+            <a href="#/guide/highway-charging" class="mobile-sub-link" data-close-drawer>🛣️ Highway Readiness Checker</a>
+            <a href="#/hub/battery-health" class="mobile-sub-link" data-close-drawer>🔋 Battery Health Guide</a>
+          </div>
+        </div>
+
+        <!-- Learn accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">LEARN <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <div class="px-1 py-2 font-mono text-[8px] text-zinc-400 uppercase tracking-wider">Buying Guide</div>
+            <a href="#/guide/everything-about-evs" class="mobile-sub-link" data-close-drawer>📘 Everything About EVs</a>
+            <a href="#/guide/ev-buying-guide" class="mobile-sub-link" data-close-drawer>📋 EV Buying Guide</a>
+            <a href="#/guide/charging-at-home" class="mobile-sub-link" data-close-drawer>🏠 Charging at Home</a>
+            <a href="#/guide/fast-vs-slow" class="mobile-sub-link" data-close-drawer>⚡ Fast vs Slow Charging</a>
+            <a href="#/guide/battery-warranty" class="mobile-sub-link" data-close-drawer>🛡️ Battery Warranty</a>
+            <a href="#/guide/government-subsidies" class="mobile-sub-link" data-close-drawer>🏛️ Government Subsidies</a>
+            <a href="#/guide/running-cost" class="mobile-sub-link" data-close-drawer>💰 Running Cost</a>
+            <div class="px-1 py-2 mt-2 font-mono text-[8px] text-zinc-400 uppercase tracking-wider border-t border-zinc-100">Knowledge Centre</div>
+            <a href="#/guide/learn-ev" class="mobile-sub-link" data-close-drawer>🚗 Learn EV</a>
+            <a href="#/guide/ev-terminology" class="mobile-sub-link" data-close-drawer>📖 EV Terminology</a>
+            <a href="#/guide/battery-chemistry" class="mobile-sub-link" data-close-drawer>🔋 Battery Chemistry</a>
+            <a href="#/guide/lfp-vs-nmc" class="mobile-sub-link" data-close-drawer>🧪 LFP vs NMC</a>
+            <a href="#/guide/ac-vs-dc" class="mobile-sub-link" data-close-drawer>🔌 AC vs DC Charging</a>
+            <a href="#/guide/v2l" class="mobile-sub-link" data-close-drawer>⚙️ Vehicle-to-Load (V2L)</a>
+            <a href="#/guide/regenerative-braking" class="mobile-sub-link" data-close-drawer>♻️ Regenerative Braking</a>
+            <a href="#/guide/highway-charging" class="mobile-sub-link" data-close-drawer>🛣️ Highway Charging</a>
+            <div class="px-1 py-2 mt-2 font-mono text-[8px] text-zinc-400 uppercase tracking-wider border-t border-zinc-100">Resources</div>
+            <a href="#/resources/apartment-noc-letter" class="mobile-sub-link" data-close-drawer>📄 Apartment NOC Letter Template</a>
+          </div>
+        </div>
+
+        <!-- Insights accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">INSIGHTS <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <a href="#/insights/latest-ev-news" class="mobile-sub-link" data-close-drawer>📰 Latest EV News</a>
+            <a href="#/insights/blogs" class="mobile-sub-link" data-close-drawer>📝 Blogs</a>
+            <a href="#/insights/ev-infrastructure-india" class="mobile-sub-link" data-close-drawer>🔌 EV Infrastructure in India</a>
+            <a href="#/insights/government-policies" class="mobile-sub-link" data-close-drawer>🏛️ Government Policies</a>
+            <a href="#/insights/ev-charging-explained" class="mobile-sub-link" data-close-drawer>⚡ EV Charging Explained</a>
+            <a href="#/insights/where-does-electricity-come-from" class="mobile-sub-link" data-close-drawer>🏭 Where Does Electricity Come From?</a>
+            <a href="#/insights/renewable-energy-and-evs" class="mobile-sub-link" data-close-drawer>☀️ Renewable Energy and EVs</a>
+            <a href="#/insights/companies-building-indias-network" class="mobile-sub-link" data-close-drawer>🏗️ Companies Building India's Network</a>
+            <a href="#/insights/ev-cost-savings" class="mobile-sub-link" data-close-drawer>💰 EV Cost & Savings</a>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="pt-4 border-t border-zinc-200 mt-2">
+          <button id="login-nav-btn-mobile" class="w-full py-3 font-mono text-[10px] tracking-wider border border-zinc-300 hover:border-black text-black hover:bg-black hover:text-white transition-all duration-300">LOGIN</button>
+        </div>
+        <!-- Mobile Profile (shown after login) -->
+        <div id="profile-container-mobile" class="hidden pt-4 border-t border-zinc-200 mt-2">
+          <a href="/profile" class="flex items-center gap-3 py-3 hover:opacity-80 transition-opacity">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 text-white flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <span class="font-mono text-[11px] text-zinc-700 font-medium">My Account</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <main class="min-h-screen bg-white text-black pt-28 pb-16 px-6 lg:px-12">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Hero -->
+      <div class="text-center mb-10">
+        <span class="font-mono text-[9px] text-zinc-500 tracking-[0.3em] uppercase block mb-3">INFRASTRUCTURE CORE</span>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Find EV Charging Stations</h1>
+        <p class="text-xs text-zinc-500 max-w-md mx-auto mt-3">Locate nearby AC and DC fast charging stations across India.</p>
+      </div>
+
+      <!-- Search + My Location -->
+      <div class="max-w-xl mx-auto mb-8 flex flex-col sm:flex-row gap-3">
+        <input type="text" id="station-search-input" placeholder="Search city, locality, or pincode..." class="flex-1 bg-white border border-zinc-200 text-sm p-3.5 text-zinc-800 outline-none focus:border-black transition-all rounded-lg placeholder-zinc-400">
+        <button id="btn-search" class="px-5 py-3.5 border border-zinc-800 hover:bg-black hover:text-white text-zinc-800 font-mono text-[9px] tracking-widest uppercase transition-all duration-300 rounded-lg whitespace-nowrap">
+          Search
+        </button>
+        <button id="btn-current-location" class="px-5 py-3.5 border border-zinc-300 hover:border-black hover:bg-black hover:text-white text-zinc-700 font-mono text-[9px] tracking-widest uppercase transition-all duration-300 rounded-lg whitespace-nowrap">
+          Use My Location
+        </button>
+      </div>
+
+      <!-- Filters -->
+      <div class="max-w-2xl mx-auto mb-8 flex flex-wrap items-center gap-3 justify-center select-none">
+        <span class="font-mono text-[8px] text-zinc-500 uppercase tracking-widest mr-1">Filter:</span>
+        <label class="flex items-center gap-1.5 cursor-pointer px-3 py-2 border border-zinc-200 rounded-lg hover:border-zinc-400 transition-colors text-[10px] font-mono">
+          <input type="checkbox" id="filter-ac" class="accent-black w-3.5 h-3.5 cursor-pointer">
+          <span>AC</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer px-3 py-2 border border-zinc-200 rounded-lg hover:border-zinc-400 transition-colors text-[10px] font-mono">
+          <input type="checkbox" id="filter-dc" class="accent-black w-3.5 h-3.5 cursor-pointer">
+          <span>DC Fast</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer px-3 py-2 border border-zinc-200 rounded-lg hover:border-zinc-400 transition-colors text-[10px] font-mono">
+          <input type="checkbox" id="filter-ccs2" class="accent-black w-3.5 h-3.5 cursor-pointer">
+          <span>CCS2</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer px-3 py-2 border border-zinc-200 rounded-lg hover:border-zinc-400 transition-colors text-[10px] font-mono">
+          <input type="checkbox" id="filter-type2" class="accent-black w-3.5 h-3.5 cursor-pointer">
+          <span>Type 2</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer px-3 py-2 border border-zinc-200 rounded-lg hover:border-zinc-400 transition-colors text-[10px] font-mono">
+          <input type="checkbox" id="filter-chademo" class="accent-black w-3.5 h-3.5 cursor-pointer">
+          <span>CHAdeMO</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer px-3 py-2 border border-green-300 rounded-lg hover:border-green-500 transition-colors text-[10px] font-mono">
+          <input type="checkbox" id="filter-open-now" class="accent-green-600 w-3.5 h-3.5 cursor-pointer">
+          <span>● Available Now</span>
+        </label>
+      </div>
+
+      <!-- Map + Station Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Left: Station Cards List -->
+        <div class="lg:col-span-5 border border-zinc-200 bg-zinc-50 p-6 flex flex-col gap-4 shadow-sm">
+          <div id="stations-list-container" class="flex flex-col gap-3 max-h-[600px] overflow-y-auto custom-scrollbar">
+            <div class="text-center py-12 text-zinc-400 font-mono text-[10px]">
+              <p class="text-lg mb-2">🔌</p>
+              <p>Enter a city name above to find charging stations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map -->
+        <div class="lg:col-span-7 border border-zinc-200 bg-zinc-50 relative min-h-[400px] flex items-center justify-center overflow-hidden shadow-sm">
+          <div id="map" class="w-full h-full absolute inset-0"></div>
+        </div>
+
+      </div>
+
+      <!-- Status Message -->
+      <div id="station-status" class="max-w-2xl mx-auto mt-6 text-center"></div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16 px-6 lg:px-12 text-left relative z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-zinc-800 pb-12">
+        <div class="flex flex-col gap-3 font-mono text-[10px] text-zinc-400">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1">MARKETPLACE</span>
+          <a href="index.html/popular-evs" class="hover:text-white transition-colors">Popular Electric Cars</a>
+          <a href="index.html/upcoming" class="hover:text-white transition-colors">Upcoming EVs</a>
+          <a href="/compare" class="hover:text-white transition-colors">Compare EVs</a>
+        </div>
+        <div class="flex flex-col gap-3 font-mono text-[10px] text-zinc-400">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1">RESOURCES</span>
+          <a href="index.html#news" class="hover:text-white transition-colors">Latest News</a>
+          <a href="/charging-stations" class="hover:text-white transition-colors">Charging Stations</a>
+        </div>
+        <div class="flex flex-col gap-3 font-mono text-[10px] text-zinc-400">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1">CORPORATE</span>
+          <a href="/about" class="hover:text-white transition-colors">About Us</a>
+          <a href="/contact" class="hover:text-white transition-colors">Contact Support</a>
+          <a href="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms-and-conditions" class="hover:text-white transition-colors">Terms & Conditions</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1 font-mono">NEWSLETTER</span>
+          <span class="font-bold tracking-tight text-white text-sm font-mono">Subscribe for latest EV updates</span>
+          <form id="newsletter-form" class="flex flex-col gap-2 mt-1">
+            <input type="email" id="footer-email-charging-stations-html" aria-label="Subscribe email address" placeholder="Type email address..." required class="bg-zinc-900 border border-zinc-700 text-xs p-2.5 text-white outline-none focus:border-white transition-all rounded-none placeholder-zinc-500 font-mono">
+            <button type="submit" class="px-4 py-2 bg-white text-black hover:bg-zinc-200 transition-colors font-mono text-[9px] tracking-widest uppercase font-semibold">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col items-center gap-6">
+        <div class="flex items-center justify-center gap-6 w-full pr-16 md:pr-0">
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" aria-label="X (Twitter)" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+        <div class="font-mono text-[9px] text-zinc-500 uppercase tracking-widest text-center pr-16 md:pr-0">
+          © 2026 EV Car Wale Group. No Colours. No Excuses.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal-test-drive" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-darkgray border border-zinc-800 w-full max-w-md p-8 relative font-mono text-xs text-zinc-300">
+      <button class="absolute top-4 right-4 text-zinc-500 hover:text-white text-base focus:outline-none modal-close-btn" aria-label="Close">×</button>
+      <div class="flex flex-col gap-2 mb-6">
+        <span class="text-[8px] text-zinc-500 uppercase tracking-super font-semibold">ACQUISITION STEP</span>
+        <h3 class="text-xl font-bold tracking-tight text-white uppercase">Book Test Drive</h3>
+      </div>
+      <form id="form-test-drive" class="flex flex-col gap-4 text-left">
+        <div class="flex flex-col gap-1">
+          <label for="td-car" class="text-zinc-500 text-[8px] uppercase tracking-wider">Select Electric Vehicle</label>
+          <select id="td-car" required class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all cursor-pointer"></select>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="td-name" class="text-zinc-500 text-[8px] uppercase tracking-wider">Full Name</label>
+          <input type="text" id="td-name" required placeholder="Full Name" class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all rounded-none placeholder-zinc-800">
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="td-phone" class="text-zinc-500 text-[8px] uppercase tracking-wider">Contact Phone</label>
+          <input type="tel" id="td-phone" required placeholder="Phone Number" class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all rounded-none placeholder-zinc-800">
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="td-date" class="text-zinc-500 text-[8px] uppercase tracking-wider">Preferred Date</label>
+          <input type="date" id="td-date" required class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all rounded-none">
+        </div>
+        <button type="submit" class="w-full py-3 bg-white text-black font-semibold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-colors mt-2">SCHEDULE DRIVE</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-search-overlay" class="fixed inset-0 bg-black/95 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <button class="absolute top-6 right-6 text-zinc-400 hover:text-white text-xl modal-close-btn" aria-label="Close">×</button>
+    <div class="w-full max-w-xl px-6 text-center">
+      <input type="text" id="global-search-input" placeholder="Search EV marketplace..." class="w-full bg-transparent border-b border-zinc-800 text-2xl py-4 text-white text-center outline-none focus:border-white transition-all placeholder-zinc-800">
+      <p class="font-mono text-[9px] text-zinc-500 uppercase tracking-widest mt-4">TYPE VEHICLE NAME, BRAND, OR RANGE CAPACITY</p>
+    </div>
+  </div>
+
+  <div id="modal-video-overlay" class="fixed inset-0 bg-black/90 backdrop-blur z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <button class="absolute top-6 right-6 text-zinc-400 hover:text-white text-xl modal-close-btn" aria-label="Close">×</button>
+    <div class="w-full max-w-3xl px-6 flex flex-col gap-4">
+      <h3 id="video-modal-title" class="font-bold text-base text-zinc-300 tracking-wider">Play video</h3>
+      <div class="aspect-video w-full border border-zinc-800 bg-black">
+        <iframe id="video-modal-iframe" class="w-full h-full" src="index.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-info-reader" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-darkgray border border-zinc-800 w-full max-w-md p-8 relative font-mono text-xs text-zinc-300">
+      <button class="absolute top-4 right-4 text-zinc-500 hover:text-white text-base modal-close-btn" aria-label="Close">×</button>
+      <span class="text-[8px] text-zinc-500 uppercase tracking-widest font-semibold block mb-2">INFORMATION LOG</span>
+      <p id="info-reader-text" class="text-zinc-200 leading-relaxed text-[11px] mb-4 pt-3 border-t border-zinc-900"></p>
+      <button class="px-5 py-2 border border-zinc-800 hover:border-white text-zinc-400 hover:text-white transition-colors modal-close-btn uppercase text-[9px] tracking-widest">CLOSE LOG</button>
+    </div>
+  </div>
+
+  <!-- AI Assistant -->
+  <div id="ai-overlay" class="ai-overlay"></div>
+  <div class="ai-assistant-container">
+    <div class="ai-trigger" id="ai-trigger">
+      <div class="ai-avatar-wrapper ai-float-anim">
+        <div class="ai-avatar-glow"></div>
+        <img src="/ai_robot_avatar.png" alt="EV AI Assistant" class="ai-avatar-img" loading="lazy">
+      </div>
+      <div class="ai-label" id="ai-label">Ask EV AI</div>
+    </div>
+    <div class="ai-chat-window" id="ai-chat-window">
+      <div class="ai-chat-header">
+        <div class="ai-chat-header-left">
+          <img src="/ai_robot_avatar.png" alt="AI" class="ai-chat-avatar" loading="lazy">
+          <div>
+            <div class="ai-chat-title">EV AI Assistant</div>
+            <div class="ai-chat-status"><span class="ai-status-dot"></span> Online</div>
+          </div>
+        </div>
+        <button class="ai-chat-close" id="ai-chat-close" aria-label="Close chat">&#x2715;</button>
+      </div>
+      <div class="ai-chat-body" id="ai-chat-body">
+        <div class="ai-message ai-bot-message" style="white-space:pre-line">
+Hi! 👋 I'm your EV AI Assistant.
+
+Ask me anything about:
+
+• Electric Vehicles
+• Charging
+• Battery Health
+• EV Costs
+• Government Policies
+• EV Buying
+• Range
+• Comparisons
+• Charging Stations
+        </div>
+        <div class="ai-suggestions">
+          <button class="ai-chip">Best EV under ₹15 lakh</button>
+          <button class="ai-chip">Charging cost</button>
+          <button class="ai-chip">Battery lifespan</button>
+          <button class="ai-chip">Compare Tata vs MG</button>
+          <button class="ai-chip">Government subsidy</button>
+          <button class="ai-chip">Charging stations near me</button>
+        </div>
+      </div>
+      <div class="ai-chat-input-area">
+        <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Ask anything about EVs..." autocomplete="off">
+        <button class="ai-send-btn" id="ai-send-btn" aria-label="Send message">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/ai-assistant.js"></script>
+  <script src="/auth-helper.js"></script>
+  <script src="/app.js"></script>
+  <script src="/videoIntegration.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.VideoIntegration) {
+        VideoIntegration.loadVideos('featured-videos-grid', '', {
+          skeletonCount: 3,
+          limit: 3,
+          onAfterRender: function () {
+            var container = document.getElementById('view-all-videos-container');
+            if (!container || container.querySelector('a')) return;
+            var link = document.createElement('a');
+            link.href = '/videos.html';
+            link.className = 'inline-flex items-center gap-2 px-8 py-4 font-mono text-[11px] tracking-[0.2em] uppercase border-2 border-[#22C55E] text-[#22C55E] hover:bg-[#22C55E] hover:text-white rounded-full transition-all duration-300 group';
+            link.innerHTML = 'View All Videos <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>';
+            container.appendChild(link);
+          }
+        });
+      }
+    });
+  </script>
+  <script>
+    function getNativeLabel(langCode) {
+      var labels = { en:'English', hi:'हिन्दी', kn:'ಕನ್ನಡ', ml:'മലയാളം', te:'తెలుగు', ta:'தமிழ்' };
+      return labels[langCode] || langCode.toUpperCase();
+    }
+    function changeLanguage(langCode) {
+      const customLabel = document.getElementById('custom-lang-label');
+      const SPINNER_HTML = '<svg class="w-3.5 h-3.5 animate-spin text-current inline-block align-middle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>';
+      if (customLabel && langCode !== 'en') {
+        customLabel.innerHTML = SPINNER_HTML;
+      } else if (customLabel) {
+        customLabel.textContent = getNativeLabel(langCode);
+      }
+      document.querySelectorAll('#custom-lang-menu .lang-option').forEach(function(o) {
+        o.classList.toggle('active', o.getAttribute('data-lang') === langCode);
+      });
+      document.getElementById('custom-lang-menu').classList.remove('open');
+      document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      document.cookie = 'googtrans=; path=/; domain=' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      document.cookie = 'googtrans=; path=/; domain=.' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      const hostParts = window.location.hostname.split('.');
+      if (hostParts.length > 2) {
+        const rootDomain = hostParts.slice(-2).join('.');
+        document.cookie = 'googtrans=; path=/; domain=' + rootDomain + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+        document.cookie = 'googtrans=; path=/; domain=.' + rootDomain + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      }
+      if (window.TranslationEngine) {
+        window.TranslationEngine.setLanguage(langCode);
+      } else {
+        localStorage.setItem('evcarwale_language', JSON.stringify({ lang: langCode, text: getNativeLabel(langCode) }));
+        location.reload();
+      }
+    }
+    document.getElementById('custom-lang-btn').addEventListener('click', function (e) {
+      e.stopPropagation();
+      document.getElementById('custom-lang-menu').classList.toggle('open');
+    });
+    document.querySelectorAll('.lang-option').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        changeLanguage(this.getAttribute('data-lang'));
+      });
+    });
+    document.addEventListener('click', function () {
+      document.getElementById('custom-lang-menu').classList.remove('open');
+    });
+  </script>
+  <script>
+    (function initCompare() {
+      function run() {
+        if (typeof loadDatabase !== 'function') return;
+        loadDatabase().then(function() {
+          if (typeof populateCompareDropdowns === 'function') populateCompareDropdowns();
+          if (typeof updateCompareTable === 'function') updateCompareTable();
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
+      }
+    })();
+  </script>
+  <script>
+    (function initChargingStations() {
+      function run() {
+        if (typeof loadDatabase !== 'function') return;
+        var mapEl = document.getElementById('map');
+        var container = document.getElementById('stations-list-container');
+        var searchInput = document.getElementById('station-search-input');
+        var btnSearch = document.getElementById('btn-search');
+        var btnLocation = document.getElementById('btn-current-location');
+        var filterAc = document.getElementById('filter-ac');
+        var filterDc = document.getElementById('filter-dc');
+        var filterCcs2 = document.getElementById('filter-ccs2');
+        var filterType2 = document.getElementById('filter-type2');
+        var filterChademo = document.getElementById('filter-chademo');
+        var filterOpenNow = document.getElementById('filter-open-now');
+        var statusEl = document.getElementById('station-status');
+
+        if (!mapEl || !container || !searchInput) return;
+
+        // Initialize Leaflet map
+        var chargerMap = null;
+        var chargerMarkersGroup = null;
+        
+        try {
+          chargerMap = L.map('map', { zoomControl: false }).setView([20.5937, 78.9629], 5);
+          L.control.zoom({ position: 'bottomright' }).addTo(chargerMap);
+          L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+          }).addTo(chargerMap);
+          chargerMarkersGroup = L.layerGroup().addTo(chargerMap);
+        } catch (e) {
+          console.error('[Charging] Map init failed:', e);
+        }
+
+        function showStatus(msg, isError) {
+          if (statusEl) statusEl.innerHTML = '<span class="font-mono text-[10px] ' + (isError ? 'text-red-600' : 'text-zinc-500') + '">' + msg + '</span>';
+        }
+
+        function showEmptyState() {
+          container.innerHTML = '<div class="text-center py-12 text-zinc-400 font-mono text-[10px]"><p class="text-lg mb-2">🔌</p><p>Enter a city name above to find charging stations.</p></div>';
+        }
+
+        function getCacheKey(query, lat, lng) {
+          return 'cs_' + (query || '') + '_' + (lat || '') + '_' + (lng || '');
+        }
+
+        function getCached(key) {
+          try {
+            var raw = sessionStorage.getItem(key);
+            if (!raw) return null;
+            var entry = JSON.parse(raw);
+            if (Date.now() - entry.ts < 900000) return entry.data;
+            sessionStorage.removeItem(key);
+          } catch (e) {}
+          return null;
+        }
+
+        function setCached(key, data) {
+          try {
+            sessionStorage.setItem(key, JSON.stringify({ ts: Date.now(), data: data }));
+          } catch (e) {}
+        }
+
+        async function searchChargingStations(query, lat, lng) {
+          container.innerHTML = '<div class="text-center py-8 text-zinc-600 font-mono text-[10px] animate-pulse">SEARCHING...</div>';
+          showStatus('');
+
+          var cacheKey = getCacheKey(query, lat, lng);
+          var cached = getCached(cacheKey);
+          if (cached) {
+            renderStations(cached.results, cached.lat, cached.lng, cached.placeCount, true);
+            showStatus('Showing cached results from last search.');
+            return;
+          }
+
+          await loadDatabase();
+
+          var searchLat = lat, searchLng = lng;
+          if (!searchLat && query) {
+            var coords = window.CITY_COORDS && CITY_COORDS[query.toLowerCase().trim()];
+            if (coords) {
+              searchLat = parseFloat(coords.lat);
+              searchLng = parseFloat(coords.lng);
+            }
+          }
+          if (!searchLat) {
+            searchLat = 19.0760;
+            searchLng = 72.8777;
+          }
+
+          var scriptTag = document.querySelector('script[src*="maps/api/js"]');
+          var apiKey = scriptTag ? new URL(scriptTag.src).searchParams.get('key') : '';
+          if (apiKey && (apiKey === '__GOOGLE_MAPS_API_KEY__' || apiKey.indexOf('__') !== -1)) {
+            apiKey = '';
+          }
+
+          if (!apiKey) {
+            // Fallback: use static database
+            renderStaticResults(query);
+            return;
+          }
+
+          try {
+            var searchQuery = query ? query + ' EV charging station' : 'EV charging station in India';
+            var body = {
+              textQuery: searchQuery,
+              maxResultCount: 20,
+              locationBias: {
+                circle: {
+                  center: { latitude: searchLat, longitude: searchLng },
+                  radius: 50000
+                }
+              }
+            };
+
+            var url = 'https://places.googleapis.com/v1/places:searchText';
+            var res = await fetch(url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-Goog-Api-Key': apiKey,
+                'X-Goog-FieldMask': 'places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.types,places.currentOpeningHours,places.nationalPhoneNumber,places.websiteUri'
+              },
+              body: JSON.stringify(body)
+            });
+
+            var data = await res.json();
+            if (data.error) {
+              renderStaticResults(query);
+              return;
+            }
+
+            var places = data.places || [];
+            setCached(cacheKey, { results: places, lat: searchLat, lng: searchLng, placeCount: places.length, ts: Date.now() });
+            renderStations(places, searchLat, searchLng, places.length, false);
+            showStatus('Found ' + places.length + ' charging stations' + (query ? ' in ' + query : ''));
+          } catch (e) {
+            console.error('[Charging] API error:', e);
+            renderStaticResults(query);
+          }
+        }
+
+        function renderStaticResults(query) {
+          var staticDb = window.STATIONS_DATABASE || [];
+          var matched = staticDb.filter(function(s) {
+            return !query || s.city.indexOf(query.toLowerCase().trim()) !== -1;
+          });
+          if (matched.length === 0) {
+            container.innerHTML = '<div class="text-center py-8 text-zinc-500 font-mono text-[10px]">No charging stations found. Try a different city.</div>';
+            return;
+          }
+          renderStationCards(matched, true);
+          showStatus('Showing static database results.');
+          if (chargerMap && chargerMarkersGroup) {
+            chargerMarkersGroup.clearLayers();
+            var coords = window.CITY_COORDS && CITY_COORDS[query.toLowerCase().trim()];
+            if (coords) chargerMap.setView([parseFloat(coords.lat), parseFloat(coords.lng)], 10);
+          }
+        }
+
+        function renderStations(places, lat, lng, count, isCached) {
+          if (!places || places.length === 0) {
+            container.innerHTML = '<div class="text-center py-8 text-zinc-500 font-mono text-[10px]">No charging stations found. Try a different search.</div>';
+            return;
+          }
+
+          var list = [];
+          for (var i = 0; i < places.length; i++) {
+            var p = places[i];
+            var name = (p.displayName && p.displayName.text) || 'Station';
+            var address = p.formattedAddress || '';
+            var rating = p.rating || null;
+            var ratingsCount = p.userRatingCount || 0;
+            var openNow = p.currentOpeningHours ? p.currentOpeningHours.openNow : null;
+            var phone = p.nationalPhoneNumber || null;
+            var website = p.websiteUri || null;
+            var pLat = p.location && p.location.latitude;
+            var pLng = p.location && p.location.longitude;
+            var types = p.types || [];
+
+            var connectorTypes = [];
+            if (types.indexOf('electric_vehicle_charging_station') !== -1) connectorTypes.push('EV Charger');
+            types.forEach(function(t) {
+              if (t.indexOf('ev_') === 0 || t.indexOf('charging') !== -1) connectorTypes.push(t);
+            });
+
+            list.push({
+              name: name,
+              address: address,
+              lat: pLat,
+              lng: pLng,
+              rating: rating,
+              ratingsCount: ratingsCount,
+              openNow: openNow,
+              phone: phone,
+              website: website,
+              types: types,
+              connectors: connectorTypes.length > 0 ? connectorTypes.join(', ') : ''
+            });
+          }
+
+          renderStationCards(list, false);
+
+          if (chargerMap && chargerMarkersGroup) {
+            chargerMarkersGroup.clearLayers();
+            var lats = [], lngs = [];
+            list.forEach(function(s) {
+              if (s.lat && s.lng) {
+                lats.push(s.lat);
+                lngs.push(s.lng);
+                L.marker([s.lat, s.lng])
+                  .bindPopup('<div class="font-mono text-[10px]"><strong>' + s.name + '</strong><br>' + s.address + '</div>', { maxWidth: 220 })
+                  .addTo(chargerMarkersGroup);
+              }
+            });
+            if (lats.length > 0) {
+              var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
+              var minLng = Math.min.apply(null, lngs), maxLng = Math.max.apply(null, lngs);
+              chargerMap.fitBounds([[minLat - 0.1, minLng - 0.1], [maxLat + 0.1, maxLng + 0.1]]);
+            }
+          }
+        }
+
+        function renderStationCards(stations, isStatic) {
+          container.innerHTML = '';
+          stations.forEach(function(s, idx) {
+            var item = document.createElement('div');
+            item.className = 'border-b border-zinc-200 pb-4 pt-2 text-left font-mono text-[10px]';
+
+            var ratingText = '';
+            if (s.rating) {
+              var stars = '';
+              for (var si = 0; si < Math.round(s.rating); si++) stars += '★';
+              ratingText = '<span class="text-amber-600 text-[10px]">' + stars + ' ' + s.rating.toFixed(1) + '</span>';
+              if (s.ratingsCount) ratingText += ' <span class="text-zinc-400">(' + s.ratingsCount + ')</span>';
+            }
+
+            var openHtml = '';
+            if (s.openNow === true) openHtml = '<span class="text-[9px] text-green-700 font-bold">● OPEN NOW</span>';
+            else if (s.openNow === false) openHtml = '<span class="text-[9px] text-red-600">● CLOSED</span>';
+
+            var phoneHtml = s.phone ? '<a href="tel:' + s.phone + '" class="text-blue-600 hover:underline text-[10px] block">' + s.phone + '</a>' : '';
+            var connectorHtml = s.connectors ? '<span class="text-[9px] text-zinc-500 block mt-1">' + s.connectors + '</span>' : '';
+
+            var directionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + (s.lat || '') + ',' + (s.lng || '');
+            var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.name + ' ' + s.address);
+
+            item.innerHTML =
+              '<div class="flex items-start justify-between gap-2">' +
+                '<div class="flex-1 min-w-0">' +
+                  '<h4 class="font-bold text-zinc-800 text-[11px] truncate">' + s.name + '</h4>' +
+                  '<p class="text-zinc-500 text-[9px] mt-0.5 truncate">' + s.address + '</p>' +
+                '</div>' +
+                '<div class="flex-shrink-0">' + openHtml + '</div>' +
+              '</div>' +
+              '<div class="flex items-center gap-2 mt-1.5 flex-wrap">' +
+                ratingText +
+                connectorHtml +
+              '</div>' +
+              phoneHtml +
+              '<div class="flex items-center gap-3 mt-2">' +
+                '<a href="' + directionsUrl + '" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-[11px] font-medium">Directions</a>' +
+                '<a href="' + mapsUrl + '" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-[11px] font-medium">View on Maps</a>' +
+              '</div>';
+            container.appendChild(item);
+          });
+        }
+
+        // Search handlers
+        var debounceTimer = null;
+        searchInput.addEventListener('input', function() {
+          if (debounceTimer) clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(function() {
+            var val = searchInput.value.trim();
+            if (val) {
+              searchChargingStations(val, null, null);
+            } else {
+              showEmptyState();
+              if (chargerMarkersGroup) chargerMarkersGroup.clearLayers();
+              if (chargerMap) chargerMap.setView([20.5937, 78.9629], 5);
+              showStatus('');
+            }
+          }, 400);
+        });
+
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            if (debounceTimer) clearTimeout(debounceTimer);
+            var val = searchInput.value.trim();
+            if (val) searchChargingStations(val, null, null);
+          }
+        });
+
+        // Search button
+        if (btnSearch) {
+          btnSearch.addEventListener('click', function() {
+            var val = searchInput.value.trim();
+            if (val) {
+              if (debounceTimer) clearTimeout(debounceTimer);
+              searchChargingStations(val, null, null);
+            }
+          });
+        }
+
+        // Use My Current Location
+        if (btnLocation) {
+          btnLocation.addEventListener('click', function() {
+            if (!navigator.geolocation) {
+              showStatus('Geolocation is not supported by your browser.', true);
+              return;
+            }
+            showStatus('Getting your location...');
+            btnLocation.textContent = 'Locating...';
+            navigator.geolocation.getCurrentPosition(
+              function(pos) {
+                btnLocation.textContent = 'Use My Location';
+                var lat = pos.coords.latitude;
+                var lng = pos.coords.longitude;
+                if (chargerMap) chargerMap.setView([lat, lng], 12);
+                searchChargingStations('', lat, lng);
+              },
+              function(err) {
+                btnLocation.textContent = 'Use My Location';
+                showStatus('Could not get location: ' + err.message, true);
+              },
+              { enableHighAccuracy: true, timeout: 10000 }
+            );
+          });
+        }
+
+        // Filter handlers
+        function applyFilters() {
+          var cards = container.querySelectorAll('.border-b');
+          var showAc = filterAc ? filterAc.checked : true;
+          var showDc = filterDc ? filterDc.checked : true;
+          var showOpen = filterOpenNow ? filterOpenNow.checked : false;
+
+          cards.forEach(function(card) {
+            var isOpen = card.querySelector('.text-green-700');
+            var isAc = card.textContent.indexOf('AC') !== -1;
+            var isDc = card.textContent.indexOf('DC') !== -1 || card.textContent.indexOf('Fast') !== -1;
+
+            var show = true;
+            if (!showAc && isAc) show = false;
+            if (!showDc && isDc) show = false;
+            if (showOpen && !isOpen) show = false;
+
+            card.style.display = show ? '' : 'none';
+          });
+        }
+
+        if (filterAc) filterAc.addEventListener('change', applyFilters);
+        if (filterDc) filterDc.addEventListener('change', applyFilters);
+        if (filterCcs2) filterCcs2.addEventListener('change', applyFilters);
+        if (filterType2) filterType2.addEventListener('change', applyFilters);
+        if (filterChademo) filterChademo.addEventListener('change', applyFilters);
+        if (filterOpenNow) filterOpenNow.addEventListener('change', applyFilters);
+
+        showEmptyState();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
+      }
+    })();
+  </script>
+</body>
+</html>

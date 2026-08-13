@@ -1,0 +1,9 @@
+{
+  "embeddings": [
+    { "term": "routing", "path": "project-brain/memory/routing.md" },
+    { "term": "calculator", "path": "project-brain/memory/overview.md" },
+    { "term": "styling", "path": "project-brain/memory/frontend.md" },
+    { "term": "database", "path": "project-brain/memory/database.md" },
+    { "term": "pdf", "path": "project-brain/memory/api.md" }
+  ]
+}

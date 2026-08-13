@@ -1,0 +1,5 @@
+[
+  { "id": "index.html", "label": "HTML Host Entry" },
+  { "id": "app.js", "label": "JavaScript Controller Logic" },
+  { "id": "style.css", "label": "CSS Styling Rules" }
+]

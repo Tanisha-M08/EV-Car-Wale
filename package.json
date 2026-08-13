@@ -1,0 +1,31 @@
+{
+  "name": "evcarwale",
+  "version": "1.0.0",
+  "description": "India's Smart Electric Vehicle Marketplace",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "backend": "node backend/src/server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1079.0",
+    "@aws-sdk/client-s3": "^3.1079.0",
+    "@aws-sdk/client-translate": "^3.1090.0",
+    "@aws-sdk/lib-dynamodb": "^3.1079.0",
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.18.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "firebase": "^12.15.0",
+    "firebase-admin": "^13.6.0",
+    "graphql-request": "^7.4.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "light-my-request": "^6.6.0"
+  }
+}

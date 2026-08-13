@@ -1,0 +1,30 @@
+{
+  "name": "@evcarwale/seo-generator-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda function (Node.js 22) for EV Car Wale that scans site HTML pages, generates sitemap.xml, robots.txt, canonical links, OpenGraph tags, Twitter meta tags, and JSON-LD structured schemas.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node -e \"require('./index').handler({ localPath: '../../../' }).then(res => console.log(JSON.stringify(res, null, 2))).catch(console.error)\""
+  },
+  "keywords": [
+    "aws-lambda",
+    "nodejs22",
+    "seo",
+    "sitemap",
+    "robots-txt",
+    "json-ld",
+    "opengraph",
+    "canonical-urls",
+    "evcarwale"
+  ],
+  "author": "EV Car Wale Team",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.500.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+[
+  { "id": "e1", "source": "index.html", "target": "app.js", "type": "loads" },
+  { "id": "e2", "source": "index.html", "target": "style.css", "type": "links" },
+  { "id": "e3", "source": "app.js", "target": "index.html", "type": "manipulates" }
+]

@@ -1,0 +1,68 @@
+{
+  "vehicles": [
+    {
+      "id": "tata-nexon",
+      "name": "Nexon.ev",
+      "brand": "tata",
+      "image": "NEXON.jpeg",
+      "variants": [
+        {
+          "name": "Smart",
+          "price": "₹7.90 Lakh",
+          "battery": "30.2 kWh",
+          "range": "312 km",
+          "realRange": "285 km",
+          "acCharge": "7.2 kW (5 hrs)",
+          "dcCharge": "30 kW (30 min)",
+          "power": "81 PS",
+          "torque": "140 Nm",
+          "drivetrain": "RWD",
+          "features": "LED Headlights, Connected Car",
+          "images": [
+            "NEXON.jpeg"
+          ]
+        },
+        {
+          "name": "Creative",
+          "price": "₹8.90 Lakh",
+          "battery": "30.2 kWh",
+          "range": "312 km",
+          "realRange": "295 km",
+          "acCharge": "7.2 kW (5 hrs)",
+          "dcCharge": "30 kW (30 min)",
+          "power": "115 PS",
+          "torque": "170 Nm",
+          "drivetrain": "RWD",
+          "features": "Panoramic Sunroof, 7‑inch Infotainment",
+          "images": [
+            "NEXON.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tata-punch",
+      "name": "Punch.ev",
+      "brand": "tata",
+      "image": "PUNCH.jpeg",
+      "variants": [
+        {
+          "name": "Smart",
+          "price": "₹7.30 Lakh",
+          "battery": "24.0 kWh",
+          "range": "295 km",
+          "realRange": "275 km",
+          "acCharge": "7.2 kW (4 hrs)",
+          "dcCharge": "30 kW (28 min)",
+          "power": "81 PS",
+          "torque": "140 Nm",
+          "drivetrain": "RWD",
+          "features": "LED DRL, Android Auto",
+          "images": [
+            "PUNCH.jpeg"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVHNJRQTPN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VVHNJRQTPN');
+</script>
+  <script>window.location.replace('/#/view-all/all');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All EVs - EV Car Wale</title>
+  <meta name="description" content="Browse all electric vehicles in India. Search, filter by brand, and sort by price, range, or battery capacity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purewhite: '#FFFFFF',
+            black: '#000000',
+            darkgray: '#1E1E1E',
+            medgray: '#555555',
+            lightgray: '#F5F5F5',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai-assistant.css">
+  <style>
+    .skeleton-shimmer {
+      background: linear-gradient(90deg, #f5f5f5 25%, #e8e8e8 50%, #f5f5f5 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .car-card {
+      transition: all 0.3s ease;
+    }
+    .car-card:hover {
+      border-color: #000;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    .filter-chip {
+      transition: all 0.2s ease;
+    }
+    .filter-chip.active {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+    #brand-filter option {
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      font-size: 10px;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/tab_logo.png">
+  <link rel="shortcut icon" type="image/png" href="/tab_logo.png">
+  <link rel="canonical" href="https://www.evcarwale.com/all-cars" />
+  <meta property="og:site_name" content="EV Car Wale" />
+  <meta property="og:title" content="All Electric Cars in India (2026) - EV Models, Specs & Prices" />
+  <meta property="og:description" content="Browse all electric cars currently on sale and upcoming EV launches in India. Filter by budget, range, brand, and body style." />
+  <meta property="og:url" content="https://www.evcarwale.com/all-cars" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="All Electric Cars in India (2026) - EV Models, Specs & Prices" />
+  <meta name="twitter:description" content="Browse all electric cars currently on sale and upcoming EV launches in India. Filter by budget, range, brand, and body style." />
+  <meta name="twitter:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "All Electric Cars in India (2026) - EV Models, Specs & Prices",
+  "description": "Browse all electric cars currently on sale and upcoming EV launches in India. Filter by budget, range, brand, and body style.",
+  "url": "https://www.evcarwale.com/all-cars"
+}
+  </script>
+</head>
+<body class="bg-white text-black font-sans overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-zinc-200 px-6 lg:px-12" style="font-family:'Poppins',sans-serif;">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
+      <a href="/" class="font-bold tracking-widest text-sm flex items-center gap-2 group text-black flex-shrink-0">
+        <img src="/nav%20bar%20logo.png" alt="Logo" class="h-6 w-auto object-contain flex-shrink-0" style="height: 24px;">
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="font-mono text-[10px] tracking-wider text-zinc-500 hover:text-black transition-colors">HOME</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="max-w-7xl mx-auto px-6 py-10 lg:py-14">
+
+    <!-- Header -->
+    <div class="mb-10">
+      <span class="font-mono text-[9px] text-zinc-400 uppercase tracking-widest">COMPLETE DATABASE</span>
+      <h1 class="text-3xl lg:text-4xl font-black tracking-tight text-black mt-1">All Electric Vehicles</h1>
+      <p class="text-sm text-zinc-500 font-mono mt-2">Browse, search, and compare every EV available in India.</p>
+    </div>
+
+    <!-- Filters Bar -->
+    <div class="flex flex-col lg:flex-row gap-4 mb-8 p-5 border border-zinc-200 rounded-2xl bg-white">
+      <!-- Search -->
+      <div class="flex-1 relative">
+        <input type="text" id="search-input" placeholder="Search by name, brand, or keyword..." class="w-full px-4 py-3 pl-10 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-800 outline-none focus:border-black transition-colors placeholder-zinc-300">
+        <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-zinc-400 fill-none stroke-[1.5] absolute left-3 top-1/2 -translate-y-1/2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <!-- Brand Filter -->
+      <select id="brand-filter" class="px-4 py-3 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-600 outline-none focus:border-black transition-colors bg-white min-w-[160px]">
+        <option value="all">All Brands</option>
+      </select>
+      <!-- Sort -->
+      <select id="sort-select" class="px-4 py-3 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-600 outline-none focus:border-black transition-colors bg-white min-w-[180px]">
+        <option value="default">Default Order</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="range-desc">Range: High to Low</option>
+        <option value="battery-desc">Battery: High to Low</option>
+      </select>
+    </div>
+
+    <!-- Results Count -->
+    <div class="flex items-center justify-between mb-6">
+      <span id="results-count" class="font-mono text-[10px] text-zinc-500 uppercase tracking-wider"></span>
+    </div>
+
+    <!-- Car Grid -->
+    <div id="car-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+    </div>
+
+    <!-- No Results -->
+    <div id="no-results" class="hidden text-center py-20">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-zinc-100 flex items-center justify-center">
+        <svg viewBox="0 0 24 24" class="w-6 h-6 stroke-zinc-300 fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <p class="font-mono text-[10px] text-zinc-400">No vehicles match your search.</p>
+      <p class="font-mono text-[9px] text-zinc-300 mt-1">Try adjusting your filters.</p>
+    </div>
+
+  </div>
+
+  <script>
+    const EV_DATABASE = [
+            {id:'jimny-ev',name:'Jimny EV',brand:'maruti',priceVal:18.00,price:'₹18.00 Lakh',rangeVal:350,range:'350 km',battery:'60 kWh',charging:'50 min (DC)',speed:'130 km/h',power:'156 hp',safety:'4 Stars (Expected)',features:'Dual-motor AllGrip AWD electric terrain system, boxy ladder-frame chassis layout',dimensions:'3985 x 1645 x 1720 mm',image:'car_images/MARUTI_SUZUKI/jimny.png'},
+      {id:'nexon-ev',name:'Nexon EV',brand:'tata',priceVal:14.50,price:'₹14.50 Lakh',rangeVal:465,range:'465 km',battery:'40.5 kWh',charging:'56 min (DC)',speed:'150 km/h',power:'143 hp',safety:'5 Stars (BNCAP)',features:'Ventilated seats, 12.3-inch screen, V2L capability',dimensions:'3994 x 1811 x 1616 mm',image:'tata_nexon_ev.jpeg'},
+      {id:'xuv400',name:'XUV400',brand:'mahindra',priceVal:15.49,price:'₹15.49 Lakh',rangeVal:456,range:'456 km',battery:'39.4 kWh',charging:'50 min (DC)',speed:'160 km/h',power:'150 hp',safety:'5 Stars (Expected)',features:'Single pane sunroof, Drive modes, 10.25-inch touchscreen',dimensions:'4200 x 1821 x 1634 mm',image:'mahindra_XUV_400.jpg'},
+      {id:'punch-ev',name:'Punch EV',brand:'tata',priceVal:10.99,price:'₹10.99 Lakh',rangeVal:421,range:'421 km',battery:'35 kWh',charging:'56 min (DC)',speed:'140 km/h',power:'122 hp',safety:'5 Stars (BNCAP)',features:'Electronic parking brake, Sunroof, Paddle shifters for regeneration',dimensions:'3827 x 1742 x 1615 mm',image:'tata_punch_ev.jpg'},
+      {id:'windsor-ev',name:'Windsor EV',brand:'mg',priceVal:13.50,price:'₹13.50 Lakh',rangeVal:331,range:'331 km',battery:'38 kWh',charging:'40 min (DC)',speed:'140 km/h',power:'136 hp',safety:'5 Stars (Expected)',features:'Aero Lounge seats, 15.6-inch Grand View touch, Smart connection',dimensions:'4295 x 1850 x 1677 mm',image:'MG_windsor_EV.jpeg'},
+      {id:'ioniq-5',name:'Ioniq 5',brand:'hyundai',priceVal:46.05,price:'₹46.05 Lakh',rangeVal:631,range:'631 km',battery:'72.6 kWh',charging:'18 min (DC)',speed:'185 km/h',power:'217 hp',safety:'5 Stars (Euro NCAP)',features:'Dual screens, Relaxion seats, V2L, Premium Bose Sound',dimensions:'4635 x 1890 x 1605 mm',image:'hyundai_ioniq5.jpeg'},
+      {id:'byd-seal',name:'BYD Seal',brand:'byd',priceVal:41.00,price:'₹41.00 Lakh',rangeVal:650,range:'650 km',battery:'82.5 kWh',charging:'26 min (DC)',speed:'240 km/h',power:'530 hp',safety:'5 Stars (Euro NCAP)',features:'Rotating screen, Cell-to-body tech, Head-up display',dimensions:'4800 x 1875 x 1460 mm',image:'byd_seal.jpeg'},
+      {id:'ev6',name:'Kia EV6',brand:'kia',priceVal:49.00,price:'₹49.00 Lakh',rangeVal:708,range:'708 km',battery:'77.4 kWh',charging:'18 min (DC)',speed:'192 km/h',power:'325 hp',safety:'5 Stars (Euro NCAP)',features:'Augmented reality HUD, Sunroof, Meridian Audio',dimensions:'4695 x 1890 x 1550 mm',image:'kia_ev6.jpeg'},
+      {id:'harrier-ev',name:'Harrier EV',brand:'tata',priceVal:22.00,price:'₹22.00 Lakh',rangeVal:500,range:'500 km',battery:'60 kWh',charging:'45 min (DC)',speed:'170 km/h',power:'218 hp',safety:'5 Stars (Expected)',features:'AWD option, V2L & V2V charging, 12.3-inch infotainment',dimensions:'4605 x 1922 x 1718 mm',image:'tata_harrier_ev.jpg'},
+      {id:'be6',name:'BE6',brand:'mahindra',priceVal:24.00,price:'₹24.00 Lakh',rangeVal:450,range:'450 km',battery:'60 kWh',charging:'30 min (DC)',speed:'180 km/h',power:'280 hp',safety:'5 Stars (Expected)',features:'Futuristic design, Digital cockpit, Advanced ADAS',dimensions:'4370 x 1900 x 1635 mm',image:'mahindra-BE6.jpeg'},
+      {id:'bmw-i4',name:'BMW i4',brand:'bmw',priceVal:72.50,price:'₹72.50 Lakh',rangeVal:590,range:'590 km',battery:'83.9 kWh',charging:'31 min (DC)',speed:'190 km/h',power:'340 hp',safety:'4 Stars (Euro NCAP)',features:'Curved display, Reversing assistant, Glass roof',dimensions:'4783 x 1852 x 1448 mm',image:'bmw_i4.jpeg'},
+      {id:'etron-gt',name:'Audi e-tron GT',brand:'audi',priceVal:195.00,price:'₹1.95 Crore',rangeVal:500,range:'500 km',battery:'93.4 kWh',charging:'22 min (DC)',speed:'245 km/h',power:'530 hp',safety:'5 Stars (Euro NCAP)',features:'Matrix LED headlights, e-tron sport sound, Virtual cockpit',dimensions:'4989 x 1964 x 1413 mm',image:'audi_etron_gt.jpg'},
+      {id:'mercedes-eqs',name:'Mercedes EQS',brand:'mercedes-benz',priceVal:162.00,price:'₹1.62 Crore',rangeVal:857,range:'857 km',battery:'107.8 kWh',charging:'31 min (DC)',speed:'210 km/h',power:'523 hp',safety:'5 Stars (Euro NCAP)',features:'Hyperscreen display, Rear axle steering, Burmester 3D',dimensions:'5216 x 1926 x 1512 mm',image:'mercedes_eqs_sedan.webp'},
+      {id:'vinfast-vf6',name:'VF6',brand:'vinfast',priceVal:18.00,price:'₹18.00 Lakh',rangeVal:399,range:'399 km',battery:'59.6 kWh',charging:'38 min (DC)',speed:'150 km/h',power:'174 hp',safety:'4 Stars (Expected)',features:'Vietnamese engineering, HUD, open cockpit screen',dimensions:'4238 x 1820 x 1590 mm',image:'vin_fast_vf6.jpeg'},
+      {id:'kia-ev9',name:'EV9',brand:'kia',priceVal:110.00,price:'₹1.10 Crore',rangeVal:561,range:'561 km',battery:'99.8 kWh',charging:'24 min (DC)',speed:'200 km/h',power:'384 hp',safety:'5 Stars (Euro NCAP)',features:'3-row seating, Swivel seats, dual sunroof, LiDAR-ready ADAS',dimensions:'5010 x 1980 x 1755 mm',image:'kia_ev9.jpeg'},
+      {id:'xev-9e',name:'XEV 9e',brand:'mahindra',priceVal:38.00,price:'₹38.00 Lakh',rangeVal:533,range:'533 km',battery:'79 kWh',charging:'35 min (DC)',speed:'180 km/h',power:'286 hp',safety:'5 Stars (Expected)',features:'Triple screen console, Augmented reality HUD, futuristic silhouette',dimensions:'4790 x 1905 x 1690 mm',image:'thar.e.jpeg'},
+      {id:'citroen-ec3',name:'Citroën eC3 Facelift',brand:'citroen',priceVal:12.50,price:'₹12.50 Lakh',rangeVal:320,range:'320 km',battery:'29.2 kWh',charging:'57 min (DC)',speed:'107 km/h',power:'57 hp',safety:'3 Stars (Expected)',features:'Refreshed bumpers, LED signature design, larger touchscreen',dimensions:'3981 x 1733 x 1604 mm',image:'Citroen_eC3.jpeg'},
+      {id:'curvv-ev',name:'Curvv EV',brand:'tata',priceVal:17.49,price:'₹17.49 Lakh',rangeVal:585,range:'585 km',battery:'55 kWh',charging:'40 min (DC)',speed:'160 km/h',power:'167 hp',safety:'5 Stars (BNCAP)',features:'Coupe design, gesture tailgate, flush handles, Arcade.ev app suite',dimensions:'4310 x 1810 x 1637 mm',image:'tata_curve_ev.jpeg'},
+      {id:'tiago-ev',name:'Tiago EV',brand:'tata',priceVal:8.69,price:'₹8.69 Lakh',rangeVal:315,range:'315 km',battery:'24 kWh',charging:'58 min (DC)',speed:'120 km/h',power:'74 hp',safety:'4 Stars (GNCAP)',features:'Multi-mode regen, connected car tech, cruise control',dimensions:'3769 x 1677 x 1536 mm',image:'tata_tiago_EV.jpeg'},
+      {id:'byd-atto3',name:'BYD Atto 3',brand:'byd',priceVal:24.99,price:'₹24.99 Lakh',rangeVal:521,range:'521 km',battery:'60.48 kWh',charging:'50 min (DC)',speed:'160 km/h',power:'201 hp',safety:'5 Stars (Euro NCAP)',features:'Blade battery, rotation screen, panoramic roof, ambient lighting',dimensions:'4455 x 1875 x 1615 mm',image:'BYD_atto.jpeg'},
+      {id:'elevate-ev',name:'Elevate EV',brand:'honda',priceVal:18.00,price:'₹18.00 Lakh',rangeVal:400,range:'400 km',battery:'48 kWh',charging:'45 min (DC)',speed:'150 km/h',power:'150 hp',safety:'5 Stars (Expected)',features:'Honda Sensing ADAS package, spacious cabin, premium seating',dimensions:'4312 x 1790 x 1650 mm',image:'honda_elevate_EV.jpeg'},
+      {id:'ioniq-6',name:'Ioniq 6',brand:'hyundai',priceVal:65.00,price:'₹65.00 Lakh',rangeVal:614,range:'614 km',battery:'77.4 kWh',charging:'18 min (DC)',speed:'250 km/h',power:'320 hp',safety:'5 Stars (Euro NCAP)',features:'Aerodynamic streamliner, interactive lighting, dual motors',dimensions:'4855 x 1880 x 1495 mm',image:'Hyundai_IONIQ6.jpeg'},
+      {id:'syros-ev',name:'Syros EV',brand:'kia',priceVal:15.00,price:'₹15.00 Lakh',rangeVal:350,range:'350 km',battery:'35 kWh',charging:'40 min (DC)',speed:'150 km/h',power:'150 hp',safety:'5 Stars (Expected)',features:'Connected telematics, tall-boy stance, compact city footprint',dimensions:'4100 x 1780 x 1600 mm',image:'Kia_syros_ev.jpeg'},
+      {id:'be07',name:'BE.07',brand:'mahindra',priceVal:28.00,price:'₹28.00 Lakh',rangeVal:500,range:'500 km',battery:'60 kWh',charging:'45 min (DC)',speed:'170 km/h',power:'230 hp',safety:'5 Stars (Expected)',features:'INGLO platform core, edge-to-edge screens, panoramic canopy',dimensions:'4560 x 1900 x 1660 mm',image:'mahindra_BE_07.jpeg'},
+      {id:'avinya-ev',name:'Avinya EV',brand:'tata',priceVal:35.00,price:'₹35.00 Lakh',rangeVal:500,range:'500 km',battery:'80 kWh',charging:'30 min (DC)',speed:'200 km/h',power:'350 hp',safety:'5 Stars (Expected)',features:'Skateboard chassis, rotating lounge chairs, bio-degradable cabin materials',dimensions:'4600 x 1900 x 1550 mm',image:'tata_avinya_ev.jpeg'},
+      {id:'ex90',name:'EX90',brand:'volvo',priceVal:120.00,price:'₹1.20 Crore',rangeVal:600,range:'600 km',battery:'111 kWh',charging:'30 min (DC)',speed:'180 km/h',power:'517 hp',safety:'5 Stars (Expected)',features:'Roof-mounted LiDAR, safety shield bubble, recycled materials interior',dimensions:'5037 x 1964 x 1747 mm',image:'Volvo_EX90.jpeg'},
+      {id:'comet-ev',name:'Comet EV',brand:'mg',priceVal:6.99,price:'₹6.99 Lakh',rangeVal:230,range:'230 km',battery:'17.3 kWh',charging:'7 hours (AC)',speed:'100 km/h',power:'42 hp',safety:'3 Stars (Expected)',features:'Ultra-compact footprint, dual screens, Apple-like key layout, city runabout',dimensions:'2974 x 1505 x 1631 mm',image:'mg_comet_ev.webp'},
+      {id:'toyota-bz4x',name:'bZ4X',brand:'toyota',priceVal:55.00,price:'₹55.00 Lakh',rangeVal:516,range:'516 km',battery:'71.4 kWh',charging:'30 min (DC)',speed:'160 km/h',power:'214 hp',safety:'5 Stars (Euro NCAP)',features:'AWD system with X-Mode, high durability battery claim, premium SUV stance',dimensions:'4690 x 1860 x 1650 mm',image:'Toyota_bZ4X.jpeg'},
+      {id:'bmw-i7',name:'BMW i7',brand:'bmw',priceVal:203.00,price:'₹2.03 Crore',rangeVal:625,range:'625 km',battery:'101.7 kWh',charging:'34 min (DC)',speed:'250 km/h',power:'544 hp',safety:'5 Stars (Euro NCAP)',features:'Rear theatre screen, crystal headlights, executive lounge seats',dimensions:'5391 x 1950 x 1544 mm',image:'bmw_i7.jpeg'},
+      {id:'macan-ev',name:'Porsche Macan EV',brand:'porsche',priceVal:165.00,price:'₹1.65 Crore',rangeVal:613,range:'613 km',battery:'100 kWh',charging:'21 min (DC)',speed:'220 km/h',power:'408 hp',safety:'5 Stars (Expected)',features:'Aero active shutter vents, rear axle steering, high speed handling bias',dimensions:'4784 x 1938 x 1622 mm',image:'porsche_maccan_EV.jpeg'},
+      {id:'audi-q6-etron',name:'Audi Q6 e-tron',brand:'audi',priceVal:105.00,price:'₹1.05 Crore',rangeVal:625,range:'625 km',battery:'100 kWh',charging:'21 min (DC)',speed:'210 km/h',power:'388 hp',safety:'5 Stars (Euro NCAP)',features:'Virtual Cockpit, Matrix LED headlights, Quattro AWD',dimensions:'4771 x 1939 x 1648 mm',image:'audi_q6_etron.jpg'},
+      {id:'audi-q8-etron',name:'Audi Q8 e-tron',brand:'audi',priceVal:115.00,price:'₹1.15 Crore',rangeVal:600,range:'600 km',battery:'114 kWh',charging:'31 min (DC)',speed:'200 km/h',power:'408 hp',safety:'5 Stars (Euro NCAP)',features:'Adaptive Air Suspension, Quattro AWD, Audi Virtual Cockpit',dimensions:'4915 x 1937 x 1633 mm',image:'audi_q8_etron.jpg'},
+      {id:'bmw-ix',name:'BMW iX',brand:'bmw',priceVal:140.00,price:'₹1.40 Crore',rangeVal:635,range:'635 km',battery:'111.5 kWh',charging:'35 min (DC)',speed:'200 km/h',power:'523 hp',safety:'5 Stars (Euro NCAP)',features:'Curved Display, Air Suspension, Driving Assistant Professional',dimensions:'4953 x 1967 x 1695 mm',image:'BMW iX.jpeg'},
+      {id:'bmw-ix1-lwb',name:'BMW iX1 LWB',brand:'bmw',priceVal:49.00,price:'₹49.00 Lakh',rangeVal:531,range:'531 km',battery:'66.4 kWh',charging:'29 min (DC)',speed:'180 km/h',power:'204 hp',safety:'5 Stars (Euro NCAP)',features:'Panoramic Sunroof, BMW Curved Display, ConnectedDrive',dimensions:'4616 x 1845 x 1641 mm',image:'bmw_ix1_lwb.jpg'},
+      {id:'byd-sealion-7',name:'BYD Sealion 7',brand:'byd',priceVal:48.90,price:'₹48.90 Lakh',rangeVal:567,range:'567 km',battery:'82.5 kWh',charging:'24 min (DC)',speed:'215 km/h',power:'530 hp',safety:'5 Stars (Euro NCAP)',features:'Blade Battery, Rotating Touchscreen, AWD',dimensions:'4830 x 1925 x 1620 mm',image:'byd_sealion7.jpg'},
+      {id:'byd-emax7',name:'BYD eMAX 7',brand:'byd',priceVal:26.90,price:'₹26.90 Lakh',rangeVal:530,range:'530 km',battery:'71.8 kWh',charging:'37 min (DC)',speed:'180 km/h',power:'204 hp',safety:'5 Stars (ASEAN NCAP)',features:'7-Seater MPV, Rotating Touchscreen, Blade Battery',dimensions:'4710 x 1810 x 1690 mm',image:'byd_emax7.jpg'},
+      {id:'hyundai-creta-electric',name:'Hyundai Creta Electric',brand:'hyundai',priceVal:18.00,price:'₹18.00 Lakh',rangeVal:473,range:'473 km',battery:'51.4 kWh',charging:'58 min (DC)',speed:'180 km/h',power:'169 hp',safety:'Expected 5 Stars',features:'Level 2 ADAS, Dual 10.25-inch Displays, V2L',dimensions:'4340 x 1790 x 1655 mm',image:'hyundai_creta_electric.jpg'},
+      {id:'kia-carens-clavis-ev',name:'Kia Carens Clavis EV',brand:'kia',priceVal:18.50,price:'₹18.50 Lakh',rangeVal:490,range:'490 km',battery:'51.4 kWh',charging:'58 min (DC)',speed:'170 km/h',power:'169 hp',safety:'Expected 5 Stars',features:'ADAS, Dual Displays, Ventilated Seats',dimensions:'4550 x 1800 x 1708 mm',image:'kia_carens_clavis_ev.jpg'},
+      {id:'mahindra-xev-7e',name:'Mahindra XEV 7e',brand:'mahindra',priceVal:21.90,price:'₹21.90 Lakh',rangeVal:650,range:'650 km',battery:'79 kWh',charging:'20 min (DC)',speed:'200 km/h',power:'282 hp',safety:'Expected 5 Stars',features:'Level 2 ADAS, Panoramic Roof, Connected Car Tech',dimensions:'4700 x 1900 x 1750 mm',image:'mahindra_xev7e.jpg'},
+      {id:'mahindra-thar-e',name:'Mahindra Thar.e',brand:'mahindra',priceVal:25.00,price:'₹25.00 Lakh',rangeVal:500,range:'500 km',battery:'75 kWh',charging:'30 min (DC)',speed:'180 km/h',power:'250 hp',safety:'Expected 5 Stars',features:'Electric 4x4, Off-road Modes, Digital Cockpit',dimensions:'4300 x 1900 x 1850 mm',image:'mahindra_thare.jpg'},
+      {id:'maruti-e-vitara',name:'Maruti e Vitara',brand:'maruti',priceVal:18.00,price:'₹18.00 Lakh',rangeVal:500,range:'500 km',battery:'61 kWh',charging:'30 min (DC)',speed:'160 km/h',power:'174 hp',safety:'Expected 5 Stars',features:'ADAS, Connected Car, Panoramic Sunroof',dimensions:'4275 x 1800 x 1640 mm',image:'maruti_evitara.jpg'},
+      {id:'mercedes-cla-electric',name:'Mercedes-Benz CLA Electric',brand:'mercedes',priceVal:65.00,price:'₹65.00 Lakh',rangeVal:792,range:'792 km',battery:'85 kWh',charging:'22 min (DC)',speed:'210 km/h',power:'268 hp',safety:'Expected 5 Stars',features:'MBUX Superscreen, Level 2 ADAS, OTA Updates',dimensions:'4723 x 1855 x 1468 mm',image:'mercedes_cla_electric.jpg'},
+      {id:'mercedes-eqa',name:'Mercedes-Benz EQA',brand:'mercedes',priceVal:67.20,price:'₹67.20 Lakh',rangeVal:560,range:'560 km',battery:'70.5 kWh',charging:'30 min (DC)',speed:'160 km/h',power:'190 hp',safety:'5 Stars (Euro NCAP)',features:'MBUX Infotainment, Panoramic Sunroof, ADAS',dimensions:'4463 x 1834 x 1620 mm',image:'mercedes_eqa.jpg'},
+      {id:'mercedes-eqe-suv',name:'Mercedes-Benz EQE SUV',brand:'mercedes',priceVal:139.00,price:'₹1.39 Crore',rangeVal:550,range:'550 km',battery:'90.6 kWh',charging:'32 min (DC)',speed:'210 km/h',power:'408 hp',safety:'5 Stars (Euro NCAP)',features:'Hyperscreen, Air Suspension, Burmester Audio',dimensions:'4863 x 1940 x 1685 mm',image:'mercedes_eqe_suv.jpg'},
+      {id:'mercedes-eqs-suv',name:'Mercedes-Benz EQS SUV',brand:'mercedes',priceVal:143.00,price:'₹1.43 Crore',rangeVal:809,range:'809 km',battery:'122 kWh',charging:'31 min (DC)',speed:'210 km/h',power:'544 hp',safety:'5 Stars (Euro NCAP)',features:'7-Seater, MBUX Hyperscreen, Air Suspension',dimensions:'5125 x 1959 x 1718 mm',image:'mercedes_eqs_suv.jpg'},
+      {id:'mercedes-g-class-electric',name:'Mercedes-Benz G-Class Electric',brand:'mercedes',priceVal:300.00,price:'₹3.00 Crore',rangeVal:473,range:'473 km',battery:'116 kWh',charging:'32 min (DC)',speed:'180 km/h',power:'579 hp',safety:'5 Stars (Euro NCAP)',features:'G-Turn, 4 Electric Motors, Off-road Crawl Mode',dimensions:'4624 x 1931 x 1986 mm',image:'mercedes_g580_eq.jpg'},
+      {id:'mg-cyberster',name:'MG Cyberster',brand:'mg',priceVal:80.00,price:'₹80.00 Lakh',rangeVal:580,range:'580 km',battery:'77 kWh',charging:'38 min (DC)',speed:'200 km/h',power:'510 hp',safety:'5 Stars (Euro NCAP)',features:'Convertible Roadster, Scissor Doors, Bose Audio',dimensions:'4535 x 1913 x 1329 mm',image:'MG_Cyberster.JPG'},
+      {id:'mg-m9',name:'MG M9',brand:'mg',priceVal:69.90,price:'₹69.90 Lakh',rangeVal:430,range:'430 km',battery:'90 kWh',charging:'30 min (DC)',speed:'180 km/h',power:'245 hp',safety:'Expected 5 Stars',features:'Luxury MPV, Ottoman Seats, Dual Sunroof',dimensions:'5270 x 2000 x 1840 mm',image:'MG_M9.jpg'},
+      {id:'mg-zs-ev',name:'MG ZS EV',brand:'mg',priceVal:18.98,price:'₹18.98 Lakh',rangeVal:461,range:'461 km',battery:'50.3 kWh',charging:'60 min (DC)',speed:'175 km/h',power:'176 hp',safety:'5 Stars (Euro NCAP)',features:'Panoramic Sunroof, ADAS, 10.1-inch Touchscreen',dimensions:'4323 x 1809 x 1649 mm',image:'MG_ZS_EV.JPG'},
+      {id:'nissan-ariya',name:'Nissan Ariya',brand:'nissan',priceVal:50.00,price:'₹50.00 Lakh',rangeVal:529,range:'529 km',battery:'87 kWh',charging:'35 min (DC)',speed:'200 km/h',power:'242 hp',safety:'5 Stars (Euro NCAP)',features:'ProPILOT Assist, Dual Displays, e-4ORCE AWD',dimensions:'4595 x 1850 x 1660 mm',image:'Nissan_Ariya.WEBP'},
+      {id:'nissan-leaf',name:'Nissan Leaf',brand:'nissan',priceVal:30.00,price:'₹30.00 Lakh',rangeVal:385,range:'385 km',battery:'62 kWh',charging:'45 min (DC)',speed:'157 km/h',power:'214 hp',safety:'5 Stars (Euro NCAP)',features:'ProPILOT Assist, e-Pedal, 360° Camera',dimensions:'4490 x 1788 x 1540 mm',image:'nissan_leaf.JPG'},
+      {id:'porsche-cayenne-electric',name:'Porsche Cayenne Electric',brand:'porsche',priceVal:200.00,price:'₹2.00 Crore',rangeVal:700,range:'700 km',battery:'100 kWh',charging:'18 min (DC)',speed:'250 km/h',power:'600 hp',safety:'5 Stars (Euro NCAP)',features:'Porsche Active Suspension, AWD, Premium Interior',dimensions:'4930 x 1983 x 1698 mm',image:'PORSCHE_CAYENNE.JPG'},
+      {id:'porsche-taycan',name:'Porsche Taycan',brand:'porsche',priceVal:170.00,price:'₹1.70 Crore',rangeVal:642,range:'642 km',battery:'105 kWh',charging:'18 min (DC)',speed:'260 km/h',power:'408 hp',safety:'5 Stars (Euro NCAP)',features:'800V Charging, Adaptive Air Suspension, Sport Chrono',dimensions:'4963 x 1966 x 1381 mm',image:'PORSCHE_TAYCAN.JPG'},
+      {id:'renault-kwid-ev',name:'Renault Kwid EV',brand:'renault',priceVal:8.00,price:'₹8.00 Lakh',rangeVal:220,range:'220 km',battery:'27 kWh',charging:'40 min (DC)',speed:'125 km/h',power:'65 hp',safety:'Expected 3 Stars',features:'Compact Hatchback, Digital Cluster, Fast Charging',dimensions:'3734 x 1579 x 1515 mm',image:'renault_kwid_ev.JPG'},
+      {id:'skoda-elroq',name:'Skoda Elroq',brand:'skoda',priceVal:35.00,price:'₹35.00 Lakh',rangeVal:560,range:'560 km',battery:'77 kWh',charging:'28 min (DC)',speed:'180 km/h',power:'286 hp',safety:'5 Stars (Euro NCAP)',features:'Digital Cockpit, Matrix LED, Travel Assist',dimensions:'4488 x 1884 x 1625 mm',image:'Skoda_Elroq.JPG'},
+      {id:'skoda-enyaq',name:'Skoda Enyaq',brand:'skoda',priceVal:65.00,price:'₹65.00 Lakh',rangeVal:587,range:'587 km',battery:'82 kWh',charging:'28 min (DC)',speed:'180 km/h',power:'286 hp',safety:'5 Stars (Euro NCAP)',features:'Head-up Display, Matrix LEDs, Canton Audio',dimensions:'4649 x 1879 x 1616 mm',image:'Skoda_Enyaq.JPG'},
+      {id:'tata-sierra-ev',name:'Tata Sierra EV',brand:'tata',priceVal:25.00,price:'₹25.00 Lakh',rangeVal:550,range:'550 km',battery:'60 kWh',charging:'30 min (DC)',speed:'180 km/h',power:'170 hp',safety:'Expected 5 Stars',features:'Panoramic Sunroof, ADAS, Connected Car Tech',dimensions:'4300 x 1820 x 1675 mm',image:'tata_sierra_ev.jpg'},
+      {id:'tata-tigor-ev',name:'Tata Tigor EV',brand:'tata',priceVal:12.49,price:'₹12.49 Lakh',rangeVal:315,range:'315 km',battery:'26 kWh',charging:'59 min (DC)',speed:'120 km/h',power:'74 hp',safety:'4 Stars (Global NCAP)',features:'Ziptron Technology, Connected Car, Auto Climate Control',dimensions:'3993 x 1677 x 1532 mm',image:'tata_tigor_ev.jpg'},
+      {id:'toyota-urban-cruiser-ev',name:'Toyota Urban Cruiser EV',brand:'toyota',priceVal:18.00,price:'₹18.00 Lakh',rangeVal:500,range:'500 km',battery:'61 kWh',charging:'30 min (DC)',speed:'160 km/h',power:'174 hp',safety:'Expected 5 Stars',features:'ADAS, Connected Car, Panoramic Sunroof',dimensions:'4275 x 1800 x 1640 mm',image:'Toyota_Urban_Cruiser.jpeg'},
+      {id:'vinfast-vf3',name:'VinFast VF 3',brand:'vinfast',priceVal:10.00,price:'₹10.00 Lakh',rangeVal:215,range:'215 km',battery:'18.6 kWh',charging:'36 min (DC)',speed:'100 km/h',power:'43 hp',safety:'Expected 4 Stars',features:'Mini SUV, Connected Car, Compact Design',dimensions:'3190 x 1679 x 1652 mm',image:'vin_fast_vf3.jpeg'},
+      {id:'vinfast-vf7',name:'VinFast VF 7',brand:'vinfast',priceVal:35.00,price:'₹35.00 Lakh',rangeVal:450,range:'450 km',battery:'75.3 kWh',charging:'30 min (DC)',speed:'175 km/h',power:'349 hp',safety:'Expected 5 Stars',features:'Panoramic Roof, Level 2 ADAS, HUD',dimensions:'4545 x 1890 x 1636 mm',image:'vin_fast_vf7.jpeg'},
+      {id:'vinfast-vf-mpv7',name:'VinFast VF MPV7',brand:'vinfast',priceVal:28.00,price:'₹28.00 Lakh',rangeVal:450,range:'450 km',battery:'75 kWh',charging:'30 min (DC)',speed:'170 km/h',power:'201 hp',safety:'Expected 5 Stars',features:'7-Seater MPV, Panoramic Roof, ADAS',dimensions:'4850 x 1900 x 1760 mm',image:'VinFast_VF_MPV7.JPG'},
+      {id:'volvo-ec40',name:'Volvo EC40',brand:'volvo',priceVal:59.00,price:'₹59.00 Lakh',rangeVal:530,range:'530 km',battery:'82 kWh',charging:'28 min (DC)',speed:'180 km/h',power:'408 hp',safety:'5 Stars (Euro NCAP)',features:'Pilot Assist, Google Built-in, Panoramic Roof',dimensions:'4440 x 1873 x 1591 mm',image:'volvo_EC40.WEBP'},
+      {id:'volvo-ex30',name:'Volvo EX30',brand:'volvo',priceVal:50.00,price:'₹50.00 Lakh',rangeVal:476,range:'476 km',battery:'69 kWh',charging:'26 min (DC)',speed:'180 km/h',power:'428 hp',safety:'5 Stars (Euro NCAP)',features:'Google Built-in, Harman Kardon Audio, Pilot Assist',dimensions:'4233 x 1837 x 1549 mm',image:'VOLVO_EX30.JPG'},
+      {id:'volvo-ex40',name:'Volvo EX40',brand:'volvo',priceVal:57.90,price:'₹57.90 Lakh',rangeVal:530,range:'530 km',battery:'82 kWh',charging:'28 min (DC)',speed:'180 km/h',power:'408 hp',safety:'5 Stars (Euro NCAP)',features:'Google Built-in, 360° Camera, Pilot Assist',dimensions:'4440 x 1873 x 1651 mm',image:'VOLVO_EX40.JPG'}
+    ];
+
+    const brandNameMap = {
+      tata:'Tata',mahindra:'Mahindra',hyundai:'Hyundai',mg:'MG',kia:'Kia',
+      byd:'BYD',bmw:'BMW','mercedes-benz':'Mercedes-Benz',mercedes:'Mercedes-Benz',
+      volvo:'Volvo',audi:'Audi',porsche:'Porsche',vinfast:'VinFast',
+      citroen:'Citroën',honda:'Honda',toyota:'Toyota',nissan:'Nissan',
+      renault:'Renault',skoda:'Skoda',maruti:'Maruti Suzuki'
+    };
+
+    const S3_IMAGE_MAPPING = {
+      "audi-a6-e-tron": "car_images/AUDI/AUDI-A6-ETRON.png",
+      "audi-e-tron-gt": "car_images/AUDI/audi_etron_gt.jpg",
+      "audi-q6-e-tron": "car_images/AUDI/Audi Q6 e-tron.jpeg",
+      "audi-q6-etron": "car_images/AUDI/Audi Q6 e-tron.jpeg",
+      "audi-q8-etron": "car_images/AUDI/Audi Q6 e-tron.jpeg",
+      "avinya-ev": "car_images/tata/tata_avinya_ev.jpeg",
+      "be-07": "car_images/mahindra/mahindra_BE_07.jpeg",
+      "be07": "car_images/mahindra/mahindra_BE_07.jpeg",
+      "be6": "car_images/mahindra/mahindra-BE6.jpeg",
+      "bmw-i4": "car_images/BMW/bmw_i4.jpeg",
+      "bmw-i5": "car_images/BMW/BMW-I5.jpeg",
+      "bmw-i7": "car_images/BMW/bmw_i7.jpeg",
+      "bmw-ix": "car_images/BMW/BMW iX.jpeg",
+      "bmw-ix1": "car_images/BMW/BMW iX1 LWB.jpeg",
+      "bmw-ix1-lwb": "car_images/BMW/BMW iX1 LWB.jpeg",
+      "byd-atto3": "car_images/BYD/BYD_atto.jpeg",
+      "byd-emax-7": "car_images/BYD/BYD_eMAX_7.jpeg",
+      "byd-emax7": "car_images/BYD/BYD_eMAX_7.jpeg",
+      "byd-seal": "car_images/BYD/byd_seal.jpeg",
+      "byd-sealion-6": "car_images/BYD/BYD-SEALION-6.jpeg",
+      "byd-sealion-7": "car_images/BYD/BYD SEALION 7.jpeg",
+      "byd-sealion7": "car_images/BYD/BYD SEALION 7.jpeg",
+      "citroen-ec3": "car_images/CITROEN/Citroen_eC3.jpeg",
+      "comet-ev": "car_images/MG/mg_comet_ev.webp",
+      "creta-ev": "car_images/hyundai/Hyundai_Creta_Electric.jpeg",
+      "curvv-ev": "car_images/tata/CURVE.jpeg",
+      "cyberster": "car_images/MG/MG_Cyberster.jpeg",
+      "d-max-ev": "car_images/ISUZU/D-MAX-EV.jpeg",
+      "ec3": "car_images/CITROEN/Citroen_eC3.jpeg",
+      "elevate-ev": "car_images/HONDA/honda_elevate_EV.jpeg",
+      "etron-gt": "car_images/AUDI/audi_etron_gt.jpg",
+      "ev6": "car_images/KIA/kia_ev6.jpeg",
+      "ex90": "car_images/VOLVO/Volvo_EX90.jpeg",
+      "fronx-ev": "car_images/maruti suzuki/fronx_ev.jpeg",
+      "gv60": "car_images/GENESIS/GV60.jpeg",
+      "harrier-ev": "car_images/tata/HARRIER.webp",
+      "hyundai-creta-electric": "car_images/hyundai/Hyundai_Creta_Electric.jpeg",
+      "ioniq-5": "car_images/hyundai/hyundai_ioniq5.jpeg",
+      "ioniq-6": "car_images/hyundai/Hyundai_IONIQ6.jpeg",
+      "jeep-avengers": "car_images/JEEP/Avengers.jpeg",
+      "kia-carens-clavis-ev": "car_images/KIA/Kia Carens Clavis EV.WEBP",
+      "kia-ev6": "car_images/KIA/kia_ev6.jpeg",
+      "kia-ev9": "car_images/KIA/kia_ev9.jpeg",
+      "lexus-es": "car_images/LEXUS/ES.jpeg",
+      "lotus-eletre": "car_images/LOTUS/ELETRE.webp",
+      "lotus-emeya": "car_images/LOTUS/EMEYA.jpeg",
+      "luce": "car_images/ferrari/LUCE.jpeg",
+      "m9-ev": "car_images/MG/MG_M9.jpeg",
+      "macan-ev": "car_images/PORSCHE/porsche_maccan_EV.jpeg",
+      "mahindra-thar-e": "car_images/mahindra/thar.e.jpeg",
+      "mahindra-xev-7e": "car_images/mahindra/mahindra_XEV_9e.webp",
+      "maruti-e-vitara": "car_images/maruti suzuki/maruti_evitara.jpeg",
+      "maruti-jimny": "car_images/maruti suzuki/jimny.png",
+      "mercedes-benz-amg-eqs": "car_images/MERCEDES_BENZ/AMG-EQS.jpeg",
+      "mercedes-benz-c-class-ev": "car_images/MERCEDES_BENZ/C-CLASS.jpeg",
+      "mercedes-benz-cla-ev": "car_images/MERCEDES_BENZ/Mercedes_Benz_CLA.jpeg",
+      "mercedes-benz-eqs-maybach": "car_images/MERCEDES_BENZ/EQS=MAYBACH.webp",
+      "mercedes-benz-eqs-suv": "car_images/MERCEDES_BENZ/Mercedes-Benz_EQS_SUV.jpeg",
+      "mercedes-benz-eqs-suv-standard": "car_images/MERCEDES_BENZ/EQS_SUV.jpeg",
+      "mercedes-benz-g-class-ev": "car_images/MERCEDES_BENZ/Mercedes-Benz_G-Class.jpeg",
+      "mercedes-cla-electric": "car_images/MERCEDES_BENZ/Mercedes_Benz_CLA.jpeg",
+      "mercedes-eqa": "car_images/MERCEDES_BENZ/C-CLASS.jpeg",
+      "mercedes-eqe-suv": "car_images/MERCEDES_BENZ/EQS_SUV.jpeg",
+      "mercedes-eqs": "car_images/MERCEDES_BENZ/Mercedes-Benz_EQS_SUV.jpeg",
+      "mercedes-eqs-suv": "car_images/MERCEDES_BENZ/Mercedes-Benz_EQS_SUV.jpeg",
+      "mercedes-g-class-electric": "car_images/MERCEDES_BENZ/Mercedes-Benz_G-Class.jpeg",
+      "mg-cyberster": "car_images/MG/MG_Cyberster.jpeg",
+      "mg-m9": "car_images/MG/MG_M9.jpeg",
+      "mg-zs-ev": "car_images/MG/MG ZS EV.JPG",
+      "mini-countryman-electric": "car_images/MINI/COUNTRYMAN-ELECTRIC.jpeg",
+      "nexon-ev": "car_images/tata/NEXON.jpeg",
+      "nissan-ariya": "car_images/NISSAN/Nissan_Ariya.jpeg",
+      "nissan-leaf": "car_images/NISSAN/nissan_leaf.JPG",
+      "pmv-eas-e": "car_images/PMV/EAS-E.jpeg",
+      "porsche-cayenne-electric": "car_images/PORSCHE/PORSCHE_CAYENNE.jpeg",
+      "porsche-cayenne-ev": "car_images/PORSCHE/PORSCHE_CAYENNE.jpeg",
+      "porsche-macan-ev": "car_images/PORSCHE/porsche_maccan_EV.jpeg",
+      "porsche-taycan": "car_images/PORSCHE/PORSCHE_TAYCAN.JPG",
+      "pravaig-defy": "car_images/PRAVAIG/DEFY.jpeg",
+      "punch-ev": "car_images/tata/PUNCH.jpeg",
+      "renault-kwid-ev": "car_images/RENAULT/renault_kwid_ev.JPG",
+      "rolls-royce-spectre": "car_images/ROLLS_ROYCE/Rolls-Royce Spectre.jpeg",
+      "ryde": "car_images/BLINQ/RYDE.jpeg",
+      "sierra-ev": "car_images/tata/SIERRA.jpeg",
+      "skoda-elroq": "car_images/SKODA/Skoda_Elroq.jpeg",
+      "skoda-enyaq": "car_images/SKODA/Skoda_Enyaq.JPG",
+      "strom-r3": "car_images/STROM_MOTORS/R3.jpeg",
+      "syros-ev": "car_images/KIA/Kia_syros_ev.jpeg",
+      "tata-sierra-ev": "car_images/tata/SIERRA.jpeg",
+      "tata-tigor-ev": "car_images/tata/TIAGO.jpeg",
+      "tesla-model-y": "car_images/TESLA/MODEL-Y.jpeg",
+      "thar-e": "car_images/mahindra/thar.e.jpeg",
+      "tiago-ev": "car_images/tata/TIAGO.jpeg",
+      "toyota-bz4x": "car_images/TOYOTA/Toyota_bZ4X.jpeg",
+      "toyota-urban-cruiser-ev": "car_images/TOYOTA/Toyota_Urban_Cruiser.jpeg",
+      "toyota-urban-cruiser-ev": "car_images/TOYOTA/Toyota_Urban_Cruiser.jpeg",
+      "vayve-mobility-eva": "car_images/VAYVE_MOBILITY/eva.jpeg",
+      "vinfast-vf-mpv7": "car_images/VINFAST/VinFast VF MPV7.JPG",
+      "vinfast-vf3": "car_images/VINFAST/vin_fast_vf3.jpeg",
+      "vinfast-vf6": "car_images/VINFAST/VinFast VF 6.jpeg",
+      "vinfast-vf7": "car_images/VINFAST/vin_fast_vf7.jpeg",
+      "volkswagen-id4": "car_images/VOLKSWAGAN/id_4.jpeg",
+      "volvo-ec40": "car_images/VOLVO/volvo_EC40.WEBP",
+      "volvo-ex30": "car_images/VOLVO/VOLVO_EX30.jpeg",
+      "volvo-ex40": "car_images/VOLVO/VOLVO_EX40.JPG",
+      "volvo-ex90": "car_images/VOLVO/Volvo_EX90.jpeg",
+      "windsor-ev": "car_images/MG/MG_windsor_EV.jpeg",
+      "xev-9e": "car_images/mahindra/mahindra_XEV_9e.webp",
+      "xev-9s": "car_images/mahindra/Mahindra XEV 9s.png",
+      "xpres-t-ev": "car_images/tata/EXPRESS-T.jpeg",
+      "xuv-3xo-ev": "car_images/mahindra/3X0.jpeg",
+      "xuv400": "car_images/mahindra/mahindra_XUV_400.jpg",
+      "zero-alpha": "car_images/HONDA/ZERO_ALPHA.jpeg",
+      "zs-ev": "car_images/MG/MG ZS EV.JPG"
+};
+
+    function getBrandDisplay(brand) {
+      return brandNameMap[brand] || brand.charAt(0).toUpperCase() + brand.slice(1);
+    }
+
+    function handleImageError(imgElement) {
+  if (!imgElement) return;
+  imgElement.onerror = null;
+  const failedUrl = imgElement.src || 'Unknown S3 URL';
+  const altText = imgElement.alt || 'Vehicle';
+  console.warn('[EV Car Wale Image Error] Failed to load image for "' + altText + '" from S3 URL: ' + failedUrl + '. Displaying default placeholder /car_outline.jpg.');
+  if (imgElement.previousElementSibling && imgElement.previousElementSibling.classList.contains('skeleton-shimmer')) {
+    imgElement.previousElementSibling.style.display = 'none';
+  }
+  imgElement.src = '/car_outline.jpg';
+}
+
+    function getS3ImageUrl(carOrPath) {
+  if (!carOrPath) return '/car_outline.jpg';
+  let relativePath = carOrPath;
+  if (typeof carOrPath === 'object' && carOrPath !== null) {
+    if (carOrPath.id && S3_IMAGE_MAPPING[carOrPath.id]) {
+      relativePath = S3_IMAGE_MAPPING[carOrPath.id];
+    } else {
+      relativePath = carOrPath.image || '';
+    }
+  } else if (typeof carOrPath === 'string' && S3_IMAGE_MAPPING[carOrPath]) {
+    relativePath = S3_IMAGE_MAPPING[carOrPath];
+  }
+  if (!relativePath) return '/car_outline.jpg';
+  if (relativePath === 'car_outline.jpg' || relativePath === '/car_outline.jpg') {
+    return '/car_outline.jpg';
+  }
+  if (relativePath.startsWith('http://') || relativePath.startsWith('https://')) {
+    return relativePath;
+  }
+  let cleanPath = relativePath.trim();
+  if (cleanPath.startsWith('/')) {
+    cleanPath = cleanPath.substring(1);
+  }
+  if (cleanPath.startsWith('public/')) {
+    cleanPath = cleanPath.substring(7);
+  }
+  const encodedPath = cleanPath.split('/').map(encodeURIComponent).join('/');
+  const s3BaseUrl = 'https://ev-car-wale.s3.ap-south-1.amazonaws.com';
+  const finalUrl = s3BaseUrl + '/' + encodedPath;
+  const carId = (typeof carOrPath === 'object' && carOrPath !== null)
+    ? carOrPath.id
+    : (typeof carOrPath === 'string' ? carOrPath : '');
+  const newImageCarIds = ['bmw-i4','bmw-i5','bmw-i7','bmw-ix','bmw-ix1','bmw-ix1-lwb','audi-a6-e-tron','audi-e-tron-gt','audi-q6-e-tron','audi-q6-etron','audi-q8-etron','jeep-avengers','luce','be6'];
+  return (carId && newImageCarIds.indexOf(carId) !== -1) ? finalUrl + '?v=2' : finalUrl;
+}
+
+    function renderCars(cars) {
+      const grid = document.getElementById('car-grid');
+      const count = document.getElementById('results-count');
+      const noResults = document.getElementById('no-results');
+      if (cars.length === 0) {
+        grid.innerHTML = '';
+        count.textContent = '0 vehicles';
+        noResults.classList.remove('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+      count.textContent = cars.length + ' vehicle' + (cars.length !== 1 ? 's' : '');
+      grid.innerHTML = cars.map(car => {
+        const displayBrand = getBrandDisplay(car.brand);
+        let displayName = car.name;
+        if (displayName.toLowerCase().startsWith(displayBrand.toLowerCase())) {
+          displayName = displayName.substring(displayBrand.length).trim();
+        }
+        return `
+        <div class="car-card border border-zinc-200 bg-white p-6 flex flex-col justify-between h-[420px] relative group hover:border-black transition-all shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] stagger-card cursor-pointer">
+          <div class="h-40 bg-white flex items-center justify-center mb-4 relative overflow-hidden border border-zinc-100 p-2">
+            <div class="absolute inset-0 skeleton-shimmer"></div>
+            <img src="${getS3ImageUrl(car)}" alt="${car.name}" class="w-full h-full object-contain relative z-10" loading="lazy" onload="if (this.previousElementSibling) this.previousElementSibling.style.display='none';" onerror="handleImageError(this)">
+          </div>
+          <div>
+            <div class="flex justify-between items-start text-black">
+              <div>
+                <span class="font-mono text-[9px] text-zinc-500 uppercase">${displayBrand}</span>
+                <h3 class="text-lg font-bold mt-0.5 text-black truncate">${displayName}</h3>
+              </div>
+              <span class="font-mono text-sm font-bold text-black">${car.price}</span>
+            </div>
+            <div class="grid grid-cols-2 gap-y-1.5 gap-x-4 my-3 text-[10px] text-zinc-500 border-t border-zinc-100 pt-3 font-mono">
+              <div>RANGE: <span class="text-zinc-800 font-bold">${car.range}</span></div>
+              <div>BATTERY: <span class="text-zinc-800">${car.battery}</span></div>
+              <div>DC CHARGE: <span class="text-zinc-800">${car.charging}</span></div>
+              <div>TOP SPEED: <span class="text-zinc-800">${car.speed}</span></div>
+            </div>
+          </div>
+          <a href="index.html#/cars/${car.id}" class="block w-full py-2.5 border border-zinc-200 hover:border-black text-zinc-500 hover:text-white hover:bg-black font-mono text-[9px] uppercase tracking-widest transition-all text-center">VIEW DETAILS</a>
+        </div>
+        `;
+      }).join('');
+    }
+
+    function filterAndSort() {
+      const search = document.getElementById('search-input').value.toLowerCase().trim();
+      const brand = document.getElementById('brand-filter').value;
+      const sort = document.getElementById('sort-select').value;
+
+      let filtered = EV_DATABASE.filter(car => {
+        if (brand !== 'all' && car.brand !== brand) return false;
+        if (search) {
+          const nameMatch = car.name.toLowerCase().includes(search);
+          const brandMatch = car.brand.toLowerCase().includes(search);
+          const displayBrand = getBrandDisplay(car.brand).toLowerCase().includes(search);
+          if (!nameMatch && !brandMatch && !displayBrand) return false;
+        }
+        return true;
+      });
+
+      switch (sort) {
+        case 'price-asc': filtered.sort((a, b) => a.priceVal - b.priceVal); break;
+        case 'price-desc': filtered.sort((a, b) => b.priceVal - a.priceVal); break;
+        case 'range-desc': filtered.sort((a, b) => b.rangeVal - a.rangeVal); break;
+        case 'battery-desc':
+          filtered.sort((a, b) => {
+            const aVal = parseFloat(a.battery) || 0;
+            const bVal = parseFloat(b.battery) || 0;
+            return bVal - aVal;
+          });
+          break;
+      }
+
+      renderCars(filtered);
+    }
+
+    // Populate brand filter
+    function initBrandFilter() {
+      const brands = [...new Set(EV_DATABASE.map(c => c.brand))].sort();
+      const select = document.getElementById('brand-filter');
+      brands.forEach(b => {
+        const opt = document.createElement('option');
+        opt.value = b;
+        opt.textContent = getBrandDisplay(b);
+        select.appendChild(opt);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const uniqueCars = [];
+      const seenIds = new Set();
+      EV_DATABASE.forEach(car => {
+        if (!seenIds.has(car.id)) {
+          seenIds.add(car.id);
+          uniqueCars.push(car);
+        }
+      });
+
+      // Overwrite global EV_DATABASE with deduplicated and S3-mapped version
+      window.EV_DATABASE = uniqueCars.map(car => {
+        if (S3_IMAGE_MAPPING[car.id]) {
+          car.image = S3_IMAGE_MAPPING[car.id];
+        } else {
+          // Fallback: prepend car_images/ and brand folder if not already containing it
+          const brandUpper = car.brand.toUpperCase();
+          const brandFolder = (brandUpper === 'MERCEDES' || brandUpper === 'MERCEDES-BENZ') ? 'MERCEDES_BENZ' : brandUpper;
+          if (!car.image.startsWith('car_images/')) {
+            car.image = `car_images/${brandFolder}/${car.image}`;
+          }
+        }
+        return car;
+      });
+
+      initBrandFilter();
+      renderCars(EV_DATABASE);
+      document.getElementById('search-input').addEventListener('input', filterAndSort);
+      document.getElementById('brand-filter').addEventListener('change', filterAndSort);
+      document.getElementById('sort-select').addEventListener('change', filterAndSort);
+    });
+  </script>
+<!-- AI Floating Assistant -->
+<div id="ai-overlay" class="ai-overlay"></div>
+<div class="ai-assistant-container">
+  <div class="ai-trigger" id="ai-trigger">
+    <div class="ai-avatar-wrapper ai-float-anim">
+      <div class="ai-avatar-glow"></div>
+      <img src="ai_robot_avatar.png" alt="EV AI Assistant" class="ai-avatar-img" loading="lazy">
+    </div>
+    <div class="ai-label" id="ai-label">Ask EV AI</div>
+  </div>
+  <div class="ai-chat-window" id="ai-chat-window">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-left">
+        <img src="ai_robot_avatar.png" alt="AI" class="ai-chat-avatar" loading="lazy">
+        <div>
+          <div class="ai-chat-title">EV AI Assistant</div>
+          <div class="ai-chat-status"><span class="ai-status-dot"></span> Online</div>
+        </div>
+      </div>
+      <button class="ai-chat-close" id="ai-chat-close" aria-label="Close chat">&#x2715;</button>
+    </div>
+    <div class="ai-chat-body" id="ai-chat-body">
+      <div class="ai-message ai-bot-message" style="white-space:pre-line">
+Hi! 👋 I'm your EV AI Assistant.
+
+Ask me anything about:
+
+• Electric Vehicles
+• Charging
+• Battery Health
+• EV Costs
+• Government Policies
+• EV Buying
+• Range
+• Comparisons
+• Charging Stations
+      </div>
+      <div class="ai-suggestions">
+        <button class="ai-chip">Best EV under ₹15 lakh</button>
+        <button class="ai-chip">Charging cost</button>
+        <button class="ai-chip">Battery lifespan</button>
+        <button class="ai-chip">Compare Tata vs MG</button>
+        <button class="ai-chip">Government subsidy</button>
+        <button class="ai-chip">Charging stations near me</button>
+      </div>
+    </div>
+    <div class="ai-chat-input-area">
+      <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Ask anything about EVs..." autocomplete="off">
+      <button class="ai-send-btn" id="ai-send-btn" aria-label="Send message">Send</button>
+    </div>
+  </div>
+</div>
+<script src="ai-assistant.js"></script>
+</body>
+</html>

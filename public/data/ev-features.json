@@ -1,0 +1,806 @@
+{
+    "Tata": {
+        "Punch EV": {
+            "Exterior": "Full-width LED DRLs, 16-inch Dual-Tone Alloy Wheels, Smart Front Charging Flap, Shark Fin Antenna & Spoiler",
+            "Interior": "Dual-Tone Premium Dashboard, Phygital Touch Climate Panel, Twin-Spoke Illuminated Steering, Central Console Armrest",
+            "Safety": "6 Airbags (Standard), ESP & ABS with EBD, ISOFIX Child Seat Mounts, 5-Star Global NCAP Rating",
+            "Infotainment": "10.25-inch Touchscreen, Navigation, 10.25-inch Digital Driver Display, Wireless Android Auto & CarPlay, 4-Speaker Premium Audio Layout",
+            "ADAS": "360-Degree Surround View Camera, Blind Spot Monitoring, Hill Descent Control, Electronic Parking Brake with Auto Hold",
+            "Comfort": "30 kWh & 40 kWh Battery Pack Options, Ventilated Front Climate Seats, Voice-Activated Sunroof, Wireless Smartphone Charging"
+        },
+        "Nexon EV": {
+            "Exterior": "Smart Digital LED DRLs, Sequential Turn Indicators, 16-inch Diamond Cut Alloys, Projector LED Headlamps & Rear Spoiler",
+            "Interior": "Premium Tech-Forward Cabin, Phygital Control Center Panel, Multi-Mode Regen Paddle Shifters, Rear Seat Sunshades",
+            "Safety": "6 Airbags (Standard across trims), Electronic Stability Control (ESC), 5-Star B-NCAP Safety Rating, All-Wheel Disc Brakes",
+            "Infotainment": "12.3-inch Cinematic Touchscreen, 10.25-inch Digital Instrument Cluster, 9-Speaker JBL Sound System, Arcade.ev In-Car App Suite",
+            "ADAS": "Forward Collision Warning, Autonomous Emergency Braking, Lane Keep Assist, High-Resolution 360Â° Camera",
+            "Comfort": "45 kWh Battery Setup (High Range), Vehicle-to-Load (V2L) & V2V Charging, Front Ventilated Seats, Voice-Assisted Panoramic Sunroof"
+        },
+        "Curvv EV": {
+            "Exterior": "Sloping SUV-Coupe Roofline Design, Flush Door Handles, 18-inch Aerodynamic Alloy Wheels, Welcome & Goodbye LED Light Bars",
+            "Interior": "Premium Dual-Tone Leatherette Cabin, 4-Spoke Illuminated Steering Wheel, Ambient Mood Lighting, 11.6-Litre Front Boot (Frunk)",
+            "Safety": "6 Airbags & ESP, All-Wheel Disc Brakes with i-VBAC, ISOFIX Child Seat Mounts, Acoustic Vehicle Alert System (AVAS)",
+            "Infotainment": "12.3-inch Ultra-Responsive Touchscreen, 10.25-inch Customizable Digital Cockpit, 9-Speaker JBL Audio with Spatial Sound, Wireless Android Auto & Apple CarPlay",
+            "ADAS": "Level 2 ADAS (Suite of 20+ features), Traffic Sign Recognition, Adaptive Cruise Control with Stop & Go, 360-degree 3D Camera System",
+            "Comfort": "Up to 55 kWh Battery Capacity Option, Powered Gesture Tailgate (Hands-Free), 6-Way Powered Driver's Seat, Front R-Comfort Ventilated Seats"
+        },
+        "Tiago EV": {
+            "Exterior": "Contrast Roof with Dual-Tone Colors, Projector Headlamps with LED DRLs, EV-exclusive Body Cladding & Accents, 14-inch Hyperstyle Wheels",
+            "Interior": "Premium Dual-Tone Interior Theme, Digital Driver's Display, Leatherette Seats, Multi-mode Regenerative Braking Setup",
+            "Safety": "6 Airbags (Standard across trims), ABS with EBD & CSC, Camera-Based Reverse Park Assist, Tyre Pressure Monitoring System (TPMS)",
+            "Infotainment": "10.25-inch Harman Touchscreen System, 4 Speakers + 4 Tweeters, Wireless Smartphone Tech, ZConnect Smart App Connectivity",
+            "ADAS": "Rear Parking Assist Camera Layout, Hill Hold & Descent Control, Auto Headlamps, Rain Sensing Wipers",
+            "Comfort": "19.2 kWh & 24 kWh Battery Packs, Fully Automatic Climate Control, Cruise Control System, Smart Keyless Push Button Start"
+        },
+        "Sierra EV": {
+            "Exterior": "Iconic Alpine-style Window Layout, Connected LED Light Elements, Flush-fitting Exterior Door Handles, Rugged SUV Profile Aesthetics",
+            "Interior": "Horizon Triple-Screen Dashboard, Lounge-like Premium Seating, Welcoming Dual-Tone Themes, In-Car Gaming & OTT Console Support",
+            "Safety": "6 Airbags & All-Wheel Disc Brakes, Electronic Parking Brake with Auto Hold, Adaptive Dual-Motor AWD System Option, Lifetime Battery Warranty Policy",
+            "Infotainment": "Ultra-Wide Panoramic 3-Screen Display, 12-Speaker JBL Audio System, Dolby Atmos Spatial Sound Support, Wireless Smartphone Integration",
+            "ADAS": "Advanced ADAS Level 2+ (22 Features), HypAR Custom Head-Up Display (HUD), 360-Degree Park View Camera Setup, Intelligent Auto Park Assist",
+            "Comfort": "63 kWh and 75 kWh Battery Packs, Multi-Terrain Dynamic Off-Road Modes, Front Ventilated & Powered Memory Seats, V2L & V2V Appliance Charging Utility"
+        },
+        "Tigor EV": {
+            "Exterior": "Signature Aqua-Blue EV Grille Accents, Halogen Projector Headlamps, 14-inch Hyperstyle Wheel Covers, Integrated Turn Indicators on ORVMs",
+            "Interior": "Premium Dark Grey & Blue Cabin Theme, Digital Cluster with EV Blue Accents, Leatherette Seat Upholstery, Rear Seat Centre Armrest with Cupholders",
+            "Safety": "Dual Front Airbags, ABS with EBD & Corner Stability Control, 4-Star Global NCAP Safety Rating, Tyre Pressure Monitoring System (TPMS)",
+            "Infotainment": "7-inch Harman Touchscreen Infotainment, 8-Speaker Harman Kardon Sound System, Wired Android & Apple CarPlay, ZConnect Smart App Connected Car Tech",
+            "ADAS": "Camera-Based Reverse Park Assist, Multi-Drive Modes (Drive & Sport), Real-Time Auto Vehicle Tracking, Follow-Me-Home Headlamps",
+            "Comfort": "26 kWh High-Energy Density Battery Pack, Fully Automatic Climate Control, Cruise Control System, Smart Keyless Entry with Push Button Start"
+        },
+        "Avinya (Concept)": {
+            "Exterior": "Streamlined Drag-Reducing Silhouette, Full-Width Signature 'T' LED Light Bars, Showcase Concept Butterfly Door System, Extra-Large Aerodynamic Performance Alloys",
+            "Interior": "Ultra-Futuristic Lounge-Style Layout, Eco-Friendly Sustainable Interior Trims, Screen-less Clean Minimalist Dashboard, Voice-Activated Command Console Setup",
+            "Safety": "Full Suite of Next-Gen Airbags, Traction Control & Electronic Stability (ESC), Blind Spot Collision Avoidance Assist, SOS Emergency Assistance Support",
+            "Infotainment": "Next-Gen AI-Enabled Connected Car Tech, Advanced Intelligent Voice Navigation, Immersive Spatial Audio System, Seamless Individual Zone Connectivity",
+            "ADAS": "Advanced Driver Assistance System (ADAS), Forward Collision & Lane Keep Assist, 360-degree 3D Surround View Camera, Adaptive Cruise Control & High Beam Assist",
+            "Comfort": "Target 500+ km Range Expectations, Ultra-Fast Charging Platform Architecture, Ergonomically Designed Relaxing Seats, Sky-View Panoramic Roof Setup"
+        },
+        "Harrier EV": {
+            "Exterior": "LED Projector Headlamps, R18 Alloy Wheels, Connected LED DRLs, Panoramic Sunroof, Rugged Skid Plates",
+            "Interior": "Premium Dark Dual-Tone Dashboard, 10.25-inch Touchscreen, Soft-Touch Materials, Ambient Lighting",
+            "Safety": "6 Airbags, Electronic Stability Program, ABS with EBD, ISOFIX Child Mounts, Hill Descent Control",
+            "Infotainment": "10.25-inch Touchscreen, JBL Premium Sound System, Wireless Android Auto & CarPlay, Connected Car Tech",
+            "ADAS": "Lane Keep Assist, Blind Spot Monitoring, Adaptive Cruise Control, Forward Collision Warning",
+            "Comfort": "Ventilated Front Seats, Dual-Zone Climate Control, Wireless Charging, Smart Keyless Entry"
+        },
+        "Xpres-T EV": {
+            "Exterior": "Body-Colored Bumpers, Halogen Headlamps, EV Signature Blue Accents, Steel Wheels with Wheel Covers",
+            "Interior": "Standard Dual-Tone Dashboard, Fabric Seat Upholstery, Manual AC, Digital Instrument Cluster",
+            "Safety": "Dual Front Airbags, ABS with EBD, Rear Parking Sensors, Speed Sensing Auto Door Lock",
+            "Infotainment": "Basic Audio System, Bluetooth Connectivity, FM/AM Radio, USB Chargers",
+            "ADAS": "Rear Parking Assist, Speed Alert System",
+            "Comfort": "Power Windows Front, Cabin Climate Control AC, Power Steering"
+        }
+    },
+    "Mahindra": {
+        "XEV 9e": {
+            "Exterior": "Aerodynamic Coupe-SUV Profile, C-Shaped Premium LED Headlamps, 19-inch Aerodynamically Optimized Alloys, Angular Flush Door Handles",
+            "Interior": "Sci-Fi Theme Triple-Screen Layout, Premium Eco-Fabric Dashboard Trims, Dual-Zone Automatic Climate Control, Multi-Mode Regen Steering Paddles",
+            "Safety": "6 Airbags (Standard), Electronic Stability Program (ESP), 5-Star Bharat NCAP Safety Rating, All-Wheel Disc Brakes",
+            "Infotainment": "12.3-inch Primary Touchscreen Navigation, 12.3-inch Digital Driver's Display, 12.3-inch Co-Driver Entertainment Screen, 16-Speaker Harman Kardon Dolby Atmos",
+            "ADAS": "Level-2 Advanced ADAS Suite, Augmented Reality Head-Up Display (HUD), 360-Degree Surround View Monitor, Advanced Intelligent Auto Park Assist",
+            "Comfort": "59 kWh & 79 kWh Battery Capacities, Up to 656 km Claimed Range, Front Seat Ventilation with Cooling, Smart Powered Hands-Free Tailgate"
+        },
+        "XEV 9s": {
+            "Exterior": "Large Bold High-Riding SUV Stance, Signature LED Light Bars Front & Rear, 18-inch High-Strength Wheels, Rugged Off-Road Ready Cladding",
+            "Interior": "Standard 3-Row 7-Seater Layout, Coast-to-Coast Dashboard Glass, Sliding & Reclining Second Row Seats, Fold-Out Integrated Snack Tray",
+            "Safety": "Up to 7 Airbags (with Driver Knee Airbag), High-Strength INGLO Skateboard Platform, Electronic Brake-by-Wire Setup, All-Wheel Disc Braking Assembly",
+            "Infotainment": "Triple 12.3-inch Custom HD Displays, In-Car Gaming & Connected Apps, Wireless Smartphone Integration, Dedicated Sound Profiles per Passenger",
+            "ADAS": "Level 2+ Next-Gen ADAS Array, Adaptive Cruise Control with Stop-and-Go, Front and Rear Cross Traffic Alerts, Blind Spot Collision Warning",
+            "Comfort": "59, 70, and 79 kWh Battery Packs, Cooled 1st and 2nd Row Seats, Panoramic Skyroof Panel, Up to 679 km Expected Range"
+        },
+        "XUV 3XO EV": {
+            "Exterior": "High-Gloss Drop-Down Grille Design, LED Projector Headlights & LED DRLs, Infinity Connected LED Tail Lights, 17-inch Diamond-Cut Alloy Wheels",
+            "Interior": "Premium Soft-Touch Dashboard Wrap, Dual-Tone Premium Cabin Theme, Leatherette Seat Upholstery, Ergonomic Flat-Bottom Steering Wheel",
+            "Safety": "6 Airbags (Standard), Electronic Stability Program (ESP), Front & Rear Parking Radar Sensors, Tire Pressure Monitoring System (TPMS)",
+            "Infotainment": "10.25-inch Touchscreen Navigation, 10.25-inch Digital Instrument Cluster, 7-Speaker Harman Kardon Sound System, In-Built Alexa Voice Assistant",
+            "ADAS": "Level-2 Autonomous Driving Suite, 360-Degree Camera & Blind View Monitor, Autonomous Emergency Braking (AEB), Lane Keep Assist & Departure Alert",
+            "Comfort": "39.4 kWh High-Efficiency Battery Pack, Dual-Zone Automatic Climate Control, Skyview Panoramic Sunroof, Claimed Range up to 456 km"
+        },
+        "BE 6": {
+            "Exterior": "C-Shaped Razor LED DRL Layout, Deployable Flush Smart Door Handles, 19-inch Concept Alloy Wheels, Practical Front Trunk (Frunk)",
+            "Interior": "Cockpit-Style Driver-Centric Cabin, Touch-Enabled Steering Control Switches, Eco-Conscious Fabric Trim Details, Cooled Center Console Storage Pod",
+            "Safety": "6 Airbags & All-Wheel Disc Brakes, Driver Drowsiness Alert Sensor, Electronic Parking Brake with Auto-Hold, Virtual Engine Warning Sound Alerts",
+            "Infotainment": "Floating 12.3-inch Twin Infotainment, Wireless Android Auto & Apple CarPlay, Augmented Reality HUD Display, 16-Speaker Harman Kardon Sound Setup",
+            "ADAS": "Level 2 Enhanced ADAS System, 360-Degree Camera with Blind-Spot Monitoring, Auto Park Assist Controls, Cross-Traffic Alert Guidance Systems",
+            "Comfort": "59 kWh and 79 kWh Battery Layouts, Ventilated Premium Front Seats, Fixed Panoramic Clear Glass Roof, Claimed Max Range of 683 km"
+        },
+        "BE 07": {
+            "Exterior": "Boxy & Edgy Contemporary SUV Styling, Large Geometric LED Headlamp Pods, Aerodynamically Contoured Alloy Profiling, Seamless Flush Exterior Fitting Handles",
+            "Interior": "Minimalist Dashboard Interface, Fully Flat Multi-Utility Interior Floor, Premium Sustainable Leatherette Upholstery, Multi-Color Ambient Accent Illumination",
+            "Safety": "Comprehensive 6-Airbag Protection Setup, Next-Gen Electronic Stability Control (ESC), Rigid EV Crash-Cage Battery Protection, ISOFIX Child Anchorage Point Fasteners",
+            "Infotainment": "Coast-to-Coast Multi-Screen Glass panel, High-Fidelity Premium Spatial Audio System, Over-The-Air (OTA) Connected Updates Support, Multi-Zone Smart Voice AI Assistants",
+            "ADAS": "Autonomous Forward Emergency Braking, Adaptive High-Beam Headlamp Assist, Blind Spot Collision Mitigation Systems, Lane Centering & Active Steering Controls",
+            "Comfort": "Target Range Expectation of 450-500 km, Ultra-Fast DC Charging Capabilities, Multi-Zone Smart Digital Climate Control, Large Panoramic Sunroof Overhead"
+        },
+        "XUV 400": {
+            "Exterior": "Stylish Copper-Finished Exterior Highlights, Bold Projector Cluster Headlamps, 16-inch Dual-Tone Machined Alloys, Sturdy Functional Roof Rail Mountings",
+            "Interior": "Modernized 'Pro' Tech Layout Dashboard, Copper Stitch Accent Interior Details, Comfortable Leatherette Seat Layouts, Convenient Rear Drop-Down Armrest",
+            "Safety": "6 Airbags (Standard Layout Trims), ABS with EBD Braking Interventions, 5-Star Certified Bharat NCAP Rating, All-Wheel Disc Brake Pad Infrastructure",
+            "Infotainment": "10.25-inch High-Definition Touchscreen, 10.25-inch Digital Cockpit Display, Wireless Android Auto & Apple CarPlay, 6-Speaker Immersive Audio Distribution",
+            "ADAS": "Rear Parking Camera with Gridlines, Follow-Me-Home Headlamp Delays, Automatic Rain-Sensing Wipers, Anti-Glare Auto-Dimming IRVM Glass",
+            "Comfort": "34.5 kWh & 39.4 kWh Batteries, Dual-Zone Customizable Climate Controls, Single-Pane Electronic Roof Sunroof Standard Range, Output up to 456 km"
+        },
+        "Thar.e": {
+            "Exterior": "Rugged Modular Off-Road Design, Square-Shaped Pixel LED Headlamps, High-Clearance Exposed Suspension Elements, Tailgate-Mounted Full-Size Spare Wheel",
+            "Interior": "Washable & Drainable Utilitarian Floor, Minimalist Screen Configured Dashboard, Heavy-Duty Grab Rails for Passengers, Industrial Grade Sustainable Seat Fabrics",
+            "Safety": "Robust Structural Off-Road Chassis Roll-Cage, Smart Electronic Off-Road Drivetrain Locks, Multi-Terrain Dynamic Grip Control, Advanced Hill Ascent & Descent Brake Assist",
+            "Infotainment": "Ruggedized Center Infotainment Hub, Dedicated Custom Off-Road Telemetry Displays, Water-Resistant Dash Control Toggle Panel, Integrated Outdoor Field Sound Bar",
+            "ADAS": "360-Degree Trail-View Camera Network, Digital Trail Mapping Navigation Software, Obstacle Detection Proximity Radars, Real-Time Vehicle Orientation Instrumentation",
+            "Comfort": "Dual-Motor AWD Smart Electric System, Generous 2,775-2,975 mm Wheelbase, Fast-Charging High-Capacity Battery Packs, Extreme Water-Wading Protection Seals"
+        }
+    },
+    "Audi": {
+        "Q6 e-tron": {
+            "Exterior": "Digital Stage Matrix LED Headlamps, 20-inch Dynamic 5-Spoke Alloys, Active Digital OLED Rear Lights, Integrated Rear Roof Spoiler",
+            "Interior": "Panoramic Audi MMI Display Wrap, Augmented Reality HUD Dashboard, Premium Recycled Material Trims, Dedicated CoDriver -Display Screen",
+            "Safety": "8 Airbags Safety Protection System, Active Crash Sensing Emergency Brake, Quattro All-Wheel Stability Tech, ISOFIX Front & Rear Seat Mounts",
+            "Infotainment": "14.5-inch MMI Curved Touchscreen, 11.9-inch Audi Virtual Cockpit Display, 10.9-inch Passenger MMI Console, Bang & Olufsen 3D Premium Sound",
+            "ADAS": "Level 2+ Top-Tier ADAS System Suite, 360-Degree Camera with 3D View, Intersection Assist & Blind Spot Radar, Adaptive Cruise Control with Steering",
+            "Comfort": "100 kWh Performance Battery Pack, 800V PPE Ultra-Fast Charging Platform, 4-Zone Smart Climate Control Setup, Front Row Massaging Ventilated Seats"
+        },
+        "e-tron GT": {
+            "Exterior": "Low-Slung Aerodynamic Gran Turismo Frame, Matrix LED Laser Light Assemblies, Carbon Fiber Reinforced Roof Shell, Active Deployable Rear Spoiler Unit",
+            "Interior": "Driver-Oriented Monoposto Cockpit Layout, Dinamica Sustainable Microfiber Seats, Flat-Bottom Alcantara Steering Wheel, Matte Carbon Interior Accent Trims",
+            "Safety": "Dual-Stage Airbag Deployment Suite, High-Performance Steel Disc Braking, Electronic All-Wheel Steering Assists, Traction Control and Launch Management",
+            "Infotainment": "10.1-inch MMI Navigation Plus Hub, 12.3-inch Virtual Cockpit Screen Unit, Premium Bang & Olufsen Audio Layout, e-tron Sports Custom Sound Generator",
+            "ADAS": "Pre-Sense Front Collision Protection, Lane Departure Active Steer Alerts, Surround-View Camera Mapping, Rear Cross-Traffic Lane Interventions & Blind Spot",
+            "Comfort": "93.4 kWh Performance Battery Core, Adaptive 3-Chamber Air Suspension Grid, Heated & Cooled Sport Bucket Seats, Dual-Port Convenient Charging Access"
+        },
+        "A6 e-tron": {
+            "Exterior": "Sleek Sportback Aerodynamic Design, Second-Gen Digital Smart Glass Roof Control, OLED Lighting Elements, Camera-Based Virtual Exterior Mirrors, Illuminated Four Rings Logo",
+            "Interior": "Ultra-Modern Digital Stage Dashboard Wrap, Panoramic High-Gloss Luxury Interior Inserts, Soft-Wrap Dynamic Cabin Layout, Luxury Styling",
+            "Safety": "Comprehensive Multistage Airbag Safety, Audi Pre-Sense Collision Mitigation, Intelligent Matrix Braking Architecture, Electronic Child Safety Door Lock Systems",
+            "Infotainment": "MMI Curved Panoramic Display Console, In-Car Dynamic Connected App Store, Individual Sound-Zone Headrest Speakers, Wireless Smartphone Interfacing Trims",
+            "ADAS": "Level 2 Autonomous Driver Suite Options, Adaptive Driving Park Assist Plus Grid, High-Resolution 360 Camera Systems, Traffic Sign Recognition Software",
+            "Comfort": "800-Volt PPE Premium Architecture, Up to 700+ km Driving Range Target, Multi-Zone Automatic Air Conditioning, Hands-Free Powered Proximity Tailgate"
+        }
+    },
+    "BMW": {
+        "iX": {
+            "Exterior": "Vertical Intelligence Kidneys Front Grille, Sleekest Slim Profile BMW Headlamps, Integrated Flush Mechanical Door Openers, Frameless High-End Side Glass Profiles",
+            "Interior": "Minimalist Lounge-Style Monolithic Floor, Hexagonal Dynamic Multi-Control Steering, Sky Lounge Electrochromic Glass Panel, Crystal Glass Interior Controller Accents",
+            "Safety": "8 Airbags with Carbon Cage Framework, Acoustic Pedestrian Proximity Warnings, Dynamic Stability & Cornering Braking, ISOFIX Rear Anchorage Child Fixtures",
+            "Infotainment": "14.9-inch BMW Live Cockpit Touchscreen, 12.3-inch Driver Information Center Screen, 18-Speaker Harman Kardon Sound Core, Latest BMW Operating System 8.5 UI",
+            "ADAS": "Driving Assistant Professional Safety Array, 360-degree Parking Monitor with Reversing, Active Route Departure Lane Management, Front Cross-Traffic Collision Mitigation",
+            "Comfort": "76.6 kWh & 111.5 kWh Battery Trims, Front Row Multizone Heated Massage Seats, 4-Zone Tailored Air Flow Distribution, Launch Control Performance Dynamic Modes"
+        },
+        "X1 (LWB)": {
+            "Exterior": "Extended Long Wheelbase Stance Proportions, Adaptive LED Twin Element Headlamps, Distinctive M Sport Exterior Package, 18-inch Aerodynamic Alloy Wheels",
+            "Interior": "BMW Widescreen Curved Display, Premium Veganza Perforated Upholstery, Generous 490-Litre Luggage Boot Space, Floating Elevated Armrest Control Pod",
+            "Safety": "8 Safety Airbags System Enclosures, Dynamic Stability Control (DSC), Level 1 ADAS Suite Interventions, ISOFIX Child Seat Anchor Mounts",
+            "Infotainment": "10.7-inch Touch Control Navigation Panel, 10.25-inch Digital Gauge Cluster Unit, 12-Speaker Harman Kardon Sound Setup, Wireless Apple CarPlay & Android Auto",
+            "ADAS": "Reversing Assistant Automatic Controls, Autonomous Emergency Braking (AEB), Lane Departure Warning System, 4-Level Selectable Regenerative Braking",
+            "Comfort": "66.4 kWh Battery / 204 PS Front Motor, Claimed Driving Range up to 531 km, Large Panoramic Glass Sunroof Overhead, Dual-Zone Premium Climate Control"
+        },
+        "i4": {
+            "Exterior": "Classic Gran Coupe 4-Door Silhouette, Closed-Off Vertical Aerodynamic Kidney, Sporty Rear Bumper Diffuser Highlights, 17/19-inch Light Aero Alloy Options",
+            "Interior": "Driver-Focused Widescreen Glass Panel, Premium Leather Sport Seats Form Pattern, Anthracite Premium Roof Liner Trim Fabrics, Variable Rear Trunk Loading Architecture",
+            "Safety": "Full Airbag Layout Safety Enclosures, Dynamic Trajectory Brake Controls (DSC), Active Protection Safety Warning Array, ISOFIX Lower Anchorage Mount Locations",
+            "Infotainment": "14.9-inch Infotainment Central Control, 12.3-inch Digital Instrument Pod Core, 17-Speaker Harman Kardon Sound Layout, BMW Connected Drive Intelligent Cloud",
+            "ADAS": "Driving Assistant, Traffic Lane Keep Assist, Active Cruise Control with Braking Tech, Rear Camera with Park Distance Sensors, High-Beam Automation Sensor Adjusters",
+            "Comfort": "83.9 High-Performance Pack Setup, Rear Axle Air Suspension Load Leveller, Three-Zone Smart Air Conditioning Trims, Electric Sunroof with Anti-Trap Safety"
+        },
+        "i7": {
+            "Exterior": "Monolithic Regal Sedan Body Profiling, Swarovski Crystal Headlight Components, Illuminated Iconic Glow Front Borders, Automatic Soft-Close Smart Power Doors",
+            "Interior": "Rear Lounge Theatre Screen, 31.3-inch BMW Interaction Multi-Light Control Bar, Executive Lounge Reclining Rear Seats, Cashmere/Leather Luxury Upholstery Themes",
+            "Safety": "Comprehensive Multi-Zone Protective Airbags, Active Roll Stabilization Handling System, Carbon-Core Reinforced Passenger Cell, Advanced Emergency Steer Interventions",
+            "Infotainment": "31.3-inch 8K Rear Theatre Display Unit, Curved Front Dashboard Dual Glass Array, 36-Speaker Bowers & Wilkins Diamond Audio, Rear Door Integrated Touch Control Pods",
+            "ADAS": "Level 2+ Automated Driving Assistant Pro, Remote 3D Parking View Phone App Tech, Route Steering Lane Guidance Arrays, Stop & Go Full Speed Adaptive Cruise",
+            "Comfort": "101.7 kWh High Capacity Power Array, 2-Axle Adaptive Air Comfort Suspensions, All-Seat Active Heating, Cooling & Massage, Executive Rear Smart Climate Controls"
+        },
+        "i5": {
+            "Exterior": "Modern Executive Business Sedan Profile, Sleek Twin Element M Headlight Clusters, Highlighted Gloss Black Side Rocker Panels, Aero Optimized Light Weight Wheel Alloys",
+            "Interior": "Interaction Bar Dashboard Light Strip, Vegan Leather Veganza Premium Seats, Dark Silver M Aluminum Interior Trims, Driver Centric Curved Screen Cockpit",
+            "Safety": "6 Cabin Airbags & Dynamic Brake Assist, Crash Sensor Post-Collision Shutdown, Active Blind Spot Collision Prevention, Electronic Parking System with Auto-Hold",
+            "Infotainment": "14.9-inch Central Touch Display Console, 12.3-inch Configurable Cluster Screen, AirConsole In-Car Video Gaming Suite, 12-Speaker Harman Kardon Premium Audio",
+            "ADAS": "Highway Assistant Hands-Free Option (up to 130km/h), Active Lane Change with Eye Activation, Parking Assistant Plus with Surround View, Rear Cross-Traffic Warning with Brake",
+            "Comfort": "81.2 kWh Functional Battery Pack Core, Sport/Eco/Expressive Dynamic Drive Modes, Front Seat Ventilation & Memory Trims, Wireless Charging Tray for Smartphones"
+        }
+    },
+    "BYD": {
+        "Sealion 7": {
+            "Exterior": "Ocean-Inspired SUV-Coupe Profile, Full-LED Headlights & Pixel Tail Lights, Motorised Hidden Flush Door Handles, 19 to 20-inch Sporty Alloys",
+            "Interior": "Layered Dashboard with Leatherette Seats, Center Console Drive Selector Knob, Dual-Zone Climate Control Setup, 58-Litre Front Boot (Frunk)",
+            "Safety": "11 Airbags (Standard across trims), Driver Monitoring Attention Tracking, All-Wheel Disc Brakes with Auto-Hold, Cell-to-Body (CTB) Rigid Platform",
+            "Infotainment": "15.6-inch Rotatable Touchscreen Console, 10.25-inch Digital Driver's Display, 12-Speaker Premium Dynaudio System, Wireless Apple CarPlay & Android Auto",
+            "ADAS": "Level 2 Advanced ADAS Suite, 360-Degree Surround View Camera, Real-Time Vehicle Tracking Software, Adaptive Cruise Control Network",
+            "Comfort": "82.56 kWh Blade Battery Configuration, Up to 567 km NEDC Claimed Range, Ventilated & 8-Way Powered Front Seats, Vehicle-to-Load (V2L) Mobile Power Outlets"
+        },
+        "EMAX 7": {
+            "Exterior": "Sophisticated European MPV Silhouetting, Crystal LED Lighting Throughout, 17-inch Multispoke Radial Alloys, Functional Integrated Roof Rails",
+            "Interior": "6-Seat (Captain) or 7-Seat Layouts, Flat-Folding Rear Rows for 580L Space, Upper AC Vents for 2nd & 3rd Rows, Luxury Leatherette Upholstery Finish",
+            "Safety": "6 Safety Airbags (Standard), Electronic Stability Control (ESC), ISOFIX Child Seat Anchor Mountings, Hill Descent & Hill Start Assist",
+            "Infotainment": "12.8-inch Rotating Touchscreen Display, Crisp Graphics Premium Interface, 6-Speaker Surround Sound System, Smart NFC Card Key Vehicle Access",
+            "ADAS": "Adaptive Cruise & Blind Spot Monitor, Autonomous Emergency Braking (AEB), Rear Cross-Traffic Collision Braking, 360-Degree Surround View Monitor",
+            "Comfort": "55.4 kWh & 71.8 kWh Blade Batteries, 420 km to 530 km Extended Range, Ventilated Front Seats with Electric Adjustment, Fixed Panoramic Roof with Electric Sunshade"
+        },
+        "Atto 3": {
+            "Exterior": "Dragon Face 3.0 Aesthetic Styling, Panoramic One-Touch Sunroof Panel, 18-inch Aerodynamically Sculpted Alloys, One-Piece Premium LED Tail Light Bar",
+            "Interior": "Quirky Gym/Fitness Inspired Cabin Motif, Guitar-String Style Flexible Door Pockets, Rotatable Gear Selector Handle Dial, Multi-Color Music Sync Ambient Lights",
+            "Safety": "7 Airbags Standard (with Center Airbag), 5-Star Euro NCAP Safety Credentials, Traction Control & Electronic Stability, Front and Rear Parking Sensors Layout",
+            "Infotainment": "12.8-inch Smart Rotating Center Screen, 5-inch Compact Driver Instrument Pod, 8-Speaker Dirac HD Custom Sound System, Voice Commands for Vehicle Functions",
+            "ADAS": "Level 2 Advanced Autonomy Suite, Blind Spot Detection Warning Alerts, Lane Keep Assist & Departure Alert, Rear Cross Traffic Radar Control",
+            "Comfort": "49.92 kWh & 60.48 kWh Battery Packs, Up to 521 km ARAI Certified Range, 6-Way Electrically Adjustable Driver Seat, CN95 Certified Smart Air Filter System"
+        },
+        "Seal": {
+            "Exterior": "Low-Slung Ocean X Sports Sedan Profiling, Striking Double U-shaped LED Headlamps, E-Shaped Aerodynamic Rear Air Vents, Wind-Resistant Flush Mechanical Handles",
+            "Interior": "High-End Tailored Minimalist Dashboard, Integrated Suede Sport Bucket Seats, Crystal Mechanism Gear Shift Selector, Soundproof Double-Glazed Front Glass",
+            "Safety": "9 Airbags Layout Enclosure Grid Protection, 5-Star Euro NCAP Evaluation Rating, Intelligent Torque Adaption Control (iTAC), All-Wheel Ventilated Performance Disc Brakes",
+            "Infotainment": "15.6-inch Smart Rotatable Media Hub, 10.25-inch Virtual Instrumentation Cockpit, 12-Speaker Dynaudio Premium Audio Core, Dual 15W High-Speed Wireless Charging Mats",
+            "ADAS": "Adaptive Cruise with Full Stop-and-Go, Forward and Rear Collision Mitigation Systems, Lane Centering & Lane Keeping Intervention, 360-Degree 3D Environmental Visualization",
+            "Comfort": "61.4 kWh & 82.56 kWh Battery Selections, Up to 650 km Maximum Driving Range, Heated/Ventilated Memory Sports Seats, Variable Headrest Cushion Damping Controls"
+        }
+    },
+    "Citroen": {
+        "Ã«C3": {
+            "Exterior": "Bold SUV-Inspired Hatchback Footprint, Signature Citroen Chevron DRL Styling, Protective Side Body Cladding Guards, High Ground Clearance Urban Profile",
+            "Interior": "Minimalist Two-Tone Anodized Dashboard, Extra-Cushioned Citroen Comfort Seats, Three USB Fast-Charging Port Tunnels, Generous 315-Litre Storage Luggage Boot",
+            "Safety": "Dual Front SRS Airbags, ABS Brake Protection Management with EBD System, Rear Proximity Sensors Parking Matrix, High-Tensile Structural Impact Shell",
+            "Infotainment": "10.2-inch C-Buddy Touchscreen Unit, Wireless Apple CarPlay & Android Auto, Digital Compact Driver Instrument Cluster, MyCitroen Connect Smartphone Car Tech App",
+            "ADAS": "Essential Reverse Camera Grid Assist, Standard Hill-Hold Assist Braking, Real-Time Location Fleet Over-The-Air Software Performance Updates, GeoSecurity",
+            "Comfort": "29.2 kWh Thermally Managed Battery Pack, 320 km ARAI Certified Driving Range, Manual Air Conditioner with PM2.5 Filter, Regenerative Braking System Energy Recapture"
+        }
+    },
+    "Ferrari": {
+        "Luce (Concept)": {
+            "Exterior": "Low-Slung Hyper-Aerodynamic Track Frame, Active Venturi Carbon Sport Racing Buckets, Wind-Tunnelling Channels, Ultra-Lightweight Monocoque Multi-Wheel Setup, Premium Carbon Body Panels, Dynamic Lightweight Alcantara Wrapped Drag-Reduction Wing Elements",
+            "Interior": "F1-Inspired Human-Machine Interface Layout, Customized Digital Race-Telemetry Instrumentation, Passenger Interactive Speed/G-Force Performance Friction Telemetry Screen",
+            "Safety": "Track-Grade Carbon Ceramic Matrix Brakes, Side Slip Control 9.0 Electronic Traction, Multi-Point Race Harness Anchor Systems, Dedicated Solid-State Battery Fire Barriers",
+            "Infotainment": "Curved Driver Race-Display Real-Time Instrumentation, Bespoke High-Fidelity Spatial Audio Core, Ferrari Track-Analytic Computing Suite",
+            "ADAS": "High-Speed Track Launch Control Matrix, Predictive Vehicle Dynamics Software, Specialized Pit-Lane Velocity Automation",
+            "Comfort": "Quad-Motor High-Performance AWD Powertrain, Sub-2.0 Second 0-100 km/h Acceleration, Advanced Formula E Derived Active Damping, Extreme High-Voltage DC Hyper-Charging"
+        }
+    },
+    "Genesis": {
+        "GV60": {
+            "Exterior": "Athletic Crossover Silhouette, Distinctive Two-Line Matrix LED Elements, Clamshell Aerodynamic Seamless Hood Wrap, Automatic Deployable Flush Side Handles",
+            "Interior": "Crystal Sphere Unique Rotating Gear Selector, Floating Architecture Center Command Pod, Sustainable Plant-Based Leather Accents, Completely Flat Second Row Cabin Floor",
+            "Safety": "8 Safety Airbags (with Front Center Airbag), Forward Blind-Spot Collision Avoidance Assist, Electronic Limited-Slip Differential (e-LSD), Safe Exit Assist Door Warning Radars",
+            "Infotainment": "Dual 12.3-inch Panoramic Panels, Face Connect Biometric Door Unlock, Fingerprint Start Vehicle Automation, 17-Speaker Bang & Olufsen Premium Audio",
+            "ADAS": "Level 2 System, Remote Smart Parking Assist II, Surround View Monitor with 3D Navigation, Navigation-Based Smart Cruise Control Matrix Highway Driving Assist II",
+            "Comfort": "77.4 kWh Capacity High-Voltage Battery, 800V Architecture Ultra-Fast Charging Core, Ergo Motion Driver Massaging Seat Profile, Active Noise Control-Road (ANC-R) Tech"
+        }
+    },
+    "Honda": {
+        "Elevate EV": {
+            "Exterior": "Upright Confident SUV Silhouette Profile, EV-Exclusive Sealed Front Nose Panel, 17-inch Low-Resistance Rolling Alloys, Roof Rails & Protective Underbody Guards",
+            "Interior": "Modern Clean Navy/Black Dashboard Theme, Spacious Cabin Layout with Fabric Seats, Generous Under-Console Storage Cubbies, Fold-Flat 60:40 Rear Seat Flexibility",
+            "Safety": "6 Safety Airbags (Standard Variant Load), Vehicle Stability Assist (VSA) Controls, ISOFIX Child Anchorage Point Fasteners, Hill Start Assist Brake Intervention Setup",
+            "Infotainment": "10.25-inch High-Definition Media Display, 7-inch Semi-Digital Driver Information Panel, Wireless Android Auto & Apple CarPlay, Honda Connect Smart Car Telematics App",
+            "ADAS": "Honda SENSING Suite (ADAS Level 2), Lane Keep Assist & Departure Mitigation, Collision Mitigation Braking System (CMBS), Adaptive Cruise Control Tracking Function",
+            "Comfort": "45-50 kWh Targeted Lithium Battery Pack, Expected Commuter Range up to 400+ km, Automatic Climate Control with Air Purifier, Single-Pane Electronic Roof Sunroof Glass"
+        },
+        "Zero Series Concepts": {
+            "Exterior": "Ultra-Futuristic 'Thin, Light, Wise' Stance, Low-Slung Aerodynamic Drag Silhouette, Redesigned New Art-Expression Honda Emblem, Interactive Digital Exterior Panel Matrix",
+            "Interior": "Minimalist Steer-by-Wire Cockpit Space, Panoramic Digital Front Horizon Display, Sustainable Recycled Composite Materials, Open-Concept Lounge Layout Configuration",
+            "Safety": "Next-Gen Omni-Directional Crash Structure, Advanced Battery Thermal Runaway Shields, AI-Driven Smart Vehicle Stability Controls, Comprehensive Safe-Exit Warning Systems",
+            "Infotainment": "Integrated AI-Driven Digital Assistant OS, Immersive Spatial Audio Entertainment Unit, Augmented Reality Front Windshield Display, Seamless Individual Device Interfacing",
+            "ADAS": "High-Tier L3 Autonomous Driving System, Eyes-Off Hands-Free Highway Automation, Machine-Learning Predictive Hazard Safety, 360-Degree Real-Time Lidar Array Grid",
+            "Comfort": "Ultra-Efficient High-Density Thin Battery, 15% to 80% Quick Charging in 15 Mins, Active Vibration-Damping Adaptive Ride, Target Performance Range over 500+ km"
+        },
+        "0 Alpha": {
+            "Exterior": "Aerodynamic Silhouette, Thin LED Matrix Headlights, Active Air Intakes, Light Weight Alloy Wheels",
+            "Interior": "Screenless Dashboard Design, Sustainable Material Seats, Minimalist Layout, Panoramic Canopy",
+            "Safety": "Advanced Collision Mitigation, Frontal and Side Curtain Airbags, Vehicle Stability Assist",
+            "Infotainment": "Augmented Reality HUD, AI Voice Interaction System, Personalized Zone Audio",
+            "ADAS": "Honda SENSING 360 ADAS Suite, Lane Departure Warning, Road Departure Mitigation",
+            "Comfort": "e-AWD Dynamic Control, Dual Zone Automatic Climate Control, Fast Wireless Charger"
+        }
+    },
+    "Hyundai": {
+        "Creta EV": {
+            "Exterior": "EV-Specific Closed Front Grille Frame, Connected LED DRLs & Main Lamps, Aero-Efficient 17-inch Alloy Wheels, Subtle Integrated Rear Roof Spoiler",
+            "Interior": "Dark Navy-Grey-Silver Cabin Theme, Kona EV Styled Steering Layout, Steering Column Mounted Gear Selector, Electric Passenger 'Boss Mode' Switch",
+            "Safety": "6 Airbags (Standard across trims), All-Wheel Disc Brakes with EBD, Electronic Stability Control (ESC), Tyre Pressure Monitoring System (TPMS)",
+            "Infotainment": "Dual 10.25-inch Screen Glass Panels, EV-Exclusive Visual Software Layout, 8-Speaker BOSE Premium Sound Tech, Wired Apple CarPlay & Android Auto",
+            "ADAS": "Level 2 Autonomous ADAS System, 360-Degree Camera with Blind-Spot View, Adaptive Cruise Control with Stop & Go, Front & Rear Parking Proximity Radars",
+            "Comfort": "42 kWh & 51.4 kWh Battery Pack Trims, 390 km to 510 km Claimed Range, Voice-Activated Panoramic Sunroof, Front Seat Ventilation & Dual-Zone AC"
+        },
+        "Inster": {
+            "Exterior": "Quirky Boxy Micro-SUV Stance Dimensions, Pixel-Design Signature LED DRL Rings, Contrast Dual-Tone C-Pillar Graphics, Rugged Front & Rear Skid Plates",
+            "Interior": "Walk-Through Flat Front Row Floor Design, Pixel-Themed Steering Cloth Inserts, 50:50 Split-Folding Slide Rear Seats, Customizable Colorful Dashboard Accents",
+            "Safety": "6 Safety Airbags Protection Array, Electronic Stability Control (ESC), Front Collision Mitigation Assist (FCA), Lane Keeping & Blind Spot Radar Alerts",
+            "Infotainment": "10.25-inch Floating Media Infotainment, 10.25-inch Digital Cluster Display Unit, Wireless Charging Pad Utility Console, Bluelink Connected Car Software Apps",
+            "ADAS": "Adaptive Cruise Control System Grid, Surround View Parking Camera Network, Rear Cross-Traffic Brake Mitigation, Intelligent Speed Limit Warning Assists",
+            "Comfort": "42 kWh and 49 kWh Battery Layouts, Up to 355 km WLTP Claimed Range Specs, Automatic Heated Steering & Front Seats, Vehicle-to-Load (V2L) Bi-Directional Ports"
+        },
+        "Ioniq 5": {
+            "Exterior": "Retro-Futuristic Parametric Pixel Profile, Clamshell Hood & Pop-Out Flush Handles, 20-inch Geometric Parametric Wheels, V-Shape Character Light Lower Accent",
+            "Interior": "Universal Island Sliding Center Console, Eco-Processed Leather & Recycled Yarn, Fully Reclining Relaxation Front Seats, Flat Platform Spacious Floor Architecture",
+            "Safety": "6 Airbags Core & All-Wheel Disc Brakes, Smart Structural Battery Safety Cage, Safe Exit Assist Electronic Side Locks, Blind-Spot View Cluster Camera Feed",
+            "Infotainment": "12.3-inch Infotainment & Driver Cluster, Premium 8-Speaker Bose Sound Core, Magnetic Dashboard Memo Board Area, In-Car App Suite with Over-The-Air Tools",
+            "ADAS": "Level 2 ADAS Hyundai SmartSense Suite, Forward Collision-Avoidance Assist (FCA), Lane Keep & Driver Attention Alerting, Smart Adaptive Cruise Control with Stop",
+            "Comfort": "72.6 kWh Standard High Range Battery Pack, 800V Ultra-Fast DC Charging Platform, V2L Internal & External Power Ports, Powered Hands-Free Smart Tailgate Utilities"
+        },
+        "Ioniq 6": {
+            "Exterior": "Streamlined Electrified Wing Design Frame, Dual-Color Parametric Pixel Rear Wing, Aerodynamic active Flap Intake Channels, Low Drag-Coefficient Sloping Silhouette",
+            "Interior": "Cocoon-Inspired Ergonomic Quiet Cabin, Interactive 4-Dot Pixel Steering Display, Bridge-Type Practical Center Command Pod, Slim Passenger Open Door Storage Wells",
+            "Safety": "7 Airbag In-Cabin Matrix Protection Grid, Forward/Side Collision-Avoidance Assist, E-Latch Smart Electronic Child Safety, Structural EV Skateboard Crash Frames",
+            "Infotainment": "Dual 12.3-inch Connected Glass Cluster, Bose Premium Sound System Architecture, EV Performance Tune-up Configurator, Multiple Synchronized Lighting Profiles",
+            "ADAS": "Level 2+ Advanced Autonomous Package, Remote Smart Parking Assist II Controls, High-Resolution 360 Surround Display, Junction Crossing Collision Interventions",
+            "Comfort": "77.4 kWh Ultra-Dense Performance Battery, Target Range Output over 600+ km Limits, Speed Sync Dual-Color Ambient Glow, Dual Directional V2L Appliance Sockets"
+        }
+    },
+    "Blinq": {
+        "RYDE": {
+            "Exterior": "Sleek & Elegant Aesthetic Layout, Smart Modern LED DRL Lighting System, Lightweight Composite Body Shell, Dual-Tone Contrast Roof Profiles",
+            "Interior": "Spacious 5-Seater Cabin Layout, Flat Modular Skateboard Chassis Floor, Touchscreen Dashboard Panel Layout, Multifunction Steering Wheel Console",
+            "Safety": "Anti-Lock Braking System (ABS), Electronic Brake Assist (BA) Tech, Overspeed Alert Warning System, Integrated Hill Start Assist Safety Station Navigation",
+            "Infotainment": "Central Touch-Screen Display Pod, Bluetooth Media Audio Connectivity, Smart Telematics In-Car Data Systems, AM/FM Radio & Media Audio Utilities",
+            "ADAS": "Camera-Assisted Reverse Parking Radar, AI-Enabled Smart Drive Features, Battery Management Diagnostic Metrics, Real-Time Charging Status Navigation",
+            "Comfort": "Under-5 Minute BlinqSwap Battery Swapping, 250 km Full Charge Claimed Commuter Range, High-Efficiency Cabin Air Conditioner, Fast DC Plug-in Charging Support"
+        }
+    },
+    "BMW_Extra": {},
+    "Isuzu": {
+        "D-Max EV (Concept)": {
+            "Exterior": "Rugged Signature Pick-Up Silhouette, Closed-Off Aerodynamic Front Fascia, EV-Exclusive Blue Accent Lighting Detailing, Heavy-Duty Rear Cargo Utility Deck",
+            "Interior": "High-Contrast Digital Instrumentation, Functional Utility-Driven Dashboard Layout, Durable Heavy-Duty Material Upholstery, Intuitive Center Gear-Selector Toggle",
+            "Safety": "Front and Rear Parking Sensors, Electronic Stability Control Suite, Advanced Traction Management Infrastructure, High-Tensile Reinforced Frame Cage",
+            "Infotainment": "Integrated Central Touchscreen Console, Smart Connectivity Telematics Interfacing, Multi-Information Digital Driver Cluster, High-Fidelity Audio Speaker System",
+            "ADAS": "Proximity Front & Rear Parking Radars, Rear-View Parking Assist Guidance Camera, Intelligent Regenerative Braking Settings, Real-Time Battery Optimization Analytics",
+            "Comfort": "66.9 kWh Dense Battery Architecture, Full-Time Dual-Motor 4WD Performance, High-Efficiency Cabin Climate Control Ready, Ready-to-Work High Payload Performance"
+        }
+    },
+    "Jeep": {
+        "Avenger EV": {
+            "Exterior": "Compact Rugged Electric SUV Profile, Distinctive 7-Slot Closed-Off Grille Stance, Protective 360-Degree Body Cladding Trim, Star-Spoke Lightweight Urban Alloy Wheels",
+            "Interior": "Minimalist Functional Horizon Dashboard, Premium Eco-Conscious Fabric Highlights, Generous Cabin Utility Cargo Spaces, Multi-Color Personalised Ambient Lighting",
+            "Safety": "Full ADAS Autonomous Safety Package, Forward Autonomous Emergency Braking, Drowsy Driver Alert Tracking Sensor, Hill Descent & All-Terrain Grip Controls",
+            "Infotainment": "10.25-inch High-Definition Touchscreen, 10.25-inch Custom Digital Driver Cockpit, Wireless Smartphone Apple/Android Linking, Integrated Connected Car Technology Apps",
+            "ADAS": "Active Lane-Keep Steering Assistance, Adaptive Cruise Control System Setup, Blind Spot Monitoring Sensor Array, 360-Degree Park Proximity Alert Visuals",
+            "Comfort": "54 kWh High-Voltage Battery System, 100 kW Fast DC Charging Compatibility, Automatic Cabin Climate Control Systems, 20% to 80% Quick Charging in 24 Mins"
+        }
+    },
+    "Kia": {
+        "EV6": {
+            "Exterior": "High-End Digital Tiger Face Designing, Sleek Sequenced LED Lighting Strips, Hidden Flush Automatic Side Handles, Unique Wing-type Roof Spoiler Unit",
+            "Interior": "Driver-Centric Dual Curved Glass Dash, Eco-Friendly Suede Performance Buckets, Floating Lower Center Command Console, Augmented Reality HUD Projections",
+            "Safety": "8 Safety SRS Airbags Protection Matrix, Dynamic Stability & Cornering Control, Safe Exit Assist Electronic Side Locks, High-Performance Regenerative Discs",
+            "Infotainment": "12.3-inch Curved Navigation Console, 12.3-inch Digital Driver Information Pod, 14-Speaker Meridian Premium Audio Unit, Over-The-Air Connected Software Packs",
+            "ADAS": "Level 2 Advanced Smart ADAS Package, Remote Smart Automated Parking Assist, Forward Blind Spot Collision Interventions, Smart Highway Driving Assist Controls",
+            "Comfort": "77.4 kWh Ultra-Dense Battery Core, 800V Ultra-Fast E-GMP Architecture, Relaxing Zero-Gravity Reclining Fronts, Vehicle-to-Load (V2L) Power Outlet Sockets"
+        },
+        "EV9": {
+            "Exterior": "Bold Boxy Digital Tiger Face Stance, Vertical Small Cube LED Projection Bulbs, Star Map Connected Design LED Tail Bars, 21-inch Aerodynamic Premium Alloy Rims",
+            "Interior": "3-Row Premium 6 or 7-Seater Floorplan, Swivelling 2nd-Row Captain Lounge Seats, Panoramic Overhead Dual Sunroof Units, Open-Style Ergonomic Lower Footwell Floor",
+            "Safety": "10 Structural SRS Airbags Protection Grid, Remote Smart Key Parking Collision Brakes, Advanced Highway Driving Pilot (L3 ADAS), Rigid EV Crash-Cage Battery Enclosure",
+            "Infotainment": "Twin 12.3-inch Displays + Climate Screen, High-Definition Digital Side View Mirrors, 14-Speaker High-End Meridian Audio Core, Kia Connect Smart Connected App Array",
+            "ADAS": "Level 3 Highway Driving Automation Pilot, Blind Spot Collision Avoidance Matrix, Rear Cross-Traffic Collision Defenses, 360-Degree Surround 3D Environment View",
+            "Comfort": "99.8 kWh Maximum Extended Range Battery, Dual-Motor Dynamic AWD Performance Setup, Full Massage/Ventilation Luxury 2nd Row, 10% to 80% Quick DC Juice-Up in 24 Mins"
+        },
+        "Carens EV": {
+            "Exterior": "Modern EV-Signature Closed Nose Grille, Split LED DRL Cluster Design Layout, 17-inch Aerodynamically Structured Alloys, Integrated Functional Utility Roof Rails",
+            "Interior": "3-Row Highly Versatile Family Cabin, One-Touch Electronic Tumble 2nd Row, Dedicated Roof-Mounted Rear AC Blowers, Leatherette Family Seating Material",
+            "Safety": "6 Safety Airbags (Standard Variant Load), ABS with EBD & All-Wheel Disc Brake Trims, Electronic Stability Program (ESP) Suite, ISOFIX Lower Child Seat Fastener Mounts",
+            "Infotainment": "10.25-inch Primary Touchscreen Console, 10.25-inch Digital Instrumentation Cluster, Wireless Android Auto & Apple CarPlay linking, Kia Connect Smart Vehicle Cloud App Suite",
+            "ADAS": "Front and Rear Parking Proximity Radars, Blind Spot Monitoring & Alert Functions, Active Lane Keeping & Departure Mitigation, Reverse Parking Assist Guidance Camera",
+            "Comfort": "51.4 kWh Battery Pack Configuration, Claimed Commuter Range up to 490 km, Front Row Climate-Ventilated Seat Sockets, Wireless Smartphone Charging Utility Tray"
+        },
+        "Syros EV": {
+            "Exterior": "Distinctive Tall-Boy Modern SUV Stance, Signature High-Mounted Smart LED DRLs, Clean Sealed Aerodynamic Front Bumper, Vertical Stacked Geometric Rear LED Lights",
+            "Interior": "High-Headroom Spacious 5-Seater Cabin, Modern Driver-Focused Widescreen Glass, Premium Dual-Tone Interior Color Theme, Generous Under-Floor Luggage Storage Room",
+            "Safety": "6 Airbags Protection System As Standard, Electronic Stability Control & Braking Assist, Hill-Start System Controls Brake Assist, High-Strength EV Skateboard Chassis Base",
+            "Infotainment": "10.25-inch Floating Media Touch Display, 10.25-inch Fully Digital Cockpit Gauge Unit, Wireless Charging Pad System Tray Console, Premium Multi-Speaker Sound Configuration",
+            "ADAS": "Level 2 Automated Driver Assistance Suite, Forward Autonomous Collision Braking, 360-Degree Camera with Blind View Feed, Rear Cross-Traffic Proximity Sensor Alerts",
+            "Comfort": "45 kWh High-Efficiency Battery Variant, Expected Target Driving Range around 400+ km, Panoramic Skyview Electric Glass Sunroof, Multi-Mode Regenerative Brake Paddle Setup"
+        }
+    },
+    "Lexus": {
+        "ES 500e": {
+            "Exterior": "Tapered Sleek Luxury Sedan Profile, Twin L-Signature LED Lighting Elements, 21-inch Aero High-Performance Rims, Semi-Flush Drag-Reducing Door Handles",
+            "Interior": "Driver-Focused Tazuna Cockpit Design, Premium Lexus Safety Bamboo Layering Surface Elements, Semi-Aniline Luxury Leather Upholstery, Clean Minimalist Centre Control Panel",
+            "Safety": "8 SRS Airbags Safety Architecture, Emergency Braking Departure Protection Lexus Safety System ADAS, Automatic Protection Lane Alert & Tracing Assist",
+            "Infotainment": "14-inch Full HD Central Touchscreen, 12.3-inch Uniquely Shaped LCD Cluster, 17-Speaker Mark Levinson Audio System, Smart Interactive Heads-Up Display (HUD)",
+            "ADAS": "Dynamic Radar Cruise Control Management, Panoramic View Environmental Monitor, Adaptive High Beam System Engineering, Smart Drive Attention Tracking Monitor",
+            "Comfort": "74.68 kWh Battery Pack Configuration, 580 km Top Claimed Driving Range, Front Driver & Passenger Ventilation, Dual-Zone Climate with nanoeX Ioniser"
+        }
+    },
+    "Lotus": {
+        "Eletre": {
+            "Exterior": "Aggressive Hyper-SUV Stance Design, Matrix LED Adaptive High Beam Layout, Active Aero Pack Deployable Tail Spoiler, 22 to 23-inch Staggered Performance Alloys",
+            "Interior": "Luxury Ultra-Premium Minimalist Cabin, Microfiber & Carbon Fiber Sport Steering, 8-Way Powered Premium Bucket Seats, Road Noise Control (RNC) Insulation",
+            "Safety": "8 SRS Airbags System Coverage, Dynamic Trajectory Traction Control, Cornering Stability Brake Interventions, Rigid Carbon-Infused Safety Substructure",
+            "Infotainment": "15.1-inch OLED Central Touch Hub, Individual Front Passenger Status Strip, 15-Speaker KEF Premium Surround Audio, Head-Up Display (HUD) Projection Suite",
+            "ADAS": "Full Autonomous Level 2 ADAS Suite, Deployable High-Definition Roof LiDARs, 360-Degree 3D Surveillance Mapping Camera, Adaptive Cruise Control Tracking Function",
+            "Comfort": "112 kWh High-Performance Battery, Up to 600 km WLTP Claimed Range, Automatic 4-Zone Climate Control Setup, Front Row Cushion Massaging Trims"
+        },
+        "Emeya": {
+            "Exterior": "Sleek Low-Slung 4-Door Coupe Profile, Active Front Lower Grille Shutters, Dual-Layer Performance Rear Wing, Hidden Flush Wind-Slip Door Handles, Active",
+            "Interior": "Cockpit-Wrapped Sustainable Textile Cab, Flat-Bottom Alcantara Performance Wheel, Sport-Bolstered Heated/Cooled Seating, Carbon Fiber Reinforced Interior Trim",
+            "Safety": "Anti-Lock Braking System (ABS) & EBD, Advanced Dynamic Traction Control, Multi-Sensor EV Battery Shield Array, Brake Assist Electronic Braking System",
+            "Infotainment": "15.1-inch Responsive Central Screen, Ultra-Wide Augmented Reality (AR) HUD, KEF Premium Spatial Sound Audio System, In-Car App Suite with OTA Tech Support",
+            "ADAS": "Dual-LiDAR Level 2+ Autonomous ADAS, Full-Speed Adaptive Cruise Control, Lane Centering & Active Steering Guides, 360-Degree HD Surround View Cameras",
+            "Comfort": "102 kWh Dense Lithium-Ion Core, 610 km Claimed Driving Range Output, Ultra-Fast 400 kW DC Hyper Charging, 10% to 80% Super Charging in 14 Mins"
+        }
+    },
+    "Maruti Suzuki": {
+        "e Vitara": {
+            "Exterior": "Clean Family SUV Design Language, Distinctive Projector LED Headlamps, Premium 18-inch Alloy Wheels, Aerodynamic Shark Fin Antenna",
+            "Interior": "Black and Tan Brown Premium Cabin, Squarish Two-Spoke Steering Wheel, Spacious Under-Console Tray Storage, Semi-Leatherette Seat Upholstery",
+            "Safety": "7 Airbags Standard Array Layout, Electronic Stability Program (ESP), 5-Star Bharat NCAP Safety Framework, Tyre Pressure Monitoring System (TPMS)",
+            "Infotainment": "10.1-inch Smart Play Infotainment, 10.25-inch Digital Driver Display, Wireless Apple CarPlay & Android Auto, Infinity Premium Sound System Upgrade",
+            "ADAS": "Level 2 Advanced ADAS Suite, High-Resolution 360-Degree Camera Guided, Dynamic Rear Parking Camera, Front and Rear Proximity Radar Sensors",
+            "Comfort": "49 kWh & 61 kWh Lithium-Ion Packs, 543 km Max Claimed Driving Range, 10-Way Power Adjustable Driver's Seat, Ventilated Front Seats & Glass Sunroof"
+        },
+        "Fronx EV": {
+            "Exterior": "Aerodynamic Coupe-SUV Body Silhouette, NEXWave Chrome Finish Grille Accents, 16-inch Dual-Tone Machined Alloys, High-Mounted Triple-Element LED DRLs",
+            "Interior": "Dual-Tone Black & Burgundy Theme, Flat-Bottom Leather Wrapped Steering, Multi-Information Color Display Cluster, Flat Cargo Floor with 60:40 Split Rear",
+            "Safety": "6 Cabin Protection Airbags As Standard, Electronic Stability Control with Hill Hold, ISOFIX Lower Child Seat Anchorage, 4-Level Selectable Brake Regeneration",
+            "Infotainment": "9-inch SmartPlay Pro+ Touchscreen, ARKAMYS Premium Acoustic Sound Studio, Suzuki Connect Smart Cloud Telematics, Wireless Charging Tray for Devices",
+            "ADAS": "360-Degree Environmental Parking Camera, Heads-Up Display (HUD) Cockpit Setup, Auto-Dimming Inside Mirror Housing, Dynamic Guided Reverse Parking Radar",
+            "Comfort": "38 kWh to 45 kWh Lithium Battery Core, Target Range Output up to 489 km, Voice-Assisted Smart Sunroof Housing, Automatic Climate Control with Rear Vents"
+        },
+        "Jimny EV (Concept)": {
+            "Exterior": "Boxy Traditional 4x4 Off-Road Silhouette, EV-Exclusive Illuminated 5-Slot Nose, High-Clearance Heavy-Duty Wheel Arches, Rear Tailgate-Mounted Spare Wheel Pod",
+            "Interior": "Washable & Ruggedized Cabin Floor Bases, Mechanical Heavy-Duty Dashboard Layout, Multi-Information Custom Off-Road Gauges, Durable Heavy-Wear Fabric Seat Liners",
+            "Safety": "Off-Road Optimized Traction Control Systems, Smart Electronic Brake Locking Differential, Front and Rear Sturdy Impact Tow Hooks, Rigid Ladder-Frame EV Integrated Chassis",
+            "Infotainment": "Ruggedized Scratch-Resistant Touch Screen, Dedicated Off-Road Telemetry Mapping App, Bluetooth Multi-Device Media Operations, High-Output Dashboard Audio Drivers",
+            "ADAS": "360-Degree Trail Visualization Camera, Real-Time Axle Articulation Trackers, Intelligent Hill Descent & Climb Braking, Proximity Sensor Arrays for Off-Roading",
+            "Comfort": "Dual-Motor Full-Time 4WD Electric Platform, Instant Torque Off-Road Drive Delivery, High-Efficiency Cabin Heating Ventilation, Quick DC Off-Road Camp Power Output Sockets"
+        }
+    },
+    "Mercedes-Benz": {
+        "AMG EQS 53": {
+            "Exterior": "AMG-Specific Vertical Strut Front Grille, One-Bow Aerodynamic Streamlined Body Coupe, 21-inch AMG Performance Alloy Wheels, Active Rear Spoiler Dynamic Lift Units",
+            "Interior": "56-inch Continuous Glass Hyperscreen Dash, AMG Performance Sports Bolstered Bucket Seats, Nappa Leather Wrapped Flat-Bottom Wheel, Carbon Fiber Performance Cabin Accents",
+            "Safety": "High-Performance AMG High-Performance Brakes, Advanced 9-Airbag In-Cabin Safety Grid, Rigid Carbon-Steel Core Battery Shell Protection, Electronic Launch Control Acceleration Stability",
+            "Infotainment": "MBUX AI-Driven Triple Display Hyperscreen, 15-Speaker Burmester 3D Surround Audio Setup, AMG Custom Performance Soundscape Engine, Rear Row Integrated Media Control Tablet Pods",
+            "ADAS": "Level 2+ Drive Pilot Autonomous Assistance Suite, 360-Degree 3D Surveillance Mapping Network, Active Distance Cruise Control with Distronic, Lane Centering Active Steering Intervention",
+            "Comfort": "107.8 kWh High-Density Performance Battery, AMG RIDE CONTROL+ Adaptive Air Suspension Layout, Multizone Massaging Front and Rear Seat Sockets, 200 kW Fast DC Juice-Up (10-80% in 31 Mins)"
+        },
+        "C-Class EV": {
+            "Exterior": "Modern Avant-Garde Luxury Sedan Proportions, Premium Star-Pattern Sealed Front Grille Nose, Flush-Fitting Aerodynamic Side Door Openers, Digital Light Ultra-High Range Projection Bulbs",
+            "Interior": "Next-Gen Floating Vertical Center Console Screen, Artico Sustainable Soft-Wrap Leather Upholstery, Configurable 64-Color Dynamic Ambient Illumination, Ergonomic Sweeping Tech Dashboard Layout",
+            "Safety": "Active Brake Assist Collision Avoidance Systems, Blind Spot Assist Radar Array Monitoring Units, Pre-Safe Predictive Passenger Safety Triggers, ISOFIX Child Anchorage Point Fastener System",
+            "Infotainment": "11.9-inch Centered Vertical Media Interface, 12.3-inch High-Resolution Instrument Cockpit Cluster, 3D Burmester Performance Audio Sound Core, Wireless Apple CarPlay & Android Auto Integrations",
+            "ADAS": "Level 2 Driving Assistance Intelligence Array, Active Lane Keeping & Steering Track Alerts, High-Resolution 360 Camera View Environmental Feed, Smart Automated Parking Assistant Parktronic Plus",
+            "Comfort": "Target 600+ km Driving Range Battery Matrix, Multi-Zone Automatic Electronic Climate Architecture, Heated/Cooled Comfort Orthopedic Front Seats, Hands-Free Smart Powered Utility Trunk Lid"
+        },
+        "CLA EV": {
+            "Exterior": "Sleek Four-Door Coupe Aerodynamic Profile, Distinctive Star-Pattern LED DRL Light Signatures, Smooth Aerodynamically Sculpted Profile Panels, Lightweight High-Efficiency Multi-Spoke Alloys",
+            "Interior": "MBUX Superscreen High-Tech Dashboard Wrap, Sporty One-Piece Integrated Headrest Bucket Seats, Fine-Grain Sustainable Eco-Conscious Materials, Floating Futuristic Center armrest Console Pod",
+            "Safety": "7 In-Cabin Safety Airbags Standard Layout, Attention Assist Driver Drowsiness Sensor Grid, Electronic Stability Program (ESP) Braking Suite, Active Lane Departure Prevention Interventions",
+            "Infotainment": "Seamless Widescreen Dashboard Infotainment Hub, Intelligent Mercedes 'Hey Mercedes' AI Voice Assistant, High-Fidelity Multi-Channel Luxury Sound Array, Real-Time Over-The-Air System Feature Updates",
+            "ADAS": "Level 2 Automated Highway Pilot Assist Setup, Forward Collision Mitigation Automated Braking System, Rear Cross-Traffic Warning Radar Sensors Layout, Active Blind Spot Mitigation Brake Triggers",
+            "Comfort": "High-Voltage 800V Architecture Electric Core, Ultra-Fast DC Power Recovery (15 Mins for 300km), Integrated Heat-Pump High-Efficiency Climate System, Panoramic Fixed Skyview Tempered Glass Overhead"
+        },
+        "EQE SUV": {
+            "Exterior": "Purpose-Built Aerodynamic Premium SUV Frame, Black Panel Grille Base with Star Elements, 20-inch Low-Drag Coefficient Radial Alloys, Connected Rear LED Helix Tail Light Bar",
+            "Interior": "Massive Triple-Screen Glass Hyperscreen Cluster, Neotex and Leatherette Fine Surface Layering, Sound-Insulated Dual-Pane Acoustic Side Glass, Completely Flat Second Row Passenger Footwell",
+            "Safety": "9 Airbags Standard (with Seat Cushion Airbags), Transparent Hood 360 View Camera Display Tech, Pre-Safe Impulse Side Crash Threat Protection, Car-to-X Network Intelligent Safety Information",
+            "Infotainment": "Widescreen MBUX Navigation Plus Cloud Engine, 15-Speaker Burmester 3D Sound with Dolby Atmos, In-Car Media Streaming & Video Gaming Support, Individual Sound Profiles per Cabin Seat Zone",
+            "ADAS": "Driving Assistant Plus Full Safety Automation Array, Active Lane Change Assist automated Turn Controls, Stop-and-Go Smart Adaptive Cruise Tracking Grid, Evasive Steering Assist Hazard Avoidance Systems",
+            "Comfort": "90.56 kWh High-Capacity High-Voltage Battery, Airmatic Adaptive Air Shock Suspension Platform, Front Seat Ventilation with Hot Stone Massage, High-Efficiency Hepa Air Filtration System Cabin"
+        },
+        "Mercedes-Maybach EQS SUV": {
+            "Exterior": "Ultra-Exclusive Maybach Dual-Tone Paint Layout, Signature Maybach Vertical Pinstripe Grille Panel, Solid 21-inch Maybach Forged Monoblock Alloys, Chrome Pillars & Illuminated Maybach Door Emblems",
+            "Interior": "First-Class Executive Rear Seating Architecture, Rear Console Fold-Out Solid Flute Tables, BuiltIn -Chilled Rear Champagne Bottle Silver Chamber, Maybach Specific Deep Pile Custom Carpet Liners",
+            "Safety": "Total 11 SRS Safety Airbags Protection Framework, Intelligent Drive-Comfort Pitch & Roll Management, Bulletproof Grade Safety Battery Chassis Armoring, Rear Seat Cushion Deployable Anti-Submarining Bags",
+            "Infotainment": "Maybach Styled High-Tech Glass Hyperscreen Unit, Dual 11.6-inch Rear Passenger Media Screens, 4D Burmester 31-Speaker Luxury Spatial Sound Core, Wireless Multi-Device Passenger Control Tablets",
+            "ADAS": "Level 2+ Automated Executive Driving Assistants, Remote Smartphone Automated Valet Park Controls, 360-Degree 3D Ultra-HD Environmental Surveillance, Night View Assist Infrared Thermal Hazard Camera",
+            "Comfort": "108.4 kWh High-Voltage Premium Battery Assembly, Maybach Chauffeur Drive Mode Ultra-Smooth Comfort, Full Reclining Rear Calf-Massage Lounge Sockets, Active In-Cabin Air Fragrance Ionization Cannister"
+        },
+        "EQS SUV": {
+            "Exterior": "Grand-Scale Premium One-Bow SUV Silhouette, Elegant Sealed Dark Panel Front Star Grille Face, Flush Electronic Deployable Proximity Door Handles, Dynamic Digital Light Cornering Headlamp Systems",
+            "Interior": "Luxurious 3-Row 7-Seater Cabin Architecture, High-End Open-Pore Wood Dash Layering Elements, Floating Front Armrest Storage Console, Multi-Zone Customizable Interior Mood Light Tubes",
+            "Safety": "8 Safety Airbags In-Cabin Enclosure Matrix Protection, Pre-Safe Sound Acoustic Ear Protective Frequency Tech, Electronic Limited-Slip Traction Control Systems, All-Wheel Ventilated Disc Braking Caliper Network",
+            "Infotainment": "Continuous 56-inch Glass MBUX Hyperscreen Layout, 15-Speaker High-Fidelity Burmester Surround Audio, Smart Online Connected Real-Time Vehicle Analytics, Front Passenger Dedicated Multimedia Control Portal",
+            "ADAS": "Active Distance Assist Distronic Velocity Controls, Active Lane Keeping Active Steering Target Guides, 360-Degree Camera Parking Radar Environment Visuals, Active Blind Spot Avoidance Collision Mitigations",
+            "Comfort": "118 kWh Massive Extended-Range Battery Array, 2-Axle Self-Leveling Airmatic Air Suspensions, Front and Second Row Heated Ventilated Massaging Seats, Automatic 4-Zone Smart Air Distribution Systems"
+        },
+        "G-Class EV (G 580)": {
+            "Exterior": "Iconic Timeless Boxy Off-Road SUV Profiling, EV-Exclusive Illuminated Solid Front Panel Grille, Rear Locking Utility Cargo Box (Replaces Spare), Aerodynamically Tweaked Flared Out Wheel Arches",
+            "Interior": "Rugged G-Class Luxury Theme Dashboard Setup, Premium Nappa Grade Tailored Leather Seating, Dedicated Physical Off-Road Center Toggle Panel, Off-Road Cockpit Digital Instrumentation Cluster",
+            "Safety": "Ultra-Robust Ladder Frame Carbon-Steel Base Case, Rigid High-Density Underbody Battery Protection Shield, 6 Cabin Safety Airbags Matrix Protection Grid, Electronic All-Wheel Vectoring Traction Control System",
+            "Infotainment": "Dual 12.3-inch MBUX Screen Display Architecture, Premium Burmester 3D Surround Audio Distribution, G-Roar Custom Electric Powertrain Sound Engine, Wireless Smartphone Android/Apple Sync Systems",
+            "ADAS": "G-Turn 360-Degree On-the-Spot Tank Turn Controls, G-Steering Tight Radius Off-Road Maneuver Assist, Transparent Hood Off-Road Under-Car View Camera, Full Level 2 Highway Driving Assist Automation Suite",
+            "Comfort": "Quad-Motor (4 Independent Motors) Electric Platform, Massive 116 kWh High-Capacity Battery Assembly Base, Dynamic Adaptive Suspension Damper Control Setup, Front Row Heated, Ventilated & Massaging Seats"
+        }
+    },
+    "MG": {
+        "Comet EV": {
+            "Exterior": "Ultra-Compact 2-Door Urban Micro Hatch, Horizon Extended Front LED Light Bars, 12-inch Wheels with Aero Hub Covers, Vertical Extended B-Pillar Passenger Glass",
+            "Interior": "Space-Optimized 4-Seater Walk-Through Floor, Modern Minimalist White & Grey Theme Cabin, Sleek Floating Twin-Screen Dashboard Layout, Multi-Function Two-Spoke Steering Controls",
+            "Safety": "Dual Front SRS Safety Protection Airbags, ABS Brake Infrastructure with EBD System, Rear Proximity Sensors Parking Radar Layout, High-Strength Integrated Safety Cage Base",
+            "Infotainment": "10.25-inch Floating Media Infotainment Screen, 10.25-inch Digital Instrument Gauge Cluster, Wireless Apple CarPlay & Android Auto Setup, Smart i-Smart Connected Car Application Suite",
+            "ADAS": "Camera-Assisted Reverse Parking Assist Guides, Digital Tire Pressure Monitoring System (TPMS), Real-Time Battery Charge Level Diagnostics, Intelligent Battery Management System Apps",
+            "Comfort": "17.3 kWh Compact High-Efficiency Battery Pack, 230 km Claimed Commuter Driving Range Specs, Fully Automatic Cabin Climate Control Systems, Smart Keyless Vehicle Entry with One-Touch Start"
+        },
+        "Cyberster": {
+            "Exterior": "Low-Slung 2-Door Electric Roadster Silhouette, Exotic Power-Operated Scissor/Butterfly Doors, Sharp Kammback Aerodynamic Rear End Profile, Staggered 20-inch High-Performance Alloy Wheels",
+            "Interior": "Wrap-Around Driver Centric Sports Cockpit Layout, Premium Suede/Leather Sport Bucket Seating Layout, Flat-Bottom Sporty Red Accent Stitching Wheel, Triple Screen Curved Instrument Dashboard Array",
+            "Safety": "High-Performance Brembo Caliper Performance Brakes, Advanced 4-Airbag In-Cabin Road Sport Safety Net, Electronic Stability Program with Sport Track Modes, Reinforced Rollover Protection Structure Bars",
+            "Infotainment": "Three-Screen Curved Virtual Cockpit Display Setup, Premium BOSE 8-Speaker High-End Audio Distribution, Dedicated Central Console Media Touch Panel Layout, Custom Performance Telemetry Lap Analytics",
+            "ADAS": "Level 2 Advanced Driver Assistance Automation Suite, 360-Degree Surround Panoramic Camera Visualization, Active Blind Spot Collision Mitigation Radar Units, Adaptive Cruise Control Tracking Speed System",
+            "Comfort": "64 kWh & 77 kWh High-Voltage Battery Assemblies, Dual-Motor AWD System Producing up to 544 PS, Rapid DC Fast Charging (10-80% in 38 Mins), Automatic Dual-Zone Sports Cabin Climate Control"
+        },
+        "Maxus M9": {
+            "Exterior": "Grand Premium Luxury MPV Silhouette Profile, Full-Width Front & Rear Connected LED Light Bars, Dual Electric Sliding Second Row Side Passenger Doors, 19-inch Premium Multi-Spoke Luxury Alloy Wheels",
+            "Interior": "Ultra-Luxurious 7-Seater Cabin Lounge Architecture, Second Row Independent Luxury Electric Captain Chairs, Extended Longitudinal Second-Row Sliding Floor Tracks, Premium Leatherette Interior Soft-Wrap Upholstery",
+            "Safety": "Comprehensive 6-Airbag Full Cabin Envelope Safety, Electronic Stability Control with Active Braking Assist, ISOFIX Second & Third Row Child Anchorage Sockets, High-Strength Impact Absorbing Energy Frame Base",
+            "Infotainment": "12.3-inch Primary Media Touch Screen Interface, 7-inch Digital Driver Instrument Gauge Cluster Pod, Premium Multi-Speaker High-Fidelity Audio Setup, Wireless Multi-Device Passenger Charging Trims",
+            "ADAS": "Level 2+ Complete Smart ADAS Pilot Package Suite, 360-Degree HD Surround Environment View Monitor, Adaptive Cruise Control with Full Speed Stop & Go, Rear Cross-Traffic Warning Radar Collision Mitigations",
+            "Comfort": "90 kWh High-Capacity Dense Lithium Battery Pack, 540 km Claimed Maximum Extended Range Output Specs, Second Row Multi-Mode Massage, Heated & Cooled Seats, Multi-Zone Fully Automatic Cabin Air Climate Grid"
+        },
+        "IM5": {
+            "Exterior": "Highly Aerodynamic Fastback Luxury Sedan Silhouette, Striking Sharp C-Shaped Front LED DRL Light Clusters, Motorized Deployable Flush Side Proximity Handles, Low-Drag Coefficient High-Performance Alloy Alloys",
+            "Interior": "Modern Seamless Widescreen Dashboard Glass, Horizon Half-Spoke Futuristic Yoke Style Steering Option, Premium Eco-Friendly Alcantara Soft Seat Outfitting, Flat Floor Open Architecture Interior Layout Concept",
+            "Safety": "7 SRS In-Cabin Safety Airbags Protection Array Grid, Advanced Traction Control & Dynamic Brake Management, Rigid Skateboard EV Chassis Crash Cell Armouring Base, Safe Exit Assist Electronic Proximity Door Alert Locks",
+            "Infotainment": "Slide-Down Continuous Dashboard Widescreen System, Integrated AI Connected Smart Vehicle OS Ecosystem, 25-Speaker Immersive Spatial Sound Studio Sound Core, Dedicated Center Armrest Vertical Command Display",
+            "ADAS": "High-Tier Level 3 Autonomous Pilot Driving Array Grid, Rooftop Mounted High-Definition LiDAR Hazard System, 360-Degree 3D Surveillance Mapping Camera Network, Remote Autonomous Valet Smartphone Parking Systems",
+            "Comfort": "Solid-State Battery Cell Technology Target Configurations, Target Performance Range Expected over 700+ km Limits, Front & Rear Climate-Ventilated Massaging Comfort Seats, Intelligent Air-Suspension Active Ride Damper Controls"
+        },
+        "IM6": {
+            "Exterior": "Streamlined High-End Aerodynamic SUV-Coupe Body, Aggressive Sweeping Front Nose LED DRL Profiling, Integrated Rear Deck Tail Ducktail Active Spoiler Shell, 20-inch Aerodynamically Optimized Sport Alloy Rims",
+            "Interior": "Continuous Retractable Horizon Dashboard Double Glass, Half-Cut Yoke Style Performance Leather Steering Wheel, Premium 'Cloud Cushion' Ergonomic Seat Patter Design, Multi-Color Music-Synchronized Cabin Ambient Illumination",
+            "Safety": "6 In-Cabin Safety Airbags Protection System Enclosure, Next-Gen Electronic Stability Control (ESC) Braking, Blind Spot Collision Mitigation Avoidance Steering Radar, All-Wheel Performance Disc Brake System Infrastructure",
+            "Infotainment": "Full-Dashboard Width Context-Aware Digital Display Grid, Advanced AI Intelligent Companion Conversational Voice OS, 20-Speaker Premium High-Fidelity Audio Cinema Sound, Smart Telematics Connected Car Mobile Application Suite",
+            "ADAS": "High-Level Level 2+ Autonomous Pilot Navigation Array, High-Resolution Roof LIDAR Environmental Scanning Radar, 360-Degree Surround View Camera with Blind View Feeds, Adaptive Cruise Control Full Speed Stop-and-Go Tracking",
+            "Comfort": "800V Ultra-High-Voltage Architecture Power Platform, 100% Dense Battery Pack / Range up to 650+ km, Front Row Active Heated, Ventilated & Massaging Seats, Panoramic Fixed Skyview Tempered Glass Roof Enclosure"
+        },
+        "ZS EV": {
+            "Exterior": "Confident Full-Size Compact Electric SUV Stance, EV-Exclusive Matrix Sealed Front Nose Grid Panel, 17-inch Tomahawk Pattern Machined Sport Alloys, Hawkeye LED Projector Lighting Headlamp Clusters",
+            "Interior": "Modern Premium Textured Dark Grey Theme Dashboard, Carbon-Fiber Pattern Dashboard Vinyl Finishing Details, Red Contrast Stitching Accent Interior Details Upholstery, 60:40 Split Fold Flat Rear Passenger Seating Utilities",
+            "Safety": "6 Safety Airbags Protection System Fitted As Standard, Electronic Stability Program with Hill Descent Assistance, 5-Star Certified Euro NCAP Safety Evaluation Rating, All-Wheel Disc Brake Infrastructure Setup Caliper Pads",
+            "Infotainment": "10.1-inch HD Touchscreen Infotainment Media Center, 7-inch Digital Driver Instrument Instrumentation Pod, Wired Apple CarPlay & Android Auto System Connections, i-Smart Next-Gen Mobile Connected Car Cloud App Suite",
+            "ADAS": "Level 2 Advanced ADAS System Safety Package Load, 360-Degree Surround View Parking Assistance Camera Net, Blind Spot Detection Warning Radar Sensor Indicator Vents, Rear Cross-Traffic Collision Prevention Braking Alerts",
+            "Comfort": "50.3 kWh High-Density Prism Lithium Battery Core, 461 km ARAI Certified Driving Range Output Specs, Voice-Assisted Large Panoramic Skyview Glass Sunroof, Automatic Climate Control System with PM2.5 Air Filter"
+        },
+        "Windsor EV": {
+            "Exterior": "Progressive High-Roof Aero CUV Stance Silhouette, Full-Width Smart LED DRL Strip Front End Architecture, Flush Mechanical Side Door Proximity Open Handles, 18-inch Five-Spoke Star Design Diamond Cut Alloys",
+            "Interior": "Ultra-Premium Minimalist Italian Bubble-Design Seats, Royal Gold Accent Theme Dash Border Liners, 135-Degree Grand Reclining Rear Sofa Seating Layout, Rear Seat Center Drop Down Armrest with Storage",
+            "Safety": "6 Safety Airbags System Enclosure Framework As Standard, Electronic Stability Program (ESP) & Brake Assist, ISOFIX Lower Rear Child Seat Anchorage Anchor Fasteners, All-Wheel Disc Brake Caliper Pad System Assemblies",
+            "Infotainment": "Massive 15.6-inch Grand Grand Touchscreen Navigation, 8.8-inch Fully Digital Cockpit Instrumentation Cluster, 9-Speaker High-End Extended Range JBL Sound Core, Wireless Apple CarPlay & Android Auto Smart Interfacing",
+            "ADAS": "360Â° Surround View High-Definition Parking Camera Net, Electronic Parking Brake Utility Switch with Auto-Hold, Smart Tyre Pressure Monitoring System (TPMS) Sensors, Anti-Glare Auto-Dimming Rear View Mirror Glass",
+            "Comfort": "38 kWh High-Density Lithium-Ion LFP Battery Pack, Claimed Driving Range Performance Output up to 331 km, Front Row Climate-Ventilated Ergonomic Cool Seats, Multi-Color Multi-Setting In-Cabin Ambient Mood Lighting"
+        }
+    },
+    "MINI": {
+        "Countryman Electric": {
+            "Exterior": "Rugged Crossover SUV Stance Dimensions Scale Size, Octagonal Newly Styled Front Sealed Nose Grille Face, Flush-Fitting Aerodynamic Mechanical Side Handles, 19 to 20-inch Star Spoke Rugged Off-Road Alloy Wheels",
+            "Interior": "Knitted Textile High-End Fabric Wrapped Dashboard Theme, Spacious Family 5-Seater Cabin Layout Seating Space, 460-Litre Large Luggage Cargo Trunk Utility Boot Space, Adjustable Sliding Rear Row Passenger Lounge Bench",
+            "Safety": "6 In-Cabin Safety Airbags Matrix Protection Grid Load, Driving Assistant Professional Advanced Safety Array Grid, ALL4 Smart All-Wheel Drive Dual-Motor Traction System, ISOFIX Rear Left & Right Child Anchorage Seat Fasteners",
+            "Infotainment": "9.4-inch Central Circular High-Definition OLED Media Screen, MINI Experience Drive Modes with Ambient Custom Projection, 12-Speaker Harman Kardon Sound System Audio Core Setup, Wireless Smartphone Android Auto & Apple CarPlay Sync",
+            "ADAS": "Full Level 2 Autonomous Pilot Driver Assistance Suite Pack, 360-Degree Surround High-Definition Camera Surveillance Net, Active Blind Spot Avoidance Radar Assistance Vents, Rear Cross-Traffic Proximity Warning Detection Sensors",
+            "Comfort": "66.45 kWh High-Capacity Dense Lithium Battery Assembly, Maximum Claimed Driving Range Output up to 462 km Specs, Front Row Power Adjustable Driver/Passenger Seats with Memory, High-Output 130 kW Fast DC Juice Charging Platform Port"
+        }
+    },
+    "Nissan": {
+        "Ariya": {
+            "Exterior": "Timeless Japanese Futurist Crossover SUV Silhouette, 3D Traditional Kumiko Pattern Sealed Front V-Motion Shield, Ultra-Slim Dual-Element LED Projector Lighting Strings, 19 to 20-inch Aerodynamically Contoured Radial Alloys",
+            "Interior": "Open Lounge Lounge-Style Cabin Layout with Flat Floor, Haptic Touch-Integrate Wooden Dashboard Button Controls, Power-Adjustable Sliding Center Armrest Storage Console, Dual 12.3-inch Curved Horizon Widescreen Display Glass",
+            "Safety": "ProPilot Safety Assist Comprehensive Protection Package Load, ProPilot Park Fully Automated Hands-Free Parking System, Nissan Zone In-Cabin 7 Airbags Shield Protection Grid, e-4ORCE Intelligent Dual-Motor All-Wheel Control System",
+            "Infotainment": "12.3-inch Primary Touch-Screen Navigation Media Center, 12.3-inch Digital Gauge Virtual Instrumentation Cockpit, 10-Speaker Bose Premium High-Fidelity Studio Audio Core, Intelligent Amazon Alexa Integration & Connected Car App",
+            "ADAS": "ProPilot Level 2 Autonomous Highway Pilot Driving Suite Pack, 360-Degree Intelligent Around View Monitor Blind Target Cam, Forward Autonomous Collision Mitigation Assist Braking System, Rear Cross-Traffic Radar Warning and Automatic Braking",
+            "Comfort": "63 kWh & 87 kWh Lithium-Ion Battery Pack Configurations, Claimed Driving Range Output Performance up to 529 km Specs, Front Row Active Climate-Ventilated Massaging Comfort Seats, 130 kW DC Quick Fast Charging (10-80% in 35 Minutes) Port"
+        },
+        "Leaf": {
+            "Exterior": "Aerodynamic Five-Door Commuter Hatchback Profile Stance, Distinctive Clear Blue Accent Sealed V-Motion Front Nose, Rear Deck Integrated Gloss Black Aerodynamic Diffuser Fin, 16/17-inch Low-Resistance Rolling Urban Alloy Wheels",
+            "Interior": "Ergonomic Driver-Centric Practical Commuter Cockpit Space, Bio-Based Sustainable Fabric Material Upholstery Trims, D-Shaped Sporty Multi-Function Three-Spoke Steering Wheel, Analogue Gauge Cluster with 7-inch Multi-Info Screen Pod",
+            "Safety": "Nissan Safety Shield 360 Degree Comprehensive Safety Array, Intelligent Trace Control Cornering Stabilization Braking, 6 Safety SRS Protection Airbags Fitted Across All Trims, ISOFIX Child Seat Lower Anchor Points Fastener System",
+            "Infotainment": "8-inch Nissan Connect Multi-Touch Media Navigation System, Wired Apple CarPlay & Android Auto Smartphone Interface Sync, 6-Speaker High-Fidelity Audio Speaker Configuration Core, Remote Telematics Smartphone App for Climate/Charge Checking",
+            "ADAS": "e-Pedal One-Pedal Driving Mode System Energy Recapture Tech, Intelligent Forward Collision Warning Autonomous Braking System, Blind Spot Radar Monitoring & Lane Departure Intervention Alerts, Rear View Parking Assist Camera with Guided Radar Sensors",
+            "Comfort": "40 kWh Compact Urban & 62 kWh Extended Range Battery Pack, Claimed Commuter Range Performance Output up to 385 km Specs, Automatic Cabin Climate Control System with PM2.5 Filtering, Quick DC CHAdeMO Port Fast Charging System Support Utility"
+        }
+    },
+    "PMV": {
+        "EaS E": {
+            "Exterior": "Ultra-Narrow Feet Urban Micro-Car Profile, Circular Retro-Modern Headlamp Outlines, High-Strength Lightweight Steel Tube Chassis, 13-inch Compact Alloy Wheels Design Setup",
+            "Interior": "Tandem (Front-Back) Unique 2-Seater Layout, Centralized Centered Steering Column Cockpit Layout, Minimalist Functional Fleet Dashboard Trims, 30-Litre Micro Luggage Boot Cargo Compartment",
+            "Safety": "1 Driver Safety SRS Protection Airbag Fitted, 4-Star Certified Global NCAP Safety Credentials, Front and Rear Basic Disc Braking Assemblies, Overspeed Audio Alarm Security Notification System",
+            "Infotainment": "Digital LCD Small Multi-Info Driver Pod Cluster, Bluetooth Mobile Media Audio Connectivity Support, Smart Telematics Connected Car Mobile Phone Diagnostics, Integrated Smartphone Docking System Mount Station",
+            "ADAS": "Camera-Assisted Reverse Parking Assist Guidance Radar, Remote Smartphone Controlled Parking Assist Function, Real-Time Battery State-of-Health Analytics Telemetry, On-Screen Battery Energy Flow Recapture Visualization",
+            "Comfort": "10 kWh High-Efficiency Lithium Iron Phosphate Battery, 160 km Claimed Urban Commuter Driving Range Specs, High-Efficiency Cabin Air Conditioner & Air Heater Unit, Smart Keyless Vehicle Entry with Push Button Start"
+        }
+    },
+    "Porsche": {
+        "Cayenne EV": {
+            "Exterior": "Muscular Commanding Full-Size Luxury SUV Profile Stance, High-Performance HD Matrix LED Main Lamp Cluster Systems, Large Functional Brake-Cooling Active Lower Intake Flaps, 21 to 22-inch Staggered High-Performance Sport Alloys",
+            "Interior": "Porsche Driver Experience Curved Instrument Horizon Dashboard, 10.9-inch Passenger Dedicated Front Media Entertainment Screen System Array, Advanced Sustainable Premium Race-Tex Recycled Fabric Material Seats, Generous Large Variable Family Luggage Cargo Boot Space",
+            "Safety": "Porsche Ceramic Composite Brakes (PCCB), High Performance 8 SRS Airbags Full Cabin Protection Enclosure, Dynamic Torque Vectoring Plus Handling Stabilization, Rigid High-Strength Integrated Safety Skateboard EV Battery Cage",
+            "Infotainment": "12.3-inch Primary PCM High-Definition Touch Media Hub, 12.6-inch Floating Digital Instrument Driver Cockpit Cluster, 21-Speaker Burmester High-End 3D Surround Audio Studio Core, Wireless Smartphone Android Auto & Apple CarPlay Integration",
+            "ADAS": "Level 2+ Complete Porsche InnoDrive Autonomous Safety Suite, 360-Degree Surround View Panoramic Camera Environment Net, Active Lane Keeping Assist & Active Steering Trajectory Guides, Night Vision Assist Infrared Heat-Sensoring Hazard Tracking Cam",
+            "Comfort": "800V Premium Platform Electric (PPE) Ultra-Fast Charging Pack, Target Maximum Driving Range Output expectations over 600+ km, Adaptive 2-Chamber Air Suspension Dynamic Dampening Control Ride, Front and Rear Heated, Ventilated & Massaging Active Sport Seats"
+        },
+        "Macan EV": {
+            "Exterior": "Athletic Aggressive Compact Crossover SUV Coupe Silhouette, Split LED DRL Cluster & Low-Mounted Main Matrix Headlamps, Porsche Active Aerodynamics (PAA) Adaptive Rear Roof Spoiler, 20 to 22-inch Lightweight Performance Staggered Sport Wheels",
+            "Interior": "Driver-Centric Porsche Cockpit Design Layout with Low Stance, High-End Leatherette & Alcantara Combined Sports Seating Materials, Multi-Color Personalised Ambient Lighting Accent Dashboard Strips, 540-Litre Rear Boot Cargo Space + 84-Litre Useful Front Frunk",
+            "Safety": "High-Performance Multi-Collision Autonomous Braking Systems, 6 Cabin Safety Airbags Protection Enclosure Systems Standard Layout, Porsche Traction Management (PTM) Electronic All-Wheel Control, ISOFIX Rear Seat Lower Anchorage Points Child Seat Fasteners",
+            "Infotainment": "10.9-inch Central PCM High-Definition Multimedia Screen Interface, 12.6-inch Curved Digital Instrument Cluster Driver Gauge Panel, 10.9-inch Passenger Dedicated Media Screen Display Housing Unit, Augmented Reality (AR) Heads-Up Display (HUD) Windshield Projection",
+            "ADAS": "Level 2 Advanced Driver Assistance Pilot Driving Automation Package, ParkAssist Front & Rear Sensors with Active Surround Parking Camera Net, Lane Change Assist Radar Blind Spot Warning Sensor Indicators Grid, Active Speed Limit Traffic Sign Recognition Computer Software Utilities",
+            "Comfort": "100 kWh Performance Density Lithium-Ion Skateboard Battery Pack Core, Up to 613 km WLTP Certified Maximum High Driving Range Output Specs, 270 kW Ultra-Fast DC Fast Charging Platform (10-80% in 21 Minutes), Adaptive Sports Air Suspension Setup with Porsche Active Suspension (PASM)"
+        },
+        "Taycan": {
+            "Exterior": "Low-Slung Wide-Stance Four-Door Electric Super Sports Sedan Profile, Iconic Vertical Curving Air Curtain Side Vents with Matrix LED Headlamps, Smooth Seamless Aerodynamic Underbody Shielding Panel Infrastructure, Automatic Deployable 3-Stage Active Rear Wing Aerodynamic Stabilizer",
+            "Interior": "Ultra-Low Sports Seating Position Driver-Centric Monoposto Cockpit, 16.8-inch Curved Free-Standing Glass Digital Driver Gauge Instrument Panel, Leather-Free Sustainable Interior Cabin Construction Material Finish, Options Central Console Integrated Crash-Optimized 8.4-inch Haptic Feedback Climate Control Management Touch",
+            "Safety": "High-Performance Massive Carbon-Ceramic Brembo Track Brake System Calipers, Full 8 Airbag Multi-Zone Impact Energy Safety Curtain Protection Grid Enclosure, Porsche Dynamic Chassis Control Sport (PDCC Sport) Active Roll Stabilization, Steel Skateboard Battery Enclosure Grid Structure",
+            "Infotainment": "10.9-inch Central High-Definition Touch Media Screen Interface Console, Optional 10.9-inch Front Passenger Multimedia Streaming Entertainment Screen, 21-Speaker Burmester High-End 3D Surround Audio Studio Distribution Core, Apple Music & Spotify Direct In-Car Connected App Streaming Ecosystem",
+            "ADAS": "Level 2 Active Driver Safety Assistant Cruise Control Trajectory Package Load, Surround View High-Definition Panoramic Parking Camera Surveillance Network, Lane Change Assist Blind Spot Monitoring Radar Warning Sensor Indicator Vents, Traffic Jam Assist Automated Steering Stop-and-Go Low-Speed Travel"
+        }
+    },
+    "Pravaig": {
+        "Defy": {
+            "Exterior": "Brutalist Sharp Geometric SUV Stance Design, C-Pillar Sloping Sharp Fastback Edge Design Profiling, Wind-Cutting Low-Drag Active Aerodynamic Panel Body, 18-inch High-Strength Performance Alloy Wheel Hubs",
+            "Interior": "Ultra-Luxury 4-Seater Executive Lounge Architecture Layout, Upcycled Sustainable Premium Fabric Interior Cabin Material Trims, Dual Reclining Rear Row Captain Chair Seating Layout Platforms, 680-Litre Extra Large Luggage Boot Cargo Compartment Trunk",
+            "Safety": "6 In-Cabin Safety Airbags Protection Enclosure Systems As Standard, High-Performance Heavy-Duty Braking Management ABS System, Next-Gen Electronic Stability Control (ESC) Traction Array Systems, Military-Grade EV Skateboard Under-Floor Crash Shielding Enclosure",
+            "Infotainment": "15.6-inch Ultra-Wide Center Touch Navigation Multimedia Screen, In-Car Ultra-Fast 5G Mobile Cloud Data Internet Connection Network, Devialet Premium Spatial Acoustic Audio Studio System Distribution, Rear Row Integrated Device Interfacing Smart Connection Panels Structure",
+            "ADAS": "360-Degree Environmental Surround View Surveillance Camera Network, Autonomous Emergency Brake Assist Automated Mitigation Braking System, Active Lane Keeping Assistance Steering Sensor Telemetry Array Grid, Blind Spot Sensor Warning Radar Infrastructure Traffic Monitors",
+            "Comfort": "Massive 90.9 kWh Heavy-Duty Dense Lithium Skateboard Battery Core, 500 km Maximum Real-World Claimed Driving Range Performance Output, Large Dual-Pane Panoramic Skyview Glass Moonroof Overhead, 6-Way Power-Adjustable Active Cooled Climate Front/Rear Seats"
+        }
+    },
+    "Renault": {
+        "Kwid EV": {
+            "Exterior": "Compact Urban Hatch Stance, Closed EV Nose Front Grille, Distinctive Dual-LED DRL Strips, Roof Rails & Underbody Cladding",
+            "Interior": "Minimalist Dashboard Layout, Dual-Tone Interior Color Trim, Compact Digital Driver Pod, Central Console Dial Gear Shifter",
+            "Safety": "Dual Front Safety Airbags, ABS with EBD Braking Tech, Rear Proximity Parking Radars, High-Tensile Monocoque Shell",
+            "Infotainment": "Touchscreen Navigation Hub, Media Bluetooth Connectivity, Smart Phone Charging Port Tunnels, Integrated Connected Car Telematics",
+            "ADAS": "Reverse Parking Assist Camera, Digital Tire Pressure Monitor (TPMS), Battery Management Telemetry Alerts, Real-Time Charging Route Guides",
+            "Comfort": "High-Efficiency Commuter Battery, Expected City Range up to 250+ km, Cabin Air Conditioning & Heater, Convenient Front Power Windows"
+        }
+    },
+    "Rolls-Royce": {
+        "Spectre": {
+            "Exterior": "Ultra-Luxury Fastback Super-Coupe, Iconic Illuminated Pantheon Grille, Rear-Hinged Starlight Power Doors, Massive 23-inch Bespoke Aero Alloys",
+            "Interior": "Shooting Star Fiber-Optic Headliner, Bespoke Tailored Luxury Upholstery, Digital Widescreen Dashboard Screen, Extensive Cabin Soundproof Insulation",
+            "Safety": "8 Comprehensive Cabin Airbags, Intelligent All-Wheel Drive (AWD), Dynamic Stability & Chassis Controls, High-Performance Regenerative Brakes",
+            "Infotainment": "Integrated Multi-Screen Media Suite, Rolls-Royce Bespoke Audio Distribution, Real-Time Cloud-Connected Navigation, Wireless Multi-Device Interfaces",
+            "ADAS": "Level 2+ Top-Tier Driver Assistance, 360-Degree Surround View Mapping, Forward Collision Mitigation Radar, Adaptive Cruise Speed Tracking",
+            "Comfort": "102 kWh High-Density Battery Pack, Claimed ARAI Range of 530 km, Heated, Cooled & Massaging Fronts, Planar Air Suspension System"
+        }
+    },
+    "Skoda": {
+        "Elroq": {
+            "Exterior": "Tech-Deck Face Modern Sealed Grille, Split Matrix LED Headlamp Stance, Aerodynamic Dual-Tone Sport Alloys, Rear Roof Profile Lip Spoiler",
+            "Interior": "Eco-Suite Recycled Fabric Trims, Driver-Centric Horizon Dashboard, Minimalist Electronic Gear Selector, Variable Boot Floor with Cargo Net",
+            "Safety": "6 Standard Protection Airbags, Electronic Stability Program (ESP), Front and Rear Radar Crash Mitigation, ISOFIX Lower Child Seat Fasteners",
+            "Infotainment": "13-inch Floating Media Touchscreen, Compact Digital Driver Cluster Pod, Wireless Android Auto & Apple CarPlay, Premium Sound System Distribution",
+            "ADAS": "Level 2 Advanced Driver Assistance, Surround View Rear Parking Camera, Lane Keeping & Blind Spot Alerts, Adaptive Cruise Traffic Tracking",
+            "Comfort": "52, 59, and 77 kWh Battery Packs, 370+ km Target Entry-Level Range, Dual-Zone Automatic Air Conditioning, Power-Adjustable Driver Seat Setup"
+        },
+        "Enyaq": {
+            "Exterior": "Sculpted Premium Electric SUV Stance, Crystal Face Illuminated Front Nose, 19-inch Aerodynamically Tweaked Alloys, Sharp Angular Full-LED Tail Lights",
+            "Interior": "Luxury Lounge Leather/Fabric Cabin, Ambient Multi-Color Mood Light Tubes, Flat Platform Middle Passenger Floor, Generous 585-Litre Storage Luggage Boot",
+            "Safety": "Up to 9 Airbags Protection Matrix, Euro NCAP 5-Star Certified Safety, Traction Control & Brake Assist Tech, SOS Emergency Assistance Systems",
+            "Infotainment": "13-inch High-Definition Multimedia Hub, Skoda Virtual Cockpit Instrument Pod, Wireless Phone Charger System Tray, Premium Multi-Speaker Sound Core",
+            "ADAS": "Level 2 Complete ADAS Package Load, 360-Degree Surround Panoramic View, Blind Spot Collision Avoidance Radar, Driver Attention Drowsiness Monitors",
+            "Comfort": "52 kWh and 77 kWh Battery Variants, Quick DC Charging (5-80% in 38 Mins), Heated Front Seats & Steering Wheel, Tri-Zone Automatic Climate Systems"
+        }
+    },
+    "Strom Motors": {
+        "R3": {
+            "Exterior": "Unique Reverse Trike 3-Wheel Layout, Edge Futurist Micro-Body Profile, Lightweight High-Strength Steel Frame, Two-Tone Custom Color Styling",
+            "Interior": "Tandem/Sideby-Side 2-Seater Cabin, Clean Minimalist Fleet Dashboard, Practical Front Console Compartments, Single Electronic Wiper Mechanism",
+            "Safety": "High-Strength Structural Safety Cage, Basic Hydraulic Disc Brake System, Battery Management Circuit Cut-offs, In-Car Audio Speed Alarm Safety",
+            "Infotainment": "7-inch Vertical Media Touchscreen, Auxiliary Custom Driver Info Display, Multi-Device Bluetooth Connection, Cloud-Connected Smart IoT Integration",
+            "ADAS": "Camera-Assisted Parking Radar Visuals, Real-Time Battery Charge Telemetry, GPS Fleet Route Tracking Features, Remote Vehicle Diagnostic Alerts",
+            "Comfort": "Compact High-Efficiency LFP Pack, Expected Commuter Range up to 200 km, High-Efficiency Cabin Air Conditioner, Power Windows & Keyless Vehicle Entry"
+        }
+    },
+    "Tesla": {
+        "Model Y": {
+            "Exterior": "High-Roof Aerodynamic Mid-Size SUV, Panoramic Fixed All-Glass Roof Panel, Drag-Reducing Flush Door Handle Loops, 19 to 21-inch Precision Sport Alloys",
+            "Interior": "Ultra-Minimalist Dashboard Interface, 15-inch Monolithic Central Touch Panel, Vegan Leather Seat Material, Completely Flat Second Row Cabin Floor",
+            "Safety": "5-Star Rated Safety Frame Structure, Electronic All-Wheel Vectoring AWD, High-Performance Regenerative Brakes, Side Impact Avoidance Steering Radar",
+            "Infotainment": "15-inch Center Media Screen Console, Custom Tesla OS Arcade Games & Apps, 13-Speaker Immersive Studio Audio Core, Dual Wireless Smartphone Charger Mats",
+            "ADAS": "Tesla Autopilot Semi-Autonomous Suite, Full Self-Driving Capability Options, 360-Degree Environmental Camera Grid, Blind Spot Collision Warning Systems",
+            "Comfort": "60 kWh and 75+ kWh Battery Selections, Over 500+ km Maximum Driving Ranges, Bioweapon Defense Mode HEPA Filtration, 12-Way Power Adjustable Heated Seats"
+        }
+    },
+    "Toyota": {
+        "bZ4X": {
+            "Exterior": "Hammerhead Shark Front Styling Mask, Multi-Segment Geometric Arch Cladding, Aerodynamic Split Rear Roof Spoilers, 18 to 20-inch Star Spoke Alloy Wheels",
+            "Interior": "Top-Mounted Low Instrument Dashboard, Premium Woven Fabric Finish Dashboard, Rotary Dial Electronic Drive Selector, Flat Platform Generous Legroom Floor",
+            "Safety": "Toyota Safety Sense 3.0 ADAS Suite, Pre-Collision System Pedestrian Detection, Blind Spot Monitor Safe Exit Assist, Rigid Under-Floor Battery Shield Grid",
+            "Infotainment": "12.3-inch Toyota Audio Multimedia Hub, 7-inch High-Mounted Driver Cluster Pod, Wireless Apple CarPlay & Android Auto, 9-Speaker JBL Premium Sound Architecture",
+            "ADAS": "Lane Tracing Assist Dynamic Steering, Full-Speed Dynamic Radar Cruise Control, Panoramic View 360 Parking Cameras, Front and Rear Cross-Traffic Alerts",
+            "Comfort": "71.4 kWh Performance Lithium Core Pack, Claimed Driving Range up to 516 km WLTP, Radiant Front Seat Leg & Foot Heaters, Dual-Zone Climate with Eco Mode Toggles"
+        },
+        "Urban SUV EV (Concept)": {
+            "Exterior": "Muscular Compact Urban Crossover SUV, High-Mounted Razor LED Light Strips, Chunky Protective Underbody Skids, Aerodynamic Multi-Spoke Alloy Wheels",
+            "Interior": "Modern Tech-Forward Dual-Screen Dash, Sustainable Recycled Interior Upholstery, Versatile Folding Seating Floor Plan, Multi-Storage Central Bridge Console",
+            "Safety": "6 Standard In-Cabin Safety Airbags, Electronic Stability & Traction Suite, ISOFIX Rear Child Anchorage Sockets, High-Tensile Crash-Cage Framework",
+            "Infotainment": "Floating Center Media Touch Display, Fully Digital Cockpit Instrumentation, Wireless Charging Tray for Devices, Connected Smart Telematics Car System",
+            "ADAS": "Level 2 Advanced ADAS Package Suite, Forward Autonomous Collision Braking, Lane Keep Assist & Departure Alerts, Rear Parking Camera with Grid Radars",
+            "Comfort": "Single Motor FWD & Dual Motor AWD Platforms, Multiple Battery Capacity Core Trims, Automatic Climate Control Architecture, Expected Entry Range around 400+ km"
+        },
+        "Urban Cruiser EV": {
+            "Exterior": "Toyota EV Grille Accent, LED Crystal DRLs, 16-inch Precision Alloys, Sporty Roof Spoiler",
+            "Interior": "Dual Tone Luxury Cabin, Leatherette Steering Cover, Ambient Footwell Lamp, Rear AC Vents",
+            "Safety": "6 Airbags, ESP and Hill Hold Control, ABS with EBD, 360-Degree Park Radar",
+            "Infotainment": "9-inch Smart Playcast Screen, Premium Sound System, Wireless Android Auto & Apple CarPlay",
+            "ADAS": "Rear Cross Traffic Alert, Reverse Camera Guidelines",
+            "Comfort": "Smart Entry with Push Start, Auto Climate Control, Fast Phone Wireless Charger"
+        }
+    },
+    "Vayve Mobility": {
+        "Eva": {
+            "Exterior": "Ultra-Narrow Two-Passenger Micro Footprint, Solar Integration Roof Charging Option, Large High-Visibility Side Window Glass, Modern LED Front Headlamp Assemblies",
+            "Interior": "Tandem 1+2 Seater Cabin Configuration, Space-Optimized Central Driver Stance, Clean Minimalist Fleet Dashboard Trims, 300-Litre Folding Rear Luggage Boot",
+            "Safety": "1 Driver Safety SRS Protection Airbag, High-Strength Steel Tube Crash Cage, Front Disc and Rear Drum Braking Layout, Tyre Pressure Monitoring System (TPMS)",
+            "Infotainment": "Smart Touchscreen Display Navigation, Bluetooth Media Audio Device Connection, i-Smart App Connected Car Connectivity, 4-Speaker Audio Speaker Distribution",
+            "ADAS": "Camera-Assisted Reverse Parking Radar, Real-Time Battery State-of-Health Updates, Integrated Hill Start Assist Controls, SOS Emergency Crash Notification App",
+            "Comfort": "Up to 18 kWh LFP Battery Capacity Core, 250 km Full Charge Claimed Range Spec, High-Efficiency Cabin Air Conditioner, Solar Panel Adding up to 10 km Daily"
+        }
+    },
+    "VinFast": {
+        "VF 3": {
+            "Exterior": "Boxy Geometric Rugged Mini-SUV Stance, High Ground Clearance Urban Stance, Bold Black Fender Wheel Arch Cladding, 16-inch Square High-Strength Steel Wheels",
+            "Interior": "Minimalist Functional 4-Seater Layout, Fold-Flat Rear Row for 550L Cargo Space, Single Widescreen Centered Control Dash, Durable Commuter Material Upholstery",
+            "Safety": "Standard Front SRS Protection Airbags, Anti-Lock Braking System (ABS) & EBD, Rear Parking Radar Proximity Sensors, High-Tensile Steel Body Structure Cage",
+            "Infotainment": "10-inch Centrally Mounted Media Screen, Multi-Device Bluetooth Audio Sync System, Smart Telematics Car Tracking Utilities, Digital Compact Driver Gauges Display",
+            "ADAS": "Reverse Parking Assist Camera System, Real-Time Battery Flow Diagnostics, Basic Cruise Control Automation Setup, Over-The-Air Smart Car System Updates",
+            "Comfort": "High-Efficiency Urban Lithium Core Pack, Claimed Target Range output up to 210 km, Manual Cabin Air Conditioning Systems, Convenient Front Row Power Windows"
+        },
+        "VF 6": {
+            "Exterior": "Aerodynamic Sloping Coupe-SUV Profiling, Signature Winged LED DRL Front End Mask, 19-inch Float-Effect Dual-Tone Alloys, Practical 423-Litre Storage Luggage Boot",
+            "Interior": "Modern Driver-Centric Open Cabin Floor, Button-Operated Central Console Selector, Premium Leatherette Soft Upholstery Finish, Ambient Sync Cabin Multi-Color Lighting",
+            "Safety": "7 Protective Airbags Standard System, 5-Star Bharat NCAP Safety Evaluation, Electronic Stability Control with Hill Hold, All-Wheel Disc Brake Infrastructure Setup",
+            "Infotainment": "12.9-inch Centered Touch Media System, Integrated Native Google App Ecosystem, Premium Multi-Speaker Sound Configuration, Connected Cloud Car App with OTA Tech",
+            "ADAS": "Level 2 Advanced Smart ADAS Package, 360-Degree Environmental Surround Camera, Forward Collision Mitigation Auto Brake, Blind Spot Collision Warning Sensors",
+            "Comfort": "59.6 kWh Dense Lithium-Ion Battery, 463 km to 468 km Claimed Range Load, 8-Way Powered & Ventilated Front Seats, Dual-Zone Fully Automatic Air Conditioning"
+        },
+        "VF 7": {
+            "Exterior": "Avant-Garde Aggressive Premium SUV Frame, Bold Geometric LED Light Assemblies, Front Flush Deployable Proximity Side Handles, Staggered 20-inch Dark Performance Alloys",
+            "Interior": "Asymmetric Driver-Focused Sci-Fi Cockpit, Premium Two-Tone Premium Leatherette Wrap, Panoramic Fixed Clear Glass Moonroof View, Completely Flat Second Row Passenger Floor",
+            "Safety": "7 Safety Airbags Full Cabin Protection, Intelligent Torque Vectoring All-Wheel AWD, Advanced Traction Control & Dynamic Braking, Rigid Armor EV Crash Battery Protective Cage",
+            "Infotainment": "Large 15.6-inch Curved Touch Media Hub, Heads-Up Display (HUD) Windshield Cockpit, Premium Spatial Audio Surround Sound Core, AI-Enabled Conversational Voice Assistant",
+            "ADAS": "Complete Level 2+ Autonomous ADAS, Highway Driving Assist Lane Centering Pilot, Remote Valet Automated Parking Assistance, Rear Cross-Traffic Warning Radar Mitigations",
+            "Comfort": "59.6 kWh and 70 kWh Battery Core Options, Up to 532 km Extended Maximum Driving Range, Multi-Way Powered Heated/Cooled Front Seats, High-Voltage 24-Min DC Fast Power Recovery"
+        },
+        "VF MPV 7": {
+            "Exterior": "Regal Full-Size Luxury MPV Stance Silhouette, Dual Smart Powered Rear Sliding Side Doors, Connected Winged LED Light Signature Bars, 20-inch Multi-Spoke Luxury Comfort Alloys",
+            "Interior": "3-Row Premium 6 or 7-Seater Cabin Lounge, Independent Second Row Power Captain Chairs, Sweeping Clean Dashboard Luxury Panel Wrap, Ambient Multi-Color Mood Light Enclosures",
+            "Safety": "Comprehensive Multi-Zone Protective Airbags, Next-Gen Electronic Stability Control (ESC), ISOFIX Second & Third Row Anchor Fasteners, Ultra-Rigid Impact-Energy Absorbing Base Cage",
+            "Infotainment": "15.6-inch Monolithic Touchscreen Navigation, Rear Row Integrated Device Interfacing Pods, Premium Multi-Channel Cinema Sound System, Smart Telematics Connected Car Mobile Suite",
+            "ADAS": "Full Level 2+ Autonomous Driving Assistance, 360-Degree Surround High-Definition Camera, Blind Spot Collision Avoidance Radar Systems, Adaptive Cruise Control Full Speed Stop & Go",
+            "Comfort": "60.13 kWh Lithium Battery Cell Packaging, 517 km Claimed High Commuter Driving Range, Front and Second Row Heated/Ventilated Seats, Multi-Zone Fully Automatic Cabin Air Climate"
+        }
+    },
+    "Volvo": {
+        "EC40": {
+            "Exterior": "Sloping Aerodynamic SUV-Coupe Stance, Pixel Tech Closed Mesh EV Front Grille, Distinctive Dual Rear Roof Diffuser Fins, 19-inch Aerodynamically Contoured Alloys",
+            "Interior": "Topography Back-Lit Dashboard Elements, Suede Textile & Microtech Luxury Seating, Flat Platform Middle Passenger Rear Floor, Fixed Overhead Panoramic Tempered Moonroof",
+            "Safety": "7 Core Protection Airbags System Layout, Emergency EBL Flashing Brake Light Tech, Electronic Traction & Cornering Stability, ISOFIX Lower Rear Child Anchorage Mounts",
+            "Infotainment": "Android Google-Built-In Touch Navigation, Harman Kardon Premium Soundbar Audio Core, Real-Time Online Vehicle Cloud Tracking, Wireless Media Interfacing Device Systems",
+            "ADAS": "Full Level 2 Advanced ADAS Intelligence, 360-Degree Parking Assist View Monitor, Forward Autonomous Braking Crash Systems, Blind Spot Monitoring Sensor Networks",
+            "Comfort": "78 kWh High-Capacity High-Voltage Battery, Claimed Driving Range up to 530 km ARAI, 402 bhp Dual-Motor AWD Power Platform, Power-Adjustable Driver Seat with Memory"
+        },
+        "EX30": {
+            "Exterior": "Compact Minimalist Electric SUV Profile, Closed Nose Thor's Hammer LED DRLs, Floating Dual-Tone 19-inch Alloy Wheels, High-Gloss Aerodynamic Side Body Panels",
+            "Interior": "Leather-Free Sustainable Interior Cabin, Central Dashboard Mounted Gear Selector, Single Vertical Center Glass Display Unit, Compact Flat Floor Rear Lounge Bench Space",
+            "Safety": "7 Airbags Standard (with Center Airbag), 5-Star Certified Euro NCAP Crash Rating, Door Opening Alert Cyclist Sensor Safety, Front and Rear Cross-Traffic Auto Brake",
+            "Infotainment": "12.3-inch Centered Google Touch Interface, 9-Speaker 1,040W Harman Kardon Soundbar, Native Google Maps, Assistant & Play Store, Wireless Device Charging & Type-C Ports",
+            "ADAS": "Park Pilot Assist Smart Steering Parking, Active Lane Keep Assist & Departure Alerts, Blind-Spot Radar Monitoring Framework, Full Speed Adaptive Cruise Control Matrix",
+            "Comfort": "69 kWh Dense RWD Skateboard Architecture, 480 km Max Claimed WLTP Driving Range, 8-Way Powered Driver Seat Adjustments, DC Ultra-Fast Charging (10-80% in 26 Mins)"
+        },
+        "EX40": {
+            "Exterior": "Premium High-Riding Family SUV Profile, EV Signature Sealed Front Shield Frame, 19-inch 5-Spoke Aerodynamic Alloys, Signature High-Mounted Vertical LED Tails",
+            "Interior": "Premium Sustainable Textiled Dashboard, Multi-Color Ambient Accent Cabin Tubes, Spacious Cabin Footwells with Flat Floor, Generous 450+ Litre Luggage Trunk Boot",
+            "Safety": "7 Safety Airbags Complete Shield Matrix, 5-Star Rated Safety Frame Chassis Base, Advanced Traction Control & Dynamic Braking, ISOFIX Rear Left & Right Child Anchorage",
+            "Infotainment": "9-inch Vertical Google Screen Interface, 12.3-inch Digital Cockpit Instrumentation, Harman Kardon Premium Surround Audio Sound, Over-The-Air Connected Software Packs",
+            "ADAS": "Pilot Assist Level 2 Autonomous Safety, 360-Degree Camera Parking Sensor Arrays, Forward Collision Mitigation System Tech, Blind Spot Monitoring Steering Assists",
+            "Comfort": "69 kWh Mid-Range Lithium Core Package, Claimed High Range Output up to 592 km, Front Row Power Adjustable Driver Seats, High-Efficiency Cabin Climate Air Purifier"
+        },
+        "EX90": {
+            "Exterior": "Flagship Large Scale Luxury Electric SUV, High-Definition Pixel Tech LED Assemblies, Integrated Rooftop Lidar Laser Housing, Flush Proximity Automatic Side Door Handles",
+            "Interior": "Luxury 3-Row 7-Seater Cabin Architecture, Nordico Sustainable Tailored Material Cab, Floating Multi-Level Storage Center Console, Sweeping Minimalist Glass Dashboard Horizon",
+            "Safety": "Total 9 SRS In-Cabin Safe Protection Airbags, Roof LIDAR Shield Spotting Hazards at 250m, Occupant Sensing Radar Detection Tech Inside, Advanced Structural Battery Energy Crash Protection",
+            "Infotainment": "14.5-inch Vertical Google Core Touchscreen, 8-inch Slim Driver Gauge Steering Pod Cluster, 25-Speaker Bowers & Wilkins Spatial Audio Core, 5G High-Speed Online Connected Car Computing",
+            "ADAS": "Level 3 Ready Autonomous Highway Pilot Assist, 360-Degree 3D Surveillance Mapping Network, Forward/Rear Cross-Traffic Collision Mitigations, Active Lane Keeping Active Steering Interventions",
+            "Comfort": "111 kWh Massive Dense Skateboard Battery Pack, Maximum Claimed Driving Range up to 600 km WLTP, Front and Second Row Power Massaging Heated Seats, 4-Zone Smart Electronic Climate Air Systems"
+        }
+    },
+    "Volkswagen": {
+        "ID.4": {
+            "Exterior": "IQ.Light LED Matrix Headlamps, 19-inch Aerodynamic Alloys, Illuminated VW Logo, Panoramic Glass Roof",
+            "Interior": "Id.Light Interactive Dashboard, Eco-Friendly Microfiber Seats, Customizable Ambient Lighting",
+            "Safety": "Post-Collision Braking System, 6 Airbags, ESC and Traction Control, Dynamic Road Sign Display",
+            "Infotainment": "12-inch Discover Pro Touchscreen, Premium Audio Layout, Wireless App-Connect",
+            "ADAS": "IQ.Drive ADAS Level 2, Active Lane Centering, Adaptive Cruise Control with Stop & Go",
+            "Comfort": "12-Way Power Adjustable Seats, Heated Front Seats and Steering, Rain Sensing Wipers"
+        }
+    }
+}

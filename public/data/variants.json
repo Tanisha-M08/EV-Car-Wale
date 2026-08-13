@@ -1,0 +1,511 @@
+{
+  "Tata": {
+    "Harrier.ev": [
+      "Adventure",
+      "Adventure S",
+      "Fearless Plus",
+      "Empowered"
+    ],
+    "Sierra.ev": [
+      "Pure",
+      "Pure S",
+      "Adventure",
+      "Empowered",
+      "Empowered A"
+    ],
+    "Xpres-T EV": [
+      "XM Plus",
+      "XT Plus"
+    ],
+    "Tigor.ev": [
+      "XE",
+      "XT",
+      "XZ Plus",
+      "XZ Plus LUX"
+    ],
+    "Punch.ev": [
+      "Smart",
+      "Smart Plus",
+      "Adventure",
+      "Empowered",
+      "Empowered Plus S"
+    ],
+    "Nexon.ev": [
+      "Creative",
+      "Creative Plus",
+      "Fearless",
+      "Fearless Plus",
+      "Empowered",
+      "Empowered Plus A"
+    ],
+    "Curvv.ev": [
+      "Creative",
+      "Accomplished",
+      "Accomplished Plus S",
+      "Empowered Plus",
+      "Empowered Plus A",
+      "Empowered Plus A Dark"
+    ],
+    "Nexon EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "Punch EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "Harrier EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "Curvv EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "Tiago EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "Avinya EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Sierra EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "BYD": {
+    "eMax 7": [
+      "Comfort",
+      "Premium",
+      "Superior"
+    ],
+    "Atto 3": [
+      "Dynamic",
+      "Premium",
+      "Superior"
+    ],
+    "Sealion 6": [
+      "Supreme"
+    ],
+    "BYD Seal": [
+      "Dynamic",
+      "Performance AWD"
+    ],
+    "BYD Atto 3": [
+      "Dynamic",
+      "Superior"
+    ],
+    "Sealion 7": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Hyundai": {
+    "Creta EV": [
+      "Executive",
+      "Smart",
+      "Smart (O)",
+      "Premium",
+      "Excellence"
+    ],
+    "Ioniq 5": [
+      "RWD"
+    ],
+    "Ioniq 6": [
+      "RWD",
+      "AWD"
+    ],
+    "Inster": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Kia": {
+    "Carens EV": [
+      "Prestige",
+      "Luxury",
+      "Luxury Plus"
+    ],
+    "EV6": [
+      "GT-Line RWD",
+      "GT-Line AWD"
+    ],
+    "EV9": [
+      "GT-Line"
+    ],
+    "Syros EV": [
+      "Choice",
+      "Preferred",
+      "Supreme"
+    ],
+    "Kia EV6": [
+      "GT Line RWD",
+      "GT Line AWD"
+    ]
+  },
+  "Mahindra": {
+    "XUV400": [
+      "EC Pro",
+      "EL Pro"
+    ],
+    "BE6": [
+      "Pack 1",
+      "Pack 2 (AWD)"
+    ],
+    "XEV 9e": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Thar.e": [
+      "Standard",
+      "Adventure Edition"
+    ],
+    "BE 07": [
+      "Standard",
+      "Long Range"
+    ],
+    "XEV 9s": [
+      "Standard",
+      "Long Range"
+    ],
+    "XUV 3XO EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "MG": {
+    "Cyberster": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "M9 EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "ZS EV": [
+      "Executive",
+      "Exclusive Plus"
+    ],
+    "Comet EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "BMW": {
+    "BMW i4": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "i7": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "iX": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "iX1 LWB": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "i5 M60": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Audi": {
+    "Q6 e-tron": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "e-tron GT": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "A6 e-tron": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Blink": {
+    "Ryde": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Genesis": {
+    "GV60": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Citroën": {
+    "eC3 X": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Ferrari": {
+    "Luce": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Honda": {
+    "Elevate EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "0 Alpha": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Isuzu": {
+    "D-Max EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Nissan": {
+    "Ariya": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Leaf": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Mini": {
+    "Countryman Electric": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Jeep": {
+    "Avenger EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Lexus": {
+    "ES 500e": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Lotus": {
+    "Eletre R": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Emeya GT": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Maruti Suzuki": {
+    "e Vitara": [
+      "Standard",
+      "Long Range"
+    ],
+    "Fronx EV": [
+      "Standard",
+      "Long Range"
+    ],
+    "Jimny EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Mercedes Benz": {
+    "CLA EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "EQS SUV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "G-Class EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "AMG EQS 53": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "C-Class EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Maybach EQS SUV 680": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Pmv": {
+    "EaS-E": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Renault": {
+    "Kwid EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Porsche": {
+    "Macan EV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Taycan": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Cayenne Electric": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Rolls Royce": {
+    "Spectre": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Toyota": {
+    "bZ4X": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "Urban Cruiser EV": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Tesla": {
+    "Model Y": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Skoda": {
+    "Elroq": [
+      "Standard",
+      "Long Range"
+    ],
+    "Enyaq iV": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Strom Motors": {
+    "R3": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Pravaig": {
+    "Defy": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Volvo": {
+    "EC40": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "EX30": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "EX40": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "EX90": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Volkswagen": {
+    "ID.4": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  },
+  "Vayve Mobility": {
+    "Eva": [
+      "Standard",
+      "Long Range"
+    ]
+  },
+  "Vinfast": {
+    "VF 3": [
+      "Standard",
+      "Long Range"
+    ],
+    "VF 6": [
+      "Standard",
+      "Long Range"
+    ],
+    "VF 7": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ],
+    "VF MPV 7": [
+      "Standard",
+      "Extended Range",
+      "Performance AWD"
+    ]
+  }
+}

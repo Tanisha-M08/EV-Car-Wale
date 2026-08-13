@@ -1,0 +1,924 @@
+{
+  "delhi": [
+    {
+      "title": "Kartavya Path",
+      "address": "Kartavya Path",
+      "city": "Delhi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 28.614253161153925,
+      "lng": 77.2034289006848,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=28.614253161153925,77.2034289006848"
+    },
+    {
+      "title": "Le Méridien",
+      "address": "Raisina Road",
+      "city": "Delhi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 28.618401012446768,
+      "lng": 77.21783619594248,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=28.618401012446768,77.21783619594248"
+    },
+    {
+      "title": "EESL Charging Station ",
+      "address": "Prithviraj Market, Rabindra Nagar",
+      "city": "Delhi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "22 kW DC Fast",
+      "lat": 28.60069401609546,
+      "lng": 77.22615763260933,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=28.60069401609546,77.22615763260933"
+    },
+    {
+      "title": "EESL Charging Station ",
+      "address": "J6JC+MR8, N Block, Middle Cir, Block N",
+      "city": "Delhi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "15 kW DC Fast",
+      "lat": 28.631607433900697,
+      "lng": 77.2219265686017,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=28.631607433900697,77.2219265686017"
+    }
+  ],
+  "jaipur": [
+    {
+      "title": "Jaipur Marriott Hotel",
+      "address": "Ashram Marg, Near Jawahar Circle",
+      "city": "Jaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 26.84202738178776,
+      "lng": 75.79630011082236,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.84202738178776,75.79630011082236"
+    },
+    {
+      "title": "Novotel Jaipur Convention Centre",
+      "address": "Sitapur Industrial Area, Tonk Road, NH 12",
+      "city": "Jaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 26.781055656145412,
+      "lng": 75.82683190631099,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.781055656145412,75.82683190631099"
+    },
+    {
+      "title": "Statiq Charging Station",
+      "address": "Entrance Gate, Mahindra World City",
+      "city": "Jaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 26.807014914448104,
+      "lng": 75.6426501962062,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.807014914448104,75.6426501962062"
+    },
+    {
+      "title": "Hotel Highway King",
+      "address": "Jaipur Kishangarh Expressway",
+      "city": "Jaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 26.83003059112643,
+      "lng": 75.57120343985028,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.83003059112643,75.57120343985028"
+    }
+  ],
+  "ajmer": [
+    {
+      "title": "Tata Power Charging Station",
+      "address": "Ratanzila, Sedariya",
+      "city": "Ajmer",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "50 kW DC Fast",
+      "lat": 26.426092708593004,
+      "lng": 74.68143813174765,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.426092708593004,74.68143813174765"
+    },
+    {
+      "title": "Xobolt Charging Station",
+      "address": "N.H.-8, JAIPUR ROAD, NEAR G.V.K.TOLL PLAZA",
+      "city": "Ajmer",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 26.59302924560663,
+      "lng": 74.9270945358154,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.59302924560663,74.9270945358154"
+    },
+    {
+      "title": "Old Rao Hotel",
+      "address": "Adani",
+      "city": "Ajmer",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 26.63638296566327,
+      "lng": 75.10221733386027,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=26.63638296566327,75.10221733386027"
+    }
+  ],
+  "udaipur": [
+    {
+      "title": "Statiq Charging Station",
+      "address": "Plot no. 10, Valley View, Airport Rd, near Transport Nagar, Pratap Nagar",
+      "city": "Udaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 24.594579460875863,
+      "lng": 73.76870844314362,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=24.594579460875863,73.76870844314362"
+    },
+    {
+      "title": "Ramee Royal Resort & Spa",
+      "address": "Near IIM, Balicha,Udaipur - Ahmedabad Highway,NH 8",
+      "city": "Udaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 24.49438992248743,
+      "lng": 73.65647369621934,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=24.49438992248743,73.65647369621934"
+    },
+    {
+      "title": "Tata Power Charging Station",
+      "address": "J36G+QXQ, Menar",
+      "city": "Udaipur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 24.612250005902666,
+      "lng": 74.07281591552953,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=24.612250005902666,74.07281591552953"
+    }
+  ],
+  "ahmedabad": [
+    {
+      "title": "Taj Hotel",
+      "address": "Nr Taj Lane",
+      "city": "Ahmedabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 23.075554346771156,
+      "lng": 72.56854041975487,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=23.075554346771156,72.56854041975487"
+    },
+    {
+      "title": "Shawadi Road",
+      "address": "Shawadi Road, Narolgam",
+      "city": "Ahmedabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "50 kW DC Fast",
+      "lat": 22.95898656230746,
+      "lng": 72.57343764720804,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.95898656230746,72.57343764720804"
+    },
+    {
+      "title": "Sardar Patel Ring Road",
+      "address": "Sardar Patel Ring Road",
+      "city": "Ahmedabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 23.01811407692714,
+      "lng": 72.67117696624051,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=23.01811407692714,72.67117696624051"
+    },
+    {
+      "title": "Agora Mall Charging Station",
+      "address": "Nr Tapovan Circle, SP Ring Road",
+      "city": "Ahmedabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 23.0675460902371,
+      "lng": 72.6648092874053,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=23.0675460902371,72.6648092874053"
+    }
+  ],
+  "vadodara": [
+    {
+      "title": "Regenta Fairlark Jio",
+      "address": "Regenta Fairlark ",
+      "city": "Vadodara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 22.288523232161836,
+      "lng": 73.13209856350943,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.288523232161836,73.13209856350943"
+    },
+    {
+      "title": "Regenta Fairlark",
+      "address": "Bhayli Road",
+      "city": "Vadodara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 22.287645146764476,
+      "lng": 73.13222578916577,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.287645146764476,73.13222578916577"
+    },
+    {
+      "title": "NE4 Eest Area Saraswani",
+      "address": "NE4",
+      "city": "Vadodara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 22.180225932979837,
+      "lng": 73.08990857907611,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.180225932979837,73.08990857907611"
+    },
+    {
+      "title": "Rest Area Mumbai - Vadodara Expressway",
+      "address": "Mumbai - Vadodara Expressway",
+      "city": "Vadodara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 22.170156061343988,
+      "lng": 73.08761282093997,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.170156061343988,73.08761282093997"
+    }
+  ],
+  "surat": [
+    {
+      "title": "Kot Safil road",
+      "address": "Gopi Talav",
+      "city": "Surat",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "2.5 kW DC Fast",
+      "lat": 21.190833374358448,
+      "lng": 72.82874435126223,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=21.190833374358448,72.82874435126223"
+    },
+    {
+      "title": " Chargezone Hotel Rangoli",
+      "address": "Nh 48",
+      "city": "Surat",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 21.038975778372475,
+      "lng": 72.9752654100723,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=21.038975778372475,72.9752654100723"
+    },
+    {
+      "title": "Hotel Empire ChargeZone",
+      "address": "NH48",
+      "city": "Surat",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 20.740672958672647,
+      "lng": 73.0356012014945,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=20.740672958672647,73.0356012014945"
+    }
+  ],
+  "vapi": [
+    {
+      "title": "Tata.Ev Vapi",
+      "address": "Shanti Complex ",
+      "city": "Vapi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 20.38011025856339,
+      "lng": 72.9144548806346,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=20.38011025856339,72.9144548806346"
+    },
+    {
+      "title": "Hotel Empire ChargeZone",
+      "address": "NH48",
+      "city": "Vapi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 20.740672958672647,
+      "lng": 73.0356012014945,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=20.740672958672647,73.0356012014945"
+    }
+  ],
+  "mumbai": [
+    {
+      "title": "Tata Power Receiving Station",
+      "address": "3, Vikhroli Village Road",
+      "city": "Mumbai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 19.0957956,
+      "lng": 72.92601089999994,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=19.0957956,72.92601089999994"
+    },
+    {
+      "title": "Andheri West",
+      "address": "Four Bunglows",
+      "city": "Mumbai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 19.1166,
+      "lng": 72.82927,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=19.1166,72.82927"
+    },
+    {
+      "title": "Mira Road ",
+      "address": "A/1104, unique heights, Poonam Garden, above new india co-op bank, near S K Stone, Mira Bhayender Rd, near S K Stone",
+      "city": "Mumbai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 19.140006053456133,
+      "lng": 72.85344382844949,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=19.140006053456133,72.85344382844949"
+    },
+    {
+      "title": "Balasaheb Thackeray Flyover",
+      "address": "Balasaheb Thackeray Flyover",
+      "city": "Mumbai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 19.139950824152606,
+      "lng": 72.85197359742608,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=19.139950824152606,72.85197359742608"
+    }
+  ],
+  "pune": [
+    {
+      "title": "Shashtri Nagar ",
+      "address": "Vanaz",
+      "city": "Pune",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "1 kW DC Fast",
+      "lat": 18.503925778446245,
+      "lng": 73.80373433483828,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.503925778446245,73.80373433483828"
+    },
+    {
+      "title": "Panchjanya Automobiles",
+      "address": "N H 48 Service Road, Warje",
+      "city": "Pune",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 18.482695102792377,
+      "lng": 73.80274365086417,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.482695102792377,73.80274365086417"
+    },
+    {
+      "title": "Aditya School",
+      "address": "Aditya School, 20, Pancard Club Road",
+      "city": "Pune",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 18.56124353052958,
+      "lng": 73.7812056950576,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.56124353052958,73.7812056950576"
+    },
+    {
+      "title": "Amar Business Zone",
+      "address": "Swati Park, Veerbhadra Nagar",
+      "city": "Pune",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 18.56414082731241,
+      "lng": 73.77645742740673,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.56414082731241,73.77645742740673"
+    }
+  ],
+  "lonavala": [
+    {
+      "title": "Life Republic, Hingewadi",
+      "address": "Survey No.74, Marunji, Hinjawadi - Kasarsai Road",
+      "city": "Lonavala",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 18.62469386315059,
+      "lng": 73.71614384492979,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.62469386315059,73.71614384492979"
+    },
+    {
+      "title": "E Fill Electric Charging Station",
+      "address": "NH4, Ravet",
+      "city": "Lonavala",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 18.65176177650684,
+      "lng": 73.73354791594272,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.65176177650684,73.73354791594272"
+    },
+    {
+      "title": "Sai Darbar Hotel",
+      "address": "Ashok Nagar, Tathawade Bearing Gate No-129/2B/1 At Village Tathawde, Taluka-Mulshi, Katraj-Dehu Road Bypass, Ashok Nagar",
+      "city": "Lonavala",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 18.623896266954958,
+      "lng": 73.74563734187849,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.623896266954958,73.74563734187849"
+    },
+    {
+      "title": "Tata Motors Tathawade",
+      "address": "S No 129/23/1, near Mehendale Transformer, Ashok Nagar, ",
+      "city": "Lonavala",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 18.623488205362765,
+      "lng": 73.74548104644525,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=18.623488205362765,73.74548104644525"
+    }
+  ],
+  "satara": [
+    {
+      "title": "Amrai Resort",
+      "address": "NH 48, Shendre - Songaon Road",
+      "city": "Satara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 17.637720837508112,
+      "lng": 74.01241295965058,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.637720837508112,74.01241295965058"
+    },
+    {
+      "title": "Amrai Resort",
+      "address": "Amrai Resort",
+      "city": "Satara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 17.63735818944548,
+      "lng": 74.01217807085504,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.63735818944548,74.01217807085504"
+    },
+    {
+      "title": "Hotel Rajmarg",
+      "address": "Bharatgaonwadi Satara-Kolhapur",
+      "city": "Satara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 17.606014312013446,
+      "lng": 74.03155558680098,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.606014312013446,74.03155558680098"
+    },
+    {
+      "title": "Anewadi Toll Plaza",
+      "address": "PSTR Anewadi Toll Plaza, N H 48",
+      "city": "Satara",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 17.81036487491417,
+      "lng": 73.97103555789285,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.81036487491417,73.97103555789285"
+    }
+  ],
+  "kolhapur": [
+    {
+      "title": "Kolhapur Railway Station",
+      "address": "757, 3rd Ln, E Ward",
+      "city": "Kolhapur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 16.70295634772825,
+      "lng": 74.23709668798799,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=16.70295634772825,74.23709668798799"
+    },
+    {
+      "title": "Vijaya Power Charging Station 60 Kw + 30 Kw",
+      "address": "Dyp City Mall ",
+      "city": "Kolhapur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 16.70336850326356,
+      "lng": 74.25045696673965,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=16.70336850326356,74.25045696673965"
+    },
+    {
+      "title": "MAI Hyundai Kolhapur",
+      "address": "517, E, Ground Floor, GPT Complex, Old Pune-Bangalore Highway",
+      "city": "Kolhapur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 16.70238664960913,
+      "lng": 74.25029800499102,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=16.70238664960913,74.25029800499102"
+    },
+    {
+      "title": "Reliance Mall",
+      "address": "Site No 61, Subhash Road, Old Dalal Market",
+      "city": "Kolhapur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 16.698876513466676,
+      "lng": 74.23114174500584,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=16.698876513466676,74.23114174500584"
+    }
+  ],
+  "belagavi": [
+    {
+      "title": "BPCL Goral Petroleum",
+      "address": "Off Mandoli Road, Dwarka Nagar, Godse Nagar",
+      "city": "Belagavi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 15.83662,
+      "lng": 74.49365,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.83662,74.49365"
+    },
+    {
+      "title": "UK27 The Fern - An Ecotel Hotel, Belagavi",
+      "address": "NH 748 Civil Hospital Road, Ayodhya Nagar",
+      "city": "Belagavi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "24 kW DC Fast",
+      "lat": 15.87496,
+      "lng": 74.51343,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.87496,74.51343"
+    },
+    {
+      "title": "Manickbag Automobiles, Belagavi",
+      "address": "No 691, Bemciel, industrial estate, Khanapur Road, next to Bemco",
+      "city": "Belagavi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 15.8188,
+      "lng": 74.49224,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.8188,74.49224"
+    },
+    {
+      "title": "Hotel Ramdev",
+      "address": "PB Road, Nehru Nagar",
+      "city": "Belagavi",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 15.878287475844715,
+      "lng": 74.51579659267398,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.878287475844715,74.51579659267398"
+    }
+  ],
+  "hubli": [
+    {
+      "title": "Shreya Stellar Mall",
+      "address": "Bus Stop, JGCC, PB Rd, Jayanagar",
+      "city": "Hubli",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 15.3593,
+      "lng": 75.12727,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.3593,75.12727"
+    },
+    {
+      "title": "Manickbag Automobiles",
+      "address": "Dharwad Road",
+      "city": "Hubli",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 15.369551854899184,
+      "lng": 75.11909436764411,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.369551854899184,75.11909436764411"
+    },
+    {
+      "title": "Salimath Engineers",
+      "address": "Salimath Building, No 18 & 19, Padma Housing Society, Airport Road",
+      "city": "Hubli",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 15.35533,
+      "lng": 75.08915,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.35533,75.08915"
+    },
+    {
+      "title": "MG Motor Bellad",
+      "address": "Opp NGEF, PB Rd, Rayapur",
+      "city": "Hubli",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 15.40827,
+      "lng": 75.06133,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.40827,75.06133"
+    }
+  ],
+  "bengaluru": [
+    {
+      "title": "JW Marriott",
+      "address": "Vittal Mallya Road, D'Souza Layout",
+      "city": "Bengaluru",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 12.97228768658023,
+      "lng": 77.59492658243641,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.97228768658023,77.59492658243641"
+    },
+    {
+      "title": "Sundaram Motors",
+      "address": "107, Kasturba Road, opp. Venkatappa Art Gallery, ",
+      "city": "Bengaluru",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "90 kW DC Fast",
+      "lat": 12.973845154518216,
+      "lng": 77.59597891080779,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.973845154518216,77.59597891080779"
+    },
+    {
+      "title": "ibis Bengaluru City Centre",
+      "address": "Plot No - 30, Raja Ram Mohan Roy Road, off Richmond Road",
+      "city": "Bengaluru",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 12.96751,
+      "lng": 77.5939,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.96751,77.5939"
+    },
+    {
+      "title": "ITC Gardenia Bengaluru",
+      "address": "1, Residency Road",
+      "city": "Bengaluru",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 12.96728,
+      "lng": 77.59552,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.96728,77.59552"
+    }
+  ],
+  "hyderabad": [
+    {
+      "title": "Fortum Mahindra ",
+      "address": "Unnamed Road, Maruthi Nagar, Attapur.",
+      "city": "Hyderabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 17.36334,
+      "lng": 78.4337,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.36334,78.4337"
+    },
+    {
+      "title": "Fortum Mahindra",
+      "address": "Chikoti Gardens, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016, India",
+      "city": "Hyderabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 17.44366,
+      "lng": 78.46395,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.44366,78.46395"
+    },
+    {
+      "title": "Tellus Power ",
+      "address": "Gamut De Lousa ",
+      "city": "Hyderabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "7.2 kW DC Fast",
+      "lat": 17.4133616071295,
+      "lng": 78.4265966206543,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.4133616071295,78.4265966206543"
+    },
+    {
+      "title": "Blaze Fast Charger For 2 Ev Wheeler ",
+      "address": "Lb Nagar ",
+      "city": "Hyderabad",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "3 kW DC Fast",
+      "lat": 17.340475789422385,
+      "lng": 78.54539549782817,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=17.340475789422385,78.54539549782817"
+    }
+  ],
+  "kurnool": [
+    {
+      "title": "NH44",
+      "address": "NH44",
+      "city": "Kurnool",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "240 kW DC Fast",
+      "lat": 15.886334147441593,
+      "lng": 78.01636638843978,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=15.886334147441593,78.01636638843978"
+    }
+  ],
+  "chennai": [
+    {
+      "title": "Spencer plaza",
+      "address": "768, Spencer Plaza, Anna Salai, Chennai, Tamil Nadu 600002",
+      "city": "Chennai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 13.086440939321662,
+      "lng": 80.24611761923632,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=13.086440939321662,80.24611761923632"
+    },
+    {
+      "title": "Grand Chennai by GRT Hotels",
+      "address": "120, Sir Thyagaraya Rd, Drivers Colony, T. Nagar, Chennai, Tamil Nadu 600017",
+      "city": "Chennai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "22 kW DC Fast",
+      "lat": 13.039883703809373,
+      "lng": 80.24507602103657,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=13.039883703809373,80.24507602103657"
+    },
+    {
+      "title": "Saravana Stores - Padi - Relux Electric ",
+      "address": "15, Madras Thiruvallur High Rd,",
+      "city": "Chennai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 13.10080944,
+      "lng": 80.19059824,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=13.10080944,80.19059824"
+    },
+    {
+      "title": "Cosmopolitan Club - Relux Electric",
+      "address": "15, Madras Thiruvallur High Rd, ",
+      "city": "Chennai",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 13.10080944,
+      "lng": 80.19059824,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=13.10080944,80.19059824"
+    }
+  ],
+  "vellore": [
+    {
+      "title": "Hotel Benzz Park",
+      "address": "4, Thottapalayam Pillayar Koil St",
+      "city": "Vellore",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 12.929099273160231,
+      "lng": 79.1336516,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.929099273160231,79.1336516"
+    },
+    {
+      "title": "Park Inn by Radisson, Vellore",
+      "address": "Katpadi Road, Vellore",
+      "city": "Vellore",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 12.932172599883003,
+      "lng": 79.13688025759188,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.932172599883003,79.13688025759188"
+    },
+    {
+      "title": "Regency Sameera Vellore by GRT Hotels",
+      "address": "No.145, Green Circle",
+      "city": "Vellore",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "24 kW DC Fast",
+      "lat": 12.93209,
+      "lng": 79.13843,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.93209,79.13843"
+    },
+    {
+      "title": "RB Business Centre",
+      "address": "18, NH - 38, near Arni Road",
+      "city": "Vellore",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 12.86196,
+      "lng": 79.13251,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=12.86196,79.13251"
+    }
+  ],
+  "asansol": [
+    {
+      "title": "FC - TataPower - TMSC Chandrani Enterprises",
+      "address": "Tata Motors Service Center, Bogra",
+      "city": "Asansol",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 23.66383145481386,
+      "lng": 87.0578281055806,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=23.66383145481386,87.0578281055806"
+    },
+    {
+      "title": "FC - TataPower - Hotel Sumandeep",
+      "address": "Hotel Sumandeep",
+      "city": "Asansol",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 23.765173283966945,
+      "lng": 86.80574019219654,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=23.765173283966945,86.80574019219654"
+    }
+  ],
+  "kolkata": [
+    {
+      "title": "FC - Tata Power - Taj Raajkutir",
+      "address": "Taj Raajkutir, EM Bypass",
+      "city": "Kolkata",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 22.573505558470004,
+      "lng": 88.40230025526728,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.573505558470004,88.40230025526728"
+    },
+    {
+      "title": "technoPolis",
+      "address": "Sector 5, Salt lake",
+      "city": "Kolkata",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 22.5796706,
+      "lng": 88.44328991347192,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.5796706,88.44328991347192"
+    },
+    {
+      "title": "FC - Jio-BP - Khardaha",
+      "address": "Jio-BP Petrol Pump, Barakpur Trunk Road",
+      "city": "Kolkata",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 22.70657211558681,
+      "lng": 88.37434853401237,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.70657211558681,88.37434853401237"
+    },
+    {
+      "title": "FC - JioBP - WBSDCL Athupur",
+      "address": "Behind WBSDCL Sub-Station, E Kapte Para Road",
+      "city": "Kolkata",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "30 kW DC Fast",
+      "lat": 22.839467099235264,
+      "lng": 88.38586414053952,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.839467099235264,88.38586414053952"
+    }
+  ],
+  "nagpur": [
+    {
+      "title": "Ola Charging Point",
+      "address": "Wardha Road",
+      "city": "Nagpur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "60 kW DC Fast",
+      "lat": 21.088567856547,
+      "lng": 79.0543895880828,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=21.088567856547,79.0543895880828"
+    },
+    {
+      "title": "D N R Fuel Point",
+      "address": "NH-44",
+      "city": "Nagpur",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 20.634269503751185,
+      "lng": 78.92731552499234,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=20.634269503751185,78.92731552499234"
+    }
+  ],
+  "indore": [
+    {
+      "title": "Jawahar Marg",
+      "address": "Jawahar Marg",
+      "city": "Indore",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "3 kW DC Fast",
+      "lat": 22.71655434470766,
+      "lng": 75.85496372756984,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=22.71655434470766,75.85496372756984"
+    }
+  ],
+  "agra": [
+    {
+      "title": "Statiq Jaypee Agra",
+      "address": "SH62",
+      "city": "Agra",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 27.153405340639026,
+      "lng": 78.07073593311952,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=27.153405340639026,78.07073593311952"
+    },
+    {
+      "title": "Tata Power Yamuna Expressway Mathura Exit LHS",
+      "address": "Yamuna Expressway",
+      "city": "Agra",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 27.55039596637711,
+      "lng": 77.75506264207092,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=27.55039596637711,77.75506264207092"
+    },
+    {
+      "title": "Tata PowerYamuna Expressway Mathura RHS",
+      "address": "Yamuna Expressway",
+      "city": "Agra",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 27.61204701128193,
+      "lng": 77.74185073192439,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=27.61204701128193,77.74185073192439"
+    },
+    {
+      "title": "Krishna Valley Vrindavan",
+      "address": "5.8Krishna Valley Vrindavan HJG7+9M3, Jait",
+      "city": "Agra",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "7 kW DC Fast",
+      "lat": 27.57529195154285,
+      "lng": 77.61453111592505,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=27.57529195154285,77.61453111592505"
+    }
+  ],
+  "jammu": [
+    {
+      "title": "Punjabi Haveli",
+      "address": "NH-44",
+      "city": "Jammu",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "25 kW DC Fast",
+      "lat": 32.88658102192956,
+      "lng": 74.95638850416762,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.88658102192956,74.95638850416762"
+    },
+    {
+      "title": "PSO",
+      "address": "Damthal, Zafarwal Road, Narowal ",
+      "city": "Jammu",
+      "network": "Tata Power EV / Statiq",
+      "chargerType": "120 kW DC Fast",
+      "lat": 32.26410948793408,
+      "lng": 74.8911596369586,
+      "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.26410948793408,74.8911596369586"
+    }
+  ]
+}

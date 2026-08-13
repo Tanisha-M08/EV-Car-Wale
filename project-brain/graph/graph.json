@@ -1,0 +1,14 @@
+{
+  "project": "EVcarwale",
+  "version": "2.0.0",
+  "nodes": [
+    { "id": "index.html", "type": "HTML", "description": "Entry point and host document" },
+    { "id": "app.js", "type": "JS", "description": "Core routing, logic, and state engine" },
+    { "id": "style.css", "type": "CSS", "description": "Layout transitions and section separation styles" }
+  ],
+  "edges": [
+    { "source": "index.html", "target": "app.js", "relation": "loads" },
+    { "source": "index.html", "target": "style.css", "relation": "links" },
+    { "source": "app.js", "target": "index.html", "relation": "manipulates_dom" }
+  ]
+}

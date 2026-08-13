@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVHNJRQTPN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VVHNJRQTPN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - EV Car Wale</title>
+  <meta name="description" content="Manage your EV Car Wale account.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purewhite: '#FFFFFF',
+            black: '#000000',
+            darkgray: '#1E1E1E',
+            medgray: '#555555',
+            lightgray: '#F5F5F5',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai-assistant.css">
+  <link rel="icon" type="image/png" href="/tab_logo.png">
+  <link rel="shortcut icon" type="image/png" href="/tab_logo.png">
+  <link rel="canonical" href="https://www.evcarwale.com/profile" />
+  <meta property="og:site_name" content="EV Car Wale" />
+  <meta property="og:title" content="Profile - EV Car Wale" />
+  <meta property="og:description" content="Official information regarding Profile on EV Car Wale." />
+  <meta property="og:url" content="https://www.evcarwale.com/profile" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Profile - EV Car Wale" />
+  <meta name="twitter:description" content="Official information regarding Profile on EV Car Wale." />
+  <meta name="twitter:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Profile - EV Car Wale",
+  "description": "Official information regarding Profile on EV Car Wale.",
+  "url": "https://www.evcarwale.com/profile"
+}
+  </script>
+</head>
+<body class="bg-white text-black font-sans overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-zinc-200 px-6 lg:px-12" style="font-family:'Poppins',sans-serif;">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
+      <a href="/" class="font-bold tracking-widest text-sm flex items-center gap-2 group text-black flex-shrink-0">
+        <img src="/nav%20bar%20logo.png" alt="Logo" class="h-6 w-auto object-contain flex-shrink-0" style="height: 24px;">
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="font-mono text-[10px] tracking-wider text-zinc-700 hover:text-black transition-colors">HOME</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="max-w-6xl mx-auto px-6 py-10 lg:py-14">
+    <div id="profile-page-wrapper" class="flex flex-col lg:flex-row gap-8 hidden">
+
+      <!-- Left Sidebar -->
+      <aside class="lg:w-64 flex-shrink-0">
+        <div class="lg:sticky lg:top-24">
+          <div class="flex items-center gap-3 mb-6 pb-6 border-b border-zinc-100">
+            <div class="w-12 h-12 rounded-full bg-zinc-800 text-white flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-xs tracking-tight text-black">My Account</p>
+              <p class="font-mono text-[9px] text-zinc-400 tracking-wider uppercase">EV CAR WALE</p>
+            </div>
+          </div>
+          <nav id="profile-sidebar" class="flex flex-col gap-1">
+            <button class="profile-nav-item active" data-section="shortlisted">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              Shortlisted Vehicles
+            </button>
+            <button class="profile-nav-item" data-section="consents">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+              Manage Consents
+            </button>
+            <button class="profile-nav-item" data-section="settings">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+              Profile Settings
+            </button>
+            <button class="profile-nav-item text-red-500 hover:text-red-700" id="btn-logout">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                <polyline points="16 17 21 12 16 7"/>
+                <line x1="21" y1="12" x2="9" y2="12"/>
+              </svg>
+              Logout
+            </button>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Right Content Area -->
+      <main class="flex-1 min-h-[500px]">
+        <!-- Shortlisted Vehicles -->
+        <div id="section-shortlisted" class="profile-section">
+          <div class="mb-8">
+            <h1 class="text-xl lg:text-2xl font-black tracking-tight text-black">Shortlisted Vehicles</h1>
+            <p class="text-xs text-zinc-400 font-mono mt-1">Vehicles you have marked as favourites.</p>
+          </div>
+          <div id="shortlisted-content-container">
+            <div class="border border-zinc-200 rounded-2xl p-10 text-center">
+              <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-zinc-100 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 stroke-zinc-300 fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <p class="font-mono text-[10px] text-zinc-400">No shortlisted vehicles yet.</p>
+              <p class="font-mono text-[9px] text-zinc-300 mt-1">Browse EVs and save your favourites.</p>
+              <a href="/" class="inline-block mt-6 px-6 py-3 bg-black text-white font-mono text-[10px] uppercase tracking-widest rounded-xl hover:bg-zinc-800 transition-colors">Browse EVs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manage Consents -->
+        <div id="section-consents" class="profile-section hidden">
+          <div class="mb-8">
+            <h2 class="text-xl lg:text-2xl font-black tracking-tight text-black">Manage Consents</h2>
+            <p class="text-xs text-zinc-400 font-mono mt-1">Control your privacy and communication preferences.</p>
+          </div>
+          <div class="border border-zinc-200 rounded-2xl divide-y divide-zinc-100">
+            <label class="flex items-center justify-between p-5 cursor-pointer">
+              <div>
+                <p class="font-mono text-[10px] text-zinc-700 font-medium">Email Communications</p>
+                <p class="font-mono text-[8px] text-zinc-400 mt-0.5">Receive updates about new EVs and offers.</p>
+              </div>
+              <input type="checkbox" checked class="w-4 h-4 rounded border-zinc-300 text-black focus:ring-black">
+            </label>
+            <label class="flex items-center justify-between p-5 cursor-pointer">
+              <div>
+                <p class="font-mono text-[10px] text-zinc-700 font-medium">SMS Notifications</p>
+                <p class="font-mono text-[8px] text-zinc-400 mt-0.5">Get text alerts for test drive updates.</p>
+              </div>
+              <input type="checkbox" checked class="w-4 h-4 rounded border-zinc-300 text-black focus:ring-black">
+            </label>
+            <label class="flex items-center justify-between p-5 cursor-pointer">
+              <div>
+                <p class="font-mono text-[10px] text-zinc-700 font-medium">Data Sharing</p>
+                <p class="font-mono text-[8px] text-zinc-400 mt-0.5">Share anonymised usage data to improve our service.</p>
+              </div>
+              <input type="checkbox" class="w-4 h-4 rounded border-zinc-300 text-black focus:ring-black">
+            </label>
+          </div>
+        </div>
+
+        <!-- Profile Settings -->
+        <div id="section-settings" class="profile-section hidden">
+          <div class="mb-8">
+            <h2 class="text-xl lg:text-2xl font-black tracking-tight text-black">Profile Settings</h2>
+            <p class="text-xs text-zinc-400 font-mono mt-1">Manage your personal information and preferences.</p>
+          </div>
+          <div class="border border-zinc-200 rounded-2xl p-6 lg:p-8">
+            <form id="profile-settings-form" class="flex flex-col gap-5 max-w-lg">
+              <div class="flex flex-col gap-1.5">
+                <label for="profile-full-name" class="font-mono text-[9px] text-zinc-500 uppercase tracking-wider">Full Name</label>
+                <input type="text" id="profile-full-name" placeholder="Enter your full name" class="w-full px-4 py-3 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-800 outline-none focus:border-black transition-colors">
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="profile-email" class="font-mono text-[9px] text-zinc-500 uppercase tracking-wider">Email Address</label>
+                <input type="email" id="profile-email" placeholder="Enter your email" class="w-full px-4 py-3 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-800 outline-none focus:border-black transition-colors">
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="profile-phone" class="font-mono text-[9px] text-zinc-500 uppercase tracking-wider">Phone Number</label>
+                <input type="tel" id="profile-phone" placeholder="+91 XXX XXX XXXX" class="w-full px-4 py-3 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-800 outline-none focus:border-black transition-colors placeholder-zinc-300">
+              </div>
+              <button type="submit" id="btn-save-profile" class="self-start px-6 py-3 bg-black text-white font-mono text-[10px] uppercase tracking-widest rounded-xl hover:bg-zinc-800 transition-colors cursor-pointer">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="auth-helper.js"></script>
+  <script>
+    let shortlistedIds = [];
+    let allCars = [];
+
+    function getBrandDisplay(brand) {
+      const names = {
+        'tata': 'Tata',
+        'mahindra': 'Mahindra',
+        'mg': 'MG',
+        'byd': 'BYD',
+        'hyundai': 'Hyundai',
+        'bmw': 'BMW',
+        'audi': 'Audi',
+        'citroen': 'Citroën',
+        'kia': 'Kia',
+        'renault': 'Renault',
+        'skoda': 'Skoda',
+        'toyota': 'Toyota',
+        'vinfast': 'VinFast',
+        'volkswagen': 'Volkswagen',
+        'porsche': 'Porsche',
+        'mercedes-benz': 'Mercedes-Benz',
+        'volvo': 'Volvo',
+        'lotus': 'Lotus',
+        'rolls-royce': 'Rolls-Royce'
+      };
+      return names[brand.toLowerCase()] || brand;
+    }
+
+    function getBrandFolder(brand) {
+      const mapping = {
+        'tata': 'tata',
+        'mg': 'MG',
+        'byd': 'BYD',
+        'hyundai': 'hyundai',
+        'mahindra': 'mahindra',
+        'bmw': 'BMW',
+        'kia': 'kia',
+        'audi': 'audi',
+        'citroen': 'Citroen',
+        'volkswagen': 'volkswagen',
+        'toyota': 'toyota',
+        'porsche': 'porsche',
+        'mercedes-benz': 'mercedes-benz',
+        'volvo': 'volvo',
+        'rolls-royce': 'rolls-royce',
+        'lotus': 'lotus'
+      };
+      return mapping[brand.toLowerCase()] || brand;
+    }
+
+    const S3_IMAGE_MAPPING = {
+      "audi-a6-e-tron": "car_images/AUDI/AUDI-A6-ETRON.png",
+      "audi-e-tron-gt": "car_images/AUDI/audi_etron_gt.jpg",
+      "audi-q6-e-tron": "car_images/AUDI/Audi Q6 e-tron.jpeg",
+      "audi-q6-etron": "car_images/AUDI/Audi Q6 e-tron.jpeg",
+      "audi-q8-etron": "car_images/AUDI/Audi Q6 e-tron.jpeg",
+      "avinya-ev": "car_images/tata/tata_avinya_ev.jpeg",
+      "be-07": "car_images/mahindra/mahindra_BE_07.jpeg",
+      "be07": "car_images/mahindra/mahindra_BE_07.jpeg",
+      "be6": "car_images/mahindra/mahindra-BE6.jpeg",
+      "bmw-i4": "car_images/BMW/bmw_i4.jpeg",
+      "bmw-i5": "car_images/BMW/BMW-I5.jpeg",
+      "bmw-i7": "car_images/BMW/bmw_i7.jpeg",
+      "bmw-ix": "car_images/BMW/BMW iX.jpeg",
+      "bmw-ix1": "car_images/BMW/BMW iX1 LWB.jpeg",
+      "bmw-ix1-lwb": "car_images/BMW/BMW iX1 LWB.jpeg",
+      "byd-atto3": "car_images/BYD/BYD_atto.jpeg",
+      "byd-emax-7": "car_images/BYD/BYD_eMAX_7.jpeg",
+      "byd-emax7": "car_images/BYD/BYD_eMAX_7.jpeg",
+      "byd-seal": "car_images/BYD/byd_seal.jpeg",
+      "byd-sealion-6": "car_images/BYD/BYD-SEALION-6.jpeg",
+      "byd-sealion-7": "car_images/BYD/BYD SEALION 7.jpeg",
+      "byd-sealion7": "car_images/BYD/BYD SEALION 7.jpeg",
+      "citroen-ec3": "car_images/CITROEN/Citroen_eC3.jpeg",
+      "comet-ev": "car_images/MG/mg_comet_ev.webp",
+      "creta-ev": "car_images/hyundai/Hyundai_Creta_Electric.jpeg",
+      "curvv-ev": "car_images/tata/CURVE.jpeg",
+      "cyberster": "car_images/MG/MG_Cyberster.jpeg",
+      "d-max-ev": "car_images/ISUZU/D-MAX-EV.jpeg",
+      "ec3": "car_images/CITROEN/Citroen_eC3.jpeg",
+      "elevate-ev": "car_images/HONDA/honda_elevate_EV.jpeg",
+      "etron-gt": "car_images/AUDI/audi_etron_gt.jpg",
+      "ev6": "car_images/KIA/kia_ev6.jpeg",
+      "ex90": "car_images/VOLVO/Volvo_EX90.jpeg",
+      "fronx-ev": "car_images/maruti suzuki/fronx_ev.jpeg",
+      "gv60": "car_images/GENESIS/GV60.jpeg",
+      "harrier-ev": "car_images/tata/HARRIER.webp",
+      "hyundai-creta-electric": "car_images/hyundai/Hyundai_Creta_Electric.jpeg",
+      "ioniq-5": "car_images/hyundai/hyundai_ioniq5.jpeg",
+      "ioniq-6": "car_images/hyundai/Hyundai_IONIQ6.jpeg",
+      "jeep-avengers": "car_images/JEEP/Avengers.jpeg",
+      "kia-carens-clavis-ev": "car_images/KIA/Kia Carens Clavis EV.WEBP",
+      "kia-ev6": "car_images/KIA/kia_ev6.jpeg",
+      "kia-ev9": "car_images/KIA/kia_ev9.jpeg",
+      "lexus-es": "car_images/LEXUS/ES.jpeg",
+      "lotus-eletre": "car_images/LOTUS/ELETRE.webp",
+      "lotus-emeya": "car_images/LOTUS/EMEYA.jpeg",
+      "luce": "car_images/ferrari/LUCE.jpeg",
+      "m9-ev": "car_images/MG/MG_M9.jpeg",
+      "macan-ev": "car_images/PORSCHE/porsche_maccan_EV.jpeg",
+      "mahindra-thar-e": "car_images/mahindra/thar.e.jpeg",
+      "mahindra-xev-7e": "car_images/mahindra/mahindra_XEV_9e.webp",
+      "maruti-e-vitara": "car_images/maruti suzuki/maruti_evitara.jpeg",
+      "maruti-jimny": "car_images/maruti suzuki/jimny.png",
+      "mercedes-benz-amg-eqs": "car_images/MERCEDES_BENZ/AMG-EQS.jpeg",
+      "mercedes-benz-c-class-ev": "car_images/MERCEDES_BENZ/C-CLASS.jpeg",
+      "mercedes-benz-cla-ev": "car_images/MERCEDES_BENZ/Mercedes_Benz_CLA.jpeg",
+      "mercedes-benz-eqs-maybach": "car_images/MERCEDES_BENZ/EQS=MAYBACH.webp",
+      "mercedes-benz-eqs-suv": "car_images/MERCEDES_BENZ/Mercedes-Benz_EQS_SUV.jpeg",
+      "mercedes-benz-eqs-suv-standard": "car_images/MERCEDES_BENZ/EQS_SUV.jpeg",
+      "mercedes-benz-g-class-ev": "car_images/MERCEDES_BENZ/Mercedes-Benz_G-Class.jpeg",
+      "mercedes-cla-electric": "car_images/MERCEDES_BENZ/Mercedes_Benz_CLA.jpeg",
+      "mercedes-eqa": "car_images/MERCEDES_BENZ/C-CLASS.jpeg",
+      "mercedes-eqe-suv": "car_images/MERCEDES_BENZ/EQS_SUV.jpeg",
+      "mercedes-eqs": "car_images/MERCEDES_BENZ/Mercedes-Benz_EQS_SUV.jpeg",
+      "mercedes-eqs-suv": "car_images/MERCEDES_BENZ/Mercedes-Benz_EQS_SUV.jpeg",
+      "mercedes-g-class-electric": "car_images/MERCEDES_BENZ/Mercedes-Benz_G-Class.jpeg",
+      "mg-cyberster": "car_images/MG/MG_Cyberster.jpeg",
+      "mg-m9": "car_images/MG/MG_M9.jpeg",
+      "mg-zs-ev": "car_images/MG/MG ZS EV.JPG",
+      "mini-countryman-electric": "car_images/MINI /COUNTRYMAN-ELECTRIC.jpeg",
+      "nexon-ev": "car_images/tata/NEXON.jpeg",
+      "nissan-ariya": "car_images/NISSAN/Nissan_Ariya.jpeg",
+      "nissan-leaf": "car_images/NISSAN/nissan_leaf.JPG",
+      "pmv-eas-e": "car_images/PMV/EAS-E.jpeg",
+      "porsche-cayenne-electric": "car_images/PORSCHE/PORSCHE_CAYENNE.jpeg",
+      "porsche-cayenne-ev": "car_images/PORSCHE/PORSCHE_CAYENNE.jpeg",
+      "porsche-macan-ev": "car_images/PORSCHE/porsche_maccan_EV.jpeg",
+      "porsche-taycan": "car_images/PORSCHE/PORSCHE_TAYCAN.JPG",
+      "pravaig-defy": "car_images/PRAVAIG/DEFY.jpeg",
+      "punch-ev": "car_images/tata/PUNCH.jpeg",
+      "renault-kwid-ev": "car_images/RENAULT/renault_kwid_ev.JPG",
+      "rolls-royce-spectre": "car_images/ROLLS_ROYCE/Rolls-Royce Spectre.jpeg",
+      "ryde": "car_images/BLINQ/RYDE.jpeg",
+      "sierra-ev": "car_images/tata/SIERRA.jpeg",
+      "skoda-elroq": "car_images/SKODA/Skoda_Elroq.jpeg",
+      "skoda-enyaq": "car_images/SKODA/Skoda_Enyaq.JPG",
+      "strom-r3": "car_images/STROM_MOTORS/R3.jpeg",
+      "syros-ev": "car_images/KIA/Kia_syros_ev.jpeg",
+      "tata-sierra-ev": "car_images/tata/SIERRA.jpeg",
+      "tata-tigor-ev": "car_images/tata/TIAGO.jpeg",
+      "tesla-model-y": "car_images/TESLA/MODEL-Y.jpeg",
+      "thar-e": "car_images/mahindra/thar.e.jpeg",
+      "tiago-ev": "car_images/tata/TIAGO.jpeg",
+      "toyota-bz4x": "car_images/TOYOTA/Toyota_bZ4X.jpeg",
+      "toyota-Urban-Cruiser-ev": "car_images/TOYOTA/Toyota_Urban_Cruiser.jpeg",
+      "vayve-mobility-eva": "car_images/VAYVE_MOBILITY/eva.jpeg",
+      "vinfast-vf-mpv7": "car_images/VINFAST/VinFast VF MPV7.JPG",
+      "vinfast-vf3": "car_images/VINFAST/vin_fast_vf3.jpeg",
+      "vinfast-vf6": "car_images/VINFAST/VinFast VF 6.jpeg",
+      "vinfast-vf7": "car_images/VINFAST/vin_fast_vf7.jpeg",
+      "volkswagen-id4": "car_images/VOLKSWAGAN/id_4.jpeg",
+      "volvo-ec40": "car_images/VOLVO/volvo_EC40.WEBP",
+      "volvo-ex30": "car_images/VOLVO/VOLVO_EX30.jpeg",
+      "volvo-ex40": "car_images/VOLVO/VOLVO_EX40.JPG",
+      "volvo-ex90": "car_images/VOLVO/Volvo_EX90.jpeg",
+      "windsor-ev": "car_images/MG/MG_windsor_EV.jpeg",
+      "xev-9e": "car_images/mahindra/mahindra_XEV_9e.webp",
+      "xev-9s": "car_images/mahindra/Mahindra XEV 9s.png",
+      "xpres-t-ev": "car_images/tata/EXPRESS-T.jpeg",
+      "xuv-3xo-ev": "car_images/mahindra/3X0.jpeg",
+      "xuv400": "car_images/mahindra/mahindra_XUV_400.jpg",
+      "zero-alpha": "car_images/HONDA/ZERO_ALPHA.jpeg",
+      "zs-ev": "car_images/MG/MG ZS EV.JPG"
+};
+
+    function handleImageError(imgElement) {
+  if (!imgElement) return;
+  imgElement.onerror = null;
+  const failedUrl = imgElement.src || 'Unknown S3 URL';
+  const altText = imgElement.alt || 'Vehicle';
+  console.warn('[EV Car Wale Image Error] Failed to load image for "' + altText + '" from S3 URL: ' + failedUrl + '. Displaying default placeholder /car_outline.jpg.');
+  if (imgElement.previousElementSibling && imgElement.previousElementSibling.classList.contains('skeleton-shimmer')) {
+    imgElement.previousElementSibling.style.display = 'none';
+  }
+  imgElement.src = '/car_outline.jpg';
+}
+
+    function getS3ImageUrl(carOrPath) {
+      if (!carOrPath) return '/car_outline.jpg';
+      let relativePath = carOrPath;
+      if (typeof carOrPath === 'object' && carOrPath !== null) {
+        if (carOrPath.id && S3_IMAGE_MAPPING[carOrPath.id]) {
+          relativePath = S3_IMAGE_MAPPING[carOrPath.id];
+        } else {
+          relativePath = carOrPath.image || '';
+        }
+      } else if (typeof carOrPath === 'string' && S3_IMAGE_MAPPING[carOrPath]) {
+        relativePath = S3_IMAGE_MAPPING[carOrPath];
+      }
+      if (!relativePath) return '/car_outline.jpg';
+      if (relativePath === 'car_outline.jpg' || relativePath === '/car_outline.jpg') {
+        return '/car_outline.jpg';
+      }
+      if (relativePath.startsWith('http://') || relativePath.startsWith('https://')) {
+        return relativePath;
+      }
+      let cleanPath = relativePath.trim();
+      if (cleanPath.startsWith('/')) {
+        cleanPath = cleanPath.substring(1);
+      }
+      if (cleanPath.startsWith('public/')) {
+        cleanPath = cleanPath.substring(7);
+      }
+      const encodedPath = cleanPath.split('/').map(encodeURIComponent).join('/');
+      const s3BaseUrl = 'https://ev-car-wale.s3.ap-south-1.amazonaws.com';
+      const finalUrl = s3BaseUrl + '/' + encodedPath;
+      const carId = (typeof carOrPath === 'object' && carOrPath !== null)
+        ? carOrPath.id
+        : (typeof carOrPath === 'string' ? carOrPath : '');
+      const newImageCarIds = ['bmw-i4','bmw-i5','bmw-i7','bmw-ix','bmw-ix1','bmw-ix1-lwb','audi-a6-e-tron','audi-e-tron-gt','audi-q6-e-tron','audi-q6-etron','audi-q8-etron','jeep-avengers','luce','be6'];
+      return (carId && newImageCarIds.indexOf(carId) !== -1) ? finalUrl + '?v=2' : finalUrl;
+    }
+
+    function showToast(message) {
+      let toastContainer = document.getElementById('toast-container');
+      if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.id = 'toast-container';
+        toastContainer.className = 'fixed top-6 right-6 z-[9999] flex flex-col gap-2 pointer-events-none font-mono';
+        document.body.appendChild(toastContainer);
+      }
+      const toast = document.createElement('div');
+      toast.className = 'bg-black text-white text-[10px] uppercase tracking-wider px-5 py-3 border border-zinc-800 shadow-lg rounded-none transition-all duration-300 transform -translate-y-10 opacity-0';
+      toast.textContent = message;
+      toastContainer.appendChild(toast);
+      
+      setTimeout(() => {
+        toast.classList.remove('-translate-y-10', 'opacity-0');
+      }, 10);
+      
+      setTimeout(() => {
+        toast.classList.add('-translate-y-10', 'opacity-0');
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 3000);
+    }
+
+    async function loadShortlistData() {
+      try {
+        const favRes = await fetch('/api/favourites');
+        if (favRes.ok) {
+          const favData = await favRes.json();
+          if (favData.success) {
+            shortlistedIds = favData.data || [];
+          }
+        }
+
+        const carsRes = await fetch('/data/cars.json');
+        if (carsRes.ok) {
+          const text = await carsRes.text();
+          const cleanText = text.replace(/,(\s*[\]}])/g, '$1');
+          allCars = JSON.parse(cleanText);
+        }
+
+        renderShortlist();
+      } catch (err) {
+        console.error('Failed to load shortlisted vehicles data:', err);
+      }
+    }
+
+    function renderShortlist() {
+      const container = document.getElementById('shortlisted-content-container');
+      if (!container) return;
+
+      const shortlistedCars = allCars.filter(car => shortlistedIds.includes(car.id));
+
+      if (shortlistedCars.length === 0) {
+        container.innerHTML = `
+          <div class="border border-zinc-200 rounded-2xl p-10 text-center">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-zinc-100 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 stroke-zinc-300 fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <p class="font-mono text-[10px] text-zinc-400">No shortlisted vehicles yet.</p>
+            <p class="font-mono text-[9px] text-zinc-300 mt-1">Browse EVs and save your favourites.</p>
+            <a href="/" class="inline-block mt-6 px-6 py-3 bg-black text-white font-mono text-[10px] uppercase tracking-widest rounded-xl hover:bg-zinc-800 transition-colors">Browse EVs</a>
+          </div>
+        `;
+        return;
+      }
+
+      let gridHtml = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">`;
+
+      shortlistedCars.forEach(car => {
+        const imgUrl = getS3ImageUrl(car);
+        const displayBrand = getBrandDisplay(car.brand);
+        
+        let cleanedName = car.name;
+        if (cleanedName.toLowerCase().startsWith(displayBrand.toLowerCase())) {
+          cleanedName = cleanedName.substring(displayBrand.length).trim();
+        }
+
+        gridHtml += `
+          <div class="car-card border border-zinc-200 bg-white p-6 flex flex-col justify-between h-[420px] relative group hover:border-black transition-all shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] cursor-pointer" data-car-id="${car.id}">
+            <button class="wishlist-btn absolute top-4 right-4 z-20" data-id="${car.id}" aria-label="Remove from Shortlist">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current text-red-500">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="h-44 bg-white mb-4 relative overflow-hidden rounded-[14px] border border-zinc-100">
+              <img src="${imgUrl}" alt="${car.name}" class="w-full h-full transition-transform duration-500 group-hover:scale-105" onerror="handleImageError(this)">
+            </div>
+            <div>
+              <div class="flex justify-between items-start text-black">
+                <div>
+                  <span class="font-mono text-[9px] text-zinc-500 uppercase notranslate">${displayBrand}</span>
+                  <h3 class="text-lg font-bold mt-0.5 text-black notranslate">${cleanedName}</h3>
+                </div>
+                <span class="font-mono text-sm font-bold text-black notranslate">${car.price}</span>
+              </div>
+              <div class="grid grid-cols-2 gap-y-1.5 gap-x-4 my-3 text-[10px] text-zinc-500 border-t border-zinc-100 pt-3 font-mono">
+                <div>RANGE: ${car.range}</div>
+                <div>BATTERY: ${car.battery}</div>
+              </div>
+            </div>
+            <a href="index.html#/cars/${car.id}" class="w-full py-2.5 border border-zinc-200 hover:border-black text-center text-zinc-500 hover:text-white hover:bg-black font-mono text-[9px] uppercase tracking-widest transition-all notranslate">
+              VIEW DETAILS
+            </a>
+          </div>
+        `;
+      });
+
+      gridHtml += `</div>`;
+      container.innerHTML = gridHtml;
+
+      // Add event listeners to remove buttons
+      container.querySelectorAll('.wishlist-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          const carId = btn.getAttribute('data-id');
+          await removeFromShortlist(carId);
+        });
+      });
+
+      // Add click event listeners to card body to navigate to details
+      container.querySelectorAll('.car-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('.wishlist-btn') || e.target.tagName.toLowerCase() === 'a') {
+            return;
+          }
+          const carId = card.getAttribute('data-car-id');
+          window.location.href = `index.html#/cars/${carId}`;
+        });
+      });
+    }
+
+    async function removeFromShortlist(carId) {
+      try {
+        const res = await fetch(`/api/favourites/${carId}`, {
+          method: 'DELETE'
+        });
+        if (res.ok) {
+          shortlistedIds = shortlistedIds.filter(id => id !== carId);
+          localStorage.setItem('ev_wishlist_logged_in', JSON.stringify(shortlistedIds));
+          renderShortlist();
+          showToast('Removed from Shortlisted Vehicles');
+        }
+      } catch (err) {
+        console.error('Failed to remove from shortlist:', err);
+      }
+    }
+
+    let recentlyViewedIds = [];
+
+    async function loadActivityData() {
+      try {
+        let localList = JSON.parse(localStorage.getItem('recently_viewed_evs') || '[]');
+        try {
+          const rvRes = await fetch('/api/recently-viewed');
+          if (rvRes.ok) {
+            const rvData = await rvRes.json();
+            if (rvData.success && Array.isArray(rvData.data)) {
+              localList = Array.from(new Set([...localList, ...rvData.data]));
+            }
+          }
+        } catch (e) {}
+
+        recentlyViewedIds = localList;
+
+        if (!allCars || allCars.length === 0) {
+          const carsRes = await fetch('/data/cars.json');
+          if (carsRes.ok) {
+            const text = await carsRes.text();
+            const cleanText = text.replace(/,(\s*[\]}])/g, '$1');
+            allCars = JSON.parse(cleanText);
+          }
+        }
+
+        renderActivity();
+      } catch (err) {
+        console.error('Failed to load activity data:', err);
+      }
+    }
+
+    function renderActivity() {
+      const container = document.getElementById('section-activity');
+      if (!container) return;
+
+      const viewedCars = recentlyViewedIds
+        .map(id => allCars.find(car => car.id === id))
+        .filter(Boolean);
+
+      let html = `
+        <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl lg:text-2xl font-black tracking-tight text-black">My Activity</h2>
+            <p class="text-xs text-zinc-400 font-mono mt-1">Your recently viewed electric vehicles.</p>
+          </div>
+          ${viewedCars.length > 0 ? `
+            <button id="btn-clear-activity" class="px-4 py-2 border border-zinc-200 hover:border-black font-mono text-[9px] uppercase tracking-wider text-zinc-600 hover:text-black rounded-lg transition-all self-start md:self-auto cursor-pointer">
+              Clear Activity History
+            </button>
+          ` : ''}
+        </div>
+      `;
+
+      if (viewedCars.length === 0) {
+        html += `
+          <div class="border border-zinc-200 rounded-2xl p-10 text-center">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-zinc-100 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 stroke-zinc-400 fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <p class="font-mono text-[10px] text-zinc-500 uppercase font-bold">No recent activity yet.</p>
+            <p class="font-mono text-[9px] text-zinc-400 mt-1">Vehicles you view across the site will automatically show up here.</p>
+            <a href="index.html#/view-all/all" class="inline-block mt-6 px-6 py-3 bg-black text-white font-mono text-[10px] uppercase tracking-widest rounded-xl hover:bg-zinc-800 transition-colors">Explore All EVs</a>
+          </div>
+        `;
+      } else {
+        html += `
+          <div class="flex items-center justify-between mb-4 border-b border-zinc-100 pb-3">
+            <span class="font-mono text-[10px] text-zinc-500 font-bold uppercase tracking-wider">
+              RECENTLY VIEWED EVS (${viewedCars.length})
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        `;
+
+        viewedCars.forEach(car => {
+          const imgUrl = getS3ImageUrl(car);
+          const displayBrand = getBrandDisplay(car.brand);
+          
+          let cleanedName = car.name;
+          if (cleanedName.toLowerCase().startsWith(displayBrand.toLowerCase())) {
+            cleanedName = cleanedName.substring(displayBrand.length).trim();
+          }
+
+          html += `
+            <div class="car-card border border-zinc-200 bg-white p-6 flex flex-col justify-between h-[420px] relative group hover:border-black transition-all shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] cursor-pointer" data-car-id="${car.id}">
+              <div class="h-44 bg-white mb-4 relative overflow-hidden rounded-[14px] border border-zinc-100">
+                <img src="${imgUrl}" alt="${car.name}" class="w-full h-full transition-transform duration-500 group-hover:scale-105" onerror="handleImageError(this)">
+              </div>
+              <div>
+                <div class="flex justify-between items-start text-black">
+                  <div>
+                    <span class="font-mono text-[9px] text-zinc-500 uppercase notranslate">${displayBrand}</span>
+                    <h3 class="text-lg font-bold mt-0.5 text-black notranslate">${cleanedName}</h3>
+                  </div>
+                  <span class="font-mono text-sm font-bold text-black notranslate">${car.price}</span>
+                </div>
+                <div class="grid grid-cols-2 gap-y-1.5 gap-x-4 my-3 text-[10px] text-zinc-500 border-t border-zinc-100 pt-3 font-mono">
+                  <div>RANGE: ${car.range}</div>
+                  <div>BATTERY: ${car.battery}</div>
+                </div>
+              </div>
+              <a href="index.html#/cars/${car.id}" class="w-full py-2.5 border border-zinc-200 hover:border-black text-center text-zinc-500 hover:text-white hover:bg-black font-mono text-[9px] uppercase tracking-widest transition-all notranslate">
+                VIEW DETAILS
+              </a>
+            </div>
+          `;
+        });
+
+        html += `</div>`;
+      }
+
+      container.innerHTML = html;
+
+      const clearBtn = container.querySelector('#btn-clear-activity');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          localStorage.removeItem('recently_viewed_evs');
+          recentlyViewedIds = [];
+          renderActivity();
+          showToast('Cleared Activity History');
+        });
+      }
+
+      container.querySelectorAll('.car-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.tagName.toLowerCase() === 'a') return;
+          const carId = card.getAttribute('data-car-id');
+          window.location.href = `index.html#/cars/${carId}`;
+        });
+      });
+    }
+
+    // Verify user session using backend OAuth /api/auth/me
+    async function verifyAuth() {
+      try {
+        const response = await fetch('/api/auth/me');
+        const data = await response.json();
+        if (data.loggedIn && data.user) {
+          const sidebarProfileImg = document.querySelector('aside .rounded-full');
+          const sidebarName = document.querySelector('aside p.font-bold');
+          
+          const savedName = localStorage.getItem('evcarwale_user_name') || data.user.name || '';
+          const savedEmail = localStorage.getItem('evcarwale_user_email') || data.user.email || '';
+          const savedPhone = localStorage.getItem('evcarwale_user_phone') || '';
+
+          // ALWAYS use the current session's OAuth picture - this is dynamic per user
+          // Cache it for page refresh (session persists across refreshes)
+          if (data.user.picture) {
+            localStorage.setItem('evcarwale_user_picture', data.user.picture);
+          }
+
+          // Use the CURRENT user's OAuth picture - NO localStorage fallback for active session
+          const pictureUrl = data.user.picture || '';
+
+          const initials = savedName
+            .split(' ')
+            .map(n => n[0])
+            .slice(0, 2)
+            .join('')
+            .toUpperCase();
+
+          if (sidebarProfileImg) {
+            if (pictureUrl) {
+              sidebarProfileImg.innerHTML = `
+                <img src="${pictureUrl}" alt="${savedName}" class="w-full h-full rounded-full object-cover" onerror="handleAvatarError(this, '${initials}')">
+              `;
+            } else {
+              // No Google picture available for this user - show initials
+              sidebarProfileImg.innerHTML = `<span class="w-full h-full rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-base">${initials}</span>`;
+            }
+          }
+          if (sidebarName) {
+            sidebarName.textContent = savedName || 'EV Car Wale User';
+          }
+
+          const nameInput = document.getElementById('profile-full-name');
+          const emailInput = document.getElementById('profile-email');
+          const phoneInput = document.getElementById('profile-phone');
+
+          if (nameInput) nameInput.value = savedName;
+          if (emailInput) emailInput.value = savedEmail;
+          if (phoneInput) phoneInput.value = savedPhone;
+
+          // Reveal profile layout once auth is confirmed
+          const wrapper = document.getElementById('profile-page-wrapper');
+          if (wrapper) wrapper.classList.remove('hidden');
+          
+          // Load shortlisted vehicles data & activity history
+          loadShortlistData();
+          loadActivityData();
+        } else {
+          // Redirect to login if unauthenticated
+          window.location.href = 'index.html#/login';
+        }
+      } catch (err) {
+        console.error('Session check failed:', err);
+        window.location.href = 'index.html#/login';
+      }
+    }
+
+    function handleAvatarError(img, initials) {
+      img.style.display = 'none';
+      const container = img.closest('.rounded-full');
+      if (container) {
+        container.innerHTML = `<span class="w-full h-full rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-base">${initials}</span>`;
+      }
+    }
+    verifyAuth();
+
+    // Profile Settings Form Save Handler
+    const settingsForm = document.getElementById('profile-settings-form');
+    if (settingsForm) {
+      settingsForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById('profile-full-name');
+        const emailInput = document.getElementById('profile-email');
+        const phoneInput = document.getElementById('profile-phone');
+
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        const emailVal = emailInput ? emailInput.value.trim() : '';
+        const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+
+        if (!nameVal) {
+          showToast('Please enter your full name');
+          return;
+        }
+
+        localStorage.setItem('evcarwale_user_name', nameVal);
+        if (emailVal) localStorage.setItem('evcarwale_user_email', emailVal);
+        if (phoneVal) localStorage.setItem('evcarwale_user_phone', phoneVal);
+
+        const sidebarName = document.querySelector('aside p.font-bold');
+        if (sidebarName) sidebarName.textContent = nameVal;
+
+        showToast('Profile settings saved successfully!');
+      });
+    }
+
+    // Sidebar navigation switching
+    document.querySelectorAll('.profile-nav-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.id === 'btn-logout') return;
+        document.querySelectorAll('.profile-nav-item').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.profile-section').forEach(s => s.classList.add('hidden'));
+        const section = document.getElementById('section-' + btn.dataset.section);
+        if (section) section.classList.remove('hidden');
+        if (btn.dataset.section === 'activity') {
+          loadActivityData();
+        }
+      });
+    });
+
+    // Handle logout button click
+    const logoutBtn = document.getElementById('btn-logout');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', (event) => {
+        if (typeof window.performLogout === 'function') {
+          window.performLogout(event);
+        } else {
+          window.location.href = '/auth/logout';
+        }
+      });
+    }
+  </script>
+<!-- AI Floating Assistant -->
+<div id="ai-overlay" class="ai-overlay"></div>
+<div class="ai-assistant-container">
+  <div class="ai-trigger" id="ai-trigger">
+    <div class="ai-avatar-wrapper ai-float-anim">
+      <div class="ai-avatar-glow"></div>
+      <img src="ai_robot_avatar.png" alt="EV AI Assistant" class="ai-avatar-img" loading="lazy">
+    </div>
+    <div class="ai-label" id="ai-label">Ask EV AI</div>
+  </div>
+  <div class="ai-chat-window" id="ai-chat-window">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-left">
+        <img src="ai_robot_avatar.png" alt="AI" class="ai-chat-avatar" loading="lazy">
+        <div>
+          <div class="ai-chat-title">EV AI Assistant</div>
+          <div class="ai-chat-status"><span class="ai-status-dot"></span> Online</div>
+        </div>
+      </div>
+      <button class="ai-chat-close" id="ai-chat-close" aria-label="Close chat">&#x2715;</button>
+    </div>
+    <div class="ai-chat-body" id="ai-chat-body">
+      <div class="ai-message ai-bot-message" style="white-space:pre-line">
+Hi! 👋 I'm your EV AI Assistant.
+
+Ask me anything about:
+
+• Electric Vehicles
+• Charging
+• Battery Health
+• EV Costs
+• Government Policies
+• EV Buying
+• Range
+• Comparisons
+• Charging Stations
+      </div>
+      <div class="ai-suggestions">
+        <button class="ai-chip">Best EV under ₹15 lakh</button>
+        <button class="ai-chip">Charging cost</button>
+        <button class="ai-chip">Battery lifespan</button>
+        <button class="ai-chip">Compare Tata vs MG</button>
+        <button class="ai-chip">Government subsidy</button>
+        <button class="ai-chip">Charging stations near me</button>
+      </div>
+    </div>
+    <div class="ai-chat-input-area">
+      <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Ask anything about EVs..." autocomplete="off">
+      <button class="ai-send-btn" id="ai-send-btn" aria-label="Send message">Send</button>
+    </div>
+  </div>
+</div>
+<script src="ai-assistant.js"></script>
+</body>
+</html>

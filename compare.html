@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVHNJRQTPN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VVHNJRQTPN');
+</script>
+
+  <!-- Performance Optimization Preloads & Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="/nav%20bar%20logo.png">
+
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare EVs - EV Car Wale</title>
+  <meta name="description" content="Compare two electric vehicles side by side. Specs, range, charging, features, and more.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <!-- Leaflet Map CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script>
+    window.__gmapReady = false;
+    window.__gmapCallbacks = [];
+    window.__gmapCallback = function() {
+      window.__gmapReady = true;
+      window.__gmapCallbacks.forEach(function(fn) { try { fn(); } catch(e) {} });
+      window.__gmapCallbacks = [];
+    };
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=__GOOGLE_MAPS_API_KEY__&libraries=places&callback=__gmapCallback" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purewhite: '#FFFFFF',
+            black: '#000000',
+            darkgray: '#1E1E1E',
+            medgray: '#555555',
+            lightgray: '#F5F5F5',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            mono: ['Poppins', 'sans-serif'],
+            serif: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/ai-assistant.css">
+  <link rel="icon" type="image/png" href="/tab_logo.png">
+  <link rel="shortcut icon" type="image/png" href="/tab_logo.png">
+  <link rel="canonical" href="https://www.evcarwale.com/compare" />
+  <meta property="og:site_name" content="EV Car Wale" />
+  <meta property="og:title" content="Compare Electric Cars Side-by-Side - EV Car Wale" />
+  <meta property="og:description" content="Compare EV prices, real-world range, battery capacity, fast charging speed, and features side-by-side." />
+  <meta property="og:url" content="https://www.evcarwale.com/compare" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compare Electric Cars Side-by-Side - EV Car Wale" />
+  <meta name="twitter:description" content="Compare EV prices, real-world range, battery capacity, fast charging speed, and features side-by-side." />
+  <meta name="twitter:image" content="https://www.evcarwale.com/tab_logo.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Compare Electric Cars Side-by-Side - EV Car Wale",
+  "url": "https://www.evcarwale.com/compare",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "description": "Compare EV prices, real-world range, battery capacity, fast charging speed, and features side-by-side."
+}
+  </script>
+</head>
+<body class="bg-white text-black font-sans overflow-x-hidden selection-none">
+  <!-- Navbar -->
+  <nav id="mega-nav" class="sticky top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-zinc-200 px-6 lg:px-12" style="font-family:'Poppins',sans-serif;">
+    <div class="w-full flex items-center justify-between h-16 px-4">
+
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-start">
+        <a href="/" class="logo-link font-bold tracking-widest text-sm flex items-center gap-4 group text-black flex-shrink-0">
+          <img loading="lazy" decoding="async" src="/nav%20bar%20logo.png" alt="Logo" class="h-20 w-auto object-contain flex-shrink-0" style="height: 64px;">
+        </a>
+      </div>
+
+      <!-- Desktop Mega Menu Links (Perfect Center) -->
+      <div id="mega-menu-links" class="hidden lg:flex items-center justify-center h-full">
+
+        <!-- HOME -->
+        <a href="/" onclick="window.location.href='/'; return false;" class="mega-nav-item nav-link px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group" data-section="home">
+          HOME
+          <span class="mega-active-bar"></span>
+        </a>
+
+        <!-- DISCOVER EVs -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="discover">
+          DISCOVER EVs
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="tools">
+          TOOLS
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+        <!-- LEARN -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="learn">
+          LEARN
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+        <!-- INSIGHTS -->
+        <div class="mega-trigger px-4 h-full flex items-center text-[11px] font-medium text-zinc-700 tracking-wider hover:text-black transition-colors relative group cursor-pointer" data-mega="insights">
+          INSIGHTS
+          <svg viewBox="0 0 24 24" class="w-3 h-3 ml-1 stroke-current fill-none stroke-2 transition-transform duration-200 mega-caret" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mega-active-bar"></span>
+        </div>
+
+      </div><!-- /mega-menu-links -->
+
+      <!-- Right Utility Actions -->
+      <div class="flex-1 flex items-center justify-end gap-4">
+        <!-- Language -->
+        <div id="google_translate_element" class="notranslate" style="display:none"></div>
+        <div class="custom-lang-dropdown notranslate">
+          <button id="custom-lang-btn" class="btn-animate px-3 notranslate">
+            <span id="custom-lang-label" class="notranslate">English</span>
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="custom-lang-menu" class="notranslate">
+            <div class="lang-option notranslate" data-lang="en">English</div>
+            <div class="lang-option notranslate" data-lang="hi">हिन्दी-HI</div>
+            <div class="lang-option notranslate" data-lang="kn">ಕನ್ನಡ-KA</div>
+            <div class="lang-option notranslate" data-lang="ml">മലയാളം-ML</div>
+            <div class="lang-option notranslate" data-lang="te">తెలుగు-TE</div>
+            <div class="lang-option notranslate" data-lang="ta">தமிழ்-TA</div>
+          </div>
+        </div>
+
+        <button id="login-nav-btn" class="hidden md:block px-4 py-2 font-mono text-[10px] tracking-wider border border-zinc-300 hover:border-black text-black hover:bg-black hover:text-white transition-all duration-300 btn-animate">
+          LOGIN
+        </button>
+
+        <!-- Profile Avatar (shown after login) -->
+        <a id="profile-container" class="hidden" href="/profile">
+          <div class="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center hover:bg-zinc-700 transition-colors cursor-pointer" aria-label="Profile">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button id="mega-hamburger" class="xl:hidden flex flex-col gap-[5px] p-2 group" aria-label="Menu" aria-expanded="false">
+          <span class="block w-5 h-[1.5px] bg-black transition-all duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-[6.5px]"></span>
+          <span class="block w-5 h-[1.5px] bg-black transition-all duration-300 group-[.open]:opacity-0"></span>
+          <span class="block w-5 h-[1.5px] bg-black transition-all duration-300 origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-[6.5px]"></span>
+        </button>
+      </div>
+
+    </div><!-- /inner flex -->
+
+    <!-- ============ MEGA PANELS ============ -->
+    <!-- Backdrop overlay -->
+    <div id="mega-backdrop" class="fixed inset-0 top-16 bg-black/10 backdrop-blur-[1px] z-30 hidden opacity-0 transition-opacity duration-200"></div>
+
+    <!-- Discover EVs Panel -->
+    <div class="mega-panel hidden" id="mega-panel-discover">
+      <div class="px-8 py-8 grid grid-cols-2 gap-10">
+        <div>
+          <p class="mega-col-title">Browse</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/popular-evs" onclick="window.location.href='/popular-evs'; return false;" class="mega-item">
+              <span class="mega-item-icon">🚗</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Popular Electric Cars</span>
+                <span class="mega-item-desc">Browse India's most popular electric vehicles.</span>
+              </span>
+            </a>
+            <a href="/launches" onclick="window.location.href='/launches'; return false;" class="mega-item">
+              <span class="mega-item-icon">⚡</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Latest EV Launches</span>
+                <span class="mega-item-desc">Newest arrivals in the Indian electric car market.</span>
+              </span>
+            </a>
+            <a href="/upcoming" onclick="window.location.href='/upcoming'; return false;" class="mega-item">
+              <span class="mega-item-icon">🔮</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Upcoming Electric Cars</span>
+                <span class="mega-item-desc">Electric models launching in India soon.</span>
+              </span>
+            </a>
+            <a href="/browse" onclick="window.location.href='/browse'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏷️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Browse by Brand</span>
+                <span class="mega-item-desc">Filter vehicles by Tata, MG, BYD, Hyundai, and more.</span>
+              </span>
+            </a>
+            
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Quick Actions</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/view-all/all" onclick="window.location.href='/#/view-all/all'; return false;" class="mega-item">
+              <span class="mega-item-icon">📋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">View All Cars</span>
+                <span class="mega-item-desc">Explore the complete EV database for India.</span>
+              </span>
+            </a>
+            <a href="/compare.html" onclick="window.location.href='/compare.html'; return false;" class="mega-item">
+              <span class="mega-item-icon">⚖️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Compare Cars</span>
+                <span class="mega-item-desc">Compare specs, charging, and features side-by-side.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Panel -->
+    <div class="mega-panel hidden" id="mega-panel-tools">
+      <div class="px-8 py-8 grid grid-cols-2 gap-10">
+        <div>
+          <p class="mega-col-title">Calculators</p>
+           <div class="flex flex-col gap-1 mt-3">
+            <a href="/trip-planner" onclick="window.location.href='/trip-planner'; return false;" class="mega-item">
+  <span class="mega-item-icon">🗺️</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">EV Trip Planner</span>
+    <span class="mega-item-desc">Plan routes, charging stops, costs.</span>
+  </span>
+  </a>
+ <a href="/#/hub/charging-time" onclick="window.location.href='/#/hub/charging-time'; return false;" class="mega-item">
+  <span class="mega-item-icon">⏱️</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">EV Charging Time Calculator</span>
+    <span class="mega-item-desc">Estimate charging duration for any EV.</span>
+  </span>
+ </a>
+ <a href="/#/hub/emi-calculator" onclick="window.location.href='/#/hub/emi-calculator'; return false;" class="mega-item">
+  <span class="mega-item-icon">💰</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">EMI Calculator</span>
+    <span class="mega-item-desc">Calculate monthly EV loan installments.</span>
+  </span>
+ </a>
+ <a href="/#/hub/petrol-savings" onclick="window.location.href='/#/hub/petrol-savings'; return false;" class="mega-item">
+  <span class="mega-item-icon">⛽</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">Petrol Savings Calculator</span>
+    <span class="mega-item-desc">Compare petrol vs EV running costs.</span>
+  </span>
+ </a>
+ <a href="/#/hub/charging-stations" onclick="window.location.href='/#/hub/charging-stations'; return false;" class="mega-item">
+  <span class="mega-item-icon">🔌</span>
+  <span class="mega-item-body">
+    <span class="mega-item-title">Charging Stations</span>
+    <span class="mega-item-desc">Locate DC fast chargers.</span>
+  </span>
+ </a>
+  
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Utilities</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/hub/apartment-charging" onclick="window.location.href='/#/hub/apartment-charging'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏢</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Apartment Charging Guide</span>
+                <span class="mega-item-desc">Get society NOC and home charging setup.</span>
+              </span>
+            </a>
+            <a href="/#/hub/battery-health" onclick="window.location.href='/#/hub/battery-health'; return false;" class="mega-item">
+              <span class="mega-item-icon">🔋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Battery Health Guide</span>
+                <span class="mega-item-desc">Tips and best practices to maximize battery lifespan.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learn Panel -->
+    <div class="mega-panel hidden" id="mega-panel-learn">
+      <div class="px-8 py-8 grid grid-cols-3 gap-8">
+
+        <div>
+          <p class="mega-col-title">Buying Guide</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/guide/everything-about-evs" onclick="window.location.href='/#/guide/everything-about-evs'; return false;" class="mega-item">
+              <span class="mega-item-icon">📘</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Everything About EVs</span>
+                <span class="mega-item-desc">A complete introduction to electric vehicles.</span>
+              </span>
+            </a>
+            <a href="/#/guide/ev-buying-guide" onclick="window.location.href='/#/guide/ev-buying-guide'; return false;" class="mega-item">
+              <span class="mega-item-icon">📋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Buying Guide</span>
+                <span class="mega-item-desc">Step-by-step purchase assistance.</span>
+              </span>
+            </a>
+            <a href="/#/guide/home-charging" onclick="window.location.href='/#/guide/home-charging'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏠</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Charging at Home</span>
+                <span class="mega-item-desc">Set up home charging safely.</span>
+              </span>
+            </a>
+            <a href="/#/guide/fast-vs-slow" onclick="window.location.href='/#/guide/fast-vs-slow'; return false;" class="mega-item">
+              <span class="mega-item-icon">⚡</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Fast vs Slow Charging</span>
+                <span class="mega-item-desc">Understand charging speeds.</span>
+              </span>
+            </a>
+            <a href="/#/guide/battery-warranty" onclick="window.location.href='/#/guide/battery-warranty'; return false;" class="mega-item">
+              <span class="mega-item-icon">🛡️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Battery Warranty</span>
+                <span class="mega-item-desc">Know battery warranty coverage.</span>
+              </span>
+            </a>
+            <a href="/#/guide/government-subsidies" onclick="window.location.href='/#/guide/government-subsidies'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏛️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Government Subsidies</span>
+                <span class="mega-item-desc">Central and state EV incentives.</span>
+              </span>
+            </a>
+            <a href="/#/guide/running-cost" onclick="window.location.href='/#/guide/running-cost'; return false;" class="mega-item">
+              <span class="mega-item-icon">💰</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Running Cost</span>
+                <span class="mega-item-desc">Compare EV vs petrol costs.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="mega-col-title">Knowledge Centre</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/guide/learn-ev" onclick="window.location.href='/#/guide/learn-ev'; return false;" class="mega-item">
+              <span class="mega-item-icon">🚗</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Learn EV</span>
+                <span class="mega-item-desc">Explore EV technology from basics.</span>
+              </span>
+            </a>
+            <a href="/#/guide/ev-terminology" onclick="window.location.href='/#/guide/ev-terminology'; return false;" class="mega-item">
+              <span class="mega-item-icon">📖</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Terminology</span>
+                <span class="mega-item-desc">Common EV glossary and definitions.</span>
+              </span>
+            </a>
+            <a href="/#/guide/battery-chemistry" onclick="window.location.href='/#/guide/battery-chemistry'; return false;" class="mega-item">
+              <span class="mega-item-icon">🔋</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Battery Chemistry</span>
+                <span class="mega-item-desc">Understand LFP, NMC and battery technology.</span>
+              </span>
+            </a>
+            <a href="/#/guide/lfp-vs-nmc" onclick="window.location.href='/#/guide/lfp-vs-nmc'; return false;" class="mega-item">
+              <span class="mega-item-icon">🧪</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">LFP vs NMC</span>
+                <span class="mega-item-desc">Compare battery types and performance.</span>
+              </span>
+            </a>
+            <a href="/#/guide/ac-vs-dc" onclick="window.location.href='/#/guide/ac-vs-dc'; return false;" class="mega-item">
+              <span class="mega-item-icon">🔌</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">AC vs DC Charging</span>
+                <span class="mega-item-desc">Know the difference between charging methods.</span>
+              </span>
+            </a>
+            <a href="/#/guide/v2l" onclick="window.location.href='/#/guide/v2l'; return false;" class="mega-item">
+              <span class="mega-item-icon">⚙️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Vehicle-to-Load (V2L)</span>
+                <span class="mega-item-desc">Power external devices directly from your EV.</span>
+              </span>
+            </a>
+            <a href="/#/guide/regenerative-braking" onclick="window.location.href='/#/guide/regenerative-braking'; return false;" class="mega-item">
+              <span class="mega-item-icon">♻️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Regenerative Braking</span>
+                <span class="mega-item-desc">Recover energy while slowing down.</span>
+              </span>
+            </a>
+            <a href="/#/guide/highway-charging" onclick="window.location.href='/#/guide/highway-charging'; return false;" class="mega-item">
+              <span class="mega-item-icon">🛣️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Highway Charging</span>
+                <span class="mega-item-desc">Plan charging stops for long-distance travel.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="mega-col-title">Resources</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/resources/apartment-noc-letter" onclick="window.location.href='/#/resources/apartment-noc-letter'; return false;" class="mega-item">
+              <span class="mega-item-icon">📄</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Apartment NOC Letter Template</span>
+                <span class="mega-item-desc">Download pre-filled request templates for RWAs.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- News Panel -->
+    <div class="mega-panel hidden" id="mega-panel-insights">
+      <div class="px-8 py-8 grid grid-cols-3 gap-6">
+        <div>
+          <p class="mega-col-title">Market & News</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/insights/blogs" onclick="window.location.href='/#/insights/blogs'; return false;" class="mega-item">
+              <span class="mega-item-icon">📝</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Blogs</span>
+                <span class="mega-item-desc">In-depth articles and EV stories.</span>
+              </span>
+            </a>
+            <a href="/#/insights/ev-infrastructure-india" onclick="window.location.href='/#/insights/ev-infrastructure-india'; return false;" class="mega-item">
+              <span class="mega-item-icon">🔌</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Infrastructure in India</span>
+                <span class="mega-item-desc">Charging network and infrastructure developments.</span>
+              </span>
+            </a>
+            <a href="/#/insights/government-policies" onclick="window.location.href='/#/insights/government-policies'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏛️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Government Policies</span>
+                <span class="mega-item-desc">Subsidies, policies, regulations.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Guides & Education</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/insights/ev-charging-explained" onclick="window.location.href='/#/insights/ev-charging-explained'; return false;" class="mega-item">
+              <span class="mega-item-icon">⚡</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Charging Explained</span>
+                <span class="mega-item-desc">Everything about EV charging.</span>
+              </span>
+            </a>
+            <a href="/#/insights/where-does-electricity-come-from" onclick="window.location.href='/#/insights/where-does-electricity-come-from'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏭</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Where Does Electricity Come From?</span>
+                <span class="mega-item-desc">Understanding the grid and energy sources.</span>
+              </span>
+            </a>
+            <a href="/#/insights/renewable-energy-and-evs" onclick="window.location.href='/#/insights/renewable-energy-and-evs'; return false;" class="mega-item">
+              <span class="mega-item-icon">☀️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Renewable Energy and EVs</span>
+                <span class="mega-item-desc">Synergies between solar and electric vehicles.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="mega-col-title">Companies</p>
+          <div class="flex flex-col gap-1 mt-3">
+            <a href="/#/insights/companies-building-indias-network" onclick="window.location.href='/#/insights/companies-building-indias-network'; return false;" class="mega-item">
+              <span class="mega-item-icon">🏗️</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">Companies Building India's Network</span>
+                <span class="mega-item-desc">Key players in India's charging infrastructure.</span>
+              </span>
+            </a>
+            <a href="/#/insights/ev-cost-savings" onclick="window.location.href='/#/insights/ev-cost-savings'; return false;" class="mega-item">
+              <span class="mega-item-icon">💰</span>
+              <span class="mega-item-body">
+                <span class="mega-item-title">EV Cost & Savings</span>
+                <span class="mega-item-desc">Total cost of ownership and financial analysis.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ===== MOBILE DRAWER ===== -->
+    <div id="mega-mobile-drawer" class="xl:hidden fixed inset-0 top-16 bg-white z-35 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out border-t border-zinc-200" style="z-index:39">
+      <div class="p-6 flex flex-col gap-0">
+
+        <a href="/" class="mobile-nav-link" data-close-drawer>HOME</a>
+
+        <!-- Discover EVs accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">DISCOVER EVs <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <a href="/popular-evs" onclick="window.location.href='/popular-evs'; return false;" class="mobile-sub-link" data-close-drawer>🚗 Popular Electric Cars</a>
+            <a href="/launches" onclick="window.location.href='/launches'; return false;" class="mobile-sub-link" data-close-drawer>⚡ Latest EV Launches</a>
+            <a href="/upcoming" onclick="window.location.href='/upcoming'; return false;" class="mobile-sub-link" data-close-drawer>🔮 Upcoming Electric Cars</a>
+            <a href="/browse" onclick="window.location.href='/browse'; return false;" class="mobile-sub-link" data-close-drawer>🏷️ Browse by Brand</a>
+            
+            <a href="/#/view-all/all" onclick="window.location.href='/#/view-all/all'; return false;" class="mobile-sub-link" data-close-drawer>📋 View All Cars</a>
+            <a href="/compare.html" onclick="window.location.href='/compare.html'; return false;" class="mobile-sub-link" data-close-drawer>⚖️ Compare Cars</a>
+            
+            <a href="/popular-evs" onclick="window.location.href='/popular-evs'; return false;" class="mobile-sub-link" data-close-drawer>🕒 Recently Viewed</a>
+          </div>
+        </div>
+
+        <!-- Tools accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">TOOLS <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <a href="/trip-planner" onclick="window.location.href='/trip-planner'; return false;" class="mobile-sub-link" data-close-drawer>🗺️ EV Trip Planner</a>
+            <a href="/#/hub/charging-time" onclick="window.location.href='/#/hub/charging-time'; return false;" class="mobile-sub-link" data-close-drawer>⏱️ EV Charging Time Calculator</a>
+            <a href="/#/hub/emi-calculator" onclick="window.location.href='/#/hub/emi-calculator'; return false;" class="mobile-sub-link" data-close-drawer>💰 EMI Calculator</a>
+            <a href="/#/hub/petrol-savings" onclick="window.location.href='/#/hub/petrol-savings'; return false;" class="mobile-sub-link" data-close-drawer>⛽ Petrol Savings Calculator</a>
+            <a href="/popular-evs" onclick="window.location.href='/popular-evs'; return false;" class="mobile-sub-link" data-close-drawer>💸 On-Road Price Calculator</a>
+            <a href="/#/hub/charging-stations" onclick="window.location.href='/#/hub/charging-stations'; return false;" class="mobile-sub-link" data-close-drawer>🔌 Charging Stations</a>
+            <a href="/#/hub/apartment-charging" onclick="window.location.href='/#/hub/apartment-charging'; return false;" class="mobile-sub-link" data-close-drawer>🏢 Apartment Charging Guide</a>
+            <a href="/#/guide/highway-charging" onclick="window.location.href='/#/guide/highway-charging'; return false;" class="mobile-sub-link" data-close-drawer>🛣️ Highway Readiness Checker</a>
+            <a href="/#/hub/battery-health" onclick="window.location.href='/#/hub/battery-health'; return false;" class="mobile-sub-link" data-close-drawer>🔋 Battery Health Guide</a>
+          </div>
+        </div>
+
+        <!-- Learn accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">LEARN <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <div class="px-1 py-2 font-mono text-[8px] text-zinc-400 uppercase tracking-wider">Buying Guide</div>
+            <a href="/#/guide/everything-about-evs" onclick="window.location.href='/#/guide/everything-about-evs'; return false;" class="mobile-sub-link" data-close-drawer>📘 Everything About EVs</a>
+            <a href="/#/guide/ev-buying-guide" onclick="window.location.href='/#/guide/ev-buying-guide'; return false;" class="mobile-sub-link" data-close-drawer>📋 EV Buying Guide</a>
+            <a href="/#/guide/charging-at-home" onclick="window.location.href='/#/guide/charging-at-home'; return false;" class="mobile-sub-link" data-close-drawer>🏠 Charging at Home</a>
+            <a href="/#/guide/fast-vs-slow" onclick="window.location.href='/#/guide/fast-vs-slow'; return false;" class="mobile-sub-link" data-close-drawer>⚡ Fast vs Slow Charging</a>
+            <a href="/#/guide/battery-warranty" onclick="window.location.href='/#/guide/battery-warranty'; return false;" class="mobile-sub-link" data-close-drawer>🛡️ Battery Warranty</a>
+            <a href="/#/guide/government-subsidies" onclick="window.location.href='/#/guide/government-subsidies'; return false;" class="mobile-sub-link" data-close-drawer>🏛️ Government Subsidies</a>
+            <a href="/#/guide/running-cost" onclick="window.location.href='/#/guide/running-cost'; return false;" class="mobile-sub-link" data-close-drawer>💰 Running Cost</a>
+            <div class="px-1 py-2 mt-2 font-mono text-[8px] text-zinc-400 uppercase tracking-wider border-t border-zinc-100">Knowledge Centre</div>
+            <a href="/#/guide/learn-ev" onclick="window.location.href='/#/guide/learn-ev'; return false;" class="mobile-sub-link" data-close-drawer>🚗 Learn EV</a>
+            <a href="/#/guide/ev-terminology" onclick="window.location.href='/#/guide/ev-terminology'; return false;" class="mobile-sub-link" data-close-drawer>📖 EV Terminology</a>
+            <a href="/#/guide/battery-chemistry" onclick="window.location.href='/#/guide/battery-chemistry'; return false;" class="mobile-sub-link" data-close-drawer>🔋 Battery Chemistry</a>
+            <a href="/#/guide/lfp-vs-nmc" onclick="window.location.href='/#/guide/lfp-vs-nmc'; return false;" class="mobile-sub-link" data-close-drawer>🧪 LFP vs NMC</a>
+            <a href="/#/guide/ac-vs-dc" onclick="window.location.href='/#/guide/ac-vs-dc'; return false;" class="mobile-sub-link" data-close-drawer>🔌 AC vs DC Charging</a>
+            <a href="/#/guide/v2l" onclick="window.location.href='/#/guide/v2l'; return false;" class="mobile-sub-link" data-close-drawer>⚙️ Vehicle-to-Load (V2L)</a>
+            <a href="/#/guide/regenerative-braking" onclick="window.location.href='/#/guide/regenerative-braking'; return false;" class="mobile-sub-link" data-close-drawer>♻️ Regenerative Braking</a>
+            <a href="/#/guide/highway-charging" onclick="window.location.href='/#/guide/highway-charging'; return false;" class="mobile-sub-link" data-close-drawer>🛣️ Highway Charging</a>
+            <div class="px-1 py-2 mt-2 font-mono text-[8px] text-zinc-400 uppercase tracking-wider border-t border-zinc-100">Resources</div>
+            <a href="/#/resources/apartment-noc-letter" onclick="window.location.href='/#/resources/apartment-noc-letter'; return false;" class="mobile-sub-link" data-close-drawer>📄 Apartment NOC Letter Template</a>
+          </div>
+        </div>
+
+        <!-- Insights accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger">INSIGHTS <svg viewBox="0 0 24 24" class="w-3 h-3 ml-auto stroke-current fill-none stroke-2 transition-transform duration-200" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="mobile-accordion-body">
+            <a href="/#/insights/latest-ev-news" onclick="window.location.href='/#/insights/latest-ev-news'; return false;" class="mobile-sub-link" data-close-drawer>📰 Latest EV News</a>
+            <a href="/#/insights/blogs" onclick="window.location.href='/#/insights/blogs'; return false;" class="mobile-sub-link" data-close-drawer>📝 Blogs</a>
+            <a href="/#/insights/ev-infrastructure-india" onclick="window.location.href='/#/insights/ev-infrastructure-india'; return false;" class="mobile-sub-link" data-close-drawer>🔌 EV Infrastructure in India</a>
+            <a href="/#/insights/government-policies" onclick="window.location.href='/#/insights/government-policies'; return false;" class="mobile-sub-link" data-close-drawer>🏛️ Government Policies</a>
+            <a href="/#/insights/ev-charging-explained" onclick="window.location.href='/#/insights/ev-charging-explained'; return false;" class="mobile-sub-link" data-close-drawer>⚡ EV Charging Explained</a>
+            <a href="/#/insights/where-does-electricity-come-from" onclick="window.location.href='/#/insights/where-does-electricity-come-from'; return false;" class="mobile-sub-link" data-close-drawer>🏭 Where Does Electricity Come From?</a>
+            <a href="/#/insights/renewable-energy-and-evs" onclick="window.location.href='/#/insights/renewable-energy-and-evs'; return false;" class="mobile-sub-link" data-close-drawer>☀️ Renewable Energy and EVs</a>
+            <a href="/#/insights/companies-building-indias-network" onclick="window.location.href='/#/insights/companies-building-indias-network'; return false;" class="mobile-sub-link" data-close-drawer>🏗️ Companies Building India's Network</a>
+            <a href="/#/insights/ev-cost-savings" onclick="window.location.href='/#/insights/ev-cost-savings'; return false;" class="mobile-sub-link" data-close-drawer>💰 EV Cost & Savings</a>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="pt-4 border-t border-zinc-200 mt-2">
+          <button id="login-nav-btn-mobile" class="w-full py-3 font-mono text-[10px] tracking-wider border border-zinc-300 hover:border-black text-black hover:bg-black hover:text-white transition-all duration-300">LOGIN</button>
+        </div>
+        <!-- Mobile Profile (shown after login) -->
+        <div id="profile-container-mobile" class="hidden pt-4 border-t border-zinc-200 mt-2">
+          <a href="/profile" class="flex items-center gap-3 py-3 hover:opacity-80 transition-opacity">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 text-white flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 stroke-current fill-none stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <span class="font-mono text-[11px] text-zinc-700 font-medium">My Account</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Compare Page Content -->
+  <main class="min-h-screen bg-white text-black pt-24 pb-16 px-6 lg:px-12">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Page Header -->
+      <div class="text-center mb-12">
+        <span class="font-mono text-[9px] text-zinc-500 tracking-[0.3em] uppercase block mb-3">DIFFERENCE METRIC</span>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Compare Cars</h1>
+        <p class="text-xs text-zinc-500 max-w-sm mx-auto mt-3">Select two electric vehicles side-by-side to compare technical variables.</p>
+      </div>
+
+      <!-- Vehicle Selectors Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <!-- Vehicle 1 Selector -->
+        <div class="bg-white border border-zinc-200 rounded-xl p-6 shadow-sm">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[8px] text-zinc-500 uppercase tracking-widest">Vehicle 1</span>
+              <span id="comp-badge-1" class="hidden font-mono text-[8px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 uppercase tracking-wider">Selected</span>
+            </div>
+            <select id="comp-select-a" class="w-full bg-white border border-zinc-200 text-sm p-3 text-zinc-800 outline-none focus:border-black transition-all cursor-pointer rounded-lg">
+              <!-- Options injected dynamically by JS -->
+            </select>
+            <div id="comp-variant-wrap-a" class="hidden mt-3">
+              <label class="block text-[9px] font-mono font-bold uppercase tracking-wider text-zinc-500 mb-1">Select Variant</label>
+              <select id="comp-variant-select-a" class="w-full bg-white border border-zinc-200 text-xs p-2.5 text-zinc-800 outline-none focus:border-black transition-all cursor-pointer rounded-lg font-mono">
+                <!-- Variant options -->
+              </select>
+            </div>
+          </div>
+          <!-- Vehicle 1 Info Card (shown after selection) -->
+          <div id="comp-card-a" class="hidden mt-4 border border-zinc-200 rounded-xl overflow-hidden shadow-sm">
+            <div id="comp-img-a" class="w-full h-64 md:h-72 bg-zinc-50 flex items-center justify-center p-3 border-b border-zinc-100">
+              <div class="w-full h-full skeleton-shimmer"></div>
+            </div>
+            <div class="p-5">
+              <p id="comp-brand-a" class="text-[9px] text-zinc-500 uppercase tracking-widest font-mono mb-1"></p>
+              <p id="comp-name-a" class="text-lg font-bold text-black"></p>
+              <div class="flex items-baseline gap-2 mt-1 mb-4">
+                <p id="comp-price-a" class="text-sm font-semibold text-zinc-800"></p>
+                <span id="comp-body-a" class="text-[9px] text-zinc-400 font-mono uppercase tracking-wider"></span>
+              </div>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-xs border-t border-zinc-100 pt-4">
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Battery</span>
+                  <span id="comp-spec-battery-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Range</span>
+                  <span id="comp-spec-range-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Charging</span>
+                  <span id="comp-spec-charging-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">DC Fast</span>
+                  <span id="comp-spec-dc-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Top Speed</span>
+                  <span id="comp-spec-speed-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Power</span>
+                  <span id="comp-spec-power-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Torque</span>
+                  <span id="comp-spec-torque-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Seating</span>
+                  <span id="comp-spec-seating-a" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div class="col-span-2">
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Boot Space</span>
+                  <span id="comp-spec-boot-a" class="text-zinc-800 font-medium"></span>
+                </div>
+              </div>
+              <a id="comp-view-details-a" href="/#" class="mt-4 w-full block text-center px-4 py-2.5 border border-zinc-300 hover:border-black hover:bg-black hover:text-white text-zinc-700 font-mono text-[9px] tracking-widest uppercase transition-all duration-300 rounded-lg">
+                View Details →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle 2 Selector -->
+        <div class="bg-white border border-zinc-200 rounded-xl p-6 shadow-sm">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[8px] text-zinc-500 uppercase tracking-widest">Vehicle 2</span>
+              <span id="comp-badge-2" class="hidden font-mono text-[8px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 uppercase tracking-wider">Selected</span>
+            </div>
+            <select id="comp-select-b" class="w-full bg-white border border-zinc-200 text-sm p-3 text-zinc-800 outline-none focus:border-black transition-all cursor-pointer rounded-lg">
+              <!-- Options injected dynamically by JS -->
+            </select>
+            <div id="comp-variant-wrap-b" class="hidden mt-3">
+              <label class="block text-[9px] font-mono font-bold uppercase tracking-wider text-zinc-500 mb-1">Select Variant</label>
+              <select id="comp-variant-select-b" class="w-full bg-white border border-zinc-200 text-xs p-2.5 text-zinc-800 outline-none focus:border-black transition-all cursor-pointer rounded-lg font-mono">
+                <!-- Variant options -->
+              </select>
+            </div>
+          </div>
+          <!-- Vehicle 2 Info Card (shown after selection) -->
+          <div id="comp-card-b" class="hidden mt-4 border border-zinc-200 rounded-xl overflow-hidden shadow-sm">
+            <div id="comp-img-b" class="w-full h-64 md:h-72 bg-zinc-50 flex items-center justify-center p-3 border-b border-zinc-100">
+              <div class="w-full h-full skeleton-shimmer"></div>
+            </div>
+            <div class="p-5">
+              <p id="comp-brand-b" class="text-[9px] text-zinc-500 uppercase tracking-widest font-mono mb-1"></p>
+              <p id="comp-name-b" class="text-lg font-bold text-black"></p>
+              <div class="flex items-baseline gap-2 mt-1 mb-4">
+                <p id="comp-price-b" class="text-sm font-semibold text-zinc-800"></p>
+                <span id="comp-body-b" class="text-[9px] text-zinc-400 font-mono uppercase tracking-wider"></span>
+              </div>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-xs border-t border-zinc-100 pt-4">
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Battery</span>
+                  <span id="comp-spec-battery-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Range</span>
+                  <span id="comp-spec-range-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Charging</span>
+                  <span id="comp-spec-charging-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">DC Fast</span>
+                  <span id="comp-spec-dc-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Top Speed</span>
+                  <span id="comp-spec-speed-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Power</span>
+                  <span id="comp-spec-power-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Torque</span>
+                  <span id="comp-spec-torque-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div>
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Seating</span>
+                  <span id="comp-spec-seating-b" class="text-zinc-800 font-medium"></span>
+                </div>
+                <div class="col-span-2">
+                  <span class="text-[8px] text-zinc-400 uppercase tracking-wider font-mono block">Boot Space</span>
+                  <span id="comp-spec-boot-b" class="text-zinc-800 font-medium"></span>
+                </div>
+              </div>
+              <a id="comp-view-details-b" href="/#" class="mt-4 w-full block text-center px-4 py-2.5 border border-zinc-300 hover:border-black hover:bg-black hover:text-white text-zinc-700 font-mono text-[9px] tracking-widest uppercase transition-all duration-300 rounded-lg">
+                View Details →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <!-- Empty State Prompt (shown when less than 2 cars selected) -->
+      <div id="comp-empty-container" class="my-10 py-16 px-6 text-center bg-zinc-50 border border-zinc-200 rounded-2xl shadow-xs">
+        <h2 class="text-xl md:text-2xl font-bold text-zinc-800 tracking-tight">Select at least 2 cars to compare</h2>
+        <p class="text-xs md:text-sm text-zinc-500 mt-2">Use the dropdowns above to pick cars from our database.</p>
+      </div>
+
+      <!-- Comparison Details & Table Wrapper (shown when 2 cars are selected) -->
+      <div id="comp-details-wrapper" class="hidden">
+        <!-- State Selector -->
+        <div class="max-w-xs mx-auto mb-10">
+          <div class="flex flex-col gap-1.5">
+            <label for="comp-state-select" class="font-mono text-[8px] text-zinc-500 uppercase tracking-widest">State / City (On-Road Price)</label>
+            <select id="comp-state-select" class="w-full bg-white border border-zinc-200 text-xs p-2.5 text-zinc-800 outline-none focus:border-black transition-all cursor-pointer rounded-lg">
+              <option value="" disabled selected>Select State / City</option>
+              <option value="delhi">Delhi</option>
+              <option value="mumbai">Mumbai, Maharashtra</option>
+              <option value="pune">Pune, Maharashtra</option>
+              <option value="bengaluru">Bengaluru, Karnataka</option>
+              <option value="hyderabad">Hyderabad, Telangana</option>
+              <option value="chennai">Chennai, Tamil Nadu</option>
+              <option value="ahmedabad">Ahmedabad, Gujarat</option>
+              <option value="kochi">Kochi, Kerala</option>
+              <option value="kolkata">Kolkata, West Bengal</option>
+              <option value="jaipur">Jaipur, Rajasthan</option>
+              <option value="lucknow">Lucknow, Uttar Pradesh</option>
+              <option value="chandigarh">Chandigarh</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="bg-white border border-zinc-200 rounded-xl overflow-hidden shadow-sm mb-12">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left font-mono text-xs text-zinc-600 select-none">
+              <thead>
+                <tr class="border-b border-zinc-200 bg-zinc-50">
+                  <th class="p-4 uppercase text-[9px] tracking-wider text-zinc-500 font-bold">Specification</th>
+                  <th id="comp-hdr-a" class="p-4 uppercase text-[10px] tracking-wider font-bold text-black">-</th>
+                  <th id="comp-hdr-b" class="p-4 uppercase text-[10px] tracking-wider font-bold text-black">-</th>
+                </tr>
+              </thead>
+              <tbody id="comp-table-body">
+                <!-- Rows injected dynamically by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informational Guide Section (Why Comparing Electric Vehicles Matters) -->
+      <div id="comp-guide-container" class="mt-16 pt-12 border-t border-zinc-200 text-left max-w-4xl mx-auto text-zinc-800">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-black">Why Comparing Electric Vehicles Matters</h2>
+        <p class="text-xs md:text-sm text-zinc-600 leading-relaxed mb-8">
+          Transitioning to electric mobility is a major milestone, but finding the right vehicle can feel overwhelming given the rapidly growing options. Performing a detailed <span class="font-semibold text-black">electric vehicle comparison</span> is essential to ensure that your investment aligns with your daily driving routine, budget constraints, and charging availability. By evaluating specifications side-by-side, you can make an informed decision that prevents range anxiety and maximizes long-term savings.
+        </p>
+
+        <h3 class="text-lg md:text-xl font-bold tracking-tight mb-3 text-black">Key Factors to Evaluate When You Compare Electric Cars</h3>
+        <p class="text-xs md:text-sm text-zinc-600 leading-relaxed mb-6">
+          To choose the best model, it is crucial to analyze several key criteria that directly impact your ownership experience. An effective <span class="font-semibold text-black">EV comparison in India</span> should focus on these aspects:
+        </p>
+
+        <ul class="space-y-4 text-xs md:text-sm text-zinc-600 leading-relaxed mb-10 pl-5 list-disc">
+          <li>
+            <strong class="text-black font-semibold">Compare EV Prices:</strong> Look beyond the ex-showroom cost. Factor in state-level subsidies, road tax exemptions, and registration discounts, which vary significantly across regions. Make sure to compute insurance costs and local registration fees.
+          </li>
+          <li>
+            <strong class="text-black font-semibold">Compare EV Range:</strong> Understand the difference between certified range (like MIDC) and real-world range. Select a battery capacity that covers your daily commute comfortably with a 20–30% safety margin to account for traffic, weather, and accessories.
+          </li>
+          <li>
+            <strong class="text-black font-semibold">Battery Capacity and Lifespan:</strong> Compare chemistry types like LFP (Lithium Iron Phosphate) and NMC (Nickel Manganese Cobalt) along with their thermal management systems. LFP is highly durable, whereas NMC is lighter and denser, providing better performance.
+          </li>
+          <li>
+            <strong class="text-black font-semibold">Charging Speeds:</strong> Check the maximum DC charging rate accepted by each vehicle. A car that supports faster charging (e.g. 50 kW or more) saves valuable time on long-distance highway road trips.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16 px-6 lg:px-12 text-left relative z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-zinc-800 pb-12">
+        <div class="flex flex-col gap-3 font-mono text-[10px] text-zinc-400">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1">MARKETPLACE</span>
+          <a href="index.html/popular-evs" class="hover:text-white transition-colors">Popular Electric Cars</a>
+          <a href="index.html/upcoming" class="hover:text-white transition-colors">Upcoming EVs</a>
+          <a href="/compare" class="hover:text-white transition-colors">Compare EVs</a>
+        </div>
+        <div class="flex flex-col gap-3 font-mono text-[10px] text-zinc-400">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1">RESOURCES</span>
+          <a href="index.html#news" class="hover:text-white transition-colors">Latest News</a>
+          <a href="/charging-stations" class="hover:text-white transition-colors">Charging Stations</a>
+        </div>
+        <div class="flex flex-col gap-3 font-mono text-[10px] text-zinc-400">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1">CORPORATE</span>
+          <a href="/about" class="hover:text-white transition-colors">About Us</a>
+          <a href="/contact" class="hover:text-white transition-colors">Contact Support</a>
+          <a href="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms-and-conditions" class="hover:text-white transition-colors">Terms & Conditions</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-semibold block mb-1 font-mono">NEWSLETTER</span>
+          <span class="font-bold tracking-tight text-white text-sm font-mono">Subscribe for latest EV updates</span>
+          <form id="newsletter-form" class="flex flex-col gap-2 mt-1">
+            <input type="email" id="footer-email-compare-html" aria-label="Subscribe email address" placeholder="Type email address..." required class="bg-zinc-900 border border-zinc-700 text-xs p-2.5 text-white outline-none focus:border-white transition-all rounded-none placeholder-zinc-500 font-mono">
+            <button type="submit" class="px-4 py-2 bg-white text-black hover:bg-zinc-200 transition-colors font-mono text-[9px] tracking-widest uppercase font-semibold">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col items-center gap-6">
+        <div class="flex items-center justify-center gap-6 w-full pr-16 md:pr-0">
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" aria-label="X (Twitter)" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-zinc-500 hover:text-[#22C55E] transition-all duration-300 ease-in-out transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+        <div class="font-mono text-[9px] text-zinc-500 uppercase tracking-widest text-center pr-16 md:pr-0">
+          © 2026 EV Car Wale Group. No Colours. No Excuses.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal-test-drive" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-darkgray border border-zinc-800 w-full max-w-md p-8 relative font-mono text-xs text-zinc-300">
+      <button class="absolute top-4 right-4 text-zinc-500 hover:text-white text-base focus:outline-none modal-close-btn" aria-label="Close">×</button>
+      <div class="flex flex-col gap-2 mb-6">
+        <span class="text-[8px] text-zinc-500 uppercase tracking-super font-semibold">ACQUISITION STEP</span>
+        <h3 class="text-xl font-bold tracking-tight text-white uppercase">Book Test Drive</h3>
+      </div>
+      <form id="form-test-drive" class="flex flex-col gap-4 text-left">
+        <div class="flex flex-col gap-1">
+          <label for="td-car" class="text-zinc-500 text-[8px] uppercase tracking-wider">Select Electric Vehicle</label>
+          <select id="td-car" required class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all cursor-pointer"></select>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="td-name" class="text-zinc-500 text-[8px] uppercase tracking-wider">Full Name</label>
+          <input type="text" id="td-name" required placeholder="Full Name" class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all rounded-none placeholder-zinc-800">
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="td-phone" class="text-zinc-500 text-[8px] uppercase tracking-wider">Contact Phone</label>
+          <input type="tel" id="td-phone" required placeholder="Phone Number" class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all rounded-none placeholder-zinc-800">
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="td-date" class="text-zinc-500 text-[8px] uppercase tracking-wider">Preferred Date</label>
+          <input type="date" id="td-date" required class="bg-black border border-zinc-850 p-2.5 text-xs text-zinc-300 outline-none focus:border-white transition-all rounded-none">
+        </div>
+        <button type="submit" class="w-full py-3 bg-white text-black font-semibold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-colors mt-2">SCHEDULE DRIVE</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-search-overlay" class="fixed inset-0 bg-black/95 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <button class="absolute top-6 right-6 text-zinc-400 hover:text-white text-xl modal-close-btn" aria-label="Close">×</button>
+    <div class="w-full max-w-xl px-6 text-center">
+      <input type="text" id="global-search-input" placeholder="Search EV marketplace..." class="w-full bg-transparent border-b border-zinc-800 text-2xl py-4 text-white text-center outline-none focus:border-white transition-all placeholder-zinc-800">
+      <p class="font-mono text-[9px] text-zinc-500 uppercase tracking-widest mt-4">TYPE VEHICLE NAME, BRAND, OR RANGE CAPACITY</p>
+    </div>
+  </div>
+
+  <div id="modal-video-overlay" class="fixed inset-0 bg-black/90 backdrop-blur z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <button class="absolute top-6 right-6 text-zinc-400 hover:text-white text-xl modal-close-btn" aria-label="Close">×</button>
+    <div class="w-full max-w-3xl px-6 flex flex-col gap-4">
+      <h3 id="video-modal-title" class="font-bold text-base text-zinc-300 tracking-wider">Play video</h3>
+      <div class="aspect-video w-full border border-zinc-800 bg-black">
+        <iframe id="video-modal-iframe" class="w-full h-full" src="index.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-info-reader" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-darkgray border border-zinc-800 w-full max-w-md p-8 relative font-mono text-xs text-zinc-300">
+      <button class="absolute top-4 right-4 text-zinc-500 hover:text-white text-base modal-close-btn" aria-label="Close">×</button>
+      <span class="text-[8px] text-zinc-500 uppercase tracking-widest font-semibold block mb-2">INFORMATION LOG</span>
+      <p id="info-reader-text" class="text-zinc-200 leading-relaxed text-[11px] mb-4 pt-3 border-t border-zinc-900"></p>
+      <button class="px-5 py-2 border border-zinc-800 hover:border-white text-zinc-400 hover:text-white transition-colors modal-close-btn uppercase text-[9px] tracking-widest">CLOSE LOG</button>
+    </div>
+  </div>
+
+  <!-- AI Assistant -->
+  <div id="ai-overlay" class="ai-overlay"></div>
+  <div class="ai-assistant-container">
+    <div class="ai-trigger" id="ai-trigger">
+      <div class="ai-avatar-wrapper ai-float-anim">
+        <div class="ai-avatar-glow"></div>
+        <img src="/ai_robot_avatar.png" alt="EV AI Assistant" class="ai-avatar-img" loading="lazy">
+      </div>
+      <div class="ai-label" id="ai-label">Ask EV AI</div>
+    </div>
+    <div class="ai-chat-window" id="ai-chat-window">
+      <div class="ai-chat-header">
+        <div class="ai-chat-header-left">
+          <img src="/ai_robot_avatar.png" alt="AI" class="ai-chat-avatar" loading="lazy">
+          <div>
+            <div class="ai-chat-title">EV AI Assistant</div>
+            <div class="ai-chat-status"><span class="ai-status-dot"></span> Online</div>
+          </div>
+        </div>
+        <button class="ai-chat-close" id="ai-chat-close" aria-label="Close chat">&#x2715;</button>
+      </div>
+      <div class="ai-chat-body" id="ai-chat-body">
+        <div class="ai-message ai-bot-message" style="white-space:pre-line">
+Hi! 👋 I'm your EV AI Assistant.
+
+Ask me anything about:
+
+• Electric Vehicles
+• Charging
+• Battery Health
+• EV Costs
+• Government Policies
+• EV Buying
+• Range
+• Comparisons
+• Charging Stations
+        </div>
+        <div class="ai-suggestions">
+          <button class="ai-chip">Best EV under ₹15 lakh</button>
+          <button class="ai-chip">Charging cost</button>
+          <button class="ai-chip">Battery lifespan</button>
+          <button class="ai-chip">Compare Tata vs MG</button>
+          <button class="ai-chip">Government subsidy</button>
+          <button class="ai-chip">Charging stations near me</button>
+        </div>
+      </div>
+      <div class="ai-chat-input-area">
+        <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Ask anything about EVs..." autocomplete="off">
+        <button class="ai-send-btn" id="ai-send-btn" aria-label="Send message">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/ai-assistant.js" defer></script>
+  <script src="/auth-helper.js" defer></script>
+  <script src="/app.js" defer></script>
+  <script src="/videoIntegration.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.VideoIntegration) {
+        VideoIntegration.loadVideos('featured-videos-grid', '', {
+          skeletonCount: 3,
+          limit: 3,
+          onAfterRender: function () {
+            var container = document.getElementById('view-all-videos-container');
+            if (!container || container.querySelector('a')) return;
+            var link = document.createElement('a');
+            link.href = '/videos.html';
+            link.className = 'inline-flex items-center gap-2 px-8 py-4 font-mono text-[11px] tracking-[0.2em] uppercase border-2 border-[#22C55E] text-[#22C55E] hover:bg-[#22C55E] hover:text-white rounded-full transition-all duration-300 group';
+            link.innerHTML = 'View All Videos <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>';
+            container.appendChild(link);
+          }
+        });
+      }
+    });
+  </script>
+  <script>
+    function getNativeLabel(langCode) {
+      var labels = { en:'English', hi:'हिन्दी', kn:'ಕನ್ನಡ', ml:'മലയാളം', te:'తెలుగు', ta:'தமிழ்' };
+      return labels[langCode] || langCode.toUpperCase();
+    }
+    function changeLanguage(langCode) {
+      const customLabel = document.getElementById('custom-lang-label');
+      const SPINNER_HTML = '<svg class="w-3.5 h-3.5 animate-spin text-current inline-block align-middle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>';
+      if (customLabel && langCode !== 'en') {
+        customLabel.innerHTML = SPINNER_HTML;
+      } else if (customLabel) {
+        customLabel.textContent = getNativeLabel(langCode);
+      }
+      document.querySelectorAll('#custom-lang-menu .lang-option').forEach(function(o) {
+        o.classList.toggle('active', o.getAttribute('data-lang') === langCode);
+      });
+      document.getElementById('custom-lang-menu').classList.remove('open');
+      document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      document.cookie = 'googtrans=; path=/; domain=' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      document.cookie = 'googtrans=; path=/; domain=.' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      const hostParts = window.location.hostname.split('.');
+      if (hostParts.length > 2) {
+        const rootDomain = hostParts.slice(-2).join('.');
+        document.cookie = 'googtrans=; path=/; domain=' + rootDomain + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+        document.cookie = 'googtrans=; path=/; domain=.' + rootDomain + '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+      }
+      if (window.TranslationEngine) {
+        window.TranslationEngine.setLanguage(langCode);
+      } else {
+        localStorage.setItem('evcarwale_language', JSON.stringify({ lang: langCode, text: getNativeLabel(langCode) }));
+        location.reload();
+      }
+    }
+    document.getElementById('custom-lang-btn').addEventListener('click', function (e) {
+      e.stopPropagation();
+      document.getElementById('custom-lang-menu').classList.toggle('open');
+    });
+    document.querySelectorAll('.lang-option').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        changeLanguage(this.getAttribute('data-lang'));
+      });
+    });
+    document.addEventListener('click', function () {
+      document.getElementById('custom-lang-menu').classList.remove('open');
+    });
+  </script>
+  <script>
+    (function initCompare() {
+      function run() {
+        if (typeof loadDatabase !== 'function') return;
+        loadDatabase().then(function() {
+          if (typeof populateCompareDropdowns === 'function') populateCompareDropdowns();
+          if (typeof updateCompareTable === 'function') updateCompareTable();
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
+      }
+    })();
+  </script>
+</body>
+</html>

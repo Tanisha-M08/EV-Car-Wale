@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/((?!api/|auth/|LOGO/|public/|.*\\.html$|.*\\.css$|.*\\.js$|.*\\.png$|.*\\.jpg$|.*\\.jpeg$|.*\\.webp$|.*\\.gif$|.*\\.svg$|.*\\.ico$|.*\\.woff$|.*\\.woff2$|.*\\.ttf$|.*\\.eot$|.*\\.mp4$|.*\\.json$|.*\\.txt$|.*\\.xml$).*)",
+      "destination": "/api/index.js"
+    }
+  ]
+}

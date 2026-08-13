@@ -19359,6 +19359,7 @@ function bindChargingStationsLogic() {
     }).addTo(map);
 
     markersGroup = L.layerGroup().addTo(map);
+    addReCenterIndiaControl(map);
     setTimeout(() => {
       if (map) {
         map.invalidateSize();

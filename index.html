@@ -792,51 +792,52 @@
           SEARCH
         </button>
       </div>
-      
-      <!-- CTA Buttons Below Search -->
-      <div class="flex flex-wrap items-center justify-center gap-6 mt-6 pt-4 border-t border-zinc-800/40">
-        <a href="#popular-evs" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('popular-evs'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="px-6 py-2.5 border border-zinc-800 hover:border-white font-mono text-[10px] tracking-wider text-zinc-300 hover:text-white transition-all btn-animate">
-          POPULAR ELECTRIC CARS
-        </a>
-        <a href="/compare" class="px-6 py-2.5 border border-zinc-800 hover:border-white font-mono text-[10px] tracking-wider text-zinc-300 hover:text-white transition-all btn-animate">
-          COMPARE CARS
-        </a>
-        <a href="/charging-time-calculator" class="px-6 py-2.5 border border-zinc-800 hover:border-white font-mono text-[10px] tracking-wider text-zinc-300 hover:text-white transition-all btn-animate">
-          ⚡ EV CHARGING TIME
-        </a>
-      </div>
-    </div>
 
     <!-- Floating Quick Actions Panel -->
-    <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full pt-6 border-t border-zinc-800/60 font-mono">
-      <a href="/charging-stations" onclick="window.location.hash='#/charging-stations';" class="flex flex-col p-5 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-2xl transition-all duration-300 hover:-translate-y-1 group shadow-lg">
-        <span class="text-[9px] text-[#22C55E] tracking-widest font-bold">01 / FAST POWER</span>
-        <span class="text-sm text-white font-bold mt-2 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
-          Locate Chargers <span class="text-xs">➔</span>
+    <div class="relative z-10 grid grid-cols-2 md:grid-cols-3 gap-2 w-full max-w-5xl mx-auto pt-6 border-t border-zinc-800/60 font-mono">
+      <a href="/charging-stations" onclick="window.location.hash='#/charging-stations';" class="flex flex-col p-1 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-xl transition-all duration-300 hover:-translate-y-1 group shadow-md">
+        <span class="text-[8px] text-[#22C55E] tracking-widest font-bold">01 / FAST POWER</span>
+        <span class="text-xs text-white font-bold mt-1.5 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
+          Locate Chargers <span class="text-[10px]">➔</span>
         </span>
       </a>
 
-      <a href="/emi-calculator" onclick="window.location.hash='#/emi-calculator';" class="flex flex-col p-5 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-2xl transition-all duration-300 hover:-translate-y-1 group shadow-lg">
-        <span class="text-[9px] text-[#22C55E] tracking-widest font-bold">02 / TAX RATES</span>
-        <span class="text-sm text-white font-bold mt-2 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
-          Calculate EMI <span class="text-xs">➔</span>
+      <a href="/emi-calculator" onclick="window.location.hash='#/emi-calculator';" class="flex flex-col p-1 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-xl transition-all duration-300 hover:-translate-y-1 group shadow-md">
+        <span class="text-[8px] text-[#22C55E] tracking-widest font-bold">02 / TAX RATES</span>
+        <span class="text-xs text-white font-bold mt-1.5 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
+          Calculate EMI <span class="text-[10px]">➔</span>
         </span>
       </a>
 
-      <a href="#upcoming" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('upcoming'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="flex flex-col p-5 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-2xl transition-all duration-300 hover:-translate-y-1 group shadow-lg">
-        <span class="text-[9px] text-[#22C55E] tracking-widest font-bold">03 / IN THE PIPELINE</span>
-        <span class="text-sm text-white font-bold mt-2 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
-          Upcoming EV Launches <span class="text-xs">➔</span>
+      <a href="#upcoming" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('upcoming'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="flex flex-col p-1 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-xl transition-all duration-300 hover:-translate-y-1 group shadow-md">
+        <span class="text-[8px] text-[#22C55E] tracking-widest font-bold">03 / IN THE PIPELINE</span>
+        <span class="text-xs text-white font-bold mt-1.5 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
+          Upcoming EV Launches <span class="text-[10px]">➔</span>
         </span>
       </a>
 
-      <a href="#trip-planner" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('trip-planner'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="flex flex-col p-5 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-2xl transition-all duration-300 hover:-translate-y-1 group shadow-lg">
-        <span class="text-[9px] text-[#22C55E] tracking-widest font-bold">04 / ROUTE AI</span>
-        <span class="text-sm text-white font-bold mt-2 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
-          Plan a Trip <span class="text-xs">✦</span>
+
+     <a href="#popular-evs" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('popular-evs'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="flex flex-col p-1 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-xl transition-all duration-300 hover:-translate-y-1 group shadow-md">
+        <span class="text-[8px] text-[#22C55E] tracking-widest font-bold">05 / POPULAR EVS</span>
+        <span class="text-xs text-white font-bold mt-1.5 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
+          Popular EVs <span class="text-[10px]">✦</span>
         </span>
       </a>
-    </div>
+
+      <a href="/charging-time-calculator" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('charging-time-calculator'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="flex flex-col p-1 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-xl transition-all duration-300 hover:-translate-y-1 group shadow-md">
+        <span class="text-[8px] text-[#22C55E] tracking-widest font-bold">06 / CHARGING TIME CALCULATOR</span>
+        <span class="text-xs text-white font-bold mt-1.5 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
+          Charging Time Calculator <span class="text-[10px]">✦</span>
+        </span>
+      </a>
+
+      <a href="/compare.html" onclick="event.preventDefault(); window.lastHomepageScrollPos = 0; if (typeof restoreHomepage === 'function') restoreHomepage(true, true); var el = document.getElementById('compare-evs'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="flex flex-col p-1 bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:border-[#22C55E] rounded-xl transition-all duration-300 hover:-translate-y-1 group shadow-md">
+        <span class="text-[8px] text-[#22C55E] tracking-widest font-bold">07 / COMPARE EVS</span>
+        <span class="text-xs text-white font-bold mt-1.5 group-hover:text-[#22C55E] transition-colors flex items-center justify-between">
+          Compare EVs <span class="text-[10px]">✦</span>
+        </span>
+      </a> 
+</div>
     
     <!-- Horizontal Divider Line below the feature cards -->
     <div class="relative z-10 max-w-5xl mx-auto w-full border-t border-zinc-800/60 mt-6"></div>

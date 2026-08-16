@@ -46,34 +46,16 @@
       "Empowered Plus A",
       "Empowered Plus A Dark"
     ],
-    "Nexon EV": [
-      "Standard",
-      "Long Range"
-    ],
-    "Punch EV": [
-      "Standard",
-      "Long Range"
-    ],
-    "Harrier EV": [
-      "Standard",
-      "Long Range"
-    ],
-    "Curvv EV": [
-      "Standard",
-      "Long Range"
-    ],
-    "Tiago EV": [
-      "Standard",
-      "Long Range"
+    "Tiago.ev": [
+      "Smart 19",
+      "Pure Plus 19",
+      "Pure Plus 24",
+      "Creative Plus 24"
     ],
     "Avinya EV": [
       "Standard",
       "Extended Range",
       "Performance AWD"
-    ],
-    "Sierra EV": [
-      "Standard",
-      "Long Range"
     ]
   },
   "BYD": {

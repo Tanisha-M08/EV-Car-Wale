@@ -6379,7 +6379,7 @@ let EV_VARIANT_FULL_DB = {
         "Airbags": "6 Airbags",
         "ADAS Features": "Level 2 ADAS Suite, ESP, Electronic Parking Brake",
         "Infotainment System": "10.25-inch Touchscreen Navigation, Android Auto & Apple CarPlay",
-        "Warranty": "8 Years / 1,60,000 km (Battery)"
+        "Warranty": "8 Years / 1,60,000 km (Battery)",
       }
     }
   }

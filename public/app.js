@@ -6017,7 +6017,8 @@ let EV_VARIANT_FULL_DB = {
         "ADAS Features": "360 Camera, Blind Spot Monitor, ESP",
         "Infotainment System": "8-inch Touchscreen, Android Auto & Apple CarPlay",
         "Warranty": "8 Years / 1,60,000 km (Battery)"
-    }
+        }
+    },
   },
   "BYD": {
     "eMax 7": {
